@@ -35,12 +35,13 @@
 			android:layout_weight="5"
 			android:layout_height="wrap_content"
 			android:background="@android:drawable/editbox_background"
+			android:textColor="#000"
 		/>
 		<ImageView
 			android:id="@+id/imClear1"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="50px"
+			android:layout_width="25px"
+			android:layout_height="25px"
+			android:layout_marginTop="7dp"
 			android:src="@drawable/clear"/>
 	</LinearLayout>
 	<TextView
@@ -61,6 +62,7 @@
 			android:layout_weight="5"
 			android:layout_height="wrap_content"
 			android:background="@android:drawable/editbox_background"
+			android:textColor="#000"
 		/>
 		<ImageView
 			android:id="@+id/imClear1"
