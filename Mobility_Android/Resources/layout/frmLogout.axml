@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<!-- Toolbar -->
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+	<!-- TITLE LOGOUT -->
+	<TextView
+		android:id="@+id/txtView_Logout"
+		android:text="Déconnexion"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/toolbar"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="#ffffffff" />
+
+	<!-- TEXT PASSWORD -->
+
+	<TextView
+		android:id="@+id/txtView_Order"
+		android:text="Veuillez entrer le mot de passe"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/txtView_Logout"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="20dp"
+		android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+	<!-- LINEAR LAYOUT TEXTINPUT / BUTTON -->
+
+	<LinearLayout
+		android:id="@+id/lineaire_Layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/txtView_Order" >
+
+		<!-- INPUT PASSWORD -->
+
+		<!-- INPUT URL -->
+
+		<EditText
+			android:id="@+id/txt_logout"
+			android:layout_width="0dp"
+			android:layout_weight="6"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginLeft="5dp"
+			android:hint="mot de passe"
+			android:textColorHint="#808080"
+			android:textColor="#000"
+			android:maxLines="1"
+			android:background="@android:drawable/editbox_background" />
+
+		<!-- BUTTON CLEAR -->
+
+		<ImageView
+			android:id="@+id/im_Clear"
+			android:src="@drawable/clear"
+			android:layout_width="25dp"
+			android:layout_height="25dp"
+			android:layout_toRightOf="@+id/txt_url"
+			android:layout_alignTop="@+id/txt_url"
+			android:layout_marginTop="7dp"
+			android:layout_centerHorizontal="true"
+			android:layout_marginBottom="0.0dp" />
+	</LinearLayout>
+
+	<!-- BUTTON LOGOUT -->
+
+	<Button
+		android:id="@+id/btn_Logout"
+		android:text="Déconnexion"
+		android:layout_width="245.0dp"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/lineaire_Layout"
+		android:layout_centerHorizontal="true" />
+</RelativeLayout>
