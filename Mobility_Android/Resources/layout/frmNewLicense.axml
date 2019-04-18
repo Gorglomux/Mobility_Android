@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<!-- Toolbar -->
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+	
+	<!-- Title -->
+	<TextView
+		android:id="@+id/lblTitleLicenseInfo" 
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/toolbar"
+		android:layout_marginTop="5px"
+		android:layout_marginBottom="15px"
+		android:text=" Information de license "
+		/>
+
+	<!-- Spinner Product -->
+	<LinearLayout
+		android:id="@+id/layoutProduct"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20px"
+		android:layout_marginLeft="40px"
+		android:layout_below="@+id/lblTitleLicenseInfo" >
+
+		<TextView
+			android:id="@+id/lblProduct"
+			android:layout_width="0dp"
+			android:layout_weight="2"
+			android:layout_height="wrap_content"
+			android:text="Produit : "
+		/>
+		
+		<Spinner
+			android:id="@+id/spnProduct"
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="5"
+		/>
+	</LinearLayout>
+	<!-- Date picker -->
+	<LinearLayout
+		android:id="@+id/layoutDate"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20px"
+		android:layout_marginLeft="40px"
+		android:layout_below="@+id/layoutProduct" >
+
+		<TextView
+			android:id="@+id/lblDate"
+			android:layout_width="0dp"
+			android:layout_weight="2"
+			android:layout_height="wrap_content"
+			android:text="Date : "
+		/>
+		<EditText
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/date_EditText" />
+	</LinearLayout>
+
+	<!-- Input Poids-->
+	<LinearLayout
+		android:id="@+id/layoutWeight"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20px"
+		android:layout_marginLeft="40px"
+		android:layout_below="@+id/layoutDate" >
+
+		<TextView
+			android:id="@+id/lblWeight"
+			android:layout_width="0dp"
+			android:layout_weight="2"
+			android:layout_height="wrap_content"
+			android:text="Poids : "
+		/>
+		<EditText
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="6"
+			android:background="@android:drawable/editbox_background"
+			android:id="@+id/tfWeight" />
+	</LinearLayout>
+
+	<!-- Quantité + Unité de mesure -->
+	<LinearLayout
+		android:id="@+id/layoutQty"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20px"
+		android:layout_marginLeft="40px"
+		android:layout_below="@+id/layoutWeight" >
+
+		<TextView
+			android:id="@+id/lblQty"
+			android:layout_width="0dp"
+			android:layout_weight="2"
+			android:layout_height="wrap_content"
+			android:text="Qté / udm : "
+		/>
+		<EditText
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="2"
+			android:background="@android:drawable/editbox_background"
+			android:id="@+id/tfQty" />
+		
+		<EditText
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="2"
+			android:background="@android:drawable/editbox_background"
+			android:id="@+id/tfUdm" />
+	</LinearLayout>
+
+	<!--Confirmer-->
+	<Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="20dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dip"
+		android:layout_below="@id/layoutQty"
+        android:text="  Confirmer  " />
+
+</RelativeLayout>

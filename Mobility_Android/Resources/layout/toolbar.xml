@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/colorPrimary">
+
+  <LinearLayout
+		android:id="@+id/layoutToolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+    
+    <!-- Flèche retour -->
+    <ImageView
+		android:id="@+id/imBack"
+		android:src="@drawable/back"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+    android:layout_weight="1"/>
+
+    <!-- Logo Ceritar -->
+    <ImageView
+    android:id="@+id/imCeritar"
+    android:src="@drawable/ceritar_logo_main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="4"/>
+
+    <!-- Retour accueil -->
+    <ImageView
+    android:id="@+id/imHome"
+    android:src="@drawable/home"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    />
+  </LinearLayout>
+</Toolbar>

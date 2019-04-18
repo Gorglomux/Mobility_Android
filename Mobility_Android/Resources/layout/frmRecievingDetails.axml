@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+		<!-- Toolbar -->
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+	<TextView
+		android:id="@+id/lblTitleRecieving" 
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/toolbar"
+		android:layout_marginTop="5px"
+		android:layout_marginBottom="15px"
+		android:text=" Réception "
+		/>
+	<TextView
+		android:id="@+id/lblRecieving"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/lblTitleRecieving"
+		android:layout_marginLeft="15px"
+		android:text="# Réception : " />
+	<!-- Affichage du num de la Réception -->
+	<TextView
+		android:id="@+id/lblNumRecieving"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/lblRecieving"
+		android:layout_alignTop="@+id/lblRecieving"
+		android:layout_marginLeft="70px"
+		android:text="1000 " />
+
+	<TextView
+		android:id="@+id/lblProvider"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/lblRecieving"
+		android:layout_marginLeft="15px"
+		android:layout_marginTop="20px"
+		android:text="Fournisseur : " />
+	<TextView
+		android:id="@+id/lblnameProvider"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/lblProvider"
+		android:layout_alignTop="@+id/lblProvider"
+		android:layout_marginLeft="70px"
+		android:text="Four1 " />
+	<ImageView
+		android:id="@+id/delim1"
+		android:src="#ffffffff"
+		android:layout_below="@id/lblnameProvider"
+		android:layout_width="fill_parent" 
+		android:layout_height="1dip" 
+	/>
+
+	<TextView
+		android:id="@+id/lblProduct"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/delim1"
+		android:layout_marginLeft="15px"
+		android:layout_marginTop="35px"
+		android:text="Produit : " />
+	<TextView
+		android:id="@+id/lblNameProduct"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/lblProduct"
+		android:layout_alignTop="@+id/lblProduct"
+		android:layout_marginLeft="150px"
+		android:text="A-95-950" />
+	<TextView
+		android:id="@+id/lblQte"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/lblProduct"
+		android:layout_marginLeft="15px"
+		android:layout_marginTop="50px"
+		android:text="Qté : " />
+	<TextView
+		android:id="@+id/lblAmountQte"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/lblQte"
+		android:layout_alignTop="@+id/lblQte"
+		android:layout_marginLeft="220px"
+		android:text="0 /0" />
+	<TextView
+		android:id="@+id/lblPoids"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/lblQte"
+		android:layout_marginLeft="15px"
+		android:layout_marginTop="30px"
+		android:text="Poids : " />
+	<TextView
+		android:id="@+id/lblAmountPoids"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/lblPoids"
+		android:layout_alignTop="@+id/lblPoids"
+		android:layout_marginLeft="175px"
+		android:text="0.00kg" />
+
+	<ImageView
+		android:id="@+id/delim2"
+		android:src="#ffffffff"
+		android:layout_below="@id/lblPoids"
+		android:layout_width="fill_parent" 
+		android:layout_height="1dip" 
+	/>
+
+	<TextView
+		android:id="@+id/lblLicense"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/delim2"
+		android:layout_marginLeft="15px"
+		android:layout_marginTop="15px"
+		android:text="License :" />
+
+
+	<LinearLayout
+		
+		android:id="@+id/layoutLicense"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/lblLicense" >
+
+		<EditText
+			android:id="@+id/tfLicense"
+			android:layout_width="0dp"
+			android:layout_weight="5"
+			android:layout_height="wrap_content"
+			android:background="@android:drawable/editbox_background"
+		/>
+		
+		<ImageView
+			android:id="@+id/imClear1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="18px"
+			android:src="@drawable/clear"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		
+		android:id="@+id/layoutEndRecieving"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20px"
+		android:layout_below="@+id/layoutLicense" >
+		<Button
+			android:id="@+id/btnEndRecieving"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="5"
+			android:text="  Réception Terminée  " />
+		<ImageView
+			android:id="@+id/imDetails"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="25px"
+			android:layout_weight="5"
+			android:src="@drawable/details"/>
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<!-- Toolbar -->
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+	
+	<!-- Spinner Warehouse -->
+	<LinearLayout
+		android:id="@+id/layoutWarehouse"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20px"
+		android:layout_marginLeft="40px"
+		android:layout_below="@+id/toolbar" >
+
+		<TextView
+			android:id="@+id/lblWarehouse"
+			android:layout_width="0dp"
+			android:layout_weight="2"
+			android:layout_height="wrap_content"
+			android:text="Entrepôt : "
+		/>
+		
+		<Spinner
+			android:id="@+id/spnWarehouse"
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="5"
+		/>
+	</LinearLayout>
+	
+	<!-- Buttons Menus-->
+	<LinearLayout
+		android:id="@+id/layoutButtons"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_below="@+id/layoutWarehouse">
+
+		<Button
+			android:id="@+id/btnMove"
+			android:layout_weight="2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			
+			android:text="1 - Déplacement"
+		/>
+
+		<Button
+			android:id="@+id/btnRecieve"
+			android:layout_weight="2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="2 - Réception"
+		/>
+
+		<Button
+			android:id="@+id/btnPicking"
+			android:layout_weight="2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+
+			android:text="3 - Cueillette"
+		/>
+
+		<Button
+			android:id="@+id/btnProduction"
+			android:layout_weight="2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="4 - Production"
+		/>
+
+		<Button
+			android:id="@+id/btnInterWarehouse"
+			android:layout_weight="2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="5 - Inter Warehouse"
+		/>
+
+
+
+	</LinearLayout>
+
+</RelativeLayout>

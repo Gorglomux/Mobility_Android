@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<!-- Toolbar -->
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+	
+	<!-- Title -->
+	<TextView
+		android:id="@+id/lblTitleSaleInfo" 
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/toolbar"
+		android:layout_marginTop="5px"
+		android:layout_marginBottom="15px"
+		android:text=" Création de vente "
+		/>
+
+	<!-- Spinner Client -->
+	<LinearLayout
+		android:id="@+id/layoutClient"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20px"
+		android:layout_marginLeft="40px"
+		android:layout_below="@+id/lblTitleSaleInfo" >
+
+		<TextView
+			android:id="@+id/lblClient"
+			android:layout_width="0dp"
+			android:layout_weight="3"
+			android:layout_height="wrap_content"
+			android:text="Client : "
+		/>
+		
+		<Spinner
+			android:id="@+id/spnClient"
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="4"
+		/>
+
+	</LinearLayout>
+
+	<!-- Spinner Destinataire -->
+	<LinearLayout
+		android:id="@+id/layoutRecipient"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20px"
+		android:layout_marginLeft="40px"
+		android:layout_below="@+id/layoutClient" >
+
+		<TextView
+			android:id="@+id/lblRecipient"
+			android:layout_width="0dp"
+			android:layout_weight="3"
+			android:layout_height="wrap_content"
+			android:text="Destinataire : "
+		/>
+		
+		<Spinner
+			android:id="@+id/spnRecipient"
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="4"
+		/>
+	</LinearLayout>
+
+	<!-- Spinner Propriétaire -->
+	<LinearLayout
+		android:id="@+id/layoutOwner"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20px"
+		android:layout_marginLeft="40px"
+		android:layout_below="@+id/layoutRecipient" >
+
+		<TextView
+			android:id="@+id/lblOwner"
+			android:layout_width="0dp"
+			android:layout_weight="3"
+			android:layout_height="wrap_content"
+			android:text="Propriétaire : "
+		/>
+		
+		<Spinner
+			android:id="@+id/spnOwner"
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="4"
+		/>
+	</LinearLayout>
+
+	<!-- Input PO -->
+	<LinearLayout
+		android:id="@+id/layoutPO"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20px"
+		android:layout_marginLeft="40px"
+		android:layout_below="@+id/layoutOwner" >
+
+		<TextView
+			android:id="@+id/lblPO"
+			android:layout_width="0dp"
+			android:layout_weight="3"
+			android:layout_height="wrap_content"
+			android:text="PO : "
+		/>
+		
+		<EditText
+			android:id="@+id/tfPO"
+			android:layout_width="0dip"
+			android:layout_height="wrap_content"
+			android:layout_weight="4"
+		/>
+	</LinearLayout>
+
+	<!-- Date picker  -->
+	<TextView
+		android:id="@+id/lblDate"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"	
+		android:layout_below="@+id/layoutPO" 
+		android:layout_marginLeft="15dip"
+		android:text="Date de livraison attendue :"
+	/>
+	<EditText
+		android:id="@+id/date_EditText"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/lblDate" 
+		 />
+	<!-- Confirmer -->
+	<Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="20dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dip"
+		android:layout_below="@id/date_EditText"
+        android:text="  Confirmer  " />
+</RelativeLayout>
