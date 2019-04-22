@@ -6,7 +6,7 @@ using Android.Widget;
 using Android.Views;
 namespace Mobility_Android
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/ApplicationTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/ApplicationTheme")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -15,9 +15,23 @@ namespace Mobility_Android
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.frmCsDetailsProduction);
 
+            //Instancie le controlleur "Login"
+            /*
+            loginController = new LoginController();
+
+            //Affiche le contenu de la vue "Login"
+            loginController.show();
+            */
+
+
+
+
+
+            /*
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
             ActionBar.Title = "";
+            */
         }
     }
 }

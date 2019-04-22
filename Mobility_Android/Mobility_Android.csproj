@@ -56,6 +56,14 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\BaseActivity.cs" />
+    <Compile Include="Activities\HomeActivity.cs" />
+    <Compile Include="Activities\LoginActivity.cs" />
+    <Compile Include="Activities\WarehouseListActivity.cs" />
+    <Compile Include="Activities\ProductionMenuActivity.cs" />
+    <Compile Include="Activities\PickingListActivity.cs" />
+    <Compile Include="Activities\ReceivingActivity.cs" />
+    <Compile Include="Activities\MoveActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -198,6 +206,9 @@
     <AndroidResource Include="Resources\layout\frmCsDetailsProduction.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="global\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
