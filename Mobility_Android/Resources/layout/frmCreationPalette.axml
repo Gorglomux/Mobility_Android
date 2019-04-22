@@ -12,7 +12,7 @@
 	<!-- TITLE PRODUCTIONS -->
 
 	<TextView
-		android:id="@+id/txtView_Production"
+		android:id="@+id/txtView_Creation"
 		android:text="Productions"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -23,12 +23,12 @@
 	<!-- SCROLL VIEW PRODUCTION -->
 
 	<ScrollView
-		android:id="@+id/scrollView_product"
+		android:id="@+id/scrollView_Palette"
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
 		android:layout_height="191.3dp"
-		android:layout_below="@+id/txtView_Production" >
+		android:layout_below="@+id/txtView_Creation" >
 
 		<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			android:id="@+id/simpleTableLayout"
@@ -217,7 +217,7 @@
 		android:id="@+id/lineaire_btn"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/scrollView_product" >
+		android:layout_below="@+id/scrollView_Palette" >
 
 		<!-- BUTTON REFRESH -->
 
@@ -227,8 +227,6 @@
 			android:layout_width="0dp"
 			android:layout_weight="1"
 			android:layout_height="40.7dp"
-			android:layout_toRightOf="@+id/txt_Logout"
-			android:layout_alignTop="@+id/txt_Logout"
 			android:layout_marginTop="-2dp"
 			android:layout_centerHorizontal="true"
 			android:layout_marginBottom="0.0dp" />
@@ -241,8 +239,6 @@
 			android:layout_width="0dp"
 			android:layout_weight="1"
 			android:layout_height="40.7dp"
-			android:layout_toRightOf="@+id/txt_Logout"
-			android:layout_alignTop="@+id/txt_Logout"
 			android:layout_marginTop="-2dp"
 			android:layout_centerHorizontal="true"
 			android:layout_marginBottom="0.0dp" />

@@ -39,7 +39,7 @@
 		<!-- INPUT URL -->
 
 		<EditText
-			android:id="@+id/txt_logout"
+			android:id="@+id/txt_licence"
 			android:layout_width="0dp"
 			android:layout_weight="6"
 			android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
 		<!-- INPUT URL -->
 
 		<EditText
-			android:id="@+id/txt_logout"
+			android:id="@+id/txt_station"
 			android:layout_width="0dp"
 			android:layout_weight="6"
 			android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
 		<!-- BUTTON CLEAR -->
 
 		<ImageView
-			android:id="@+id/im_Clear"
+			android:id="@+id/im_clear_station"
 			android:src="@drawable/clear"
 			android:layout_width="25dp"
 			android:layout_height="25dp"
@@ -113,7 +113,7 @@
 
 
 	<ScrollView
-		android:id="@+id/scrollView1"
+		android:id="@+id/scrollView_product"
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
@@ -303,10 +303,10 @@
 	</ScrollView>
 
 	<LinearLayout
-		android:id="@+id/lineaire_Layout"
+		android:id="@+id/lineaire_btn"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/scrollView1" >
+		android:layout_below="@+id/scrollView_product" >
 
 		<!-- BUTTON CLEAR -->
 
@@ -317,8 +317,6 @@
 			android:layout_width="0dp"
 			android:layout_weight="1"
 			android:layout_height="40.7dp"
-			android:layout_toRightOf="@+id/txt_Logout"
-			android:layout_alignTop="@+id/txt_Logout"
 			android:layout_marginTop="-2dp"
 			android:layout_centerHorizontal="true"
 			android:layout_marginBottom="0.0dp" />
