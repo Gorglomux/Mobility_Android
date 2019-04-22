@@ -13,7 +13,7 @@ namespace Mobility_Android
         {
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.frmCreationPalette);
+            SetContentView(Resource.Layout.frmCsDetailsProduction);
 
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
