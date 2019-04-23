@@ -59,14 +59,6 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activities\BaseActivity.cs" />
-    <Compile Include="Activities\HomeActivity.cs" />
-    <Compile Include="Activities\LoginActivity.cs" />
-    <Compile Include="Activities\WarehouseListActivity.cs" />
-    <Compile Include="Activities\ProductionMenuActivity.cs" />
-    <Compile Include="Activities\PickingListActivity.cs" />
-    <Compile Include="Activities\ReceivingActivity.cs" />
-    <Compile Include="Activities\MoveActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\global\Configuration.cs" />
     <Compile Include="Resources\global\webService.cs" />

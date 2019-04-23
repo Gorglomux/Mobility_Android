@@ -238,6 +238,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
@@ -257,6 +258,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\svr-net15-temp\security.disco" />
+=======
+    <Folder Include="global\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\menu.xml" />
+>>>>>>> dbea6baf5d8d25bd6a9717a9a2a35eeff79082e5
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

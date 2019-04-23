@@ -51,9 +51,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
@@ -68,40 +65,13 @@
     <Compile Include="Activities\ReceivingActivity.cs" />
     <Compile Include="Activities\MoveActivity.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="Resources\global\Configuration.cs" />
-    <Compile Include="Resources\global\webService.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Web References\svr-net15-temp\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
-    <None Include="Web References\svr-net15-temp\CR_ResultActionOfBoolean.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\svr-net15-temp\CR_ResultActionOfCR_WebAuthentification.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\svr-net15-temp\CR_ResultActionOfListOfCompanyObjectWS.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\svr-net15-temp\CR_ResultActionOfListOfWarehouseObject.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\svr-net15-temp\CR_ResultActionOfUserInfosWS.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\svr-net15-temp\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Web References\svr-net15-temp\security.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\colors.xml" />
@@ -238,25 +208,10 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <WebReferences Include="Web References\" />
+    <Folder Include="global\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://svr-net15-temp/myceritar_miechko/services/security.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\svr-net15-temp\</RelPath>
-      <UpdateFromURL>http://svr-net15-temp/myceritar_miechko/services/security.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>
-      </CachedAppSettingsObjectName>
-      <CachedSettingsPropName>
-      </CachedSettingsPropName>
-    </WebReferenceUrl>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Web References\svr-net15-temp\security.disco" />
+    <AndroidResource Include="Resources\menu\menu.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

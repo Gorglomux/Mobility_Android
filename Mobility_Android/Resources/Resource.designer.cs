@@ -2672,9 +2672,6 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800d3
 			public const int imDetails = 2131230931;
 			
-			// aapt resource value: 0x7f08013f
-			public const int imHome = 2131231039;
-			
 			// aapt resource value: 0x7f0800d4
 			public const int imLogo = 2131230932;
 			
@@ -2918,14 +2915,32 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-			// aapt resource value: 0x7f080142
-			public const int masked = 2131231042;
+			// aapt resource value: 0x7f080141
+			public const int masked = 2131231041;
 			
 			// aapt resource value: 0x7f08012f
 			public const int media_actions = 2131231023;
 			
-			// aapt resource value: 0x7f080140
-			public const int message = 2131231040;
+			// aapt resource value: 0x7f080142
+			public const int menuHome = 2131231042;
+			
+			// aapt resource value: 0x7f080143
+			public const int menuMove = 2131231043;
+			
+			// aapt resource value: 0x7f080145
+			public const int menuPicking = 2131231045;
+			
+			// aapt resource value: 0x7f080146
+			public const int menuProduction = 2131231046;
+			
+			// aapt resource value: 0x7f080144
+			public const int menuRecieving = 2131231044;
+			
+			// aapt resource value: 0x7f080147
+			public const int menuWarehouse = 2131231047;
+			
+			// aapt resource value: 0x7f08013f
+			public const int message = 2131231039;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -3314,8 +3329,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f080141
-			public const int visible = 2131231041;
+			// aapt resource value: 0x7f080140
+			public const int visible = 2131231040;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3637,6 +3652,22 @@ namespace Mobility_Android
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f0e0000
+			public const int menu = 2131623936;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}
