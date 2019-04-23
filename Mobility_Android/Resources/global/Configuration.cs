@@ -26,21 +26,21 @@ namespace Mobility_Android.Resources.global
 
     class Configuration
     {
-        public CR_TTLangue currentLanguage = CR_TTLangue.French_France;
+        public static CR_TTLangue currentLanguage = CR_TTLangue.French_France;
 
-        public String fileConfigLanguage = "@.\ressourceFR.resx";
+        public static String fileConfigLanguage = "@.\ressourceFR.resx";
 
-        public String webServiceURL = "http://clientservices.ceritar.com/MyCeritar_Test/";
+        public static String webServiceURL = "http://clientservices.ceritar.com/MyCeritar_Test/";
 
-        public String termicon_IP = "";
+        public static String termicon_IP = "";
 
-        public String termicon_Port = "";
+        public static String termicon_Port = "";
 
         // public currentEquipment As EquipementType = EquipementType.Inconnu
 
-        public String securityToken = "";
+        public static String securityToken = "";
 
-        public UserInfosWS userInfos = new UserInfosWS();
+        public static UserInfosWS userInfos = new UserInfosWS();
 
         /*
          * Methode setLanguage
@@ -54,11 +54,11 @@ namespace Mobility_Android.Resources.global
         {
             if (language.Equals(CR_TTLangue.English))
             {
-                this.currentLanguage = language;
-                this.fileConfigLanguage = "RessourceANG";
+                Configuration.currentLanguage = language;
+                Configuration.fileConfigLanguage = "RessourceANG";
             } else {
-                this.currentLanguage = language;
-                this.fileConfigLanguage = "RessourceFR";
+                Configuration.currentLanguage = language;
+                Configuration.fileConfigLanguage = "RessourceFR";
             }
         }
 

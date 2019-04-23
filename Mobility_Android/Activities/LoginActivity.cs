@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Mobility_Android.Resources.webservice;
 
 namespace Mobility_Android.Activities
 {
@@ -17,15 +18,24 @@ namespace Mobility_Android.Activities
     [Activity(Label = "LoginActivity", MainLauncher = true)]
     public class LoginActivity : BaseActivity
     {
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
-
             base.OnCreate(savedInstanceState, Resource.Layout.frmLogin);
+
+            EditText username = FindViewById<EditText>(Resource.Id.tfName);
+            EditText password = FindViewById<EditText>(Resource.Id.tfPass);
 
             FindViewById<Button>(Resource.Id.btnConnect).Click += (sender, e) =>
             {
-                //Todo : Gérer le login
-                StartActivity(new Intent(this, typeof(HomeActivity)));
+                if(UserWebService.doLogin(username.Text, password.Text))
+                {
+                    StartActivity(new Intent(this, typeof(HomeActivity)));
+                } else
+                {
+                    Toast.MakeText(this, "Erreur connexion", ToastLength.Long).Show();
+                }
+                
             };
         }
         
