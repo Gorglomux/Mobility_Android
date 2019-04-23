@@ -29,13 +29,5 @@ https://docs.microsoft.com/en-us/xamarin/android/user-interface/controls/tool-ba
     android:layout_height="75px"
     android:layout_weight="4"/>
 
-    <!-- Retour accueil -->
-    <ImageView
-    android:id="@+id/imHome"
-    android:src="@drawable/home"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_weight="1"
-    />
   </LinearLayout>
 </Toolbar>
