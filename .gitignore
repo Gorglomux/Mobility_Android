@@ -3,6 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=visualstudio,xamarinstudio
 
 Mobility_Android/Web\ References/*
+*.csproj
 
 ### XamarinStudio ###
 bin/
