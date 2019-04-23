@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://svr-net15-temp/myceritar_miechko/services/inventory/workorder.asmx?wsdl" docRef="http://svr-net15-temp/myceritar_miechko/services/inventory/workorder.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://svr-net15-temp/myceritar_miechko/services/inventory/workorder.asmx" xmlns:q1="https://ceritar.com/" binding="q1:WorkOrderSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://svr-net15-temp/myceritar_miechko/services/inventory/workorder.asmx" xmlns:q2="https://ceritar.com/" binding="q2:WorkOrderSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
