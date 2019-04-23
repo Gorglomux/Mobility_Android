@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://svr-net15-temp/myceritar_miechko/services/security.asmx?wsdl" filename="security.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://svr-net15-temp/myceritar_miechko/services/security.asmx?disco" filename="security.disco" />
-  </Results>
-</DiscoveryClientResultsFile>
