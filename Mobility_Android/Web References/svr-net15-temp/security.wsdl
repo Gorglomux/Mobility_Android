@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://ceritar.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://ceritar.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://ceritar.com/">
+      <s:element name="authentificateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="language" type="tns:CR_TTLangue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="CR_TTLangue">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="French_Canada" />
+          <s:enumeration value="English" />
+          <s:enumeration value="Spanish" />
+          <s:enumeration value="French_France" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="authentificateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="authentificateUserResult" type="tns:CR_ResultActionOfCR_WebAuthentification" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CR_ResultActionOfCR_WebAuthentification">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfCR_ErrorMessage" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="tns:CR_WebAuthentification" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCR_ErrorMessage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CR_ErrorMessage" nillable="true" type="tns:CR_ErrorMessage" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CR_ErrorMessage">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CR_WebAuthentification">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="disconnectUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="securedToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="disconnectUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="disconnectUserResult" type="tns:CR_ResultActionOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CR_ResultActionOfBoolean">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfCR_ErrorMessage" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReturnValue" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserInfos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="securedToken" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserInfosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserInfosResult" type="tns:CR_ResultActionOfUserInfosWS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CR_ResultActionOfUserInfosWS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfCR_ErrorMessage" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="tns:UserInfosWS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserInfosWS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NRI" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="warehouseNRI" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveUserInfos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="securedToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="infos" type="tns:UserInfosWS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveUserInfosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveUserInfosResult" type="tns:CR_ResultActionOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListWarehouses">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="securedToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="warehousesToExclude" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListWarehousesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListWarehousesResult" type="tns:CR_ResultActionOfListOfWarehouseObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CR_ResultActionOfListOfWarehouseObject">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfCR_ErrorMessage" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="tns:ArrayOfWarehouseObject" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfWarehouseObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WarehouseObject" nillable="true" type="tns:WarehouseObject" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WarehouseObject">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescriptionEn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DescriptionFr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DefaultLocationId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetListCompanies">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="securedToken" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="companyType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListCompaniesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListCompaniesResult" type="tns:CR_ResultActionOfListOfCompanyObjectWS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CR_ResultActionOfListOfCompanyObjectWS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Errors" type="tns:ArrayOfCR_ErrorMessage" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnValue" type="tns:ArrayOfCompanyObjectWS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCompanyObjectWS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CompanyObjectWS" nillable="true" type="tns:CompanyObjectWS" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CompanyObjectWS">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NRI" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUserWarehouse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="securedToken" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="newWarehouseNRI" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserWarehouseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateUserWarehouseResult" type="tns:CR_ResultActionOfBoolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="authentificateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:authentificateUser" />
+  </wsdl:message>
+  <wsdl:message name="authentificateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:authentificateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="disconnectUserSoapIn">
+    <wsdl:part name="parameters" element="tns:disconnectUser" />
+  </wsdl:message>
+  <wsdl:message name="disconnectUserSoapOut">
+    <wsdl:part name="parameters" element="tns:disconnectUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserInfos" />
+  </wsdl:message>
+  <wsdl:message name="GetUserInfosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserInfosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveUserInfosSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveUserInfos" />
+  </wsdl:message>
+  <wsdl:message name="SaveUserInfosSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveUserInfosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListWarehousesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListWarehouses" />
+  </wsdl:message>
+  <wsdl:message name="GetListWarehousesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListWarehousesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListCompaniesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListCompanies" />
+  </wsdl:message>
+  <wsdl:message name="GetListCompaniesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListCompaniesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserWarehouseSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserWarehouse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserWarehouseSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserWarehouseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SecuritySoap">
+    <wsdl:operation name="authentificateUser">
+      <wsdl:input message="tns:authentificateUserSoapIn" />
+      <wsdl:output message="tns:authentificateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="disconnectUser">
+      <wsdl:input message="tns:disconnectUserSoapIn" />
+      <wsdl:output message="tns:disconnectUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfos">
+      <wsdl:input message="tns:GetUserInfosSoapIn" />
+      <wsdl:output message="tns:GetUserInfosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserInfos">
+      <wsdl:input message="tns:SaveUserInfosSoapIn" />
+      <wsdl:output message="tns:SaveUserInfosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListWarehouses">
+      <wsdl:input message="tns:GetListWarehousesSoapIn" />
+      <wsdl:output message="tns:GetListWarehousesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListCompanies">
+      <wsdl:input message="tns:GetListCompaniesSoapIn" />
+      <wsdl:output message="tns:GetListCompaniesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserWarehouse">
+      <wsdl:input message="tns:UpdateUserWarehouseSoapIn" />
+      <wsdl:output message="tns:UpdateUserWarehouseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SecuritySoap" type="tns:SecuritySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="authentificateUser">
+      <soap:operation soapAction="https://ceritar.com/authentificateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="disconnectUser">
+      <soap:operation soapAction="https://ceritar.com/disconnectUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfos">
+      <soap:operation soapAction="https://ceritar.com/GetUserInfos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserInfos">
+      <soap:operation soapAction="https://ceritar.com/SaveUserInfos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListWarehouses">
+      <soap:operation soapAction="https://ceritar.com/GetListWarehouses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListCompanies">
+      <soap:operation soapAction="https://ceritar.com/GetListCompanies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserWarehouse">
+      <soap:operation soapAction="https://ceritar.com/UpdateUserWarehouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SecuritySoap12" type="tns:SecuritySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="authentificateUser">
+      <soap12:operation soapAction="https://ceritar.com/authentificateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="disconnectUser">
+      <soap12:operation soapAction="https://ceritar.com/disconnectUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserInfos">
+      <soap12:operation soapAction="https://ceritar.com/GetUserInfos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveUserInfos">
+      <soap12:operation soapAction="https://ceritar.com/SaveUserInfos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListWarehouses">
+      <soap12:operation soapAction="https://ceritar.com/GetListWarehouses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListCompanies">
+      <soap12:operation soapAction="https://ceritar.com/GetListCompanies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserWarehouse">
+      <soap12:operation soapAction="https://ceritar.com/UpdateUserWarehouse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Security">
+    <wsdl:port name="SecuritySoap" binding="tns:SecuritySoap">
+      <soap:address location="http://svr-net15-temp/myceritar_miechko/services/security.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SecuritySoap12" binding="tns:SecuritySoap12">
+      <soap12:address location="http://svr-net15-temp/myceritar_miechko/services/security.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

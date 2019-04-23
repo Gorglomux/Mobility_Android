@@ -4,6 +4,7 @@ using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
 using Android.Views;
+
 namespace Mobility_Android
 {
     [Activity(Label = "@string/app_name", Theme = "@style/ApplicationTheme", MainLauncher = true)]
@@ -18,6 +19,7 @@ namespace Mobility_Android
             var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             SetActionBar(toolbar);
             ActionBar.Title = "";
+
         }
     }
 }
