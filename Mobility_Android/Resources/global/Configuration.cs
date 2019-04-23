@@ -11,11 +11,10 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Resources.global
 {
-    enum Langue { FRANCAIS, ANGLAIS };
-
     /**
      * Class Configuration
      * 
@@ -27,11 +26,11 @@ namespace Mobility_Android.Resources.global
 
     class Configuration
     {
-        public Langue currentLanguage = Langue.FRANCAIS;
+        public CR_TTLangue currentLanguage = CR_TTLangue.French_France;
 
         public String fileConfigLanguage = "@.\ressourceFR.resx";
 
-        public String webServiceURL = "";
+        public String webServiceURL = "http://clientservices.ceritar.com/MyCeritar_Test/";
 
         public String termicon_IP = "";
 
@@ -41,7 +40,7 @@ namespace Mobility_Android.Resources.global
 
         public String securityToken = "";
 
-        public String userInfos; //As Webservice.Security.UserInfosWS = New Webservice.Security.UserInfosWS
+        public UserInfosWS userInfos = new UserInfosWS();
 
         /*
          * Methode setLanguage
@@ -51,9 +50,9 @@ namespace Mobility_Android.Resources.global
          * 
          */
 
-        public void setLanguage(Langue language)
+        public void setLanguage(CR_TTLangue language)
         {
-            if (language.Equals(Langue.ANGLAIS))
+            if (language.Equals(CR_TTLangue.English))
             {
                 this.currentLanguage = language;
                 this.fileConfigLanguage = "RessourceANG";

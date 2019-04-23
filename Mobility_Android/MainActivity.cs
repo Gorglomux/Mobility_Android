@@ -20,6 +20,9 @@ namespace Mobility_Android
             SetActionBar(toolbar);
             ActionBar.Title = "";
 
+            WebServiceSecurityManager test = new WebServiceSecurityManager();
+            WebServiceSecurityManager.doLogin("admin", "admin");
+
         }
     }
 }

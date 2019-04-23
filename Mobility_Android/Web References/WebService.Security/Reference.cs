@@ -13,7 +13,7 @@
 // 
 #pragma warning disable 1591
 
-namespace Mobility_Android.svr_net15_temp {
+namespace Mobility_Android.WebService.Security {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
