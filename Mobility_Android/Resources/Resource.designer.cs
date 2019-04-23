@@ -2672,12 +2672,6 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800d3
 			public const int imDetails = 2131230931;
 			
-<<<<<<< HEAD
-=======
-			// aapt resource value: 0x7f08013f
-			public const int imHome = 2131231039;
-			
->>>>>>> 2b2c26f2884cd655571c146a521ec427bcaf176e
 			// aapt resource value: 0x7f0800d4
 			public const int imLogo = 2131230932;
 			
@@ -2921,42 +2915,32 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
-<<<<<<< HEAD
-			// aapt resource value: 0x7f08013c
-			public const int masked = 2131231036;
-=======
-			// aapt resource value: 0x7f080142
-			public const int masked = 2131231042;
->>>>>>> 2b2c26f2884cd655571c146a521ec427bcaf176e
+			// aapt resource value: 0x7f080141
+			public const int masked = 2131231041;
 			
 			// aapt resource value: 0x7f08012f
 			public const int media_actions = 2131231023;
 			
-<<<<<<< HEAD
-			// aapt resource value: 0x7f08013d
-			public const int menuHome = 2131231037;
+			// aapt resource value: 0x7f080142
+			public const int menuHome = 2131231042;
 			
-			// aapt resource value: 0x7f08013e
-			public const int menuMove = 2131231038;
+			// aapt resource value: 0x7f080143
+			public const int menuMove = 2131231043;
 			
-			// aapt resource value: 0x7f080140
-			public const int menuPicking = 2131231040;
+			// aapt resource value: 0x7f080145
+			public const int menuPicking = 2131231045;
 			
-			// aapt resource value: 0x7f080141
-			public const int menuProduction = 2131231041;
+			// aapt resource value: 0x7f080146
+			public const int menuProduction = 2131231046;
+			
+			// aapt resource value: 0x7f080144
+			public const int menuRecieving = 2131231044;
+			
+			// aapt resource value: 0x7f080147
+			public const int menuWarehouse = 2131231047;
 			
 			// aapt resource value: 0x7f08013f
-			public const int menuRecieving = 2131231039;
-			
-			// aapt resource value: 0x7f080142
-			public const int menuWarehouse = 2131231042;
-			
-			// aapt resource value: 0x7f08013a
-			public const int message = 2131231034;
-=======
-			// aapt resource value: 0x7f080140
-			public const int message = 2131231040;
->>>>>>> 2b2c26f2884cd655571c146a521ec427bcaf176e
+			public const int message = 2131231039;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -3345,13 +3329,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-<<<<<<< HEAD
-			// aapt resource value: 0x7f08013b
-			public const int visible = 2131231035;
-=======
-			// aapt resource value: 0x7f080141
-			public const int visible = 2131231041;
->>>>>>> 2b2c26f2884cd655571c146a521ec427bcaf176e
+			// aapt resource value: 0x7f080140
+			public const int visible = 2131231040;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
