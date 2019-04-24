@@ -34,11 +34,11 @@ namespace Mobility_Android.Resources.global
 
             return output;
         }
-
+        //Parse un objet et ses enfants
         public static String processObject(object i)
         {
             String output = "";
-           
+            //Si l'objet est un type générique (int, string...) on le traite différemment
             if (isOfGenericType(i))
             {
                 output += i.GetType() + " " + i.GetType().Name + ": " + i.ToString();
@@ -48,6 +48,7 @@ namespace Mobility_Android.Resources.global
                 output += i.GetType() + " " + i.GetType().Name + ": ";
 
                 output += "(";
+                //Pour chaque attributs PUBLICS dans un objet :
                 foreach (var attribute in i.GetType().GetFields())
                 {
                     var value = attribute.GetValue(i);
@@ -57,7 +58,7 @@ namespace Mobility_Android.Resources.global
                     }
                     else
                     {
-
+                        //On réexecute la fonction si c'est l'enfant est un objet non générique
                         output += processObject(value);
 
                     }

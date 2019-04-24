@@ -74,6 +74,7 @@
     <Compile Include="global\DatePickerFragment.cs" />
     <Compile Include="Resources\global\Configuration.cs" />
     <Compile Include="Resources\global\DataTransfer.cs" />
+    <Compile Include="Resources\global\ReceivingCustomAdapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\webservice\CsWebService.cs" />
@@ -349,7 +350,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\menu\menu.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\listviewReceiving.axml" />
+  </ItemGroup>
   <ItemGroup>
     <WebReferenceUrl Include="http://svr-net15-temp/myceritar_miechko/services/inventory/WMSoperations.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
@@ -399,6 +402,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Web References\WebService.Operations\WMSoperations.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\refresh.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
