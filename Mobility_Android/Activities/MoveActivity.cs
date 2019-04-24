@@ -18,7 +18,24 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmMove);
-            
+
+            //On stocke les boutons et les transitions dans un dictionnaire
+            Dictionary<int, Intent> buttons = new Dictionary<int, Intent>()
+            {
+                {Resource.Id.btnConsolidation, new Intent(this, typeof(ConsolidationActivity))},
+                {Resource.Id.btnRelocation, new Intent(this, typeof(RelocationActivity))},
+            };
+
+
+            //Pour chaque bouton on créer un évènement avec l'intention correspondante
+            foreach (KeyValuePair<int, Intent> entry in buttons)
+            {
+                FindViewById<Button>(entry.Key).Click += (sender, e) =>
+                {
+                    StartActivity(entry.Value);
+                };
+
+            }
         }
     }
 }

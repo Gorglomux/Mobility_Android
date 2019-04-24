@@ -23,13 +23,16 @@ namespace Mobility_Android.Activities
     {
         protected void OnCreate(Bundle savedInstanceState, int layoutId)
         {
-
             base.OnCreate(savedInstanceState);
             base.SetContentView(layoutId);
+
+            //Création de la toolbar
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             if (toolbar != null)
             {
+               
                 ImageView backImage = FindViewById<ImageView>(Resource.Id.imBack);
+                //Bouton retour
                 backImage.Touch += (sender, e) =>
                 {
 
@@ -41,6 +44,7 @@ namespace Mobility_Android.Activities
             
         }
 
+        //Menu hamburger
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.menu, menu);

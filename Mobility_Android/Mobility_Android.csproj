@@ -60,13 +60,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\BaseActivity.cs" />
+    <Compile Include="Activities\NewSaleActivity.cs" />
+    <Compile Include="Activities\RelocationActivity.cs" />
     <Compile Include="Activities\HomeActivity.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
+    <Compile Include="Activities\ConsolidationActivity.cs" />
     <Compile Include="Activities\WarehouseListActivity.cs" />
     <Compile Include="Activities\ProductionMenuActivity.cs" />
     <Compile Include="Activities\PickingListActivity.cs" />
     <Compile Include="Activities\ReceivingActivity.cs" />
     <Compile Include="Activities\MoveActivity.cs" />
+    <Compile Include="global\DatePickerFragment.cs" />
     <Compile Include="Resources\global\Configuration.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -343,9 +347,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\menu\menu.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="global\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WebReferenceUrl Include="http://svr-net15-temp/myceritar_miechko/services/inventory/WMSoperations.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
