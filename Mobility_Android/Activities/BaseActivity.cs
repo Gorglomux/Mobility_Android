@@ -12,6 +12,7 @@ using Android.Util;
 using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
+using Mobility_Android.Resources.global;
 
 // Article sur la création d'une activité de base https://stackoverflow.com/questions/38435138/set-toolbar-for-all-activities
 // Article (en Java) http://mateoj.com/2015/06/21/adding-toolbar-and-navigation-drawer-all-activities-android/
@@ -76,9 +77,9 @@ namespace Mobility_Android.Activities
                     break;
             }
             StartActivity(intentMenu);
+            Object j = this;
 
-
-            Toast.MakeText(this, "Action selected: " + item.ItemId,
+            Toast.MakeText(this, "typeof this : " + j.GetType(),
                 ToastLength.Long).Show();
             return base.OnOptionsItemSelected(item);
         }

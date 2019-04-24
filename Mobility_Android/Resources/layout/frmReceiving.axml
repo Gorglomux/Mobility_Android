@@ -215,10 +215,10 @@
 		android:layout_height="wrap_content" 
 		android:layout_below="@+id/scrollView1" >
 
-		<!-- BUTTON CLEAR -->
+		<!-- BUTTON REFRESH -->
 
 		<Button
-			android:id="@+id/btn_Clear"
+			android:id="@+id/btnRefreshList"
 			android:text="Rafraîchir"
 			android:layout_width="0dp"
 			android:layout_weight="1"
@@ -229,10 +229,10 @@
 			android:layout_centerHorizontal="true"
 			android:layout_marginBottom="0.0dp" />
 
-		<!-- BUTTON CLEAR -->
+		<!-- BUTTON SELECT-->
 
 		<Button
-			android:id="@+id/btn_Clear"
+			android:id="@+id/btnSelectRecieving"
 			android:text="Sélectionner"
 			android:layout_width="0dp"
 			android:layout_weight="1"

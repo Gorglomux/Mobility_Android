@@ -36,7 +36,7 @@ namespace Mobility_Android.Resources.webservice
                 webServiceSecurity.Url = Configuration.webServiceURL + urlExtension;
                 isSuccess = true;
             }
-            catch (UriFormatException ex)
+            catch (UriFormatException)
             {
                 if (Configuration.currentLanguage == CR_TTLangue.French_France)
                     Console.WriteLine("francais");
@@ -44,7 +44,7 @@ namespace Mobility_Android.Resources.webservice
                     Console.WriteLine("anglais");
                 isSuccess = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 if (Configuration.currentLanguage == CR_TTLangue.French_France)
                     Console.WriteLine("francais");
@@ -79,7 +79,7 @@ namespace Mobility_Android.Resources.webservice
                     }
                 }
             }
-            catch (WebException ex)
+            catch (WebException)
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -96,7 +96,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -140,7 +140,7 @@ namespace Mobility_Android.Resources.webservice
                     }
                 }
             }
-            catch (WebException ex)
+            catch (WebException)
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -157,7 +157,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 switch (Configuration.currentLanguage)
                 {

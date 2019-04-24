@@ -18,7 +18,7 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmProductionMenu);
-            
+
         }
     }
 }

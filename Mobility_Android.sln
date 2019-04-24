@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobility_Android", "Mobility_Android\Mobility_Android.csproj", "{C3E34DB5-16C6-4455-BAEA-BCBC721DC208}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobility_Android_Tests", "Mobility_Android_Tests\Mobility_Android_Tests.csproj", "{77EC9D59-8718-4573-8DB6-1E83BB9F2399}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{C3E34DB5-16C6-4455-BAEA-BCBC721DC208}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3E34DB5-16C6-4455-BAEA-BCBC721DC208}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C3E34DB5-16C6-4455-BAEA-BCBC721DC208}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{77EC9D59-8718-4573-8DB6-1E83BB9F2399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77EC9D59-8718-4573-8DB6-1E83BB9F2399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77EC9D59-8718-4573-8DB6-1E83BB9F2399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77EC9D59-8718-4573-8DB6-1E83BB9F2399}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

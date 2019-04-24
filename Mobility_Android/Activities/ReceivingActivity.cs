@@ -18,6 +18,13 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceiving);
+
+            FindViewById<Button>(Resource.Id.btnSelectRecieving).Click += (sender, e) =>
+            {
+                //Envoi de la donnée à l'autre activité
+                String data_to_send = "Hello from ReceivingActivity";
+                StartActivity(new Intent(this, typeof(RecievingDetailsActivity)));
+            };
         }
     }
 }

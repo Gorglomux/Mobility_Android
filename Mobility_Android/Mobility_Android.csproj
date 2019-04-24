@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Activities\BaseActivity.cs" />
     <Compile Include="Activities\NewSaleActivity.cs" />
+    <Compile Include="Activities\RecievingDetailsActivity.cs" />
     <Compile Include="Activities\RelocationActivity.cs" />
     <Compile Include="Activities\HomeActivity.cs" />
     <Compile Include="Activities\LoginActivity.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Activities\MoveActivity.cs" />
     <Compile Include="global\DatePickerFragment.cs" />
     <Compile Include="Resources\global\Configuration.cs" />
+    <Compile Include="Resources\global\DataTransfer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\webservice\CsWebService.cs" />
@@ -264,7 +266,7 @@
     <AndroidResource Include="Resources\layout\frmProductionOrder.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\frmRecievingDetails.axml" />
+    <AndroidResource Include="Resources\layout\frmReceivingDetails.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\frmRelocation.axml" />
