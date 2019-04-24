@@ -19,201 +19,48 @@
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:textColor="#ffffffff" />
 
-	<ScrollView
-		android:id="@+id/scrollView1"
+	<LinearLayout
+		android:id="@+id/linear_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/txtView_Logout" >
+
+		<TextView
+			android:text="Produit"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="40.7dp"
+			android:layout_marginLeft="10dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/txtFournisseur" />
+
+		<TextView
+			android:text="Quantité"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="12"
+			android:layout_height="40.7dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/txtFournisseur" />
+			
+	</LinearLayout>
+		
+	<ListView 
+		android:id="@+id/listView" 
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
 		android:layout_height="191.3dp"
-		android:layout_below="@+id/txtView_Logout" >
-
-		<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			android:id="@+id/simpleTableLayout"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:stretchColumns="1"> <!-- stretch the second column of the layout-->
-
-			<!-- first row of the table layout-->
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<!-- Numero reception -->
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="5dip"
-					android:text="Produit"
-					android:textColor="#000"
-					android:textSize="12dp" />
-
-				<!-- Nom fournisseur -->
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="5dip"
-					android:text="Quantité"
-					android:textColor="#000"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="Produit 1"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="3/5"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="Produit 2"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="10/10"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="Produit 3"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="0/10"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="Produit 4"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="10/10"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="Produit 5"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="2/3"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-		</TableLayout>
-
-	</ScrollView>
+		android:layout_below="@+id/linear_layout"/>
 
 	<LinearLayout
 		android:id="@+id/lineaire_Layout"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/scrollView1" >
+		android:layout_below="@+id/listView" >
 
 		<!-- BUTTON CLEAR -->
 
