@@ -19,6 +19,14 @@ using Mobility_Android.Resources.global;
 
 namespace Mobility_Android.Resources.webservice
 {
+    /**
+     * Classe qui gére les méthodes du web service concernant la partie utilisateur 
+     *  Méthodes :
+     *      connectToWebServiceSecurity
+     *      doLogin
+     *      GetUserInfos
+     * 
+     **/
     class UserWebService
     {
         private const string urlExtension = "services/security.asmx";
@@ -26,7 +34,10 @@ namespace Mobility_Android.Resources.webservice
         private static Security webServiceSecurity;
 
 
-
+        /*
+         * Méthode de connexion au web service Security pour pouvoir accèder aux méthodes
+         * 
+         */
         private static bool connectToWebServiceSecurity()
         {
             bool isSuccess = false;
@@ -55,6 +66,10 @@ namespace Mobility_Android.Resources.webservice
             return isSuccess;
         }
 
+        /*
+         * Méthode pour se connecter à un user 
+         * 
+         */
         public static bool doLogin(string username, string password)
         {
             bool isSuccess = false;
@@ -117,6 +132,10 @@ namespace Mobility_Android.Resources.webservice
             return isSuccess;
         }
 
+        /*
+         * Méthode pour se connecter à un user 
+         * 
+         */
         public static bool GetUserInfos(string userToken)
         {
             bool isSuccess = false;
