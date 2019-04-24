@@ -197,6 +197,243 @@ namespace Mobility_Android.Resources.webservice
             return isSuccess;
         }
 
+        class SurroundingClass
+        {
+            public static bool SaveUserInfos(string userToken, UserInfosWS userInfo)
+            {
+                bool isSuccess = false;
+                try
+                {
+                    CR_ResultActionOfBoolean result;
+
+                    if (connectToWebServiceSecurity())
+                    {
+                        result = webServiceSecurity.SaveUserInfos(userToken, userInfo);
+
+                        if (result.Success)
+                            isSuccess = true;
+                        else
+                        {
+                            //
+                            isSuccess = false;
+                        }
+                    }
+                }
+                catch (WebException ex)
+                {
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_France:
+                            {
+                                //
+                                break;
+                            }
+
+                        default:
+                            {
+                                //
+                                break;
+                            }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_France:
+                            {
+                                //
+                                break;
+                            }
+
+                        default:
+                            {
+                                //
+                                break;
+                            }
+                    }
+                }
+
+                return isSuccess;
+            }
+            public static Dictionary<int, string> GetListWarehouses(string userToken, int[] warehousesToExlude = null)
+            {
+                Dictionary<int, string> warehouses = new Dictionary<int, string>();
+                try
+                {
+                    CR_ResultActionOfListOfWarehouseObject result;
+
+                    if (connectToWebServiceSecurity())
+                    {
+                        if (warehousesToExlude == null)
+                            warehousesToExlude = new int[] { };
+                        result = webServiceSecurity.GetListWarehouses(userToken, warehousesToExlude);
+
+                        if (result.Success)
+                        {
+                            foreach (WarehouseObject warehouse in result.ReturnValue)
+                                warehouses.Add(warehouse.Id, warehouse.Code);
+                        }
+                        else
+                        {
+                            //
+                        }
+                    }
+                }
+                catch (WebException ex)
+                {
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_France:
+                            {
+                                //
+                                break;
+                            }
+
+                        default:
+                            {
+                                //
+                                break;
+                            }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_France:
+                            {
+                                //
+                                break;
+                            }
+
+                        default:
+                            {
+                                //
+                                break;
+                            }
+                    }
+                }
+
+                return warehouses;
+            }
+            public static Dictionary<int, string> GetListCompanies(string userToken, int companyType)
+            {
+                Dictionary<int, string> companies = new Dictionary<int, string>();
+                try
+                {
+                    CR_ResultActionOfListOfCompanyObjectWS result;
+
+                    if (connectToWebServiceSecurity())
+                    {
+                        result = webServiceSecurity.GetListCompanies(userToken, companyType);
+
+                        if (result.Success)
+                        {
+                            foreach (CompanyObjectWS company in result.ReturnValue)
+                                companies.Add(company.NRI, company.Code);
+                        }
+                        else
+                        {
+                            //
+                        }
+                    }
+                }
+                catch (WebException ex)
+                {
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_France:
+                            {
+                                //
+                                break;
+                            }
+
+                        default:
+                            {
+                                //
+                                break;
+                            }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_France:
+                            {
+                                //
+                                break;
+                            }
+
+                        default:
+                            {
+                                //
+                                break;
+                            }
+                    }
+                }
+
+                return companies;
+            }
+            public static bool UpdateUserWarehouse(string userToken, int newWarehouseNRI)
+            {
+                bool isSuccess = false;
+                try
+                {
+                    CR_ResultActionOfBoolean result;
+
+                    if (connectToWebServiceSecurity())
+                    {
+                        result = webServiceSecurity.UpdateUserWarehouse(userToken, newWarehouseNRI);
+
+                        isSuccess = result.Success;
+
+                        if (!result.Success)
+                        {
+                            //
+                        }
+                    }
+                }
+                catch (WebException ex)
+                {
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_France:
+                            {
+                                //
+                                break;
+                            }
+
+                        default:
+                            {
+                                //
+                                break;
+                            }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_France:
+                            {
+                                //
+                                break;
+                            }
+
+                        default:
+                            {
+                                //
+                                break;
+                            }
+                    }
+                }
+
+                return isSuccess;
+            }
+        }
+
     }
 
 }
