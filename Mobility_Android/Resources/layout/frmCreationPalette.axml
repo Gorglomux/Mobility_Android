@@ -11,237 +11,68 @@
 
 	<!-- TITLE PRODUCTIONS -->
 
-	<TextView
-		android:id="@+id/txtView_Creation"
-		android:text="Productions"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/toolbar"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:textColor="#ffffffff" />
+	<LinearLayout
+		android:id="@+id/linear_titre"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/toolbar" >
+		<TextView
+			android:id="@+id/txtView_Creation"
+			android:text="Productions"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/toolbar"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffffff" />
 
+		<ImageButton
+			android:id="@+id/im_Clear"
+			android:src="@drawable/refresh"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
 	<!-- SCROLL VIEW PRODUCTION -->
 
-	<ScrollView
-		android:id="@+id/scrollView_Palette"
+	<LinearLayout
+		android:id="@+id/linear_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/linear_titre" >
+
+		<TextView
+			android:text="Ligne"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="4"
+			android:layout_height="40.7dp"
+			android:layout_marginLeft="10dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/txtFournisseur" />
+
+		<TextView
+			android:text="Gabarit"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="15"
+			android:layout_height="40.7dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/txtFournisseur" />
+			
+	</LinearLayout>
+		
+	<ListView 
+		android:id="@+id/listView" 
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
 		android:layout_height="191.3dp"
-		android:layout_below="@+id/txtView_Creation" >
-
-		<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			android:id="@+id/simpleTableLayout"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:stretchColumns="1"> <!-- stretch the second column of the layout-->
-
-			<!-- first row of the table layout-->
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<!-- Ligne production -->
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="5dip"
-					android:text="Ligne"
-					android:textColor="#000"
-					android:textSize="12dp" />
-
-				<!-- Gabarit -->
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="5dip"
-					android:text="Gabarit"
-					android:textColor="#000"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="0001"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="5"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="0002"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="3"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="0003"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="10"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="0004"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="12"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="0005"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="1"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-		</TableLayout>
-	</ScrollView>
-
-	<!-- LINEAR LAYOUT BUTTON -->
-
-	<LinearLayout
-		android:id="@+id/lineaire_btn"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" 
-		android:layout_below="@+id/scrollView_Palette" >
-
-		<!-- BUTTON REFRESH -->
-
-		<Button
-			android:id="@+id/btn_refresh"
-			android:text="Rafraîchir"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:layout_height="40.7dp"
-			android:layout_marginTop="-2dp"
-			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
-
-		<!-- BUTTON SELECT -->
-
-		<Button
-			android:id="@+id/btn_selec"
-			android:text="Sélectionner"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:layout_height="40.7dp"
-			android:layout_marginTop="-2dp"
-			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
-	</LinearLayout>
+		android:layout_below="@+id/linear_layout"/>
 
 </RelativeLayout>

@@ -10,258 +10,67 @@
         layout="@layout/toolbar" />
 
 	<!-- TITLE PRODUCT DETAILS -->
-	<TextView
-		android:id="@+id/txtView_product_details"
-		android:text="Détails Produit"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/toolbar"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:textColor="#ffffffff" />
+	<LinearLayout
+		android:id="@+id/linear_titre"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/toolbar" >
+		<TextView
+			android:id="@+id/txtView_Picking"
+			android:text="Détails Produit"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/toolbar"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffffff" />
 
-	<ScrollView
-		android:id="@+id/scrollView_product_details"
+		<ImageButton
+			android:id="@+id/im_Clear"
+			android:src="@drawable/refresh"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/linear_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/linear_titre" >
+
+		<TextView
+			android:text="CS"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="4"
+			android:layout_height="40.7dp"
+			android:layout_marginLeft="10dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/txtFournisseur" />
+
+		<TextView
+			android:text="Poids (en Kg)"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="15"
+			android:layout_height="40.7dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/txtFournisseur" />
+			
+	</LinearLayout>
+		
+	<ListView 
+		android:id="@+id/listView" 
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
-		android:layout_height="300.3dp"
-		android:layout_below="@+id/txtView_product_details" >
-
-		<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			android:id="@+id/simpleTableLayout"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:stretchColumns="1"> <!-- stretch the second column of the layout-->
-
-			<!-- first row of the table layout-->
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<!-- Numero CS -->
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="5dip"
-					android:text="CS"
-					android:textColor="#000"
-					android:textSize="12dp" />
-
-				<!-- Poids (en kg) -->
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="5dip"
-					android:text="Poids (Kg)"
-					android:textColor="#000"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="CS_4584646"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="48.428"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="CS_4873158"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="1000.32"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="CS_4584646"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="42.54"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="CS_4456246"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="5.23"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="CS_1234646"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="398.23"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="CS_1234646"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="398.23"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="CS_1234646"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="398.23"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-		</TableLayout>
-	</ScrollView>
+		android:layout_height="191.3dp"
+		android:layout_below="@+id/linear_layout"/>
 
 </RelativeLayout>

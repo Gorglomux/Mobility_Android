@@ -9,206 +9,71 @@
         layout="@layout/toolbar" />
 
 	<!-- TITLE PICKING -->
-	<TextView
-		android:id="@+id/txtView_Picking"
-		android:text="Cueillettes"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/toolbar"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:textColor="#ffffffff" />
+	<LinearLayout
+		android:id="@+id/linear_titre"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/toolbar" >
+		<TextView
+			android:id="@+id/txtView_Picking"
+			android:text="Cueillettes"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/toolbar"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffffff" />
+
+		<ImageButton
+			android:id="@+id/im_Clear"
+			android:src="@drawable/refresh"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
+
 
 	<!-- SCROLL VIEW PICKING -->
 
-	<ScrollView
-		android:id="@+id/scrollView_picking"
+	<LinearLayout
+		android:id="@+id/linear_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/linear_titre" >
+
+		<TextView
+			android:text="# Vente"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="4"
+			android:layout_height="40.7dp"
+			android:layout_marginLeft="10dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/txtFournisseur" />
+
+		<TextView
+			android:text="Client"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="4"
+			android:layout_height="40.7dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/txtFournisseur" />
+			
+	</LinearLayout>
+		
+	<ListView 
+		android:id="@+id/listView" 
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
 		android:layout_height="191.3dp"
-		android:layout_below="@+id/txtView_Picking" >
-
-		<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			android:id="@+id/simpleTableLayout"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:stretchColumns="1"> <!-- stretch the second column of the layout-->
-
-			<!-- first row of the table layout-->
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<!-- Numero reception -->
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="5dip"
-					android:text="# Vente"
-					android:textColor="#000"
-					android:textSize="12dp" />
-
-				<!-- Nom fournisseur -->
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="5dip"
-					android:text="Client"
-					android:textColor="#000"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="0001"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="Simon"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="0002"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="Enzo"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="0003"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="Armand"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="0004"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="Enzo"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-			<TableRow
-
-				android:id="@+id/firstRow"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content">
-
-				<TextView
-
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="0005"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-				<TextView
-					android:id="@+id/simpleTextView"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@drawable/border"
-					android:padding="18dip"
-					android:text="Simon"
-					android:textColor="#FFF"
-					android:textSize="12dp" />
-
-			</TableRow>
-		</TableLayout>
-
-	</ScrollView>
+		android:layout_below="@+id/linear_layout"/>
 
 	<!-- LINEAR LAYOUT BUTTONS -->
 
@@ -216,22 +81,7 @@
 		android:id="@+id/lineaire_Layout"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/scrollView_picking" >
-
-		<!-- BUTTON REFRESH -->
-
-		<Button
-			android:id="@+id/btn_Refresh"
-			android:text="Rafraîchir"
-			android:textSize="20px"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:layout_height="40.7dp"
-			android:layout_toRightOf="@+id/txt_Logout"
-			android:layout_alignTop="@+id/txt_Logout"
-			android:layout_marginTop="-2dp"
-			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
+		android:layout_below="@+id/listView" >
 
 		<!-- BUTTON NEW -->
 
@@ -248,20 +98,6 @@
 			android:layout_centerHorizontal="true"
 			android:layout_marginBottom="0.0dp" />
 
-		<!-- BUTTON SELECT -->
-
-		<Button
-			android:id="@+id/btn_Select"
-			android:text="Sélectionner"
-			android:textSize="20px"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:layout_height="40.7dp"
-			android:layout_toRightOf="@+id/txt_Logout"
-			android:layout_alignTop="@+id/txt_Logout"
-			android:layout_marginTop="-2dp"
-			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
 	</LinearLayout>
 
 </RelativeLayout>
