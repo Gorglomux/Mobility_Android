@@ -11,22 +11,38 @@
 
 	<!-- TITLE PRODUCTIONS -->
 
-	<TextView
-		android:id="@+id/txtView_Creation"
-		android:text="Productions"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/toolbar"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:textColor="#ffffffff" />
+	<LinearLayout
+		android:id="@+id/linear_titre"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/toolbar" >
+		<TextView
+			android:id="@+id/txtView_Creation"
+			android:text="Productions"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/toolbar"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffffff" />
 
+		<ImageButton
+			android:id="@+id/im_Clear"
+			android:src="@drawable/refresh"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
 	<!-- SCROLL VIEW PRODUCTION -->
 
 	<LinearLayout
 		android:id="@+id/linear_layout"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/txtView_Creation" >
+		android:layout_below="@+id/linear_titre" >
 
 		<TextView
 			android:text="Ligne"
@@ -58,38 +74,5 @@
 		android:layout_width="match_parent"
 		android:layout_height="191.3dp"
 		android:layout_below="@+id/linear_layout"/>
-
-	<!-- LINEAR LAYOUT BUTTON -->
-
-	<LinearLayout
-		android:id="@+id/lineaire_btn"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" 
-		android:layout_below="@+id/listView" >
-
-		<!-- BUTTON REFRESH -->
-
-		<Button
-			android:id="@+id/btn_refresh"
-			android:text="Rafraîchir"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:layout_height="40.7dp"
-			android:layout_marginTop="-2dp"
-			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
-
-		<!-- BUTTON SELECT -->
-
-		<Button
-			android:id="@+id/btn_selec"
-			android:text="Sélectionner"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:layout_height="40.7dp"
-			android:layout_marginTop="-2dp"
-			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
-	</LinearLayout>
 
 </RelativeLayout>

@@ -9,14 +9,32 @@
         layout="@layout/toolbar" />
 
 	<!-- TITLE PICKING -->
-	<TextView
-		android:id="@+id/txtView_Picking"
-		android:text="Cueillettes"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/toolbar"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:textColor="#ffffffff" />
+	<LinearLayout
+		android:id="@+id/linear_titre"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/toolbar" >
+		<TextView
+			android:id="@+id/txtView_Picking"
+			android:text="Cueillettes"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/toolbar"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffffff" />
+
+		<ImageButton
+			android:id="@+id/im_Clear"
+			android:src="@drawable/refresh"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
+
 
 	<!-- SCROLL VIEW PICKING -->
 
@@ -24,7 +42,7 @@
 		android:id="@+id/linear_layout"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/txtView_Picking" >
+		android:layout_below="@+id/linear_titre" >
 
 		<TextView
 			android:text="# Vente"
@@ -65,21 +83,6 @@
 		android:layout_height="wrap_content" 
 		android:layout_below="@+id/listView" >
 
-		<!-- BUTTON REFRESH -->
-
-		<Button
-			android:id="@+id/btn_Refresh"
-			android:text="Rafraîchir"
-			android:textSize="20px"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:layout_height="40.7dp"
-			android:layout_toRightOf="@+id/txt_Logout"
-			android:layout_alignTop="@+id/txt_Logout"
-			android:layout_marginTop="-2dp"
-			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
-
 		<!-- BUTTON NEW -->
 
 		<Button
@@ -95,20 +98,6 @@
 			android:layout_centerHorizontal="true"
 			android:layout_marginBottom="0.0dp" />
 
-		<!-- BUTTON SELECT -->
-
-		<Button
-			android:id="@+id/btn_Select"
-			android:text="Sélectionner"
-			android:textSize="20px"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:layout_height="40.7dp"
-			android:layout_toRightOf="@+id/txt_Logout"
-			android:layout_alignTop="@+id/txt_Logout"
-			android:layout_marginTop="-2dp"
-			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
 	</LinearLayout>
 
 </RelativeLayout>

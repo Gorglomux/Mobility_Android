@@ -10,21 +10,38 @@
         layout="@layout/toolbar" />
 
 	<!-- TITLE LOGOUT -->
-	<TextView
-		android:id="@+id/txtView_production"
-		android:text="Mise en production"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/toolbar"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:textColor="#ffffffff" />
+	<LinearLayout
+		android:id="@+id/linear_titre"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/toolbar" >
+		<TextView
+			android:id="@+id/txtView_Picking"
+			android:text="Mise en production"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/toolbar"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffffff" />
+
+		<ImageButton
+			android:id="@+id/im_Clear"
+			android:src="@drawable/refresh"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
 
 	<TextView
 		android:id="@+id/txtView_licence"
 		android:text="Licence :"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/txtView_production"
+		android:layout_below="@+id/linear_titre"
 		android:layout_marginLeft="5dp"
 		android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -148,25 +165,5 @@
 		android:layout_width="match_parent"
 		android:layout_height="191.3dp"
 		android:layout_below="@+id/linear_layout"/>
-
-	<LinearLayout
-		android:id="@+id/lineaire_btn"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" 
-		android:layout_below="@+id/listView" >
-
-		<!-- BUTTON CLEAR -->
-
-		<Button
-			android:id="@+id/btn_Clear"
-			android:text="CS Details"
-			android:textSize="20px"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:layout_height="40.7dp"
-			android:layout_marginTop="-2dp"
-			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
-	</LinearLayout>
 
 </RelativeLayout>

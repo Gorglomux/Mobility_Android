@@ -10,14 +10,31 @@
         layout="@layout/toolbar" />
 
 	<!-- TITLE WAREHOUSE -->
-	<TextView
-		android:id="@+id/txtView_Warehouse"
-		android:text="Inter Entrepôt"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/toolbar"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:textColor="#ffffffff" />
+	<LinearLayout
+		android:id="@+id/linear_titre"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/toolbar" >
+		<TextView
+			android:id="@+id/txtView_Picking"
+			android:text="Inter Entrepôt"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/toolbar"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffffff" />
+
+		<ImageButton
+			android:id="@+id/im_Clear"
+			android:src="@drawable/refresh"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
 
 	<!-- LINEAR LAYOUT WAREHOUSE -->
 
@@ -25,7 +42,7 @@
 		android:id="@+id/lineaire_Layout_entrepot"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/txtView_Warehouse" >
+		android:layout_below="@+id/linear_titre" >
 
 		<!-- SPINNER WAREHOUSE -->
 		<Spinner
