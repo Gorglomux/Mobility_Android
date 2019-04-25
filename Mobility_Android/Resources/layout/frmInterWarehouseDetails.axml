@@ -180,12 +180,13 @@
 			android:layout_height="wrap_content"
 			android:layout_weight="5"
 			android:text="  Terminer  " />
-		<ImageView
+		<ImageButton
 			android:id="@+id/imDetails"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginTop="25px"
 			android:layout_weight="5"
+			android:background="?android:selectableItemBackground"
 			android:src="@drawable/details"/>
 	</LinearLayout>
 </RelativeLayout>
