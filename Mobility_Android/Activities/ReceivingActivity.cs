@@ -24,7 +24,7 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceiving);
 
-            List<ReceptionWS> receptions = ReceivingWebService.getListReceptions(Configuration.securityToken);
+            List<ReceptionWS> receptions = OperationsWebService.getListReceptions(Configuration.securityToken);
 
             ListView list = FindViewById<ListView>(Resource.Id.listView);
 
