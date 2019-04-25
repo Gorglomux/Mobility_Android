@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 
 namespace Mobility_Android.Activities

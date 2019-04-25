@@ -131,7 +131,7 @@
         android:text="  Connexion  " />
 
 	<!-- Logout -->
-		<ImageView
+		<ImageButton
 			android:id="@+id/imLogout"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -139,10 +139,11 @@
 			android:layout_below="@id/btnConnect"
 			android:minWidth="10px"
 			android:minHeight="10px"
-			android:src="@drawable/logout"/>
+			android:background="?android:selectableItemBackground"
+			android:src="@drawable/exit"/>
 	
 	<!-- Config -->
-		<ImageView
+		<ImageButton
 			android:id="@+id/imLogout"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
@@ -151,5 +152,6 @@
 			android:layout_below="@id/btnConnect"
 			android:minWidth="10px"
 			android:minHeight="10px"
-			android:src="@drawable/data_config"/>
+			android:background="?android:selectableItemBackground"
+			android:src="@drawable/settings"/>
 </RelativeLayout>

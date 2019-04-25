@@ -14,11 +14,12 @@ https://docs.microsoft.com/en-us/xamarin/android/user-interface/controls/tool-ba
 		android:layout_height="wrap_content">
     
     <!-- Flèche retour -->
-    <ImageView
+    <ImageButton
 		android:id="@+id/imBack"
 		android:src="@drawable/back"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
     android:layout_weight="1"/>
 
     <!-- Logo Ceritar -->

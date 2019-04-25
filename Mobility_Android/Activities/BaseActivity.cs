@@ -21,6 +21,7 @@ namespace Mobility_Android.Activities
     [Activity(Label = "BaseActivity")]
     public abstract class BaseActivity : Activity
     {
+        public static object data;
         protected void OnCreate(Bundle savedInstanceState, int layoutId)
         {
 
