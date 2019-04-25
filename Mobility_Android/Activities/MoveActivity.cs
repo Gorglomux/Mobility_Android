@@ -17,7 +17,7 @@ namespace Mobility_Android.Activities
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState, Resource.Layout.frmMove);
+            base.OnCreate(savedInstanceState, Resource.Layout.frmConsolidation);
             
         }
     }

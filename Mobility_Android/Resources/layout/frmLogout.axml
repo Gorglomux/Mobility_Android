@@ -58,16 +58,14 @@
 
 		<!-- BUTTON CLEAR -->
 
-		<ImageView
+		<ImageButton
 			android:id="@+id/im_Clear"
 			android:src="@drawable/clear"
-			android:layout_width="25dp"
-			android:layout_height="25dp"
-			android:layout_toRightOf="@+id/txt_url"
-			android:layout_alignTop="@+id/txt_url"
-			android:layout_marginTop="7dp"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
 			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
+			android:background="?android:selectableItemBackground" />
 	</LinearLayout>
 
 	<!-- BUTTON LOGOUT -->

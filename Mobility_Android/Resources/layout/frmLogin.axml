@@ -41,12 +41,14 @@
 			android:textColor="#000"
 		/>
 		
-		<ImageView
-			android:id="@+id/imClear1"
+		<ImageButton
+			android:id="@+id/im_Clear"
 			android:src="@drawable/clear"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="18px"/>
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
 
 	</LinearLayout>
 	
@@ -77,12 +79,14 @@
 			android:textColor="#000"
 		/>
 		
-		<ImageView
-			android:id="@+id/imClear1"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="18px"
-			android:src="@drawable/clear"/>
+		<ImageButton
+			android:id="@+id/im_Clear"
+			android:src="@drawable/clear"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
 
 	</LinearLayout>
 
