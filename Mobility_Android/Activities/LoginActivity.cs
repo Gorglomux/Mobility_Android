@@ -37,6 +37,16 @@ namespace Mobility_Android.Activities
                 }
                 
             };
+
+            FindViewById<ImageButton>(Resource.Id.imLogout).Click += (sender, e) =>
+            {
+               StartActivity(new Intent(this, typeof(LogoutActivity)));
+            };
+
+            FindViewById<ImageButton>(Resource.Id.imConfig).Click += (sender, e) =>
+            {
+                StartActivity(new Intent(this, typeof(ConfigActivity)));
+            };
         }
         
     }

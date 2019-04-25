@@ -86,7 +86,7 @@
 		<!-- BUTTON NEW -->
 
 		<Button
-			android:id="@+id/btn_New"
+			android:id="@+id/btnNewSale"
 			android:text="Nouveau"
 			android:textSize="20px"
 			android:layout_width="0dp"

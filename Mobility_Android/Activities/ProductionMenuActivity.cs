@@ -18,7 +18,15 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmProductionMenu);
-            
+
+            FindViewById<Button>(Resource.Id.btnPutProduction).Click += (sender, e) =>
+            {
+                StartActivity(new Intent(this, typeof(ProductionActivity)));
+            };
+            FindViewById<Button>(Resource.Id.btnAddPalette).Click += (sender, e) =>
+            {
+                StartActivity(new Intent(this, typeof(ProductionOrderActivity)));
+            };
         }
     }
 }

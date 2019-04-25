@@ -11,12 +11,12 @@
 
 	<!-- TITLE LOGOUT -->
 	<LinearLayout
-		android:id="@+id/linear_titre"
+		android:id="@+id/layoutTitle"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
 		android:layout_below="@+id/toolbar" >
 		<TextView
-			android:id="@+id/txtView_Picking"
+			android:id="@+id/tvPutProduction"
 			android:text="Mise en production"
 			android:layout_width="0dp"
 			android:layout_weight="10"
@@ -26,7 +26,7 @@
 			android:textColor="#ffffffff" />
 
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imClear"
 			android:src="@drawable/refresh"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -37,26 +37,26 @@
 	</LinearLayout>
 
 	<TextView
-		android:id="@+id/txtView_licence"
+		android:id="@+id/tvLicence"
 		android:text="Licence :"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/linear_titre"
+		android:layout_below="@+id/layoutTitle"
 		android:layout_marginLeft="5dp"
 		android:textAppearance="?android:attr/textAppearanceSmall" />
 
 	<!-- LINEAR LAYOUT TEXTINPUT / BUTTON -->
 
 	<LinearLayout
-		android:id="@+id/lineaire_licence"
+		android:id="@+id/layoutLicense"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/txtView_licence" >
+		android:layout_below="@+id/tvLicence" >
 
 		<!-- INPUT URL -->
 
 		<EditText
-			android:id="@+id/txt_licence"
+			android:id="@+id/tfLicence"
 			android:layout_width="0dp"
 			android:layout_weight="6"
 			android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
 
 		<!-- BUTTON CLEAR -->
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imClear"
 			android:src="@drawable/clear"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -80,26 +80,26 @@
 	</LinearLayout>
 
 	<TextView
-		android:id="@+id/txtView_station"
+		android:id="@+id/tvStation"
 		android:text="Station :"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lineaire_licence"
+		android:layout_below="@+id/layoutLicense"
 		android:layout_marginLeft="5dp"
 		android:textAppearance="?android:attr/textAppearanceSmall" />
 
 	<!-- LINEAR LAYOUT TEXTINPUT / BUTTON -->
 
 	<LinearLayout
-		android:id="@+id/lineaire_station"
+		android:id="@+id/layoutStation"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/txtView_station" >
+		android:layout_below="@+id/tvStation" >
 
 		<!-- INPUT URL -->
 
 		<EditText
-			android:id="@+id/txt_station"
+			android:id="@+id/tvStation"
 			android:layout_width="0dp"
 			android:layout_weight="6"
 			android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
 		<!-- BUTTON CLEAR -->
 
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imClear"
 			android:src="@drawable/clear"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -125,10 +125,10 @@
 
 
 	<LinearLayout
-		android:id="@+id/linear_layout"
+		android:id="@+id/layoutEntete"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/lineaire_station" >
+		android:layout_below="@+id/layoutStation" >
 
 		<TextView
 			android:text="Produit"
@@ -139,7 +139,7 @@
 			android:layout_marginLeft="10dp"
 			android:textSize="15dp"
 			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			android:id="@+id/tvProductEntete" />
 
 		<TextView
 			android:text="Quantité"
@@ -149,16 +149,16 @@
 			android:layout_height="40.7dp"
 			android:textSize="15dp"
 			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			android:id="@+id/tvQtyEntete" />
 			
 	</LinearLayout>
 		
 	<ListView 
-		android:id="@+id/listView" 
+		android:id="@+id/lvProduction" 
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
 		android:layout_height="191.3dp"
-		android:layout_below="@+id/linear_layout"/>
+		android:layout_below="@+id/layoutEntete"/>
 
 </RelativeLayout>

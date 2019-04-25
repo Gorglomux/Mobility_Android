@@ -11,12 +11,12 @@
 
 	<!-- TITLE PRODUCT DETAILS -->
 	<LinearLayout
-		android:id="@+id/linear_titre"
+		android:id="@+id/layoutTitleCSDetails"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
 		android:layout_below="@+id/toolbar" >
 		<TextView
-			android:id="@+id/txtView_Picking"
+			android:id="@+id/tvProductDetails"
 			android:text="Détails Produit"
 			android:layout_width="0dp"
 			android:layout_weight="10"
@@ -26,7 +26,7 @@
 			android:textColor="#ffffffff" />
 
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imClear"
 			android:src="@drawable/refresh"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -37,12 +37,13 @@
 	</LinearLayout>
 
 	<LinearLayout
-		android:id="@+id/linear_layout"
+		android:id="@+id/layoutEntete"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/linear_titre" >
+		android:layout_below="@+id/layoutTitleCSDetails" >
 
 		<TextView
+			android:id="@+id/tvCS"
 			android:text="CS"
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="0dp"
@@ -51,9 +52,10 @@
 			android:layout_marginLeft="10dp"
 			android:textSize="15dp"
 			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			 />
 
 		<TextView
+			android:id="@+id/tvWeight"
 			android:text="Poids (en Kg)"
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="0dp"
@@ -61,12 +63,12 @@
 			android:layout_height="40.7dp"
 			android:textSize="15dp"
 			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			 />
 			
 	</LinearLayout>
 		
 	<ListView 
-		android:id="@+id/listView" 
+		android:id="@+id/lvCSDetails" 
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"

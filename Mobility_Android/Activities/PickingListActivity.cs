@@ -18,6 +18,12 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingList);
+
+            FindViewById<Button>(Resource.Id.btnNewSale).Click += (sender, e) =>
+            {
+                StartActivity(new Intent(this, typeof(NewSaleActivity)));
+            };
         }
+
     }
 }
