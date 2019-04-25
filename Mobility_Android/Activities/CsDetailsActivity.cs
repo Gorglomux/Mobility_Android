@@ -12,13 +12,14 @@ using Android.Widget;
 
 namespace Mobility_Android.Activities
 {
-    [Activity(Label = "MoveActivity", ParentActivity = typeof(HomeActivity))]
-    public class MoveActivity : BaseActivity
+    [Activity(Label = "CsDetailsActivity", ParentActivity = typeof(HomeActivity))]
+    public class CsDetailsActivity : BaseActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState, Resource.Layout.frmMove);
-            
+            base.OnCreate(savedInstanceState, Resource.Layout.frmCsDetails);
+
+            // Create your application here
         }
     }
 }
