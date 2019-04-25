@@ -22,7 +22,6 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmLogin);
-
             EditText username = FindViewById<EditText>(Resource.Id.tfName);
             EditText password = FindViewById<EditText>(Resource.Id.tfPass);
 

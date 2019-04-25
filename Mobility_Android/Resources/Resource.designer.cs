@@ -3542,10 +3542,10 @@ namespace Mobility_Android
 			public const int frmReceiving = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int frmReceivingList = 2130968635;
+			public const int frmReceivingDetails = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int frmRecievingDetails = 2130968636;
+			public const int frmReceivingList = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
 			public const int frmRelocation = 2130968637;
