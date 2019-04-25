@@ -18,7 +18,7 @@
 		android:layout_below="@+id/toolbar">
 
 		<Button
-			android:id="@+id/btnMove"
+			android:id="@+id/btnRelocation"
 			android:layout_weight="2"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
 			android:text="1 - Relocalisation"
 		/>
 		<Button
-			android:id="@+id/btnRecieve"
+			android:id="@+id/btnConsolidate"
 			android:layout_weight="2"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"

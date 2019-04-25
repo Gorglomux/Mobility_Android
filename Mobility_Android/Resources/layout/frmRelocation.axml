@@ -10,7 +10,7 @@
         layout="@layout/toolbar" />
 
 	<TextView
-		android:id="@+id/lblDeplacement" 
+		android:id="@+id/tvDeplacement" 
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -20,10 +20,10 @@
 		android:text=" Déplacement "
 		/>
 	<TextView
-		android:id="@+id/lblLicense"
+		android:id="@+id/tvLicense"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lblDeplacement"
+		android:layout_below="@+id/tvDeplacement"
 		android:layout_marginLeft="15px"
 		android:text="License :" />
 	<LinearLayout
@@ -31,7 +31,7 @@
 		android:id="@+id/layoutLicense"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lblLicense" >
+		android:layout_below="@+id/tvLicense" >
 
 		<EditText
 			android:id="@+id/tfLicense"
@@ -43,7 +43,7 @@
 		/>
 		
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imClear"
 			android:src="@drawable/clear"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -54,7 +54,7 @@
 	</LinearLayout>
 
 	<TextView
-		android:id="@+id/lblDestination"
+		android:id="@+id/tvDestination"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="15px"
@@ -65,7 +65,7 @@
 		android:id="@+id/layoutDestination"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lblDestination" >
+		android:layout_below="@+id/tvDestination" >
 
 		<EditText
 			android:id="@+id/tfDestination"
@@ -77,7 +77,7 @@
 		/>
 		
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imClear"
 			android:src="@drawable/clear"
 			android:layout_width="5dp"
 			android:layout_height="35dp"

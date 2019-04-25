@@ -10,7 +10,7 @@
         layout="@layout/toolbar" />
 
   <TextView
-		android:id="@+id/lblTitlePicking"
+		android:id="@+id/tvTitlePicking"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -20,48 +20,48 @@
 		android:text=" Cueillette "
 		/>
   <TextView
-		android:id="@+id/lblPicking"
+		android:id="@+id/tvPicking"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lblTitlePicking"
+		android:layout_below="@+id/tvTitlePicking"
 		android:layout_marginLeft="15px"
 		android:text="# Vente : " />
   <!-- Affichage du num de la Réception -->
   <TextView
-		android:id="@+id/lblNumPicking"
+		android:id="@+id/tvNumPicking"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_toRightOf="@id/lblPicking"
-		android:layout_alignTop="@+id/lblPicking"
+		android:layout_toRightOf="@id/tvPicking"
+		android:layout_alignTop="@+id/tvPicking"
 		android:layout_marginLeft="70px"
 		android:text="140 " />
 
   <TextView
-		android:id="@+id/lblClient"
+		android:id="@+id/tvClient"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lblPicking"
+		android:layout_below="@+id/tvPicking"
 		android:layout_marginLeft="15px"
 		android:layout_marginTop="20px"
 		android:text="Client: " />
   <TextView
-		android:id="@+id/lblnameClient"
+		android:id="@+id/tvnameClient"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_toRightOf="@+id/lblClient"
-		android:layout_alignTop="@+id/lblClient"
+		android:layout_toRightOf="@+id/tvClient"
+		android:layout_alignTop="@+id/tvClient"
 		android:layout_marginLeft="70px"
 		android:text="Client1 " />
   <ImageView
 		android:id="@+id/delim1"
 		android:src="#ffffffff"
-		android:layout_below="@id/lblnameClient"
+		android:layout_below="@id/tvnameClient"
 		android:layout_width="fill_parent"
 		android:layout_height="1dip"
 	/>
 
   <TextView
-		android:id="@+id/lblProduct"
+		android:id="@+id/tvProduct"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/delim1"
@@ -69,56 +69,56 @@
 		android:layout_marginTop="35px"
 		android:text="Produit : " />
   <TextView
-		android:id="@+id/lblNameProduct"
+		android:id="@+id/tvNameProduct"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_toRightOf="@+id/lblProduct"
-		android:layout_alignTop="@+id/lblProduct"
+		android:layout_toRightOf="@+id/tvProduct"
+		android:layout_alignTop="@+id/tvProduct"
 		android:layout_marginLeft="150px"
 		android:text="A-95-950" />
   <TextView
-		android:id="@+id/lblQte"
+		android:id="@+id/tvQte"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lblProduct"
+		android:layout_below="@+id/tvProduct"
 		android:layout_marginLeft="15px"
 		android:layout_marginTop="50px"
 		android:text="Qté : " />
   <TextView
-		android:id="@+id/lblAmountQte"
+		android:id="@+id/tvAmountQte"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_toRightOf="@+id/lblQte"
-		android:layout_alignTop="@+id/lblQte"
+		android:layout_toRightOf="@+id/tvQte"
+		android:layout_alignTop="@+id/tvQte"
 		android:layout_marginLeft="220px"
 		android:text="0 /0" />
   <TextView
-		android:id="@+id/lblPoids"
+		android:id="@+id/tvPoids"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lblQte"
+		android:layout_below="@+id/tvQte"
 		android:layout_marginLeft="15px"
 		android:layout_marginTop="30px"
 		android:text="Poids : " />
   <TextView
-		android:id="@+id/lblAmountPoids"
+		android:id="@+id/tvAmountPoids"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_toRightOf="@+id/lblPoids"
-		android:layout_alignTop="@+id/lblPoids"
+		android:layout_toRightOf="@+id/tvPoids"
+		android:layout_alignTop="@+id/tvPoids"
 		android:layout_marginLeft="175px"
 		android:text="0.00kg" />
 
   <ImageView
 		android:id="@+id/delim2"
 		android:src="#ffffffff"
-		android:layout_below="@id/lblPoids"
+		android:layout_below="@id/tvPoids"
 		android:layout_width="fill_parent"
 		android:layout_height="1dip"
 	/>
 
   <TextView
-		android:id="@+id/lblLicense"
+		android:id="@+id/tvLicense"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/delim2"
@@ -132,7 +132,7 @@
 		android:id="@+id/layoutLicense"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lblLicense" >
+		android:layout_below="@+id/tvLicense" >
 
     <EditText
 			android:id="@+id/tfLicense"
@@ -167,12 +167,13 @@
 			android:layout_height="wrap_content"
 			android:layout_weight="5"
 			android:text="  Cueillette Terminée  " />
-    <ImageView
+    <ImageButton
 			android:id="@+id/imDetails"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginTop="25px"
 			android:layout_weight="5"
+			android:background="?android:selectableItemBackground"
 			android:src="@drawable/details"/>
   </LinearLayout>
 </RelativeLayout>

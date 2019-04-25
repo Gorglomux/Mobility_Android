@@ -15,11 +15,16 @@ namespace Mobility_Android.Activities
     [Activity(Label = "ConfigActivity", ParentActivity = typeof(HomeActivity))]
     public class ConfigActivity : BaseActivity
     {
+        EditText urlEditText;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmConfig);
 
-            // Create your application here
+            urlEditText = FindViewById<EditText>(Resource.Id.tfUrl);
+            urlEditText.AfterTextChanged += (sender, e) =>
+            {
+                Console.WriteLine("AHAHAHA");
+            };
         }
     }
 }

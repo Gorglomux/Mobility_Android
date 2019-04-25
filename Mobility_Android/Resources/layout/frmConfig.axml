@@ -11,7 +11,7 @@
 
 	<!-- TITLE CONFIG -->
 	<TextView
-		android:id="@+id/txtView_Config"
+		android:id="@+id/tvConfig"
 		android:text="Configurations"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -21,26 +21,26 @@
 	<!-- TEXT ORDER URL -->
 
 	<TextView
-		android:id="@+id/txtView_Order"
+		android:id="@+id/tvOrder"
 		android:text="URL du service Web :"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/txtView_Config"
+		android:layout_below="@+id/tvConfig"
 		android:layout_marginLeft="5dp"
 		android:textAppearance="?android:attr/textAppearanceSmall" />
 
 	<!-- LINEAR LAYOUT TEXTINPUT / BUTTON -->
 
 	<LinearLayout
-		android:id="@+id/lineaire_URL"
+		android:id="@+id/layoutUrl"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/txtView_Order" >
+		android:layout_below="@+id/tvOrder" >
 
 		<!-- INPUT URL -->
 
 		<EditText
-			android:id="@+id/txt_url"
+			android:id="@+id/tfUrl"
 			android:layout_width="0dp"
 			android:layout_weight="6"
 			android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
 		<!-- BUTTON CLEAR -->
 
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imClear"
 			android:src="@drawable/clear"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -67,27 +67,27 @@
 	<!-- TEXT TERMICON -->
 
 	<TextView
-		android:id="@+id/txtView_Termicon"
+		android:id="@+id/tvTermicon"
 		android:text="Termicon :"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lineaire_URL"
+		android:layout_below="@+id/layoutUrl"
 		android:layout_marginLeft="5dp"
 		android:textAppearance="?android:attr/textAppearanceSmall"/>
 
 		<!-- LINEAR LAYOUT (TEXTVIEW / BUTTON)x2 -->
 
 	<LinearLayout
-		android:id="@+id/lineaire_Termicon"
+		android:id="@+id/layoutTermicon"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:padding="5dp"
-		android:layout_below="@+id/txtView_Termicon" >
+		android:layout_below="@+id/tvTermicon" >
 
 		<!-- TEXTVIEW IP -->
 
 		<TextView
-			android:id="@+id/txtView_ip"
+			android:id="@+id/tvIp"
 			android:text="ip:"
 			android:layout_width="0dp"
 			android:layout_weight="2"
@@ -98,7 +98,7 @@
 		<!-- INPUT IP -->
 
 		<EditText
-			android:id="@+id/txt_ip"
+			android:id="@+id/tfIp"
 			android:layout_width="0dp"
 			android:layout_weight="9"
 			android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
 		<!-- TEXTVIEW PORT -->
 
 		<TextView
-			android:id="@+id/txtView_port"
+			android:id="@+id/tvPort"
 			android:text="port:"
 			android:layout_width="0dp"
 			android:layout_weight="3"
@@ -124,7 +124,7 @@
 		<!-- INPUT PORT -->
 
 		<EditText
-			android:id="@+id/txt_port"
+			android:id="@+id/tfPort"
 			android:layout_width="0dp"
 			android:layout_weight="9"
 			android:layout_height="wrap_content"
@@ -141,11 +141,11 @@
 	<!-- BUTTON APPLY -->
 
 	<Button
-		android:id="@+id/btn_Apply"
+		android:id="@+id/btnApply"
 		android:text="Appliquer"
 		android:layout_width="245.0dp"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lineaire_Termicon"
+		android:layout_below="@+id/layoutTermicon"
 		android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

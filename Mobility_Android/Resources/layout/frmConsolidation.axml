@@ -8,7 +8,7 @@
 		android:id="@+id/toolbar"
 		layout="@layout/toolbar" />
 	<TextView
-		android:id="@+id/lblConsolidation"
+		android:id="@+id/tvConsolidation"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -18,17 +18,17 @@
 		android:text=" Consolidation "
 		/>
 	<TextView
-		android:id="@+id/lblLicense"
+		android:id="@+id/tvLicense"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lblConsolidation"
+		android:layout_below="@+id/tvConsolidation"
 		android:layout_marginLeft="15px"
 		android:text="License :" />
 	<LinearLayout
 		android:id="@+id/layoutLicense"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lblLicense">
+		android:layout_below="@+id/tvLicense">
 		<EditText
 			android:id="@+id/tfLicense"
 			android:layout_width="0dp"
@@ -38,7 +38,7 @@
 			android:textColor="#000"
 		/>
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imClear"
 			android:src="@drawable/clear"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -47,7 +47,7 @@
 			android:background="?android:selectableItemBackground" />
 	</LinearLayout>
 	<TextView
-		android:id="@+id/lblPalette"
+		android:id="@+id/tvPalette"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginLeft="15px"
@@ -57,7 +57,7 @@
 		android:id="@+id/layoutPalette"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lblPalette">
+		android:layout_below="@+id/tvPalette">
 		<EditText
 			android:id="@+id/tfPalette"
 			android:layout_width="0dp"
@@ -67,7 +67,7 @@
 			android:textColor="#000"
 		/>
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imClear"
 			android:src="@drawable/clear"
 			android:layout_width="5dp"
 			android:layout_height="35dp"

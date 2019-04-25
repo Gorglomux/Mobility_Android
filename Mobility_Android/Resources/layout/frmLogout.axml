@@ -11,7 +11,7 @@
 
 	<!-- TITLE LOGOUT -->
 	<TextView
-		android:id="@+id/txtView_Logout"
+		android:id="@+id/tvLogout"
 		android:text="Déconnexion"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
@@ -22,11 +22,11 @@
 	<!-- TEXT PASSWORD -->
 
 	<TextView
-		android:id="@+id/txtView_Order"
+		android:id="@+id/tvPassPrompt"
 		android:text="Veuillez entrer le mot de passe"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/txtView_Logout"
+		android:layout_below="@+id/tvLogout"
 		android:layout_marginTop="20dp"
 		android:layout_marginLeft="20dp"
 		android:textAppearance="?android:attr/textAppearanceSmall"/>
@@ -34,17 +34,17 @@
 	<!-- LINEAR LAYOUT TEXTINPUT / BUTTON -->
 
 	<LinearLayout
-		android:id="@+id/lineaire_Layout"
+		android:id="@+id/layoutTextLogoutPassword"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/txtView_Order" >
+		android:layout_below="@+id/tvPassPrompt" >
 
 		<!-- INPUT PASSWORD -->
 
 		<!-- INPUT URL -->
 
 		<EditText
-			android:id="@+id/txt_logout"
+			android:id="@+id/tfPassPrompt"
 			android:layout_width="0dp"
 			android:layout_weight="6"
 			android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
 		<!-- BUTTON CLEAR -->
 
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imClear"
 			android:src="@drawable/clear"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -71,10 +71,10 @@
 	<!-- BUTTON LOGOUT -->
 
 	<Button
-		android:id="@+id/btn_Logout"
+		android:id="@+id/btnLogout"
 		android:text="Déconnexion"
 		android:layout_width="245.0dp"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/lineaire_Layout"
+		android:layout_below="@+id/layoutTextLogoutPassword"
 		android:layout_centerHorizontal="true" />
 </RelativeLayout>

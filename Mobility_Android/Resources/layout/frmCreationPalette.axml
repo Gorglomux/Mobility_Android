@@ -12,12 +12,12 @@
 	<!-- TITLE PRODUCTIONS -->
 
 	<LinearLayout
-		android:id="@+id/linear_titre"
+		android:id="@+id/layoutTitreProduction"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
 		android:layout_below="@+id/toolbar" >
 		<TextView
-			android:id="@+id/txtView_Creation"
+			android:id="@+id/tvCreation"
 			android:text="Productions"
 			android:layout_width="0dp"
 			android:layout_weight="10"
@@ -27,7 +27,7 @@
 			android:textColor="#ffffffff" />
 
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imClear"
 			android:src="@drawable/refresh"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -39,10 +39,10 @@
 	<!-- SCROLL VIEW PRODUCTION -->
 
 	<LinearLayout
-		android:id="@+id/linear_layout"
+		android:id="@+id/layoutEntete"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/linear_titre" >
+		android:layout_below="@+id/layoutTitreProduction" >
 
 		<TextView
 			android:text="Ligne"
@@ -53,7 +53,7 @@
 			android:layout_marginLeft="10dp"
 			android:textSize="15dp"
 			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			android:id="@+id/tvLigne" />
 
 		<TextView
 			android:text="Gabarit"
@@ -63,16 +63,16 @@
 			android:layout_height="40.7dp"
 			android:textSize="15dp"
 			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			android:id="@+id/tvGabarit" />
 			
 	</LinearLayout>
 		
 	<ListView 
-		android:id="@+id/listView" 
+		android:id="@+id/lvPalette" 
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
 		android:layout_height="191.3dp"
-		android:layout_below="@+id/linear_layout"/>
+		android:layout_below="@+id/layoutEntete"/>
 
 </RelativeLayout>

@@ -18,7 +18,7 @@
 		android:layout_below="@+id/toolbar" >
 
 		<TextView
-			android:id="@+id/lblWarehouse"
+			android:id="@+id/tvWarehouse"
 			android:layout_width="0dp"
 			android:layout_weight="2"
 			android:layout_height="wrap_content"
