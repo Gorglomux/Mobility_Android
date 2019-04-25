@@ -332,7 +332,7 @@ namespace Mobility_Android.Resources.webservice
          * Méthode qui permet de récupérer une liste de produit via une reception
          * 
          */
-        public static ProductDetailsWS[] tetReceptionProductDetails(string userToken, int receptionNRI, int lang, int UdP_NRI, string UdP_Label)
+        public static ProductDetailsWS[] getReceptionProductDetails(string userToken, int receptionNRI, int lang, int UdP_NRI, string UdP_Label)
         {
             ProductDetailsWS[] productDetails = null;
             try

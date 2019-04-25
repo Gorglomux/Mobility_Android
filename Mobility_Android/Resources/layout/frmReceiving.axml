@@ -11,12 +11,12 @@
 
 	<!-- TITLE LOGOUT -->
 	<LinearLayout
-		android:id="@+id/linear_titre"
+		android:id="@+id/layoutReceiving"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
 		android:layout_below="@+id/toolbar" >
 		<TextView
-			android:id="@+id/txtView_Picking"
+			android:id="@+id/tvReceiving"
 			android:text="Réceptions"
 			android:layout_width="0dp"
 			android:layout_weight="10"
@@ -26,7 +26,7 @@
 			android:textColor="#ffffffff" />
 
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imRefresh"
 			android:src="@drawable/refresh"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -37,12 +37,13 @@
 	</LinearLayout>
 
 	<LinearLayout
-		android:id="@+id/linear_layout"
+		android:id="@+id/layoutOrder"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/linear_titre" >
+		android:layout_below="@+id/layoutReceiving" >
 
 		<TextView
+			android:id="@+id/txtRec" 
 			android:text="# Rec."
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="0dp"
@@ -50,27 +51,26 @@
 			android:layout_height="40.7dp"
 			android:layout_marginLeft="10dp"
 			android:textSize="15dp"
-			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			android:textColor="#FFF"/>
 
 		<TextView
+			android:id="@+id/txtFournisseur"
 			android:text="Fournisseur"
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="0dp"
 			android:layout_weight="15"
 			android:layout_height="40.7dp"
 			android:textSize="15dp"
-			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			android:textColor="#FFF" />
 			
 	</LinearLayout>
 		
 	<ListView 
-		android:id="@+id/listView" 
+		android:id="@+id/lvReceiving" 
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
 		android:layout_height="191.3dp"
-		android:layout_below="@+id/linear_layout"/>
+		android:layout_below="@+id/layoutOrder"/>
 
 </RelativeLayout>

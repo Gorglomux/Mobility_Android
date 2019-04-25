@@ -36,7 +36,6 @@ namespace Mobility_Android.Activities
             {
                 FindViewById<Button>(entry.Key).Click += (sender, e) =>
                 {
-                    Console.Write("\n\n\n\n\n\n\n\n"+LoginActivity.data.ToString()+ "\n\n\n\n\n\n\n\n");
                     StartActivity(entry.Value);
                 };
 

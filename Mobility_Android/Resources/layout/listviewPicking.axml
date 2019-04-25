@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-	<TextView
-		android:id="@+id/tvReception"
-		android:text="# Rec. "
+  <TextView
+		android:id="@+id/tvSale"
+		android:text="Sale : "
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="0dp"
 		android:layout_weight="3"
@@ -14,9 +14,9 @@
 		android:textSize="12dp"
 		android:textColor="#FFF" />
 
-	<TextView
-		android:id="@+id/tvFournisseur"
-		android:text="Email :"
+  <TextView
+		android:id="@+id/tvCustomer"
+		android:text="Customer :"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="0dp"
 		android:layout_weight="15"

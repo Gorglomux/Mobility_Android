@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Mobility_Android.WebService.Operations;
 
 namespace Mobility_Android.Activities
 {
@@ -19,7 +20,9 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceivingDetails);
 
-            // Create your application here
+            ReceptionWS reception = (ReceptionWS)ReceivingActivity.data;
+            Toast.MakeText(this, "Réception : " + reception.ReceptionNRI,
+            ToastLength.Long).Show();
         }
     }
 }

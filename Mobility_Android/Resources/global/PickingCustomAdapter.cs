@@ -14,21 +14,23 @@ using Mobility_Android.WebService.Operations;
 
 namespace Mobility_Android.Resources.global
 {
-    public class ReceivingCustomAdapter : BaseAdapter
+
+    public class PickingCustomAdapter : BaseAdapter
     {
         private Activity activity;
-        private List<ReceptionWS> receptions;
+        private List<SaleWS> picking;
 
-        public ReceivingCustomAdapter(Activity activity, List<ReceptionWS> receptions)
+        public PickingCustomAdapter(Activity activity, List<SaleWS> picking)
         {
             this.activity = activity;
-            this.receptions = receptions;
+            this.picking = picking;
         }
 
-        public override int Count {
+        public override int Count
+        {
             get
             {
-                return receptions.Count;
+                return picking.Count;
             }
         }
 
@@ -39,18 +41,18 @@ namespace Mobility_Android.Resources.global
 
         public override long GetItemId(int position)
         {
-            return receptions[position].ReceptionNRI;
+            return picking[position].saleNRI;
         }
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            var view = convertView ?? activity.LayoutInflater.Inflate(Resource.Layout.listviewReceiving, parent, false);
+            var view = convertView ?? activity.LayoutInflater.Inflate(Resource.Layout.listviewPicking, parent, false);
 
-            var txtNumRec = view.FindViewById<TextView>(Resource.Id.tvReception);
-            var txtFournisseur = view.FindViewById<TextView>(Resource.Id.tvFournisseur);
+            var tvSale = view.FindViewById<TextView>(Resource.Id.tvSale);
+            var tvCustomer = view.FindViewById<TextView>(Resource.Id.tvCustomer);
 
-            txtNumRec.Text = receptions[position].ReceptionNRI.ToString();
-            txtFournisseur.Text = receptions[position].SupplierCode;
+            tvSale.Text = picking[position].saleNRI.ToString();
+            tvCustomer.Text = picking[position].customerCode;
 
             return view;
         }

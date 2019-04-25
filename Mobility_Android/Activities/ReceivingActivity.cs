@@ -26,11 +26,17 @@ namespace Mobility_Android.Activities
 
             List<ReceptionWS> receptions = OperationsWebService.getListReceptions(Configuration.securityToken);
 
-            ListView list = FindViewById<ListView>(Resource.Id.listView);
+            ListView list = FindViewById<ListView>(Resource.Id.lvReceiving);
 
             var adapter = new ReceivingCustomAdapter(this, receptions);
-            Console.Write(list == null);
             list.Adapter = adapter;
+
+            list.ItemClick += (parent, args) =>
+            {
+                data = receptions[args.Position];
+                ReceptionWS reception = (ReceptionWS)data;
+                StartActivity(new Intent(this, typeof(ReceivingDetailsActivity)));
+            };
         }
     }
 }

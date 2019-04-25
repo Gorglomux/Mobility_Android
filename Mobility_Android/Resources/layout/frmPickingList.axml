@@ -10,12 +10,12 @@
 
 	<!-- TITLE PICKING -->
 	<LinearLayout
-		android:id="@+id/linear_titre"
+		android:id="@+id/layoutPicking"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
 		android:layout_below="@+id/toolbar" >
 		<TextView
-			android:id="@+id/txtView_Picking"
+			android:id="@+id/tvPicking"
 			android:text="Cueillettes"
 			android:layout_width="0dp"
 			android:layout_weight="10"
@@ -25,7 +25,7 @@
 			android:textColor="#ffffffff" />
 
 		<ImageButton
-			android:id="@+id/im_Clear"
+			android:id="@+id/imRefresh"
 			android:src="@drawable/refresh"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -39,10 +39,10 @@
 	<!-- SCROLL VIEW PICKING -->
 
 	<LinearLayout
-		android:id="@+id/linear_layout"
+		android:id="@+id/layoutOrder"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/linear_titre" >
+		android:layout_below="@+id/layoutPicking" >
 
 		<TextView
 			android:text="# Vente"
@@ -53,7 +53,7 @@
 			android:layout_marginLeft="10dp"
 			android:textSize="15dp"
 			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			android:id="@+id/tvSale" />
 
 		<TextView
 			android:text="Client"
@@ -63,12 +63,12 @@
 			android:layout_height="40.7dp"
 			android:textSize="15dp"
 			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			android:id="@+id/tvCustomer" />
 			
 	</LinearLayout>
 		
 	<ListView 
-		android:id="@+id/listView" 
+		android:id="@+id/lvPicking" 
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
@@ -78,15 +78,15 @@
 	<!-- LINEAR LAYOUT BUTTONS -->
 
 	<LinearLayout
-		android:id="@+id/lineaire_Layout"
+		android:id="@+id/layoutBtn"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/listView" >
+		android:layout_below="@+id/lvPicking" >
 
 		<!-- BUTTON NEW -->
 
 		<Button
-			android:id="@+id/btn_New"
+			android:id="@+id/btnNew"
 			android:text="Nouveau"
 			android:textSize="20px"
 			android:layout_width="0dp"
