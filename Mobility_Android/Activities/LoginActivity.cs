@@ -37,7 +37,8 @@ namespace Mobility_Android.Activities
                 }
                 
             };
-
+            clearTextOnClick(username);
+            clearTextOnClick(password);
             FindViewById<ImageButton>(Resource.Id.imLogout).Click += (sender, e) =>
             {
                StartActivity(new Intent(this, typeof(LogoutActivity)));

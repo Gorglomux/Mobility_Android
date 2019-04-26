@@ -34,7 +34,7 @@
 		android:layout_toRightOf="@id/tvRecieving"
 		android:layout_alignTop="@+id/tvRecieving"
 		android:layout_marginLeft="70px"
-		android:text="1000 " />
+		android:text=" " />
 
 	<TextView
 		android:id="@+id/tvProvider"
@@ -51,7 +51,7 @@
 		android:layout_toRightOf="@+id/tvProvider"
 		android:layout_alignTop="@+id/tvProvider"
 		android:layout_marginLeft="70px"
-		android:text="Four1 " />
+		android:text=" " />
 	<ImageView
 		android:id="@+id/delim1"
 		android:src="#ffffffff"
@@ -75,7 +75,7 @@
 		android:layout_toRightOf="@+id/tvProduct"
 		android:layout_alignTop="@+id/tvProduct"
 		android:layout_marginLeft="150px"
-		android:text="A-95-950" />
+		android:text="" />
 	<TextView
 		android:id="@+id/tvQte"
 		android:layout_width="wrap_content"

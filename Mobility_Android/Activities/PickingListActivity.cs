@@ -21,7 +21,7 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingList);
-
+            /*
             List<SaleWS> picking = OperationsWebService.(Configuration.securityToken);
 
             ListView list = FindViewById<ListView>(Resource.Id.lvPicking);
@@ -35,7 +35,7 @@ namespace Mobility_Android.Activities
 
                 ReceptionWS vente= (SaleWS)data;
                 StartActivity(new Intent(this, typeof(ReceivingDetailsActivity)));
-            };
+            };*/
         }
     }
 }

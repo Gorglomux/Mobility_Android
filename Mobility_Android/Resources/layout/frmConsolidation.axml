@@ -67,7 +67,7 @@
 			android:textColor="#000"
 		/>
 		<ImageButton
-			android:id="@+id/imClear"
+			android:id="@+id/imClear2"
 			android:src="@drawable/clear"
 			android:layout_width="5dp"
 			android:layout_height="35dp"

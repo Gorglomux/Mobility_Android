@@ -21,6 +21,15 @@ namespace Mobility_Android.Activities
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceivingDetails);
 
             ReceptionWS reception = (ReceptionWS)ReceivingActivity.data;
+
+            FindViewById<TextView>(Resource.Id.tvNumRecieving).Text = reception.ReceptionNRI.ToString();
+            FindViewById<TextView>(Resource.Id.tvnameProvider).Text = reception.SupplierCode;
+            FindViewById<Button>(Resource.Id.btnEndRecieving).Click += (sender, e) => {
+                Finish();
+            };
+            FindViewById<ImageButton>(Resource.Id.imDetails).Click += (sender, e) => {
+                StartActivity(new Intent(this, typeof(ProductDetailsActivity)));
+            };
             Toast.MakeText(this, "Réception : " + reception.ReceptionNRI,
             ToastLength.Long).Show();
         }

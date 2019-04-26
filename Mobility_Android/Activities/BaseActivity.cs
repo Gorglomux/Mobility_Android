@@ -80,5 +80,12 @@ namespace Mobility_Android.Activities
                 ToastLength.Long).Show();
             return base.OnOptionsItemSelected(item);
         }
+
+        public void clearTextOnClick(ImageButton clear, EditText et)
+        {
+            clear.Click += (sender,e)=>{
+                et.Text = "";
+            };
+        }
     }
 }
