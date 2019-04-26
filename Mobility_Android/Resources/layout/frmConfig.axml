@@ -22,7 +22,7 @@
 
 	<TextView
 		android:id="@+id/tvOrder"
-		android:text="URL du service Web :"
+		android:text="URL du serveur :"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/tvConfig"
@@ -68,7 +68,7 @@
 
 	<TextView
 		android:id="@+id/tvTermicon"
-		android:text="Termicon :"
+		android:text="Serveur impression :"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/layoutUrl"
@@ -141,8 +141,8 @@
 	<!-- BUTTON APPLY -->
 
 	<Button
-		android:id="@+id/btnApply"
-		android:text="Appliquer"
+		android:id="@+id/btnSaveConfig"
+		android:text="Sauveguarder"
 		android:layout_width="245.0dp"
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/layoutTermicon"

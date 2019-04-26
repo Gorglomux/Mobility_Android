@@ -17,7 +17,7 @@
 		android:layout_below="@id/toolbar"
 		android:layout_marginTop="5px"
 		android:layout_marginBottom="15px"
-		android:text=" Ordre de production "
+		android:text=" Bon de production "
 		/>
   <TextView
 		android:id="@+id/tvProdOrder"
@@ -25,7 +25,7 @@
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/tvTitleProdOrder"
 		android:layout_marginLeft="15px"
-		android:text="# Ordre de travail : " />
+		android:text="# Bon de travail : " />
   <!-- Affichage du num de la Réception -->
   <TextView
 		android:id="@+id/tvNumProdOrder"
@@ -64,7 +64,7 @@
 		android:id="@+id/tvProduct"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/delim1"
+		android:layout_below="@+id/delim2"
 		android:layout_marginLeft="15px"
 		android:layout_marginTop="35px"
 		android:text="Produit : " />
@@ -112,7 +112,7 @@
   <ImageView
 		android:id="@+id/delim2"
 		android:src="#ffffffff"
-		android:layout_below="@id/tvPoids"
+		android:layout_below="@id/layoutLicense"
 		android:layout_width="fill_parent"
 		android:layout_height="1dip"
 	/>
@@ -121,7 +121,7 @@
 		android:id="@+id/tvLicense"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/delim2"
+		android:layout_below="@+id/delim1"
 		android:layout_marginLeft="15px"
 		android:layout_marginTop="15px"
 		android:text="License :" />
@@ -160,7 +160,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="20px"
-		android:layout_below="@+id/layoutLicense" >
+		android:layout_below="@+id/tvPoids" >
     <Button
 			android:id="@+id/btnEndPicking"
 			android:layout_width="wrap_content"

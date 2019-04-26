@@ -17,7 +17,7 @@
 		android:layout_below="@id/toolbar"
 		android:layout_marginTop="5px"
 		android:layout_marginBottom="15px"
-		android:text=" Création de vente "
+		android:text=" Création de commande "
 		/>
 
 	<!-- Spinner Client -->

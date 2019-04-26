@@ -16,7 +16,7 @@
 		android:layout_below="@+id/toolbar" >
 		<TextView
 			android:id="@+id/tvPicking"
-			android:text="Cueillettes"
+			android:text="Commandes"
 			android:layout_width="0dp"
 			android:layout_weight="10"
 			android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
 		android:layout_below="@+id/layoutPicking" >
 
 		<TextView
-			android:text="# Vente"
+			android:text="# Commande"
 			android:textAppearance="?android:attr/textAppearanceMedium"
 			android:layout_width="0dp"
 			android:layout_weight="4"

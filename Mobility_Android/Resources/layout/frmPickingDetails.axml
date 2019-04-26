@@ -17,7 +17,7 @@
 		android:layout_below="@id/toolbar"
 		android:layout_marginTop="5px"
 		android:layout_marginBottom="15px"
-		android:text=" Cueillette "
+		android:text=" Commande"
 		/>
   <TextView
 		android:id="@+id/tvPicking"
@@ -25,7 +25,7 @@
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/tvTitlePicking"
 		android:layout_marginLeft="15px"
-		android:text="# Vente : " />
+		android:text="# Commande : " />
   <!-- Affichage du num de la Réception -->
   <TextView
 		android:id="@+id/tvNumPicking"
@@ -51,7 +51,7 @@
 		android:layout_toRightOf="@+id/tvClient"
 		android:layout_alignTop="@+id/tvClient"
 		android:layout_marginLeft="70px"
-		android:text="Client1 " />
+		android:text="  " />
   <ImageView
 		android:id="@+id/delim1"
 		android:src="#ffffffff"
@@ -75,7 +75,7 @@
 		android:layout_toRightOf="@+id/tvProduct"
 		android:layout_alignTop="@+id/tvProduct"
 		android:layout_marginLeft="150px"
-		android:text="A-95-950" />
+		android:text="" />
   <TextView
 		android:id="@+id/tvQte"
 		android:layout_width="wrap_content"
@@ -166,7 +166,7 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="5"
-			android:text="  Cueillette Terminée  " />
+			android:text="  Commande Terminée  " />
     <ImageButton
 			android:id="@+id/imDetails"
 			android:layout_width="wrap_content"

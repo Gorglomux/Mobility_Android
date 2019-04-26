@@ -118,9 +118,6 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f09008a
 			public const int btnAddPalette = 2131296394;
 			
-			// aapt resource value: 0x7f09000c
-			public const int btnApply = 2131296268;
-			
 			// aapt resource value: 0x7f09005e
 			public const int btnConfirm = 2131296350;
 			
@@ -169,6 +166,9 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f09004e
 			public const int btnRelocation = 2131296334;
 			
+			// aapt resource value: 0x7f09000c
+			public const int btnSaveConfig = 2131296268;
+			
 			// aapt resource value: 0x7f0900ab
 			public const int btnSelect = 2131296427;
 			
@@ -181,11 +181,11 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f09003b
 			public const int delim2 = 2131296315;
 			
-			// aapt resource value: 0x7f0900af
-			public const int imBack = 2131296431;
-			
 			// aapt resource value: 0x7f0900b0
-			public const int imCeritar = 2131296432;
+			public const int imBack = 2131296432;
+			
+			// aapt resource value: 0x7f0900b1
+			public const int imCeritar = 2131296433;
 			
 			// aapt resource value: 0x7f090005
 			public const int imClear = 2131296261;
@@ -301,8 +301,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f090016
 			public const int layoutTitreProduction = 2131296278;
 			
-			// aapt resource value: 0x7f0900ae
-			public const int layoutToolbar = 2131296430;
+			// aapt resource value: 0x7f0900af
+			public const int layoutToolbar = 2131296431;
 			
 			// aapt resource value: 0x7f090003
 			public const int layoutUrl = 2131296259;
@@ -346,6 +346,9 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0900a1
 			public const int linear_layout = 2131296417;
 			
+			// aapt resource value: 0x7f0900ac
+			public const int listCs = 2131296428;
+			
 			// aapt resource value: 0x7f0900a0
 			public const int listView = 2131296416;
 			
@@ -373,20 +376,20 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f090096
 			public const int lvReceiving = 2131296406;
 			
-			// aapt resource value: 0x7f0900b1
-			public const int menuHome = 2131296433;
-			
 			// aapt resource value: 0x7f0900b2
-			public const int menuMove = 2131296434;
-			
-			// aapt resource value: 0x7f0900b4
-			public const int menuPicking = 2131296436;
-			
-			// aapt resource value: 0x7f0900b5
-			public const int menuProduction = 2131296437;
+			public const int menuHome = 2131296434;
 			
 			// aapt resource value: 0x7f0900b3
-			public const int menuRecieving = 2131296435;
+			public const int menuMove = 2131296435;
+			
+			// aapt resource value: 0x7f0900b5
+			public const int menuPicking = 2131296437;
+			
+			// aapt resource value: 0x7f0900b6
+			public const int menuProduction = 2131296438;
+			
+			// aapt resource value: 0x7f0900b4
+			public const int menuRecieving = 2131296436;
 			
 			// aapt resource value: 0x7f090062
 			public const int spnClient = 2131296354;
@@ -496,8 +499,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f090032
 			public const int tvDestination = 2131296306;
 			
-			// aapt resource value: 0x7f0900ad
-			public const int tvFournisseur = 2131296429;
+			// aapt resource value: 0x7f0900ae
+			public const int tvFournisseur = 2131296430;
 			
 			// aapt resource value: 0x7f09001a
 			public const int tvGabarit = 2131296282;
@@ -598,8 +601,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f090093
 			public const int tvReceiving = 2131296403;
 			
-			// aapt resource value: 0x7f0900ac
-			public const int tvReception = 2131296428;
+			// aapt resource value: 0x7f0900ad
+			public const int tvReception = 2131296429;
 			
 			// aapt resource value: 0x7f090098
 			public const int tvRecieving = 2131296408;
@@ -744,16 +747,19 @@ namespace Mobility_Android
 			public const int frmWarehouseList = 2130968598;
 			
 			// aapt resource value: 0x7f040017
-			public const int listviewPicking = 2130968599;
+			public const int listviewCs = 2130968599;
 			
 			// aapt resource value: 0x7f040018
-			public const int listviewProduct = 2130968600;
+			public const int listviewPicking = 2130968600;
 			
 			// aapt resource value: 0x7f040019
-			public const int listviewReceiving = 2130968601;
+			public const int listviewProduct = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int toolbar = 2130968602;
+			public const int listviewReceiving = 2130968602;
+			
+			// aapt resource value: 0x7f04001b
+			public const int toolbar = 2130968603;
 			
 			static Layout()
 			{

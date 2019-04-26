@@ -65,7 +65,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:textAlignment="textStart" 
-			android:text="3 - Cueillette"
+			android:text="3 - Commande"
 		/>
 		<Button
 			android:id="@+id/btnProduction"
