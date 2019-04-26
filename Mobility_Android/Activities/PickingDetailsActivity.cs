@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Mobility_Android.WebService.Operations;
 
 namespace Mobility_Android.Activities
 {
@@ -19,7 +20,9 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingDetails);
 
-            // Create your application here
+            SaleWS reception = (SaleWS)PickingListActivity.data;
+            Toast.MakeText(this, "Vente : " + reception.saleNRI,
+            ToastLength.Long).Show();
         }
     }
 }

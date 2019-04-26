@@ -8,21 +8,21 @@
 		android:text="Sale : "
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="0dp"
-		android:layout_weight="3"
+		android:layout_weight="4"
 		android:layout_height="40.7dp"
-		android:layout_margin="10dp"
-		android:textSize="12dp"
-		android:textColor="#FFF" />
+		android:textSize="15dp"
+		android:textColor="#FFF"
+		android:layout_margin="10dp"/>
 
   <TextView
 		android:id="@+id/tvCustomer"
 		android:text="Customer :"
 		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_width="0dp"
-		android:layout_weight="15"
+		android:layout_weight="4"
 		android:layout_height="40.7dp"
-		android:layout_margin="10dp"
-		android:textSize="12dp"
-		android:textColor="#FFF" />
+		android:textSize="15dp"
+		android:textColor="#FFF"
+		android:layout_margin="10dp"/>
 
 </LinearLayout>

@@ -21,21 +21,23 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingList);
-            /*
-            List<SaleWS> picking = OperationsWebService.(Configuration.securityToken);
+
+            CR_ResultActionOfListOfSaleWS result = OperationsWebService.getListPickingSale(Configuration.securityToken, (int)Configuration.currentLanguage, Configuration.userInfos.warehouseNRI);
+
+            List<SaleWS> picking = result.ReturnValue.OfType<SaleWS>().ToList();
 
             ListView list = FindViewById<ListView>(Resource.Id.lvPicking);
 
-            var adapter = new ReceivingCustomAdapter(this, picking);
+            var adapter = new PickingCustomAdapter(this, picking);
             list.Adapter = adapter;
 
             list.ItemClick += (parent, args) =>
             {
                 data = picking[args.Position];
 
-                ReceptionWS vente= (SaleWS)data;
-                StartActivity(new Intent(this, typeof(ReceivingDetailsActivity)));
-            };*/
+                SaleWS vente = (SaleWS)data;
+                StartActivity(new Intent(this, typeof(PickingDetailsActivity)));
+            };
         }
     }
 }

@@ -32,6 +32,7 @@ namespace Mobility_Android.Activities
             };
             Toast.MakeText(this, "Réception : " + reception.ReceptionNRI,
             ToastLength.Long).Show();
+
         }
     }
 }
