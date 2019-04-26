@@ -46,11 +46,11 @@ namespace Mobility_Android.Resources.global
         {
             var view = convertView ?? activity.LayoutInflater.Inflate(Resource.Layout.listviewReceiving, parent, false);
 
-            var txtNumRec = view.FindViewById<TextView>(Resource.Id.tvReception);
-            var txtFournisseur = view.FindViewById<TextView>(Resource.Id.tvFournisseur);
+            var tvNumRec = view.FindViewById<TextView>(Resource.Id.tvReception);
+            var tvFournisseur = view.FindViewById<TextView>(Resource.Id.tvFournisseur);
 
-            txtNumRec.Text = receptions[position].ReceptionNRI.ToString();
-            txtFournisseur.Text = receptions[position].SupplierCode;
+            tvNumRec.Text = receptions[position].ReceptionNRI.ToString();
+            tvFournisseur.Text = receptions[position].SupplierCode;
 
             return view;
         }

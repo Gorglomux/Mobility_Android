@@ -74,7 +74,7 @@
 			android:layout_height="wrap_content"
 			android:text="4 - Production"
 		/>
-
+		<!--
 		<Button
 			android:id="@+id/btnInterWarehouse"
 			android:layout_weight="2"
@@ -82,7 +82,7 @@
 			android:layout_height="wrap_content"
 			android:text="5 - Inter Warehouse"
 		/>
-
+		-->
 
 
 	</LinearLayout>

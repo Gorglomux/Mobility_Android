@@ -34,8 +34,6 @@ namespace Mobility_Android.Activities
             list.ItemClick += (parent, args) =>
             {
                 data = picking[args.Position];
-
-                SaleWS vente = (SaleWS)data;
                 StartActivity(new Intent(this, typeof(PickingDetailsActivity)));
             };
         }

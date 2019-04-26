@@ -26,7 +26,7 @@ namespace Mobility_Android.Resources.global
 
     class Configuration
     {
-        public static CR_TTLangue currentLanguage = CR_TTLangue.French_France;
+        public static CR_TTLangue currentLanguage = CR_TTLangue.French_Canada;
 
         public static String fileConfigLanguage = "@.\ressourceFR.resx";
 

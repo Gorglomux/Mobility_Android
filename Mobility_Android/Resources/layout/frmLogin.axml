@@ -11,7 +11,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:minWidth="20px"
-		android:minHeight="200px"/>
+		android:minHeight="130px"
+		android:paddingTop="5dp"/>
 
 	<!-- USERNAME + TEXT FIELD -->
 	<TextView
@@ -91,7 +92,7 @@
 	</LinearLayout>
 
 	<!-- ENGLISH / FRENCH -->
-
+	<!--
 	<RadioGroup
 		android:id="@+id/rgLanguage"
 		android:layout_marginTop="20dip"
@@ -117,6 +118,7 @@
 			android:layout_below="@id/layoutPass" 
 			android:text="Anglais"/>
 	</RadioGroup>
+	-->
 
 	<!-- CONNECTION BUTTON -->
 
@@ -127,7 +129,7 @@
 		android:layout_marginTop="20dip"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dip"
-		android:layout_below="@id/rgLanguage"
+		android:layout_below="@id/layoutPass"
         android:text="  Connexion  " />
 
 	<!-- Logout -->

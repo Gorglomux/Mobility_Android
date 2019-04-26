@@ -6,7 +6,7 @@ https://docs.microsoft.com/en-us/xamarin/android/user-interface/controls/tool-ba
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="75px"
-    android:background="?android:attr/colorPrimary">
+    android:background="#000">
 
   <LinearLayout
 		android:id="@+id/layoutToolbar"
@@ -25,9 +25,9 @@ https://docs.microsoft.com/en-us/xamarin/android/user-interface/controls/tool-ba
     <!-- Logo Ceritar -->
     <ImageView
     android:id="@+id/imCeritar"
-    android:src="@drawable/ceritar_logo_main"
+    android:src="@drawable/ceritar_logo_login"
     android:layout_width="wrap_content"
-    android:layout_height="75px"
+    android:layout_height="65px"
     android:layout_weight="4"/>
 
   </LinearLayout>

@@ -26,10 +26,10 @@ namespace Mobility_Android.Activities
                 {Resource.Id.btnMove, new Intent(this, typeof(MoveActivity))},
                 {Resource.Id.btnRecieve, new Intent(this, typeof(ReceivingActivity))},
                 {Resource.Id.btnPicking, new Intent(this, typeof(PickingListActivity))},
-                {Resource.Id.btnProduction, new Intent(this, typeof(ProductionMenuActivity))},
-                {Resource.Id.btnInterWarehouse, new Intent(this, typeof(WarehouseListActivity)) }
+                {Resource.Id.btnProduction, new Intent(this, typeof(ProductionMenuActivity))}
+                
             };
-
+            //{Resource.Id.btnInterWarehouse, new Intent(this, typeof(WarehouseListActivity)) }
 
             //Pour chaque bouton on créer un évènement avec l'intention correspondante
             foreach (KeyValuePair< int, Intent> entry in buttons)

@@ -347,6 +347,7 @@ namespace Mobility_Android.Resources.webservice
                         productDetails = result.ReturnValue;
                     else
                     {
+                        Console.Write("\n apfohzepogfhzpaefhzea^fhze^fhozfohnzaepfohze$pfohzae$pfze$fhjzea$pfohjzf$poj\n");
                         //MessageBox.Show(result.Errors(0).Message.ToString);
                         productDetails = null;
                     }

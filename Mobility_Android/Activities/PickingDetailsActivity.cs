@@ -20,8 +20,8 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingDetails);
 
-            SaleWS reception = (SaleWS)PickingListActivity.data;
-            Toast.MakeText(this, "Vente : " + reception.saleNRI,
+            SaleWS vente = (SaleWS)PickingListActivity.data;
+            Toast.MakeText(this, "Vente : " + vente.saleNRI,
             ToastLength.Long).Show();
         }
     }

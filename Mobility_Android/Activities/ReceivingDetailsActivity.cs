@@ -27,9 +27,16 @@ namespace Mobility_Android.Activities
             FindViewById<Button>(Resource.Id.btnEndRecieving).Click += (sender, e) => {
                 Finish();
             };
+
+
+
             FindViewById<ImageButton>(Resource.Id.imDetails).Click += (sender, e) => {
+                ReceptionWS data = reception;
                 StartActivity(new Intent(this, typeof(ProductDetailsActivity)));
             };
+
+
+
             Toast.MakeText(this, "Réception : " + reception.ReceptionNRI,
             ToastLength.Long).Show();
 

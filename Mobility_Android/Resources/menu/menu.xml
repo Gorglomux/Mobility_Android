@@ -22,8 +22,10 @@
      android:id="@+id/menuProduction"
      android:showAsAction="never"
      android:title="Production" />
+  <!--
   <item
      android:id="@+id/menuWarehouse"
      android:showAsAction="never"
      android:title="Inter Entrepôt" />
+    -->
 </menu>

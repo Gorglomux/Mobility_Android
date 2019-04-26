@@ -34,7 +34,6 @@ namespace Mobility_Android.Activities
             list.ItemClick += (parent, args) =>
             {
                 data = receptions[args.Position];
-                ReceptionWS reception = (ReceptionWS)data;
                 StartActivity(new Intent(this, typeof(ReceivingDetailsActivity)));
             };
         }

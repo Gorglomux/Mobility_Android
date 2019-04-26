@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<TextView
+		android:id="@+id/tvCs"
+		android:text="Cs "
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="0dp"
+		android:layout_weight="15"
+		android:layout_height="40.7dp"
+		android:textSize="15dp"
+		android:textColor="#FFF"
+		android:layout_margin="10dp" />
+
+	<TextView
+		android:id="@+id/tvFournisseur"
+		android:text="Poids"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="0dp"
+		android:layout_weight="15"
+		android:layout_height="40.7dp"
+		android:textSize="15dp"
+		android:textColor="#FFF"
+		android:layout_margin="10dp" />
+
+</LinearLayout>

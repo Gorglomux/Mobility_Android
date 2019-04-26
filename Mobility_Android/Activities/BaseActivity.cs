@@ -69,9 +69,10 @@ namespace Mobility_Android.Activities
                 case Resource.Id.menuRecieving:
                     intentMenu = new Intent(this, typeof(ReceivingActivity));
                     break;
-                case Resource.Id.menuWarehouse:
+                /*case Resource.Id.menuWarehouse:
                     intentMenu = new Intent(this, typeof(WarehouseListActivity));
                     break;
+                    */
             }
             StartActivity(intentMenu);
 
