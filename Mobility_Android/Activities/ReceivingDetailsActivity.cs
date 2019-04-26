@@ -21,12 +21,13 @@ namespace Mobility_Android.Activities
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceivingDetails);
 
             ReceptionWS reception = (ReceptionWS)ReceivingActivity.data;
-
+            clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), FindViewById<EditText>(Resource.Id.tfLicenseReceivingDetails));
             FindViewById<TextView>(Resource.Id.tvNumRecieving).Text = reception.ReceptionNRI.ToString();
             FindViewById<TextView>(Resource.Id.tvnameProvider).Text = reception.SupplierCode;
-            FindViewById<Button>(Resource.Id.btnEndRecieving).Click += (sender, e) => {
+            FindViewById<Button>(Resource.Id.btnEndReceiving).Click += (sender, e) => {
                 Finish();
             };
+            
 
 
 

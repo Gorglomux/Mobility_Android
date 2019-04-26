@@ -11,12 +11,12 @@
 
 	<!-- TITLE PRODUCTIONS -->
 	<LinearLayout
-		android:id="@+id/linear_titre"
+		android:id="@+id/layoutTitle"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
 		android:layout_below="@+id/toolbar" >
 		<TextView
-			android:id="@+id/txtView_Picking"
+			android:id="@+id/tvPicking"
 			android:text="Productions"
 			android:layout_width="0dp"
 			android:layout_weight="10"
@@ -39,10 +39,10 @@
 	<!-- SCROLL VIEW PRODUCTION -->
 
 	<LinearLayout
-		android:id="@+id/linear_layout"
+		android:id="@+id/layoutEntete"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
-		android:layout_below="@+id/linear_titre" >
+		android:layout_below="@+id/layoutTitle" >
 
 		<TextView
 			android:text="Ligne"
@@ -53,7 +53,7 @@
 			android:layout_marginLeft="10dp"
 			android:textSize="15dp"
 			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			android:id="@+id/tvLine" />
 
 		<TextView
 			android:text="Gabarit"
@@ -63,7 +63,7 @@
 			android:layout_height="40.7dp"
 			android:textSize="15dp"
 			android:textColor="#FFF"
-			android:id="@+id/txtFournisseur" />
+			android:id="@+id/tvGabarit" />
 			
 	</LinearLayout>
 		

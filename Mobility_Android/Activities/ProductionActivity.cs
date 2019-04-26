@@ -18,7 +18,8 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmProduction);
-
+            clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), FindViewById<EditText>(Resource.Id.tfLicenceProduction));
+            clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear2), FindViewById<EditText>(Resource.Id.tfStation));
             // Create your application here
         }
     }

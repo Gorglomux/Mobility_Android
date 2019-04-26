@@ -135,7 +135,7 @@
 		android:layout_below="@+id/tvLicense" >
 
 		<EditText
-			android:id="@+id/tfLicense"
+			android:id="@+id/tfLicenseReceivingDetails"
 			android:layout_width="0dp"
 			android:layout_weight="5"
 			android:layout_height="wrap_content"
@@ -156,13 +156,13 @@
 
 	<LinearLayout
 		
-		android:id="@+id/layoutEndRecieving"
+		android:id="@+id/layoutEndReceiving"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="20px"
 		android:layout_below="@+id/layoutLicense" >
 		<Button
-			android:id="@+id/btnEndRecieving"
+			android:id="@+id/btnEndReceiving"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="5"
