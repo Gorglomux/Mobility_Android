@@ -14,21 +14,22 @@ using Mobility_Android.WebService.Operations;
 
 namespace Mobility_Android.Resources.global
 {
-    public class ReceivingCustomAdapter : BaseAdapter
+    public class CsCustomAdapter : BaseAdapter
     {
         private Activity activity;
-        private List<ReceptionWS> receptions;
+        private List<PickedLicensesWS> listCs;
 
-        public ReceivingCustomAdapter(Activity activity, List<ReceptionWS> receptions)
+        public CsCustomAdapter(Activity activity, List<PickedLicensesWS> listCs)
         {
             this.activity = activity;
-            this.receptions = receptions;
+            this.listCs = listCs;
         }
 
-        public override int Count {
+        public override int Count
+        {
             get
             {
-                return receptions.Count;
+                return listCs.Count;
             }
         }
 
@@ -39,18 +40,18 @@ namespace Mobility_Android.Resources.global
 
         public override long GetItemId(int position)
         {
-            return receptions[position].ReceptionNRI;
+            return listCs[position].nri;
         }
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            var view = convertView ?? activity.LayoutInflater.Inflate(Resource.Layout.listviewReceiving, parent, false);
+            var view = convertView ?? activity.LayoutInflater.Inflate(Resource.Layout.listviewCs, parent, false);
 
-            var tvNumRec = view.FindViewById<TextView>(Resource.Id.tvReception);
-            var tvFournisseur = view.FindViewById<TextView>(Resource.Id.tvFournisseur);
+            var tvCs = view.FindViewById<TextView>(Resource.Id.tvCs);
+            var tvWeight = view.FindViewById<TextView>(Resource.Id.tvWeight);
 
-            tvNumRec.Text = receptions[position].ReceptionNRI.ToString();
-            tvFournisseur.Text = receptions[position].SupplierCode;
+            tvCs.Text = listCs[position].code;
+            tvWeight.Text = listCs[position].weight.ToString();
 
             return view;
         }
