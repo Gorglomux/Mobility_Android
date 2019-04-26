@@ -19,7 +19,7 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingDetails);
-
+            clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), FindViewById<EditText>(Resource.Id.tfLicensePickingDetails));
             SaleWS reception = (SaleWS)PickingListActivity.data;
             Toast.MakeText(this, "Vente : " + reception.saleNRI,
             ToastLength.Long).Show();

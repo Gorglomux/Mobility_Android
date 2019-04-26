@@ -25,7 +25,8 @@ namespace Mobility_Android.Activities
             base.OnCreate(savedInstanceState, Resource.Layout.frmLogin);
             EditText username = FindViewById<EditText>(Resource.Id.tfName);
             EditText password = FindViewById<EditText>(Resource.Id.tfPass);
-
+            clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), username);
+            clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear2), password);
             FindViewById<Button>(Resource.Id.btnConnect).Click += (sender, e) =>
             {
                 if(UserWebService.doLogin(username.Text, password.Text))
@@ -37,7 +38,7 @@ namespace Mobility_Android.Activities
                 }
                 
             };
-                        FindViewById<ImageButton>(Resource.Id.imLogout).Click += (sender, e) =>
+            FindViewById<ImageButton>(Resource.Id.imLogout).Click += (sender, e) =>
             {
                StartActivity(new Intent(this, typeof(LogoutActivity)));
             };
