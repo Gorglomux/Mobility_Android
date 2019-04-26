@@ -46,7 +46,7 @@
 			android:layout_weight="2"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			
+			android:textAlignment="textStart" 
 			android:text="1 - Déplacement"
 		/>
 
@@ -56,6 +56,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:text="2 - Réception"
+			android:textAlignment="textStart" 
 		/>
 
 		<Button
@@ -63,16 +64,16 @@
 			android:layout_weight="2"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-
+			android:textAlignment="textStart" 
 			android:text="3 - Cueillette"
 		/>
-
 		<Button
 			android:id="@+id/btnProduction"
 			android:layout_weight="2"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:text="4 - Production"
+			android:textAlignment="textStart" 
 		/>
 		<!--
 		<Button
