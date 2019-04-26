@@ -56,7 +56,7 @@
 		<!-- INPUT URL -->
 
 		<EditText
-			android:id="@+id/tfLicence"
+			android:id="@+id/tfLicenceProduction"
 			android:layout_width="0dp"
 			android:layout_weight="6"
 			android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
 
 		<!-- BUTTON CLEAR -->
 		<ImageButton
-			android:id="@+id/imClear2"
+			android:id="@+id/imClear"
 			android:src="@drawable/clear"
 			android:layout_width="5dp"
 			android:layout_height="35dp"
@@ -99,7 +99,7 @@
 		<!-- INPUT URL -->
 
 		<EditText
-			android:id="@+id/tvStation"
+			android:id="@+id/tfStation"
 			android:layout_width="0dp"
 			android:layout_weight="6"
 			android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
 		<!-- BUTTON CLEAR -->
 
 		<ImageButton
-			android:id="@+id/imClear"
+			android:id="@+id/imClear2"
 			android:src="@drawable/clear"
 			android:layout_width="5dp"
 			android:layout_height="35dp"

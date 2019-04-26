@@ -34,7 +34,7 @@
 		android:layout_below="@+id/tvLicense" >
 
 		<EditText
-			android:id="@+id/tfLicense"
+			android:id="@+id/tfLicenseRelocation"
 			android:layout_width="0dp"
 			android:layout_weight="5"
 			android:layout_height="wrap_content"

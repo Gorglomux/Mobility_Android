@@ -21,9 +21,9 @@ namespace Mobility_Android.Activities
             base.OnCreate(savedInstanceState, Resource.Layout.frmConfig);
 
             urlEditText = FindViewById<EditText>(Resource.Id.tfUrl);
+            clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), urlEditText);
             urlEditText.AfterTextChanged += (sender, e) =>
             {
-                Console.WriteLine("AHAHAHA");
             };
         }
     }
