@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
 	<TextView
-		android:id="@+id/tvCs"
+		android:id="@+id/listCs"
 		android:text="Cs "
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:layout_width="0dp"

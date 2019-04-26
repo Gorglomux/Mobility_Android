@@ -47,7 +47,7 @@ namespace Mobility_Android.Resources.global
         {
             var view = convertView ?? activity.LayoutInflater.Inflate(Resource.Layout.listviewCs, parent, false);
 
-            var tvCs = view.FindViewById<TextView>(Resource.Id.tvCs);
+            var tvCs = view.FindViewById<TextView>(Resource.Id.listCs);
             var tvWeight = view.FindViewById<TextView>(Resource.Id.tvWeight);
 
             tvCs.Text = listCs[position].code;
