@@ -23,6 +23,7 @@ namespace Mobility_Android.Activities
             ReceptionWS reception = (ReceptionWS)ReceivingActivity.data;
             Toast.MakeText(this, "Réception : " + reception.ReceptionNRI,
             ToastLength.Long).Show();
+
         }
     }
 }

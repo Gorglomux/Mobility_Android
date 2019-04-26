@@ -457,11 +457,11 @@ namespace Mobility_Android.Resources.webservice
 #region Relocation
 
 
-        /*
-         * Méthode qui permet de déplacer une licence dans un autre entrepôt
-         * 
-         */
-        public static void relocateLicense(string userToken, string sourceCode, string destinationCode, RELOCATION_DESTINATION destinationType, int warehouseNRI)
+            /*
+             * Méthode qui permet de déplacer une licence dans un autre entrepôt
+             * 
+             */
+            public static void relocateLicense(string userToken, string sourceCode, string destinationCode, RELOCATION_DESTINATION destinationType, int warehouseNRI)
         {
             bool blnReturn = false;
             try
@@ -1019,6 +1019,69 @@ namespace Mobility_Android.Resources.webservice
 
             return result.ReturnValue;
         }
+
 #endregion
+
+#region Vente
+
+        public static CR_ResultActionOfListOfSaleWS getListPickingSale(string securedToken, int lang, int warehouseNRI)
+        {
+            CR_ResultActionOfListOfSaleWS productDetails = null;
+            try
+            {
+                CR_ResultActionOfListOfSaleWS result;
+
+                if (connectToWebServiceOperations())
+                {
+                    result = webServiceOperation.GetListSale(securedToken, lang, warehouseNRI);
+
+                    if (result.Success)
+                        productDetails = result;
+                    else
+                    {
+                        //MessageBox.Show(result.Errors(0).Message.ToString);
+                        productDetails = null;
+                    }
+                }
+            }
+            /*catch (WebException ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case object _ when Ceritar.Common.CR_TTLangue.French:
+                        {
+                            MessageBox.Show(My.Resources.RessourceFR.errCannotReachWebservice);
+                            break;
+                        }
+
+                    default:
+                        {
+                            MessageBox.Show(My.Resources.RessourceEN.errCannotReachWebservice);
+                            break;
+                        }
+                }
+            }*/
+            catch (Exception ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_France:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errWebserviceGeneric);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errWebserviceGeneric);
+                            break;
+                        }
+                }
+            }
+            return productDetails;
+        }
+
+#endregion
+
     }
 }
