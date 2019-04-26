@@ -31,11 +31,23 @@ namespace Mobility_Android.Activities
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             if (toolbar != null)
             {
-                ImageView backImage = FindViewById<ImageView>(Resource.Id.imBack);
-                backImage.Touch += (sender, e) =>
+                ImageButton backImage = FindViewById<ImageButton>(Resource.Id.imBack);
+                backImage.Click += (sender, e) =>
                 {
-
+                    data = null;
                     Finish();
+
+                };
+
+
+
+            }
+            ImageButton refreshButton = FindViewById<ImageButton>(Resource.Id.imRefresh);
+            if (refreshButton != null)
+            {
+                refreshButton.Click += (sender, e) =>
+                {
+                    this.Recreate();
 
                 };
             }
@@ -74,11 +86,9 @@ namespace Mobility_Android.Activities
                     break;
                     */
             }
+            data = null;
             StartActivity(intentMenu);
-
-
-            Toast.MakeText(this, "Action selected: " + item.ItemId,
-                ToastLength.Long).Show();
+            
             return base.OnOptionsItemSelected(item);
         }
 
@@ -88,5 +98,8 @@ namespace Mobility_Android.Activities
                 et.Text = "";
             };
         }
+
+
+
     }
 }

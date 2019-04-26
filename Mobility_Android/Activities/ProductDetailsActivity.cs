@@ -22,20 +22,30 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmProductDetails);
 
+            // Récupération de la réception sélectionnée
             ReceptionWS reception = (ReceptionWS)ReceivingDetailsActivity.data;
-         
+
+            // Récupération de la liste de produit selon une reception grâce au web service Operations
             List<ProductDetailsWS> listProduct = OperationsWebService.getReceptionProductDetails(Configuration.securityToken, reception.ReceptionNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI, null).OfType<ProductDetailsWS>().ToList();
 
+            // Configuration de la ListView et de son Adapter par rapport à une liste de produit
             ListView list = FindViewById<ListView>(Resource.Id.lvDetailsProduct);
-
             var adapter = new ProductCustomAdapter(this, listProduct);
             list.Adapter = adapter;
 
+            // Action clic bouton pour sélectionner un produit
             list.ItemClick += (parent, args) =>
             {
+                // Sauvegarde du produit sélectionné
                 data = listProduct[args.Position];
                 StartActivity(new Intent(this, typeof(CsDetailsActivity)));
             };
+
+            // Si pas de liste de produit alors on previent l'utilisateur avec un msg
+            if (listProduct.Count == 0)
+            {
+                Toast.MakeText(this, "Pas de produit", ToastLength.Long).Show();
+            }
         }
     }
 }

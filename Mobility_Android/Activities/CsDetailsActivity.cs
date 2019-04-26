@@ -21,14 +21,22 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmCsDetails);
 
+            // Récupération du produit sélectionné
             ProductDetailsWS product = (ProductDetailsWS)ProductDetailsActivity.data;
 
-            List<PickedLicensesWS> listProduct = product.pickedProducts.OfType<PickedLicensesWS>().ToList();
+            // Récupération de la liste de licence d'un produit
+            List<PickedLicensesWS> listLicence = product.pickedProducts.OfType<PickedLicensesWS>().ToList();
 
+            // Configuration de la ListView et de son Adapter par rapport à une liste de licence
             ListView list = FindViewById<ListView>(Resource.Id.lvCSDetails);
-
-            var adapter = new CsCustomAdapter(this, listProduct);
+            var adapter = new CsCustomAdapter(this, listLicence);
             list.Adapter = adapter;
+
+            // Si aucune licence alors on affiche un message pour prévenir l'utilisateur
+            if (listLicence.Count == 0)
+            {
+                Toast.MakeText(this, "Pas de licence", ToastLength.Long).Show();
+            }
         }
     }
 }

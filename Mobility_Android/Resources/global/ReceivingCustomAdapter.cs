@@ -14,6 +14,14 @@ using Mobility_Android.WebService.Operations;
 
 namespace Mobility_Android.Resources.global
 {
+    /**
+    * Class ReceivingCustomAdapter
+    * 
+    * Classe qui utilise les méthodes de BaseAdapter afin de configurer l'adapter
+    * de la listView de Receiving en prenant comme paramètre une Liste de ReceptionWs
+    * 
+    **/
+
     public class ReceivingCustomAdapter : BaseAdapter
     {
         private Activity activity;

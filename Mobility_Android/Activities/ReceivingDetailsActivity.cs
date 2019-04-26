@@ -20,27 +20,30 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceivingDetails);
 
+            // Récupération de la réception
             ReceptionWS reception = (ReceptionWS)ReceivingActivity.data;
+
+            // Action clic pour clear le EditText
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), FindViewById<EditText>(Resource.Id.tfLicenseReceivingDetails));
+
+            // Remplir champs de données par rapport à la réception
             FindViewById<TextView>(Resource.Id.tvNumRecieving).Text = reception.ReceptionNRI.ToString();
             FindViewById<TextView>(Resource.Id.tvnameProvider).Text = reception.SupplierCode;
+
+            // Action clic sur bouton pour completer une reception
             FindViewById<Button>(Resource.Id.btnEndReceiving).Click += (sender, e) => {
                 Finish();
             };
-            
 
-
-
+            // Action clic sur bouton pour accèder aux details des produits
             FindViewById<ImageButton>(Resource.Id.imDetails).Click += (sender, e) => {
-                ReceptionWS data = reception;
+                // Sauvegarde de la réception
+                data = reception;
                 StartActivity(new Intent(this, typeof(ProductDetailsActivity)));
             };
 
-
-
-            Toast.MakeText(this, "Réception : " + reception.ReceptionNRI,
-            ToastLength.Long).Show();
-
+            // Affichage du numéro de reception
+            Toast.MakeText(this, "Réception : " + reception.ReceptionNRI, ToastLength.Long).Show();
         }
     }
 }
