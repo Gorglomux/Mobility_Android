@@ -103,40 +103,9 @@
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
-		android:layout_height="191.3dp"
+		android:layout_height="wrap_content"
 		android:layout_below="@+id/layoutEntete"/>
 
-	<!-- LINEAR LAYOUT WAREHOUSE -->
 
-	<LinearLayout
-		android:id="@+id/layoutBottomButtons"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content" 
-		android:layout_below="@+id/lvInterWarehouse" >
-
-		<!-- BUTTON CLEAR -->
-
-		<Button
-			android:id="@+id/btnRefresh"
-			android:text="Rafraîchir"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:layout_height="40.7dp"
-			android:layout_marginTop="-2dp"
-			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
-
-		<!-- BUTTON CLEAR -->
-
-		<Button
-			android:id="@+id/btnSelect"
-			android:text="Sélectionner"
-			android:layout_width="0dp"
-			android:layout_weight="1"
-			android:layout_height="40.7dp"
-			android:layout_marginTop="-2dp"
-			android:layout_centerHorizontal="true"
-			android:layout_marginBottom="0.0dp" />
-	</LinearLayout>
 
 </RelativeLayout>

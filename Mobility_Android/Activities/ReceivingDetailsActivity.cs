@@ -7,9 +7,11 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Mobility_Android.WebService.Operations;
+using ZXing.Mobile;
 
 namespace Mobility_Android.Activities
 {
@@ -27,9 +29,21 @@ namespace Mobility_Android.Activities
             FindViewById<Button>(Resource.Id.btnEndReceiving).Click += (sender, e) => {
                 Finish();
             };
-            
 
 
+            FindViewById<ImageButton>(Resource.Id.imPhoto).Click += async (sender, e) =>
+            {
+                    // Initialize the scanner first so it can track the current context
+                    MobileBarcodeScanner.Initialize(Application);
+
+                    var scanner = new ZXing.Mobile.MobileBarcodeScanner();
+
+                    var result = await scanner.Scan();
+                    
+                    if (result != null)
+                        Console.WriteLine("Scanned Barcode: " + result.Text);
+               
+            };
 
             FindViewById<ImageButton>(Resource.Id.imDetails).Click += (sender, e) => {
                 ReceptionWS data = reception;
@@ -37,10 +51,11 @@ namespace Mobility_Android.Activities
             };
 
 
-
             Toast.MakeText(this, "Réception : " + reception.ReceptionNRI,
             ToastLength.Long).Show();
 
         }
+
+
     }
 }

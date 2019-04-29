@@ -142,6 +142,14 @@
 			android:background="@android:drawable/editbox_background"
 			android:textColor="#000"
 		/>
+		<ImageButton
+			android:id="@+id/imPhoto"
+			android:src="@drawable/camera"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
 		
 		<ImageButton
 			android:id="@+id/imClear"

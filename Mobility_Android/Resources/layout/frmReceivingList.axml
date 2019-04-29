@@ -72,7 +72,7 @@
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
-		android:layout_height="191.3dp"
+		android:layout_height="wrap_content"
 		android:layout_below="@+id/linear_layout"/>
 
 </RelativeLayout>

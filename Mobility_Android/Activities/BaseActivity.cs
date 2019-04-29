@@ -25,12 +25,12 @@ namespace Mobility_Android.Activities
 
         protected void OnCreate(Bundle savedInstanceState, int layoutId)
         {
-
             base.OnCreate(savedInstanceState);
             base.SetContentView(layoutId);
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             if (toolbar != null)
             {
+                 
                 ImageView backImage = FindViewById<ImageView>(Resource.Id.imBack);
                 backImage.Touch += (sender, e) =>
                 {
