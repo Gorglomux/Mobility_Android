@@ -26,6 +26,43 @@ namespace Mobility_Android
 		
 		public static void UpdateIdValues()
 		{
+			global::AndroidHUD.Resource.Attribute.ahBarColor = global::Mobility_Android.Resource.Attribute.ahBarColor;
+			global::AndroidHUD.Resource.Attribute.ahBarLength = global::Mobility_Android.Resource.Attribute.ahBarLength;
+			global::AndroidHUD.Resource.Attribute.ahBarWidth = global::Mobility_Android.Resource.Attribute.ahBarWidth;
+			global::AndroidHUD.Resource.Attribute.ahCircleColor = global::Mobility_Android.Resource.Attribute.ahCircleColor;
+			global::AndroidHUD.Resource.Attribute.ahDelayMillis = global::Mobility_Android.Resource.Attribute.ahDelayMillis;
+			global::AndroidHUD.Resource.Attribute.ahRadius = global::Mobility_Android.Resource.Attribute.ahRadius;
+			global::AndroidHUD.Resource.Attribute.ahRimColor = global::Mobility_Android.Resource.Attribute.ahRimColor;
+			global::AndroidHUD.Resource.Attribute.ahRimWidth = global::Mobility_Android.Resource.Attribute.ahRimWidth;
+			global::AndroidHUD.Resource.Attribute.ahSpinSpeed = global::Mobility_Android.Resource.Attribute.ahSpinSpeed;
+			global::AndroidHUD.Resource.Attribute.ahText = global::Mobility_Android.Resource.Attribute.ahText;
+			global::AndroidHUD.Resource.Attribute.ahTextColor = global::Mobility_Android.Resource.Attribute.ahTextColor;
+			global::AndroidHUD.Resource.Attribute.ahTextSize = global::Mobility_Android.Resource.Attribute.ahTextSize;
+			global::AndroidHUD.Resource.Drawable.ic_errorstatus = global::Mobility_Android.Resource.Drawable.ic_errorstatus;
+			global::AndroidHUD.Resource.Drawable.ic_successstatus = global::Mobility_Android.Resource.Drawable.ic_successstatus;
+			global::AndroidHUD.Resource.Drawable.roundedbg = global::Mobility_Android.Resource.Drawable.roundedbg;
+			global::AndroidHUD.Resource.Drawable.roundedbgdark = global::Mobility_Android.Resource.Drawable.roundedbgdark;
+			global::AndroidHUD.Resource.Id.loadingImage = global::Mobility_Android.Resource.Id.loadingImage;
+			global::AndroidHUD.Resource.Id.loadingProgressBar = global::Mobility_Android.Resource.Id.loadingProgressBar;
+			global::AndroidHUD.Resource.Id.loadingProgressWheel = global::Mobility_Android.Resource.Id.loadingProgressWheel;
+			global::AndroidHUD.Resource.Id.textViewStatus = global::Mobility_Android.Resource.Id.textViewStatus;
+			global::AndroidHUD.Resource.Layout.loading = global::Mobility_Android.Resource.Layout.loading;
+			global::AndroidHUD.Resource.Layout.loadingimage = global::Mobility_Android.Resource.Layout.loadingimage;
+			global::AndroidHUD.Resource.Layout.loadingprogress = global::Mobility_Android.Resource.Layout.loadingprogress;
+			global::AndroidHUD.Resource.String.library_name = global::Mobility_Android.Resource.String.library_name;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel = global::Mobility_Android.Resource.Styleable.ProgressWheel;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahBarColor = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahBarColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahBarLength = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahBarLength;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahBarWidth = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahBarWidth;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahCircleColor = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahCircleColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahDelayMillis = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahDelayMillis;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahRadius = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahRadius;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahRimColor = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahRimColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahRimWidth = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahRimWidth;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahSpinSpeed = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahSpinSpeed;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahText;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahTextColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahTextSize;
 			global::ZXing.Mobile.Resource.Id.contentFrame = global::Mobility_Android.Resource.Id.contentFrame;
 			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::Mobility_Android.Resource.Layout.zxingscanneractivitylayout;
 			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::Mobility_Android.Resource.Layout.zxingscannerfragmentlayout;
@@ -212,6 +249,42 @@ namespace Mobility_Android
 			
 			// aapt resource value: 0x7f010075
 			public const int activityChooserViewStyle = 2130772085;
+			
+			// aapt resource value: 0x7f01015d
+			public const int ahBarColor = 2130772317;
+			
+			// aapt resource value: 0x7f010165
+			public const int ahBarLength = 2130772325;
+			
+			// aapt resource value: 0x7f010164
+			public const int ahBarWidth = 2130772324;
+			
+			// aapt resource value: 0x7f010162
+			public const int ahCircleColor = 2130772322;
+			
+			// aapt resource value: 0x7f010161
+			public const int ahDelayMillis = 2130772321;
+			
+			// aapt resource value: 0x7f010163
+			public const int ahRadius = 2130772323;
+			
+			// aapt resource value: 0x7f01015e
+			public const int ahRimColor = 2130772318;
+			
+			// aapt resource value: 0x7f01015f
+			public const int ahRimWidth = 2130772319;
+			
+			// aapt resource value: 0x7f010160
+			public const int ahSpinSpeed = 2130772320;
+			
+			// aapt resource value: 0x7f01015a
+			public const int ahText = 2130772314;
+			
+			// aapt resource value: 0x7f01015b
+			public const int ahTextColor = 2130772315;
+			
+			// aapt resource value: 0x7f01015c
+			public const int ahTextSize = 2130772316;
 			
 			// aapt resource value: 0x7f01009a
 			public const int alertDialogButtonGroupStyle = 2130772122;
@@ -2233,26 +2306,26 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f020078
-			public const int avd_hide_password_1 = 2130837624;
+			// aapt resource value: 0x7f02007c
+			public const int avd_hide_password_1 = 2130837628;
 			
-			// aapt resource value: 0x7f020079
-			public const int avd_hide_password_2 = 2130837625;
+			// aapt resource value: 0x7f02007d
+			public const int avd_hide_password_2 = 2130837629;
 			
-			// aapt resource value: 0x7f02007a
-			public const int avd_hide_password_3 = 2130837626;
+			// aapt resource value: 0x7f02007e
+			public const int avd_hide_password_3 = 2130837630;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f02007b
-			public const int avd_show_password_1 = 2130837627;
+			// aapt resource value: 0x7f02007f
+			public const int avd_show_password_1 = 2130837631;
 			
-			// aapt resource value: 0x7f02007c
-			public const int avd_show_password_2 = 2130837628;
+			// aapt resource value: 0x7f020080
+			public const int avd_show_password_2 = 2130837632;
 			
-			// aapt resource value: 0x7f02007d
-			public const int avd_show_password_3 = 2130837629;
+			// aapt resource value: 0x7f020081
+			public const int avd_show_password_3 = 2130837633;
 			
 			// aapt resource value: 0x7f020056
 			public const int back = 2130837590;
@@ -2303,58 +2376,70 @@ namespace Mobility_Android
 			public const int home = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int navigation_empty_icon = 2130837606;
+			public const int ic_errorstatus = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int notification_action_background = 2130837607;
+			public const int ic_successstatus = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int notification_bg = 2130837608;
+			public const int navigation_empty_icon = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int notification_bg_low = 2130837609;
+			public const int notification_action_background = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int notification_bg_low_normal = 2130837610;
+			public const int notification_bg = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int notification_bg_low_pressed = 2130837611;
+			public const int notification_bg_low = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int notification_bg_normal = 2130837612;
+			public const int notification_bg_low_normal = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int notification_bg_normal_pressed = 2130837613;
+			public const int notification_bg_low_pressed = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int notification_icon_background = 2130837614;
-			
-			// aapt resource value: 0x7f020076
-			public const int notification_template_icon_bg = 2130837622;
-			
-			// aapt resource value: 0x7f020077
-			public const int notification_template_icon_low_bg = 2130837623;
+			public const int notification_bg_normal = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int notification_tile_bg = 2130837615;
+			public const int notification_bg_normal_pressed = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int notify_panel_notification_icon_bg = 2130837616;
+			public const int notification_icon_background = 2130837616;
+			
+			// aapt resource value: 0x7f02007a
+			public const int notification_template_icon_bg = 2130837626;
+			
+			// aapt resource value: 0x7f02007b
+			public const int notification_template_icon_low_bg = 2130837627;
 			
 			// aapt resource value: 0x7f020071
-			public const int refresh = 2130837617;
+			public const int notification_tile_bg = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int settings = 2130837618;
+			public const int notify_panel_notification_icon_bg = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int spinner = 2130837619;
+			public const int refresh = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int tooltip_frame_dark = 2130837620;
+			public const int roundedbg = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int tooltip_frame_light = 2130837621;
+			public const int roundedbgdark = 2130837621;
+			
+			// aapt resource value: 0x7f020076
+			public const int settings = 2130837622;
+			
+			// aapt resource value: 0x7f020077
+			public const int spinner = 2130837623;
+			
+			// aapt resource value: 0x7f020078
+			public const int tooltip_frame_dark = 2130837624;
+			
+			// aapt resource value: 0x7f020079
+			public const int tooltip_frame_light = 2130837625;
 			
 			static Drawable()
 			{
@@ -2387,8 +2472,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080037
 			public const int SYM = 2131230775;
 			
-			// aapt resource value: 0x7f080149
-			public const int action0 = 2131231049;
+			// aapt resource value: 0x7f08014d
+			public const int action0 = 2131231053;
 			
 			// aapt resource value: 0x7f08007c
 			public const int action_bar = 2131230844;
@@ -2411,17 +2496,17 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08005a
 			public const int action_bar_title = 2131230810;
 			
-			// aapt resource value: 0x7f080146
-			public const int action_container = 2131231046;
+			// aapt resource value: 0x7f08014a
+			public const int action_container = 2131231050;
 			
 			// aapt resource value: 0x7f08007d
 			public const int action_context_bar = 2131230845;
 			
-			// aapt resource value: 0x7f08014d
-			public const int action_divider = 2131231053;
+			// aapt resource value: 0x7f080151
+			public const int action_divider = 2131231057;
 			
-			// aapt resource value: 0x7f080147
-			public const int action_image = 2131231047;
+			// aapt resource value: 0x7f08014b
+			public const int action_image = 2131231051;
 			
 			// aapt resource value: 0x7f080003
 			public const int action_menu_divider = 2131230723;
@@ -2438,11 +2523,11 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08005c
 			public const int action_mode_close_button = 2131230812;
 			
-			// aapt resource value: 0x7f080148
-			public const int action_text = 2131231048;
+			// aapt resource value: 0x7f08014c
+			public const int action_text = 2131231052;
 			
-			// aapt resource value: 0x7f080156
-			public const int actions = 2131231062;
+			// aapt resource value: 0x7f08015a
+			public const int actions = 2131231066;
 			
 			// aapt resource value: 0x7f08005d
 			public const int activity_chooser_view_content = 2131230813;
@@ -2528,8 +2613,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08008b
 			public const int cameraPreview = 2131230859;
 			
-			// aapt resource value: 0x7f08014a
-			public const int cancel_action = 2131231050;
+			// aapt resource value: 0x7f08014e
+			public const int cancel_action = 2131231054;
 			
 			// aapt resource value: 0x7f080045
 			public const int center = 2131230789;
@@ -2543,8 +2628,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080073
 			public const int checkbox = 2131230835;
 			
-			// aapt resource value: 0x7f080152
-			public const int chronometer = 2131231058;
+			// aapt resource value: 0x7f080156
+			public const int chronometer = 2131231062;
 			
 			// aapt resource value: 0x7f08004e
 			public const int clip_horizontal = 2131230798;
@@ -2558,8 +2643,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08008f
 			public const int container = 2131230863;
 			
-			// aapt resource value: 0x7f08015d
-			public const int contentFrame = 2131231069;
+			// aapt resource value: 0x7f080161
+			public const int contentFrame = 2131231073;
 			
 			// aapt resource value: 0x7f080066
 			public const int contentPanel = 2131230822;
@@ -2612,8 +2697,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080030
 			public const int end = 2131230768;
 			
-			// aapt resource value: 0x7f080158
-			public const int end_padder = 2131231064;
+			// aapt resource value: 0x7f08015c
+			public const int end_padder = 2131231068;
 			
 			// aapt resource value: 0x7f08003f
 			public const int enterAlways = 2131230783;
@@ -2657,17 +2742,17 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080062
 			public const int icon = 2131230818;
 			
-			// aapt resource value: 0x7f080157
-			public const int icon_group = 2131231063;
+			// aapt resource value: 0x7f08015b
+			public const int icon_group = 2131231067;
 			
 			// aapt resource value: 0x7f08003a
 			public const int ifRoom = 2131230778;
 			
-			// aapt resource value: 0x7f08015a
-			public const int imBack = 2131231066;
+			// aapt resource value: 0x7f08015e
+			public const int imBack = 2131231070;
 			
-			// aapt resource value: 0x7f08015b
-			public const int imCeritar = 2131231067;
+			// aapt resource value: 0x7f08015f
+			public const int imCeritar = 2131231071;
 			
 			// aapt resource value: 0x7f0800a0
 			public const int imClear = 2131230880;
@@ -2702,8 +2787,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08005f
 			public const int image = 2131230815;
 			
-			// aapt resource value: 0x7f080153
-			public const int info = 2131231059;
+			// aapt resource value: 0x7f080157
+			public const int info = 2131231063;
 			
 			// aapt resource value: 0x7f080059
 			public const int italic = 2131230809;
@@ -2798,8 +2883,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800b1
 			public const int layoutTitreProduction = 2131230897;
 			
-			// aapt resource value: 0x7f080159
-			public const int layoutToolbar = 2131231065;
+			// aapt resource value: 0x7f08015d
+			public const int layoutToolbar = 2131231069;
 			
 			// aapt resource value: 0x7f08009e
 			public const int layoutUrl = 2131230878;
@@ -2864,6 +2949,15 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080061
 			public const int list_item = 2131230817;
 			
+			// aapt resource value: 0x7f080148
+			public const int loadingImage = 2131231048;
+			
+			// aapt resource value: 0x7f080146
+			public const int loadingProgressBar = 2131231046;
+			
+			// aapt resource value: 0x7f080149
+			public const int loadingProgressWheel = 2131231049;
+			
 			// aapt resource value: 0x7f0800bb
 			public const int lvCSDetails = 2131230907;
 			
@@ -2888,29 +2982,29 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08012e
 			public const int lvReceiving = 2131231022;
 			
-			// aapt resource value: 0x7f08015f
-			public const int masked = 2131231071;
-			
-			// aapt resource value: 0x7f08014c
-			public const int media_actions = 2131231052;
-			
-			// aapt resource value: 0x7f080160
-			public const int menuHome = 2131231072;
-			
-			// aapt resource value: 0x7f080161
-			public const int menuMove = 2131231073;
-			
 			// aapt resource value: 0x7f080163
-			public const int menuPicking = 2131231075;
+			public const int masked = 2131231075;
+			
+			// aapt resource value: 0x7f080150
+			public const int media_actions = 2131231056;
 			
 			// aapt resource value: 0x7f080164
-			public const int menuProduction = 2131231076;
+			public const int menuHome = 2131231076;
 			
-			// aapt resource value: 0x7f080162
-			public const int menuRecieving = 2131231074;
+			// aapt resource value: 0x7f080165
+			public const int menuMove = 2131231077;
 			
-			// aapt resource value: 0x7f08015c
-			public const int message = 2131231068;
+			// aapt resource value: 0x7f080167
+			public const int menuPicking = 2131231079;
+			
+			// aapt resource value: 0x7f080168
+			public const int menuProduction = 2131231080;
+			
+			// aapt resource value: 0x7f080166
+			public const int menuRecieving = 2131231078;
+			
+			// aapt resource value: 0x7f080160
+			public const int message = 2131231072;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -2933,14 +3027,14 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08001e
 			public const int normal = 2131230750;
 			
-			// aapt resource value: 0x7f080155
-			public const int notification_background = 2131231061;
+			// aapt resource value: 0x7f080159
+			public const int notification_background = 2131231065;
 			
-			// aapt resource value: 0x7f08014f
-			public const int notification_main_column = 2131231055;
+			// aapt resource value: 0x7f080153
+			public const int notification_main_column = 2131231059;
 			
-			// aapt resource value: 0x7f08014e
-			public const int notification_main_column_container = 2131231054;
+			// aapt resource value: 0x7f080152
+			public const int notification_main_column_container = 2131231058;
 			
 			// aapt resource value: 0x7f08004c
 			public const int parallax = 2131230796;
@@ -2966,11 +3060,11 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08004a
 			public const int right = 2131230794;
 			
-			// aapt resource value: 0x7f080154
-			public const int right_icon = 2131231060;
+			// aapt resource value: 0x7f080158
+			public const int right_icon = 2131231064;
 			
-			// aapt resource value: 0x7f080150
-			public const int right_side = 2131231056;
+			// aapt resource value: 0x7f080154
+			public const int right_side = 2131231060;
 			
 			// aapt resource value: 0x7f08000c
 			public const int save_image_matrix = 2131230732;
@@ -3089,8 +3183,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08004b
 			public const int start = 2131230795;
 			
-			// aapt resource value: 0x7f08014b
-			public const int status_bar_latest_event_content = 2131231051;
+			// aapt resource value: 0x7f08014f
+			public const int status_bar_latest_event_content = 2131231055;
 			
 			// aapt resource value: 0x7f080076
 			public const int submenuarrow = 2131230838;
@@ -3115,6 +3209,9 @@ namespace Mobility_Android
 			
 			// aapt resource value: 0x7f080069
 			public const int textSpacerNoTitle = 2131230825;
+			
+			// aapt resource value: 0x7f080147
+			public const int textViewStatus = 2131231047;
 			
 			// aapt resource value: 0x7f08009a
 			public const int text_input_password_toggle = 2131230874;
@@ -3185,8 +3282,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800f3
 			public const int tfWeight = 2131230963;
 			
-			// aapt resource value: 0x7f080151
-			public const int time = 2131231057;
+			// aapt resource value: 0x7f080155
+			public const int time = 2131231061;
 			
 			// aapt resource value: 0x7f08001c
 			public const int title = 2131230748;
@@ -3431,8 +3528,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f08015e
-			public const int visible = 2131231070;
+			// aapt resource value: 0x7f080162
+			public const int visible = 2131231074;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3701,73 +3798,82 @@ namespace Mobility_Android
 			public const int listviewReceiving = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int notification_action = 2130968644;
+			public const int loading = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int notification_action_tombstone = 2130968645;
+			public const int loadingimage = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int notification_media_action = 2130968646;
+			public const int loadingprogress = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int notification_media_cancel_action = 2130968647;
+			public const int notification_action = 2130968647;
 			
 			// aapt resource value: 0x7f040048
-			public const int notification_template_big_media = 2130968648;
+			public const int notification_action_tombstone = 2130968648;
 			
 			// aapt resource value: 0x7f040049
-			public const int notification_template_big_media_custom = 2130968649;
+			public const int notification_media_action = 2130968649;
 			
 			// aapt resource value: 0x7f04004a
-			public const int notification_template_big_media_narrow = 2130968650;
+			public const int notification_media_cancel_action = 2130968650;
 			
 			// aapt resource value: 0x7f04004b
-			public const int notification_template_big_media_narrow_custom = 2130968651;
+			public const int notification_template_big_media = 2130968651;
 			
 			// aapt resource value: 0x7f04004c
-			public const int notification_template_custom_big = 2130968652;
+			public const int notification_template_big_media_custom = 2130968652;
 			
 			// aapt resource value: 0x7f04004d
-			public const int notification_template_icon_group = 2130968653;
+			public const int notification_template_big_media_narrow = 2130968653;
 			
 			// aapt resource value: 0x7f04004e
-			public const int notification_template_lines_media = 2130968654;
+			public const int notification_template_big_media_narrow_custom = 2130968654;
 			
 			// aapt resource value: 0x7f04004f
-			public const int notification_template_media = 2130968655;
+			public const int notification_template_custom_big = 2130968655;
 			
 			// aapt resource value: 0x7f040050
-			public const int notification_template_media_custom = 2130968656;
+			public const int notification_template_icon_group = 2130968656;
 			
 			// aapt resource value: 0x7f040051
-			public const int notification_template_part_chronometer = 2130968657;
+			public const int notification_template_lines_media = 2130968657;
 			
 			// aapt resource value: 0x7f040052
-			public const int notification_template_part_time = 2130968658;
+			public const int notification_template_media = 2130968658;
 			
 			// aapt resource value: 0x7f040053
-			public const int select_dialog_item_material = 2130968659;
+			public const int notification_template_media_custom = 2130968659;
 			
 			// aapt resource value: 0x7f040054
-			public const int select_dialog_multichoice_material = 2130968660;
+			public const int notification_template_part_chronometer = 2130968660;
 			
 			// aapt resource value: 0x7f040055
-			public const int select_dialog_singlechoice_material = 2130968661;
+			public const int notification_template_part_time = 2130968661;
 			
 			// aapt resource value: 0x7f040056
-			public const int support_simple_spinner_dropdown_item = 2130968662;
+			public const int select_dialog_item_material = 2130968662;
 			
 			// aapt resource value: 0x7f040057
-			public const int toolbar = 2130968663;
+			public const int select_dialog_multichoice_material = 2130968663;
 			
 			// aapt resource value: 0x7f040058
-			public const int tooltip = 2130968664;
+			public const int select_dialog_singlechoice_material = 2130968664;
 			
 			// aapt resource value: 0x7f040059
-			public const int zxingscanneractivitylayout = 2130968665;
+			public const int support_simple_spinner_dropdown_item = 2130968665;
 			
 			// aapt resource value: 0x7f04005a
-			public const int zxingscannerfragmentlayout = 2130968666;
+			public const int toolbar = 2130968666;
+			
+			// aapt resource value: 0x7f04005b
+			public const int tooltip = 2130968667;
+			
+			// aapt resource value: 0x7f04005c
+			public const int zxingscanneractivitylayout = 2130968668;
+			
+			// aapt resource value: 0x7f04005d
+			public const int zxingscannerfragmentlayout = 2130968669;
 			
 			static Layout()
 			{
@@ -3907,11 +4013,11 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f090010
 			public const int abc_toolbar_collapse_description = 2131296272;
 			
-			// aapt resource value: 0x7f090028
-			public const int action_settings = 2131296296;
+			// aapt resource value: 0x7f090029
+			public const int action_settings = 2131296297;
 			
-			// aapt resource value: 0x7f090027
-			public const int app_name = 2131296295;
+			// aapt resource value: 0x7f090028
+			public const int app_name = 2131296296;
 			
 			// aapt resource value: 0x7f09001e
 			public const int appbar_scrolling_view_behavior = 2131296286;
@@ -3921,6 +4027,9 @@ namespace Mobility_Android
 			
 			// aapt resource value: 0x7f090020
 			public const int character_counter_pattern = 2131296288;
+			
+			// aapt resource value: 0x7f090027
+			public const int library_name = 2131296295;
 			
 			// aapt resource value: 0x7f090021
 			public const int password_toggle_content_description = 2131296289;
@@ -6567,6 +6676,56 @@ namespace Mobility_Android
 			
 			// aapt resource value: 0
 			public const int PopupWindowBackgroundState_state_above_anchor = 0;
+			
+			public static int[] ProgressWheel = new int[] {
+					2130772314,
+					2130772315,
+					2130772316,
+					2130772317,
+					2130772318,
+					2130772319,
+					2130772320,
+					2130772321,
+					2130772322,
+					2130772323,
+					2130772324,
+					2130772325};
+			
+			// aapt resource value: 3
+			public const int ProgressWheel_ahBarColor = 3;
+			
+			// aapt resource value: 11
+			public const int ProgressWheel_ahBarLength = 11;
+			
+			// aapt resource value: 10
+			public const int ProgressWheel_ahBarWidth = 10;
+			
+			// aapt resource value: 8
+			public const int ProgressWheel_ahCircleColor = 8;
+			
+			// aapt resource value: 7
+			public const int ProgressWheel_ahDelayMillis = 7;
+			
+			// aapt resource value: 9
+			public const int ProgressWheel_ahRadius = 9;
+			
+			// aapt resource value: 4
+			public const int ProgressWheel_ahRimColor = 4;
+			
+			// aapt resource value: 5
+			public const int ProgressWheel_ahRimWidth = 5;
+			
+			// aapt resource value: 6
+			public const int ProgressWheel_ahSpinSpeed = 6;
+			
+			// aapt resource value: 0
+			public const int ProgressWheel_ahText = 0;
+			
+			// aapt resource value: 1
+			public const int ProgressWheel_ahTextColor = 1;
+			
+			// aapt resource value: 2
+			public const int ProgressWheel_ahTextSize = 2;
 			
 			public static int[] RecycleListView = new int[] {
 					2130772175,

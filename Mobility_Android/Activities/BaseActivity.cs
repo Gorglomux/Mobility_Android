@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content;
 using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.App;
 using Android.Util;
 using Android.Views;
 using Android.Views.Animations;
@@ -22,11 +24,22 @@ namespace Mobility_Android.Activities
     public abstract class BaseActivity : Activity
     {
         public static object data;
-
+        private bool _isBusy;
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                OnPropertyChanged();
+            }
+        }
         protected void OnCreate(Bundle savedInstanceState, int layoutId)
         {
             base.OnCreate(savedInstanceState);
             base.SetContentView(layoutId);
+            UserDialogs.Init(this);
+            IsBusy = false;
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             if (toolbar != null)
             {
@@ -87,6 +100,19 @@ namespace Mobility_Android.Activities
             clear.Click += (sender,e)=>{
                 et.Text = "";
             };
+        }
+
+
+        private void OnPropertyChanged()
+        {
+            if (_isBusy == true)
+            {
+                var toastConfig = new ToastConfig("Chargement...");
+                toastConfig.SetDuration(500);
+                toastConfig.SetBackgroundColor(System.Drawing.Color.FromArgb(12, 131, 193));
+                UserDialogs.Instance.Toast(toastConfig);
+
+            }
         }
     }
 }

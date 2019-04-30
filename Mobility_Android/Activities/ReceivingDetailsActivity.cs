@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -45,9 +45,12 @@ namespace Mobility_Android.Activities
                
             };
 
-            FindViewById<ImageButton>(Resource.Id.imDetails).Click += (sender, e) => {
+            FindViewById<ImageButton>(Resource.Id.imDetails).Click += async(sender, e) => {
                 ReceptionWS data = reception;
+                IsBusy = true;
+                await Task.Delay(50);
                 StartActivity(new Intent(this, typeof(ProductDetailsActivity)));
+                IsBusy = false;
             };
 
 

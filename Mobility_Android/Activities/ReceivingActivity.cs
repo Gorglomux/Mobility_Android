@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -24,6 +24,7 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceiving);
 
+
             List<ReceptionWS> receptions = OperationsWebService.getListReceptions(Configuration.securityToken);
 
             ListView list = FindViewById<ListView>(Resource.Id.lvReceiving);
@@ -31,10 +32,13 @@ namespace Mobility_Android.Activities
             var adapter = new ReceivingCustomAdapter(this, receptions);
             list.Adapter = adapter;
 
-            list.ItemClick += (parent, args) =>
+            list.ItemClick += async (parent, args) =>
             {
                 data = receptions[args.Position];
+                IsBusy = true;
+                await Task.Delay(50);
                 StartActivity(new Intent(this, typeof(ReceivingDetailsActivity)));
+                IsBusy = false;
             };
         }
     }
