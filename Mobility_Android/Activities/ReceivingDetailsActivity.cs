@@ -22,10 +22,17 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceivingDetails);
 
+            // Récupération de la réception
             ReceptionWS reception = (ReceptionWS)ReceivingActivity.data;
+
+            // Action clic pour clear le EditText
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), FindViewById<EditText>(Resource.Id.tfLicenseReceivingDetails));
+
+            // Remplir champs de données par rapport à la réception
             FindViewById<TextView>(Resource.Id.tvNumRecieving).Text = reception.ReceptionNRI.ToString();
             FindViewById<TextView>(Resource.Id.tvnameProvider).Text = reception.SupplierCode;
+
+            // Action clic sur bouton pour completer une reception
             FindViewById<Button>(Resource.Id.btnEndReceiving).Click += (sender, e) => {
                 Finish();
             };
@@ -33,32 +40,28 @@ namespace Mobility_Android.Activities
 
             FindViewById<ImageButton>(Resource.Id.imPhoto).Click += async (sender, e) =>
             {
-                    // Initialize the scanner first so it can track the current context
-                    MobileBarcodeScanner.Initialize(Application);
+                // Initialize the scanner first so it can track the current context
+                MobileBarcodeScanner.Initialize(Application);
 
-                    var scanner = new ZXing.Mobile.MobileBarcodeScanner();
+                var scanner = new ZXing.Mobile.MobileBarcodeScanner();
 
-                    var result = await scanner.Scan();
-                    
-                    if (result != null)
-                        Console.WriteLine("Scanned Barcode: " + result.Text);
-               
+                var result = await scanner.Scan();
+
+                if (result != null)
+                    Console.WriteLine("Scanned Barcode: " + result.Text);
+
             };
 
-            FindViewById<ImageButton>(Resource.Id.imDetails).Click += async(sender, e) => {
-                ReceptionWS data = reception;
+            FindViewById<ImageButton>(Resource.Id.imDetails).Click += async (sender, e) => {
+                data = reception;
                 IsBusy = true;
                 await Task.Delay(50);
                 StartActivity(new Intent(this, typeof(ProductDetailsActivity)));
                 IsBusy = false;
             };
 
-
-            Toast.MakeText(this, "Réception : " + reception.ReceptionNRI,
-            ToastLength.Long).Show();
-
+            // Affichage du numéro de reception
+            Toast.MakeText(this, "Réception : " + reception.ReceptionNRI, ToastLength.Long).Show();
         }
-
-
     }
 }

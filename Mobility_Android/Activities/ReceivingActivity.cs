@@ -24,9 +24,10 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceiving);
 
-
+            // Récupération de la liste de réception selon l'utilisateur
             List<ReceptionWS> receptions = OperationsWebService.getListReceptions(Configuration.securityToken);
 
+            // Configuration de la ListView et de son Adapter par rapport à une liste de réception
             ListView list = FindViewById<ListView>(Resource.Id.lvReceiving);
 
             var adapter = new ReceivingCustomAdapter(this, receptions);
@@ -34,12 +35,19 @@ namespace Mobility_Android.Activities
 
             list.ItemClick += async (parent, args) =>
             {
+                // Sauvegarde de la réception choisie
                 data = receptions[args.Position];
                 IsBusy = true;
                 await Task.Delay(50);
                 StartActivity(new Intent(this, typeof(ReceivingDetailsActivity)));
                 IsBusy = false;
             };
+
+            // Si pas de reception alors message pour prévenir l'utilisateur
+            if (receptions.Count == 0)
+            {
+                Toast.MakeText(this, "Pas de reception", ToastLength.Long).Show();
+            }
         }
     }
 }
