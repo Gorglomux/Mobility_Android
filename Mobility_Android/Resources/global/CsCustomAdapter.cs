@@ -12,6 +12,8 @@ using Android.Widget;
 using Java.Lang;
 using Mobility_Android.WebService.Operations;
 
+
+
 namespace Mobility_Android.Resources.global
 {
     public class CsCustomAdapter : BaseAdapter
@@ -21,6 +23,7 @@ namespace Mobility_Android.Resources.global
 
         public CsCustomAdapter(Activity activity, List<PickedLicensesWS> listCs)
         {
+            
             this.activity = activity;
             this.listCs = listCs;
         }

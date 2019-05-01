@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Mobility_Android.WebService.Operations;
+using ZXing.Mobile;
 using static Android.InputMethodServices.KeyboardView;
 
 namespace Mobility_Android.Activities
@@ -38,20 +40,36 @@ namespace Mobility_Android.Activities
                 Finish();
             };
 
-            // Action clic sur bouton pour accèder aux details des produits
-            FindViewById<ImageButton>(Resource.Id.imDetails).Click += (sender, e) => {
-                // Sauvegarde de la réception
+
+            FindViewById<ImageButton>(Resource.Id.imPhoto).Click += async (sender, e) =>
+            {
+                // Initialize the scanner first so it can track the current context
+                MobileBarcodeScanner.Initialize(Application);
+
+                var scanner = new ZXing.Mobile.MobileBarcodeScanner();
+
+                var result = await scanner.Scan();
+
+                if (result != null)
+                    Console.WriteLine("Scanned Barcode: " + result.Text);
+
+            };
+
+            FindViewById<ImageButton>(Resource.Id.imDetails).Click += async (sender, e) => {
                 data = reception;
+                IsBusy = true;
+                await Task.Delay(50);
                 StartActivity(new Intent(this, typeof(ProductDetailsActivity)));
+                IsBusy = false;
             };
 
             // Action touche "Enter" pour accèder à la création d'une nouvelle licence
-            EditText urlEditText = FindViewById<EditText>(Resource.Id.tfLicenseReceivingDetails);  
+            EditText urlEditText = FindViewById<EditText>(Resource.Id.tfLicenseReceivingDetails);
             urlEditText.KeyPress += (object sender, View.KeyEventArgs e) => {
                 e.Handled = false;
                 if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter)
                 {
-                    if(urlEditText.Text.ToString() != "")
+                    if (urlEditText.Text.ToString() != "")
                     {
                         licence = new LicenseWS();
                         licence.licenseCode = urlEditText.Text.ToString();
@@ -59,7 +77,8 @@ namespace Mobility_Android.Activities
                         data = reception;
                         StartActivity(new Intent(this, typeof(NewLicenseActivity)));
                         e.Handled = true;
-                    } else
+                    }
+                    else
                     {
                         urlEditText.Text = "";
                         Toast.MakeText(this, "Veuillez entrer un code pour la licence", ToastLength.Long).Show();

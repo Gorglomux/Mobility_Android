@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Util;
+using System.Threading.Tasks;
 
 namespace Mobility_Android.Activities
 {
@@ -34,9 +35,12 @@ namespace Mobility_Android.Activities
             //Pour chaque bouton on créer un évènement avec l'intention correspondante
             foreach (KeyValuePair< int, Intent> entry in buttons)
             {
-                FindViewById<Button>(entry.Key).Click += (sender, e) =>
+                FindViewById<Button>(entry.Key).Click += async(sender, e) =>
                 {
+                    IsBusy = true;
+                    await Task.Delay(50);
                     StartActivity(entry.Value);
+                    IsBusy = false;
                 };
 
             }

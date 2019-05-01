@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content;
 using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.App;
 using Android.Util;
 using Android.Views;
 using Android.Views.Animations;
@@ -22,32 +24,31 @@ namespace Mobility_Android.Activities
     public abstract class BaseActivity : Activity
     {
         public static object data;
-
+        private bool _isBusy;
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                OnPropertyChanged();
+            }
+        }
         protected void OnCreate(Bundle savedInstanceState, int layoutId)
         {
-
             base.OnCreate(savedInstanceState);
             base.SetContentView(layoutId);
+            UserDialogs.Init(this);
+            IsBusy = false;
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             if (toolbar != null)
             {
-                ImageButton backImage = FindViewById<ImageButton>(Resource.Id.imBack);
-                backImage.Click += (sender, e) =>
+                 
+                ImageView backImage = FindViewById<ImageView>(Resource.Id.imBack);
+                backImage.Touch += (sender, e) =>
                 {
-                    data = null;
+
                     Finish();
-
-                };
-
-
-
-            }
-            ImageButton refreshButton = FindViewById<ImageButton>(Resource.Id.imRefresh);
-            if (refreshButton != null)
-            {
-                refreshButton.Click += (sender, e) =>
-                {
-                    this.Recreate();
 
                 };
             }
@@ -86,9 +87,11 @@ namespace Mobility_Android.Activities
                     break;
                     */
             }
-            data = null;
             StartActivity(intentMenu);
-            
+
+
+            Toast.MakeText(this, "Action selected: " + item.ItemId,
+                ToastLength.Long).Show();
             return base.OnOptionsItemSelected(item);
         }
 
@@ -100,6 +103,16 @@ namespace Mobility_Android.Activities
         }
 
 
+        private void OnPropertyChanged()
+        {
+            if (_isBusy == true)
+            {
+                var toastConfig = new ToastConfig("Chargement...");
+                toastConfig.SetDuration(500);
+                toastConfig.SetBackgroundColor(System.Drawing.Color.FromArgb(12, 131, 193));
+                UserDialogs.Instance.Toast(toastConfig);
 
+            }
+        }
     }
 }

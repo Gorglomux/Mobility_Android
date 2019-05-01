@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -21,6 +21,7 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingList);
+
 
             CR_ResultActionOfListOfSaleWS result = OperationsWebService.getListPickingSale(Configuration.securityToken, (int)Configuration.currentLanguage, Configuration.userInfos.warehouseNRI);
 

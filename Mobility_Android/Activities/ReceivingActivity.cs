@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -29,15 +29,18 @@ namespace Mobility_Android.Activities
 
             // Configuration de la ListView et de son Adapter par rapport à une liste de réception
             ListView list = FindViewById<ListView>(Resource.Id.lvReceiving);
+
             var adapter = new ReceivingCustomAdapter(this, receptions);
             list.Adapter = adapter;
 
-            // Action clic sur bouton pour accèder à une réception sélectionnée
-            list.ItemClick += (parent, args) =>
+            list.ItemClick += async (parent, args) =>
             {
                 // Sauvegarde de la réception choisie
                 data = receptions[args.Position];
+                IsBusy = true;
+                await Task.Delay(50);
                 StartActivity(new Intent(this, typeof(ReceivingDetailsActivity)));
+                IsBusy = false;
             };
 
             // Si pas de reception alors message pour prévenir l'utilisateur

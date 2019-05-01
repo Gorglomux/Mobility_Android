@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -23,20 +24,27 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmLogin);
+            
             EditText username = FindViewById<EditText>(Resource.Id.tfName);
             EditText password = FindViewById<EditText>(Resource.Id.tfPass);
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), username);
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear2), password);
-            FindViewById<Button>(Resource.Id.btnConnect).Click += (sender, e) =>
+            FindViewById<Button>(Resource.Id.btnConnect).Click += async  (sender, e) =>
             {
-                if(UserWebService.doLogin(username.Text, password.Text))
+
+
+                //Loading
+                IsBusy = true;
+                await Task.Delay(50);
+                if (UserWebService.doLogin(username.Text, password.Text))
                 {
                     StartActivity(new Intent(this, typeof(HomeActivity)));
                 } else
                 {
-                    Toast.MakeText(this, "Erreur connexion", ToastLength.Long).Show();
+                    Toast.MakeText(this, "Erreur connexion", ToastLength.Short).Show();
                 }
-                
+                IsBusy = false;
+
             };
             FindViewById<ImageButton>(Resource.Id.imLogout).Click += (sender, e) =>
             {

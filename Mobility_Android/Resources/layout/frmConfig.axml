@@ -145,7 +145,7 @@
 
 	<Button
 		android:id="@+id/btnSaveConfig"
-		android:text="Sauveguarder"
+		android:text="Sauvegarder"
 		android:layout_width="245.0dp"
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/layoutTermicon"

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+	<SurfaceView
+	android:id="@+id/cameraPreview"
+		android:layout_centerInParent="true"
+		android:layout_width="match_parent"
+		android:layout_height="800px"
+	/>
+
+	<TextView
+		android:id="@+id/txtPreview" 
+		android:layout_width="match_parent"
+		android:gravity="center_horizontal"
+		android:layout_marginTop="20dp"
+		android:textSize="20sp"
+		android:text="Focus QR Code"
+		android:layout_below="@+id/cameraPreview"
+		android:layout_height="wrap_content"
+		
+		
+		/>
+
+
+</RelativeLayout>
