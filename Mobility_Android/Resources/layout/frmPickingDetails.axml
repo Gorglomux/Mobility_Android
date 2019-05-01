@@ -137,6 +137,8 @@
     <EditText
 			android:id="@+id/tfLicensePickingDetails"
 			android:layout_width="0dp"
+			android:maxLines="1"
+			android:inputType="text"
 			android:layout_weight="5"
 			android:layout_height="wrap_content"
 			android:background="@android:drawable/editbox_background"

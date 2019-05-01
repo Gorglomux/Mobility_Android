@@ -55,6 +55,7 @@
 			android:textColor="#000"
 			android:maxLines="1"
 			android:password="true"
+			android:inputType="text"
 			android:background="@android:drawable/editbox_background" />
 
 		<!-- BUTTON CLEAR -->

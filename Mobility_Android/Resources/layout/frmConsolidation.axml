@@ -36,6 +36,8 @@
 			android:layout_height="wrap_content"
 			android:background="@android:drawable/editbox_background"
 			android:textColor="#000"
+			android:maxLines="1"
+			android:inputType="text"
 		/>
 		<ImageButton
 			android:id="@+id/imClear"
@@ -65,6 +67,8 @@
 			android:layout_height="wrap_content"
 			android:background="@android:drawable/editbox_background"
 			android:textColor="#000"
+			android:maxLines="1"
+			android:inputType="text"
 		/>
 		<ImageButton
 			android:id="@+id/imClear2"
