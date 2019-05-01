@@ -50,6 +50,7 @@
 			android:textColorHint="#808080"
 			android:textColor="#000"
 			android:maxLines="1"
+			android:inputType="text"
 			android:background="@android:drawable/editbox_background" />
 
 		<!-- BUTTON CLEAR -->
@@ -107,6 +108,7 @@
 			android:textColorHint="#808080"
 			android:textColor="#000"
 			android:maxLines="1"
+			android:inputType="text"
 			android:background="@android:drawable/editbox_background"/>
 
 		<!-- TEXTVIEW PORT -->
@@ -134,6 +136,7 @@
 			android:backgroundTintMode="src_over"
 			android:textColor="#000"
 			android:maxLines="1"
+			android:inputType="text"
 			android:background="@android:drawable/editbox_background" />
 
 	</LinearLayout>
