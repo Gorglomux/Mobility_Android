@@ -116,7 +116,8 @@ namespace Mobility_Android.Activities
 
                 if (sucess == true)
                 {
-                    OperationsWebService.pickLicenseReception(Configuration.securityToken, licence, (int)Configuration.currentLanguage, 0, "");
+                    //OperationsWebService.pickLicenseReception(Configuration.securityToken, licence, (int)Configuration.currentLanguage, 0, "");
+                    StartActivity(new Intent(this, typeof(ReceivingDetailsActivity)));
                     Finish();
                 }
                 else

@@ -20,7 +20,13 @@ namespace Mobility_Android.Activities
             base.OnCreate(savedInstanceState, Resource.Layout.frmRelocation);
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), FindViewById<EditText>(Resource.Id.tfLicenseRelocation));
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear2), FindViewById<EditText>(Resource.Id.tfDestination));
-            // Create your application here
+
+            // Sélection Licence
+
+
+            //Gestion spinner locations
+
+
         }
     }
 }

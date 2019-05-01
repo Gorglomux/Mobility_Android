@@ -10,6 +10,8 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Mobility_Android.Resources.global;
+using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
 using ZXing.Mobile;
 using static Android.InputMethodServices.KeyboardView;
@@ -34,6 +36,26 @@ namespace Mobility_Android.Activities
             // Remplir champs de données par rapport à la réception
             FindViewById<TextView>(Resource.Id.tvNumRecieving).Text = reception.ReceptionNRI.ToString();
             FindViewById<TextView>(Resource.Id.tvnameProvider).Text = reception.SupplierCode;
+
+            if (licence!=null)
+            {
+                if(licence.productNRI != 0)
+                {
+                    // Creation liste de nom produit pour le spinner
+                    List<ProductDetailsWS> listProduct = OperationsWebService.getReceptionProductDetails(Configuration.securityToken, reception.ReceptionNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI, null).OfType<ProductDetailsWS>().ToList();
+                    foreach (ProductDetailsWS p in listProduct)
+                    {
+                        if (licence.productNRI == p.NRI)
+                        {
+                            FindViewById<TextView>(Resource.Id.tvNameProduct).Text = p.code;
+                            FindViewById<TextView>(Resource.Id.tvAmountQte).Text = p.qtyPicked.ToString() + "/" + p.qtyToPick.ToString();
+                            FindViewById<TextView>(Resource.Id.tvAmountPoids).Text = licence.weightKG.ToString() + " kg";
+                        }
+                    }
+                }
+                
+
+            }
 
             // Action clic sur bouton pour completer une reception
             FindViewById<Button>(Resource.Id.btnEndReceiving).Click += (sender, e) => {
@@ -76,6 +98,7 @@ namespace Mobility_Android.Activities
                         licence.parentNRI = reception.ReceptionNRI;
                         data = reception;
                         StartActivity(new Intent(this, typeof(NewLicenseActivity)));
+                        Finish();
                         e.Handled = true;
                     }
                     else
