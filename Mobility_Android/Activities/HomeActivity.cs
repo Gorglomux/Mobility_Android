@@ -20,7 +20,7 @@ namespace Mobility_Android.Activities
      * Permet d'accéder a toute les fonctionnalités de l'application
      * 
      **/ 
-    [Activity(Label = "HomeActivity", ParentActivity = typeof(LoginActivity))]
+    [Activity(Label = "HomeActivity", ParentActivity = typeof(MyCeritar))]
     public class HomeActivity : BaseActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

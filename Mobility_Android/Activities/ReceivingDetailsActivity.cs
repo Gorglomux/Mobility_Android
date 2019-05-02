@@ -13,7 +13,6 @@ using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
-using ZXing.Mobile;
 using static Android.InputMethodServices.KeyboardView;
 
 namespace Mobility_Android.Activities
@@ -60,21 +59,6 @@ namespace Mobility_Android.Activities
                 
 
             }
-
-            // Action clic sur photo pour scanner un code en prenant une photo
-            FindViewById<ImageButton>(Resource.Id.imPhoto).Click += async (sender, e) =>
-            {
-                // Initialize the scanner first so it can track the current context
-                MobileBarcodeScanner.Initialize(Application);
-
-                var scanner = new ZXing.Mobile.MobileBarcodeScanner();
-
-                var result = await scanner.Scan();
-
-                if (result != null)
-                    Console.WriteLine("Scanned Barcode: " + result.Text);
-
-            };
 
             // Action touche "Enter" pour accèder à la création d'une nouvelle licence
             EditText urlEditText = FindViewById<EditText>(Resource.Id.tfLicenseReceivingDetails);

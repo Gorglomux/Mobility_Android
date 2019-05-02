@@ -21,8 +21,8 @@ namespace Mobility_Android.Activities
      * Permet de se connecter à l'application, de se déconnecter ou d'accéder aux paramètres et de modifier la configuration
      * 
      **/ 
-    [Activity(Label = "LoginActivity", MainLauncher = true)]
-    public class LoginActivity : BaseActivity
+    [Activity(Label = "MyCeritar", MainLauncher = true)]
+    public class MyCeritar : BaseActivity
     {
 
         protected override void OnCreate(Bundle savedInstanceState)
