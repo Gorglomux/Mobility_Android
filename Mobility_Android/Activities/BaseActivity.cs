@@ -48,7 +48,6 @@ namespace Mobility_Android.Activities
             }
         }
 
-<<<<<<< HEAD
         private void OnPropertyChanged()
         {
             //Si l'application est occupée on affiche un message de chargement
@@ -63,9 +62,7 @@ namespace Mobility_Android.Activities
         }
 
         //Fonction appellée a la création de l'activité
-=======
 
->>>>>>> 78c5f6e45b45ac3b55f06b4c284ac28362714902
         protected void OnCreate(Bundle savedInstanceState, int layoutId)
         {
             base.OnCreate(savedInstanceState);
@@ -156,24 +153,11 @@ namespace Mobility_Android.Activities
         }
 
 
-<<<<<<< HEAD
-=======
-        private void OnPropertyChanged()
-        {
-            if (_isBusy)
-            {
-                var toastConfig = new ToastConfig("Chargement...");
-                toastConfig.SetDuration(500);
-                toastConfig.SetBackgroundColor(System.Drawing.Color.FromArgb(12, 131, 193));
-                UserDialogs.Instance.Toast(toastConfig);
-                
-            }
-        }
+ 
         public void refresh()
         {
             Recreate();
         }
-
->>>>>>> 78c5f6e45b45ac3b55f06b4c284ac28362714902
+         
     }
 }
