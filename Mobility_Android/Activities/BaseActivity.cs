@@ -23,7 +23,7 @@ namespace Mobility_Android.Activities
     [Activity(Label = "BaseActivity")]
     public abstract class BaseActivity : Activity
     {
-        public static object data;
+        public static object data=null;
         private bool _isBusy;
         public bool IsBusy
         {
@@ -34,6 +34,8 @@ namespace Mobility_Android.Activities
                 OnPropertyChanged();
             }
         }
+
+
         protected void OnCreate(Bundle savedInstanceState, int layoutId)
         {
             base.OnCreate(savedInstanceState);
@@ -50,6 +52,20 @@ namespace Mobility_Android.Activities
 
                     Finish();
 
+                };
+
+
+            }
+
+            ImageButton refreshImage = FindViewById<ImageButton>(Resource.Id.imRefresh);
+
+            if (refreshImage != null)
+            {
+
+                refreshImage.Touch += (sender, e) =>
+                {
+                    
+                    refresh();
                 };
             }
             SetActionBar(toolbar);
@@ -105,14 +121,19 @@ namespace Mobility_Android.Activities
 
         private void OnPropertyChanged()
         {
-            if (_isBusy == true)
+            if (_isBusy)
             {
                 var toastConfig = new ToastConfig("Chargement...");
                 toastConfig.SetDuration(500);
                 toastConfig.SetBackgroundColor(System.Drawing.Color.FromArgb(12, 131, 193));
                 UserDialogs.Instance.Toast(toastConfig);
-
+                
             }
         }
+        public void refresh()
+        {
+            Recreate();
+        }
+
     }
 }
