@@ -13,6 +13,12 @@ using Mobility_Android.WebService.Operations;
 
 namespace Mobility_Android.Activities
 {
+
+    /**
+     * 
+     * Interface pour scanner des produits pour les rajouter dans une commande
+     * 
+     * */
     [Activity(Label = "PickingDetailsActivity", ParentActivity = typeof(HomeActivity))]
     public class PickingDetailsActivity : BaseActivity
     {

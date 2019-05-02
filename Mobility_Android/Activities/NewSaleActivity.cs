@@ -12,6 +12,11 @@ using Android.Widget;
 
 namespace Mobility_Android.Activities
 {
+    /**
+     * 
+     * Créer une nouvelle commande 
+     * 
+     * */
     [Activity(Label = "NewSaleActivity", ParentActivity = typeof(HomeActivity))]
     public class NewSaleActivity : BaseActivity
     {

@@ -15,6 +15,11 @@ using Mobility_Android.WebService.Operations;
 
 namespace Mobility_Android.Activities
 {
+    /**
+     * 
+     * Activité permettant de créer une nouvelle license dans le cadre d'une réception
+     * 
+     * */
     [Activity(Label = "NewLicenseActivity", ParentActivity = typeof(HomeActivity))]
     public class NewLicenseActivity : BaseActivity
     {

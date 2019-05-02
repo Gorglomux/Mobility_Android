@@ -15,6 +15,10 @@ using Mobility_Android.WebService.Operations;
 
 namespace Mobility_Android.Activities
 {
+    /**
+     * 
+     * Récupère la liste des produits d'une réception
+     * */
     [Activity(Label = "ProductDetailsActivity", ParentActivity = typeof(HomeActivity))]
     public class ProductDetailsActivity : BaseActivity
     {

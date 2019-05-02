@@ -12,8 +12,17 @@ using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Security;
+
+
 namespace Mobility_Android.Activities
 {
+
+    /** ConfigActivity
+     * Est appelée quand l'utilisateur appuie sur l'image configuration sur le menu
+     * Permet de modifier l'url du serveur 
+     * Le serveur d'impression n'est pour l'instant pas géré
+     * 
+     * */
     [Activity(Label = "ConfigActivity", ParentActivity = typeof(HomeActivity))]
     public class ConfigActivity : BaseActivity
     {
@@ -26,9 +35,13 @@ namespace Mobility_Android.Activities
             urlEditText.Text = Configuration.webServiceURL;
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), urlEditText);
 
+            //Vérification du champ de l'url
             FindViewById<Button>(Resource.Id.btnSaveConfig).Click += (sender, e) =>
             {
+
+                //On enlève les espaces en trop
                 var textUrl = urlEditText.Text.Trim();
+                //Si l'url est une url valide on regarde si il y a http devant, sinon on l'ajoute
                 if (isValidURL(textUrl))
                 {
                     
@@ -51,7 +64,7 @@ namespace Mobility_Android.Activities
                 }
             };
         }
-
+        //Fonction permettant de tester si une url était valide
         public bool isValidURL(string url)
         {
             return Android.Util.Patterns.WebUrl.Matcher(url).Matches();
