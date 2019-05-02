@@ -14,6 +14,12 @@ using System.Threading.Tasks;
 
 namespace Mobility_Android.Activities
 {
+    /**
+     * 
+     * Menu principal de l'application
+     * Permet d'accéder a toute les fonctionnalités de l'application
+     * 
+     **/ 
     [Activity(Label = "HomeActivity", ParentActivity = typeof(LoginActivity))]
     public class HomeActivity : BaseActivity
     {

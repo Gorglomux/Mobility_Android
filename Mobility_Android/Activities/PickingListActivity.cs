@@ -15,6 +15,10 @@ using Mobility_Android.WebService.Operations;
 
 namespace Mobility_Android.Activities
 {
+    /**
+     * Page avec la liste de toutes les commandes avec possibilté d'en créer une nouvelle
+     * 
+     * */
     [Activity(Label = "PickingListActivity", ParentActivity = typeof(HomeActivity))]
     public class PickingListActivity : BaseActivity
     {

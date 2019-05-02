@@ -14,6 +14,11 @@ using Mobility_Android.WebService.Operations;
 
 namespace Mobility_Android.Activities
 {
+    /** Appellée par ProductDetailActivity, cette activité sert a afficher le contenu d'un produit dans une réception
+     *  
+     * 
+     * 
+     **/ 
     [Activity(Label = "CsDetailsActivity", ParentActivity = typeof(HomeActivity))]
     public class CsDetailsActivity : BaseActivity
     {

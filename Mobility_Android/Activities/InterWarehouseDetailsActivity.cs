@@ -12,6 +12,10 @@ using Android.Widget;
 
 namespace Mobility_Android.Activities
 {
+    /**
+     * Fonctionnalité supprimée pour l'instant
+     * 
+     **/
     [Activity(Label = "InterWarehouseDetailsActivity", ParentActivity = typeof(HomeActivity))]
     public class InterWarehouseDetailsActivity : BaseActivity
     {
