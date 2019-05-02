@@ -462,7 +462,7 @@ namespace Mobility_Android.Resources.webservice
              * Méthode qui permet de déplacer une licence dans un autre entrepôt
              * 
              */
-            public static void relocateLicense(string userToken, string sourceCode, string destinationCode, RELOCATION_DESTINATION destinationType, int warehouseNRI)
+            public static bool relocateLicense(string userToken, string sourceCode, string destinationCode, RELOCATION_DESTINATION destinationType, int warehouseNRI)
         {
             bool blnReturn = false;
             try
@@ -474,10 +474,10 @@ namespace Mobility_Android.Resources.webservice
                     result = webServiceOperation.RelocaliseLicense(userToken, sourceCode, destinationCode, destinationType, warehouseNRI);
 
                     if (result.Success)
-                        blnReturn = result.Success;
+                        blnReturn = result.Success;                 
                     else
                     {
-                        //
+                        blnReturn = false;
                     }
                 }
             }
@@ -515,7 +515,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }
-            //return blnReturn;
+            return blnReturn;
         }
 
 #endregion

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -26,10 +26,13 @@ namespace Mobility_Android.Activities
         TextView dateSelect;
         Spinner spinner;
         LicenseWS licence = new LicenseWS();
+        public static bool mustRefresh;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmNewLicense);
+
+            mustRefresh = false;
 
             licence = ReceivingDetailsActivity.licence;
             var tfWeight = FindViewById<EditText>(Resource.Id.tfWeight);
@@ -78,7 +81,7 @@ namespace Mobility_Android.Activities
 
             };
 
-            FindViewById<Button>(Resource.Id.btnConfirm).Click += (sender, e) => {
+            FindViewById<Button>(Resource.Id.btnConfirm).Click += async (sender, e) => {
                 bool sucess = true;
                 string msg = "Veuillez renseigner les champs :  ";
 
@@ -121,8 +124,14 @@ namespace Mobility_Android.Activities
 
                 if (sucess == true)
                 {
-                    //OperationsWebService.pickLicenseReception(Configuration.securityToken, licence, (int)Configuration.currentLanguage, 0, "");
-                    StartActivity(new Intent(this, typeof(ReceivingDetailsActivity)));
+                    IsBusy = true;
+                    await Task.Delay(50);
+                    if(OperationsWebService.pickLicenseReception(Configuration.securityToken, licence, (int)Configuration.currentLanguage, 0, "")==null)
+                    {
+                        Toast.MakeText(this, "Une licence existe déjà avec ce nom", ToastLength.Long).Show();
+                    }
+                    IsBusy = false;
+                    mustRefresh = true;
                     Finish();
                 }
                 else

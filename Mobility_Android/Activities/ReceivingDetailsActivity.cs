@@ -37,14 +37,18 @@ namespace Mobility_Android.Activities
             FindViewById<TextView>(Resource.Id.tvNumRecieving).Text = reception.ReceptionNRI.ToString();
             FindViewById<TextView>(Resource.Id.tvnameProvider).Text = reception.SupplierCode;
 
+            // Affichage de la dernière licence créer, si pas de licence alors on n'affiche rien
             if (licence!=null)
             {
                 if(licence.productNRI != 0)
                 {
-                    // Creation liste de nom produit pour le spinner
+                    // Creation liste de nom produit
                     List<ProductDetailsWS> listProduct = OperationsWebService.getReceptionProductDetails(Configuration.securityToken, reception.ReceptionNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI, null).OfType<ProductDetailsWS>().ToList();
+
+                    // On parcourt la liste de produit pour trouver le produit qui correspond à la licence
                     foreach (ProductDetailsWS p in listProduct)
                     {
+                        // Puis on affichage les information dans les TextView
                         if (licence.productNRI == p.NRI)
                         {
                             FindViewById<TextView>(Resource.Id.tvNameProduct).Text = p.code;
@@ -57,12 +61,7 @@ namespace Mobility_Android.Activities
 
             }
 
-            // Action clic sur bouton pour completer une reception
-            FindViewById<Button>(Resource.Id.btnEndReceiving).Click += (sender, e) => {
-                Finish();
-            };
-
-
+            // Action clic sur photo pour scanner un code en prenant une photo
             FindViewById<ImageButton>(Resource.Id.imPhoto).Click += async (sender, e) =>
             {
                 // Initialize the scanner first so it can track the current context
@@ -75,14 +74,6 @@ namespace Mobility_Android.Activities
                 if (result != null)
                     Console.WriteLine("Scanned Barcode: " + result.Text);
 
-            };
-
-            FindViewById<ImageButton>(Resource.Id.imDetails).Click += async (sender, e) => {
-                data = reception;
-                IsBusy = true;
-                await Task.Delay(50);
-                StartActivity(new Intent(this, typeof(ProductDetailsActivity)));
-                IsBusy = false;
             };
 
             // Action touche "Enter" pour accèder à la création d'une nouvelle licence
@@ -98,7 +89,6 @@ namespace Mobility_Android.Activities
                         licence.parentNRI = reception.ReceptionNRI;
                         data = reception;
                         StartActivity(new Intent(this, typeof(NewLicenseActivity)));
-                        Finish();
                         e.Handled = true;
                     }
                     else
@@ -109,8 +99,35 @@ namespace Mobility_Android.Activities
                 }
             };
 
-            // Affichage du numéro de reception
-            Toast.MakeText(this, "Réception : " + reception.ReceptionNRI, ToastLength.Long).Show();
+            // Action clic sur détails pour accèder à la liste de produit d'une reception
+            FindViewById<ImageButton>(Resource.Id.imDetails).Click += async (sender, e) => {
+                data = reception;
+                IsBusy = true;
+                await Task.Delay(50);
+                StartActivity(new Intent(this, typeof(ProductDetailsActivity)));
+                IsBusy = false;
+            };
+
+            // Action clic sur bouton pour completer une reception
+            FindViewById<Button>(Resource.Id.btnEndReceiving).Click += async(sender, e) => {
+                IsBusy = true;
+                await Task.Delay(50);
+                OperationsWebService.completeReception(Configuration.securityToken, reception.ReceptionNRI);
+                IsBusy = false;
+
+                
+                Finish();
+            };
+        }
+
+        public override void OnWindowFocusChanged(bool hasFocus)
+        {
+            if (hasFocus && NewLicenseActivity.mustRefresh)
+            {
+                NewLicenseActivity.mustRefresh = false;
+                Recreate();
+            }
+            
         }
     }
 }

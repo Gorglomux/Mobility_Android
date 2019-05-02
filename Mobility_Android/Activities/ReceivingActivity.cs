@@ -48,6 +48,15 @@ namespace Mobility_Android.Activities
             {
                 Toast.MakeText(this, "Pas de reception", ToastLength.Long).Show();
             }
+
         }
+        public override void OnWindowFocusChanged(bool hasFocus)
+        {
+            if (hasFocus)
+            {
+                Recreate();
+            }
+        }
+
     }
 }
