@@ -2565,14 +2565,14 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08011f
 			public const int btnAddPalette = 2131231007;
 			
-			// aapt resource value: 0x7f0800f5
-			public const int btnConfirm = 2131230965;
-			
 			// aapt resource value: 0x7f0800ae
-			public const int btnConnect = 2131230894;
+			public const int btnConfirm = 2131230894;
 			
-			// aapt resource value: 0x7f0800e7
-			public const int btnConsolidate = 2131230951;
+			// aapt resource value: 0x7f0800df
+			public const int btnConnect = 2131230943;
+			
+			// aapt resource value: 0x7f0800e8
+			public const int btnConsolidate = 2131230952;
 			
 			// aapt resource value: 0x7f0800d6
 			public const int btnEnd = 2131230934;
@@ -2583,8 +2583,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080134
 			public const int btnEndReceiving = 2131231028;
 			
-			// aapt resource value: 0x7f0800e5
-			public const int btnLogout = 2131230949;
+			// aapt resource value: 0x7f0800e6
+			public const int btnLogout = 2131230950;
 			
 			// aapt resource value: 0x7f0800c3
 			public const int btnMove = 2131230915;
@@ -2604,8 +2604,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800c4
 			public const int btnRecieve = 2131230916;
 			
-			// aapt resource value: 0x7f0800e6
-			public const int btnRelocation = 2131230950;
+			// aapt resource value: 0x7f0800e7
+			public const int btnRelocation = 2131230951;
 			
 			// aapt resource value: 0x7f0800a5
 			public const int btnSaveConfig = 2131230885;
@@ -2658,8 +2658,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08006c
 			public const int customPanel = 2131230828;
 			
-			// aapt resource value: 0x7f0800ee
-			public const int date_EditText = 2131230958;
+			// aapt resource value: 0x7f0800ef
+			public const int date_EditText = 2131230959;
 			
 			// aapt resource value: 0x7f08007a
 			public const int decor_content_parent = 2131230842;
@@ -2760,8 +2760,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800ad
 			public const int imClear2 = 2131230893;
 			
-			// aapt resource value: 0x7f0800e0
-			public const int imConfig = 2131230944;
+			// aapt resource value: 0x7f0800e1
+			public const int imConfig = 2131230945;
 			
 			// aapt resource value: 0x7f0800bc
 			public const int imDelete = 2131230908;
@@ -2772,8 +2772,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800d8
 			public const int imLogo = 2131230936;
 			
-			// aapt resource value: 0x7f0800df
-			public const int imLogout = 2131230943;
+			// aapt resource value: 0x7f0800e0
+			public const int imLogout = 2131230944;
 			
 			// aapt resource value: 0x7f08010c
 			public const int imNewSale = 2131230988;
@@ -2805,8 +2805,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800f7
 			public const int layoutClient = 2131230967;
 			
-			// aapt resource value: 0x7f0800ec
-			public const int layoutDate = 2131230956;
+			// aapt resource value: 0x7f0800ed
+			public const int layoutDate = 2131230957;
 			
 			// aapt resource value: 0x7f08013a
 			public const int layoutDestination = 2131231034;
@@ -2850,11 +2850,11 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08010b
 			public const int layoutPicking = 2131230987;
 			
-			// aapt resource value: 0x7f0800e9
-			public const int layoutProduct = 2131230953;
+			// aapt resource value: 0x7f0800ea
+			public const int layoutProduct = 2131230954;
 			
-			// aapt resource value: 0x7f0800f2
-			public const int layoutQty = 2131230962;
+			// aapt resource value: 0x7f0800f3
+			public const int layoutQty = 2131230963;
 			
 			// aapt resource value: 0x7f080127
 			public const int layoutReceiving = 2131231015;
@@ -2868,8 +2868,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800a0
 			public const int layoutTermicon = 2131230880;
 			
-			// aapt resource value: 0x7f0800e3
-			public const int layoutTextLogoutPassword = 2131230947;
+			// aapt resource value: 0x7f0800e4
+			public const int layoutTextLogoutPassword = 2131230948;
 			
 			// aapt resource value: 0x7f080111
 			public const int layoutTitle = 2131230993;
@@ -2892,14 +2892,14 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800bf
 			public const int layoutWarehouse = 2131230911;
 			
-			// aapt resource value: 0x7f0800ef
-			public const int layoutWeight = 2131230959;
+			// aapt resource value: 0x7f0800f0
+			public const int layoutWeight = 2131230960;
 			
 			// aapt resource value: 0x7f0800f8
 			public const int lblClient = 2131230968;
 			
-			// aapt resource value: 0x7f0800ed
-			public const int lblDate = 2131230957;
+			// aapt resource value: 0x7f0800ee
+			public const int lblDate = 2131230958;
 			
 			// aapt resource value: 0x7f0800fe
 			public const int lblOwner = 2131230974;
@@ -2907,23 +2907,23 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080101
 			public const int lblPO = 2131230977;
 			
-			// aapt resource value: 0x7f0800ea
-			public const int lblProduct = 2131230954;
+			// aapt resource value: 0x7f0800eb
+			public const int lblProduct = 2131230955;
 			
-			// aapt resource value: 0x7f0800f3
-			public const int lblQty = 2131230963;
+			// aapt resource value: 0x7f0800f4
+			public const int lblQty = 2131230964;
 			
 			// aapt resource value: 0x7f0800fb
 			public const int lblRecipient = 2131230971;
 			
-			// aapt resource value: 0x7f0800e8
-			public const int lblTitleLicenseInfo = 2131230952;
+			// aapt resource value: 0x7f0800e9
+			public const int lblTitleLicenseInfo = 2131230953;
 			
 			// aapt resource value: 0x7f0800f6
 			public const int lblTitleSaleInfo = 2131230966;
 			
-			// aapt resource value: 0x7f0800f0
-			public const int lblWeight = 2131230960;
+			// aapt resource value: 0x7f0800f1
+			public const int lblWeight = 2131230961;
 			
 			// aapt resource value: 0x7f080049
 			public const int left = 2131230793;
@@ -3162,8 +3162,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800ff
 			public const int spnOwner = 2131230975;
 			
-			// aapt resource value: 0x7f0800eb
-			public const int spnProduct = 2131230955;
+			// aapt resource value: 0x7f0800ec
+			public const int spnProduct = 2131230956;
 			
 			// aapt resource value: 0x7f0800fc
 			public const int spnRecipient = 2131230972;
@@ -3261,14 +3261,14 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800de
 			public const int tfPass = 2131230942;
 			
-			// aapt resource value: 0x7f0800e4
-			public const int tfPassPrompt = 2131230948;
+			// aapt resource value: 0x7f0800e5
+			public const int tfPassPrompt = 2131230949;
 			
 			// aapt resource value: 0x7f0800a4
 			public const int tfPort = 2131230884;
 			
-			// aapt resource value: 0x7f0800f4
-			public const int tfQty = 2131230964;
+			// aapt resource value: 0x7f0800f5
+			public const int tfQty = 2131230965;
 			
 			// aapt resource value: 0x7f08011a
 			public const int tfStation = 2131231002;
@@ -3276,8 +3276,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08009d
 			public const int tfUrl = 2131230877;
 			
-			// aapt resource value: 0x7f0800f1
-			public const int tfWeight = 2131230961;
+			// aapt resource value: 0x7f0800f2
+			public const int tfWeight = 2131230962;
 			
 			// aapt resource value: 0x7f080152
 			public const int time = 2131231058;
@@ -3372,8 +3372,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080135
 			public const int tvLine = 2131231029;
 			
-			// aapt resource value: 0x7f0800e1
-			public const int tvLogout = 2131230945;
+			// aapt resource value: 0x7f0800e2
+			public const int tvLogout = 2131230946;
 			
 			// aapt resource value: 0x7f08013e
 			public const int tvNRI = 2131231038;
@@ -3405,8 +3405,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800dc
 			public const int tvPass = 2131230940;
 			
-			// aapt resource value: 0x7f0800e2
-			public const int tvPassPrompt = 2131230946;
+			// aapt resource value: 0x7f0800e3
+			public const int tvPassPrompt = 2131230947;
 			
 			// aapt resource value: 0x7f080104
 			public const int tvPicking = 2131230980;

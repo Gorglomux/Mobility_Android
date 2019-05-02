@@ -80,7 +80,7 @@
 			android:background="?android:selectableItemBackground" />
 	</LinearLayout>
 	<Button
-		android:id="@+id/btnConnect"
+		android:id="@+id/btnConfirm"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="20dip"
