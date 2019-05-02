@@ -117,22 +117,34 @@
 		android:layout_height="1dip" 
 	/>
 
-	<TextView
-		android:id="@+id/tvLicense"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/delim2"
-		android:layout_marginLeft="15px"
-		android:layout_marginTop="15px"
-		android:text="License :" />
+	<LinearLayout
+		android:id="@+id/layoutPalette"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/delim2" >
+		<TextView
+			android:id="@+id/tvLicence"
+			android:layout_width="0dp"
+			android:layout_weight="20"
+			android:layout_height="wrap_content"
+			android:text="Licence : " />
 
+		<Button
+			android:id="@+id/btnPalette"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:text=" Palette" />
 
+	</LinearLayout>
+	
 	<LinearLayout
 		
 		android:id="@+id/layoutLicense"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/tvLicense" >
+		android:layout_below="@+id/layoutPalette" >
 
 		<EditText
 			android:id="@+id/tfLicenseReceivingDetails"

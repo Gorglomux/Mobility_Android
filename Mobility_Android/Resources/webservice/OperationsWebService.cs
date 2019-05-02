@@ -453,16 +453,76 @@ namespace Mobility_Android.Resources.webservice
             return blnReturn;
         }
 
-#endregion
+        /*
+         * Méthode qui permet de créer et retouner un numéro de palette
+         * 
+         */
+        public static string createPalletCode(string usertoken, ref string licenseParentCode, ref string licenseCode)
+        {
+            WebService.Operations.CR_ResultActionOfString result = new WebService.Operations.CR_ResultActionOfString();
+            try
+            {
+                if (connectToWebServiceOperations())
+                {
+                    result = webServiceOperation.CreatePalletCode(usertoken, ref licenseParentCode, ref licenseCode);
 
-#region Relocation
+                    if (!result.Success)
+                    {
+                        //MessageBox.Show(result.Errors(0).Message.ToString);
+                    }
+
+                }
+            }
+            /*catch (WebException ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errCannotReachWebservice);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errCannotReachWebservice);
+                            break;
+                        }
+                }
+                result.Success = false;
+            }*/
+            catch (Exception ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_France:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errWebserviceGeneric);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errWebserviceGeneric);
+                            break;
+                        }
+                }
+                result.Success = false;
+            }
+
+            return result.ReturnValue;
+        }
+
+        #endregion
+
+        #region Relocation
 
 
-            /*
-             * Méthode qui permet de déplacer une licence dans un autre entrepôt
-             * 
-             */
-            public static bool relocateLicense(string userToken, string sourceCode, string destinationCode, RELOCATION_DESTINATION destinationType, int warehouseNRI)
+        /*
+         * Méthode qui permet de déplacer une licence dans un autre entrepôt
+         * 
+         */
+        public static bool relocateLicense(string userToken, string sourceCode, string destinationCode, RELOCATION_DESTINATION destinationType, int warehouseNRI)
         {
             bool blnReturn = false;
             try
