@@ -45,7 +45,7 @@ namespace Mobility_Android.Activities
                 IsBusy = true;
                 await Task.Delay(50);
                 //On essaye de se connecter au WebService
-                if (UserWebService.doLogin(username.Text, password.Text))
+                if (SecurityWebService.doLogin(username.Text, password.Text))
                 {
                     //Si la connectio s'est bien passé on est envoyé vers la page d'accueil
 

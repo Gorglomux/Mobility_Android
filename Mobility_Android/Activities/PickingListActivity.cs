@@ -26,7 +26,8 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingList);
 
-            
+            CsDetailsActivity.typeCS = TYPE_CS.COMMANDE;
+
             CR_ResultActionOfListOfSaleWS result = OperationsWebService.getListPickingSale(Configuration.securityToken, (int)Configuration.currentLanguage, Configuration.userInfos.warehouseNRI);
 
             List<SaleWS> picking = result.ReturnValue.OfType<SaleWS>().ToList();

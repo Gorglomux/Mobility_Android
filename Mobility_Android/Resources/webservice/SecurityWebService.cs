@@ -20,7 +20,7 @@ namespace Mobility_Android.Resources.webservice
      *      UpdateUserWarehouse
      * 
      **/
-    class UserWebService
+    class SecurityWebService
     {
         private const string urlExtension = "services/security.asmx";
 
