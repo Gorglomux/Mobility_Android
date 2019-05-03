@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Android.App;
@@ -68,7 +70,31 @@ namespace Mobility_Android.Activities
             {
                 StartActivity(new Intent(this, typeof(ConfigActivity)));
             };
+
+
+            var rbFrench = FindViewById<RadioButton>(Resource.Id.rbFrench);
+            rbFrench.Click += (sender, e) =>
+            {
+                Toast.MakeText(this, rbFrench.Text, ToastLength.Short).Show();
+                SetLocale(new CultureInfo("fr"));
+
+            };
+
+            var rbEnglish= FindViewById<RadioButton>(Resource.Id.rbEnglish);
+            rbEnglish.Click += (sender, e) =>
+            {
+                Toast.MakeText(this, rbEnglish.Text, ToastLength.Short).Show();
+                SetLocale(new CultureInfo("en-CA"));
+
+            };
         }
-        
+        public void SetLocale(CultureInfo ci)
+        {
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+
+        }
+
+
     }
 }

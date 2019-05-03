@@ -38,6 +38,8 @@ namespace Mobility_Android.Resources.global
 
         // public currentEquipment As EquipementType = EquipementType.Inconnu
 
+        public static String logoutPassword= "Ceritar1706";
+
         public static String securityToken = "";
 
         public static UserInfosWS userInfos = new UserInfosWS();
