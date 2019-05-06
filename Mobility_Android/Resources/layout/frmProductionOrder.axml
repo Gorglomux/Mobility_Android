@@ -164,7 +164,7 @@
 		android:layout_marginTop="20px"
 		android:layout_below="@+id/tvPoids" >
     <Button
-			android:id="@+id/btnEndPicking"
+			android:id="@+id/btnEndPickingPalette"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_weight="5"

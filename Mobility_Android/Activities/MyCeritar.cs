@@ -49,8 +49,7 @@ namespace Mobility_Android.Activities
                 //On essaye de se connecter au WebService
                 if (SecurityWebService.doLogin(username.Text, password.Text))
                 {
-                    //Si la connectio s'est bien passé on est envoyé vers la page d'accueil
-
+                    //Si la connection s'est bien passé on est envoyé vers la page d'accueil
                     StartActivity(new Intent(this, typeof(HomeActivity)));
                 } else
                 {

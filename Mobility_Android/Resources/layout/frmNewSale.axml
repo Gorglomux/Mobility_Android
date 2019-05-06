@@ -124,7 +124,7 @@
 
 	<!-- Date picker  -->
 	<TextView
-		android:id="@+id/lblDate"
+		android:id="@+id/lblDateSale"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"	
 		android:layout_below="@+id/layoutPO" 
@@ -137,7 +137,7 @@
 		android:layout_weight="1"
 		android:layout_height="wrap_content"
 		android:background="@android:drawable/editbox_background"
-		android:layout_below="@+id/lblDate" 
+		android:layout_below="@+id/lblDateSale" 
 		android:textColor="#000"/>
 	<!-- Confirmer -->
 	<Button
