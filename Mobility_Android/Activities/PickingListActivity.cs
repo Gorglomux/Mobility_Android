@@ -37,11 +37,29 @@ namespace Mobility_Android.Activities
             var adapter = new PickingCustomAdapter(this, picking);
             list.Adapter = adapter;
 
+            // Action clic sur ajouter pour accèder à la liste de produit d'une reception
+            FindViewById<Button>(Resource.Id.imNewSale).Click += async (sender, e) => {
+                IsBusy = true;
+                await Task.Delay(50);
+                StartActivity(new Intent(this, typeof(NewSaleActivity)));
+                IsBusy = false;
+            };
+
             list.ItemClick += (parent, args) =>
             {
                 data = picking[args.Position];
                 StartActivity(new Intent(this, typeof(PickingDetailsActivity)));
             };
+        }
+
+        public override void OnWindowFocusChanged(bool hasFocus)
+        {
+            if (hasFocus && NewSaleActivity.mustRefresh)
+            {
+                NewSaleActivity.mustRefresh = false;
+                Recreate();
+            }
+
         }
     }
 }

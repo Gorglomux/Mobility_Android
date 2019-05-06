@@ -40,7 +40,7 @@ namespace Mobility_Android.Activities
                 // Récupération de la réception sélectionnée
                 SaleWS sale = (SaleWS)PickingListActivity.data;
                 // Récupération de la liste de produit selon une reception grâce au web service Operations
-                listProduct = sale.products.OfType<ProductDetailsWS>().ToList();
+                listProduct = OperationsWebService.getSaleProductDetails(Configuration.securityToken, sale.saleNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI).OfType<ProductDetailsWS>().ToList();
             }
 
             // Configuration de la ListView et de son Adapter par rapport à une liste de produit

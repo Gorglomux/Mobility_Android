@@ -45,10 +45,10 @@ namespace Mobility_Android.Activities
             if (CsDetailsActivity.typeCS == TYPE_CS.COMMANDE)
             {
                 // Récupération du produit sélectionné
-                SaleWS sale = (SaleWS)PickingListActivity.data;
+                ProductDetailsWS product = (ProductDetailsWS)ProductDetailsActivity.data;
 
                 // Récupération de la liste de licence d'un produit
-                listLicence = sale.products.OfType<PickedLicensesWS>().ToList();
+                listLicence = product.pickedProducts.OfType<PickedLicensesWS>().ToList();
             }
 
             // Configuration de la ListView et de son Adapter par rapport à une liste de licence

@@ -45,11 +45,12 @@ namespace Mobility_Android.Activities
             var dictionary = SecurityWebService.getListWarehouses(Configuration.securityToken);
             // Creation liste de nom produit pour le spinner
             List<string> warehouses = new List<string>();
+
             foreach (KeyValuePair<int, string> w in dictionary)
             {
                 if(Configuration.userInfos.warehouseNRI == w.Key)
                 {
-
+                    //
                 }
                 warehouses.Add(w.Value);
             }
@@ -61,13 +62,7 @@ namespace Mobility_Android.Activities
 
             spinner.ItemSelected += (parent, args) =>
             {
-                foreach (KeyValuePair<int, string> w in dictionary)
-                {
-                    if (warehouses[args.Position] == w.Value)
-                    {
-                        Configuration.userInfos.warehouseNRI = w.Key;
-                    }
-                }
+                Configuration.userInfos.warehouseNRI = dictionary.FirstOrDefault(x => x.Value == warehouses[args.Position]).Key;
             };
 
             //Pour chaque bouton on créer un évènement avec l'intention correspondante

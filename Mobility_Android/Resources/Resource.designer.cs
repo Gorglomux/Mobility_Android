@@ -2661,9 +2661,6 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08006c
 			public const int customPanel = 2131230828;
 			
-			// aapt resource value: 0x7f0800ef
-			public const int date_EditText = 2131230959;
-			
 			// aapt resource value: 0x7f08007a
 			public const int decor_content_parent = 2131230842;
 			
@@ -3344,6 +3341,9 @@ namespace Mobility_Android
 			
 			// aapt resource value: 0x7f08010f
 			public const int tvCustomer = 2131230991;
+			
+			// aapt resource value: 0x7f0800ef
+			public const int tvDate = 2131230959;
 			
 			// aapt resource value: 0x7f080139
 			public const int tvDeplacement = 2131231033;

@@ -60,7 +60,7 @@ namespace Mobility_Android.Activities
             spinner.Adapter = adapter;
 
             DateTime date = new DateTime();
-            dateSelect = FindViewById<TextView>(Resource.Id.date_EditText);
+            dateSelect = FindViewById<TextView>(Resource.Id.tvDate);
             dateSelect.Click += (sender, e) =>
             {
                 DatePickerFragment frag = DatePickerFragment.NewInstance(delegate (DateTime time)
