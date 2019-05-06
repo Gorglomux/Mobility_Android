@@ -24,6 +24,8 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceiving);
 
+            CsDetailsActivity.typeCS = TYPE_CS.RECEPTION;
+
             // Récupération de la liste de réception selon l'utilisateur
             List<ReceptionWS> receptions = OperationsWebService.getListReceptions(Configuration.securityToken);
 

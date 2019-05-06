@@ -60,7 +60,7 @@ namespace Mobility_Android.Activities
             spinner.Adapter = adapter;
 
             DateTime date = new DateTime();
-            dateSelect = FindViewById<TextView>(Resource.Id.date_EditText);
+            dateSelect = FindViewById<TextView>(Resource.Id.tvDate);
             dateSelect.Click += (sender, e) =>
             {
                 DatePickerFragment frag = DatePickerFragment.NewInstance(delegate (DateTime time)
@@ -106,6 +106,7 @@ namespace Mobility_Android.Activities
                 if (tfWeight.Text != "")
                 {
                     licence.weightKG = decimal.Parse(tfWeight.Text);
+                    licence.weightLb = decimal.Parse(tfWeight.Text);
                 } else
                 {
                     msg += "poids, ";
@@ -129,7 +130,15 @@ namespace Mobility_Android.Activities
                     if(OperationsWebService.pickLicenseReception(Configuration.securityToken, licence, (int)Configuration.currentLanguage, 0, "")==null)
                     {
                         Toast.MakeText(this, "Une licence existe déjà avec ce nom", ToastLength.Long).Show();
+                    } else
+                    {
+                        if (ReceivingDetailsActivity.licences == null)
+                        {
+                            ReceivingDetailsActivity.licences = new List<LicenseWS>();
+                        }
+                        ReceivingDetailsActivity.licences.Add(licence);
                     }
+
                     IsBusy = false;
                     mustRefresh = true;
                     Finish();

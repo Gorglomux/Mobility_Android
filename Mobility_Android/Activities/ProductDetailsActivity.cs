@@ -26,11 +26,22 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmProductDetails);
 
-            // Récupération de la réception sélectionnée
-            ReceptionWS reception = (ReceptionWS)ReceivingDetailsActivity.data;
+            List<ProductDetailsWS> listProduct =  null;
 
-            // Récupération de la liste de produit selon une reception grâce au web service Operations
-            List<ProductDetailsWS> listProduct = OperationsWebService.getReceptionProductDetails(Configuration.securityToken, reception.ReceptionNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI, null).OfType<ProductDetailsWS>().ToList();
+            if (CsDetailsActivity.typeCS == TYPE_CS.RECEPTION)
+            {
+                // Récupération de la réception sélectionnée
+                ReceptionWS reception = (ReceptionWS)ReceivingDetailsActivity.data;
+                // Récupération de la liste de produit selon une reception grâce au web service Operations
+                listProduct = OperationsWebService.getReceptionProductDetails(Configuration.securityToken, reception.ReceptionNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI, null).OfType<ProductDetailsWS>().ToList();
+            }
+            else if (CsDetailsActivity.typeCS == TYPE_CS.COMMANDE)
+            {
+                // Récupération de la réception sélectionnée
+                SaleWS sale = (SaleWS)PickingListActivity.data;
+                // Récupération de la liste de produit selon une reception grâce au web service Operations
+                listProduct = OperationsWebService.getSaleProductDetails(Configuration.securityToken, sale.saleNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI).OfType<ProductDetailsWS>().ToList();
+            }
 
             // Configuration de la ListView et de son Adapter par rapport à une liste de produit
             ListView list = FindViewById<ListView>(Resource.Id.lvDetailsProduct);

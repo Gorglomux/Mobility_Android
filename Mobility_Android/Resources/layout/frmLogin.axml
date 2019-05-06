@@ -120,7 +120,7 @@
 			android:layout_height="wrap_content"
 			android:layout_marginLeft="40dip"
 			android:layout_below="@id/layoutPass" 
-			android:text="Anglais"/>
+			android:text="Anglais"/> 
 	</RadioGroup>
 
 	<!-- CONNECTION BUTTON -->

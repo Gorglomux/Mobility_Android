@@ -13,6 +13,11 @@ namespace Mobility_Android.Resources.webservice
      * Classe qui gére les méthodes du web service Operation 
      * Méthodes :
      *      connectToWebServiceOperations
+     *      completeSale
+     *      getSaleProductDetails
+     *      createSale
+     *      getSaleByNRI
+     *      getListSales
      *      getListReceptions
      *      getReceptionByNRI
      *      pickLicenseReception
@@ -78,7 +83,322 @@ namespace Mobility_Android.Resources.webservice
             return isSuccess;
         }
 
-#region Reception 
+        #region Sale
+
+        public static List<SaleWS> getListSales(string userToken, int warehouseNRI)
+        {
+            List<SaleWS> receptions = new List<SaleWS>();
+            try
+            {
+                CR_ResultActionOfListOfSaleWS result;
+
+                if (connectToWebServiceOperations())
+                {
+                    result = webServiceOperation.GetListSale(userToken, (int)Configuration.currentLanguage, warehouseNRI);
+
+                    if (result.Success)
+                        receptions = new List<SaleWS>(result.ReturnValue);
+                    else
+                    {
+                        //MessageBox.Show(result.Errors(0).Message.ToString);
+                        receptions.Clear();
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errCannotReachWebservice);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errCannotReachWebservice);
+                            break;
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errWebserviceGeneric);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errWebserviceGeneric);
+                            break;
+                        }
+                }
+            }
+
+            return receptions;
+        }
+
+        public static SaleWS getSaleByNRI(string userToken, int receptionNRI, int lang)
+        {
+            SaleWS reception = new SaleWS();
+            try
+            {
+                CR_ResultActionOfSaleWS result;
+
+                if (connectToWebServiceOperations())
+                {
+                    result = webServiceOperation.GetSaleByNRI(userToken, receptionNRI, lang);
+
+                    if (result.Success)
+                        reception = result.ReturnValue;
+                    else
+                    {
+                        //MessageBox.Show(result.Errors(0).Message.ToString);
+                        reception = null/* TODO Change to default(_) if this is not a reference type */;
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errCannotReachWebservice);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errCannotReachWebservice);
+                            break;
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errWebserviceGeneric);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errWebserviceGeneric);
+                            break;
+                        }
+                }
+            }
+
+            return reception;
+        }
+
+        public static ProductDetailsWS PickLicenseSale(string userToken, LicenseWS license, int warehouseNRI, int UdP_NRI)
+        {
+            ProductDetailsWS currentProduct = new ProductDetailsWS();
+            CR_ResultActionOfProductDetailsWS result;
+
+            if (connectToWebServiceOperations())
+            {
+                result = webServiceOperation.PickLicenseSale(userToken, license, warehouseNRI, UdP_NRI);
+
+                if (result.Success)
+                    currentProduct = result.ReturnValue;
+                else
+                {
+                    Console.Write("\n\n\n\n\n" + result.Errors[0].Message.ToString() + "\n\n\n\n\n\n\n\n\n\n");
+                    //MessageBox.Show(result.Errors(0).Message.ToString);
+                    currentProduct = null/* TODO Change to default(_) if this is not a reference type */;
+                }
+            }
+
+            return currentProduct;
+        }
+
+        public static bool createSale(string userToken, SaleObjectWS sale)
+        {
+            bool blnReturn = false;
+            try
+            {
+                CR_ResultActionOfInt32 result;
+
+                if (connectToWebServiceOperations())
+                {
+                    result = webServiceOperation.CreateSale(userToken, sale);
+
+                    if (result.Success)
+                    {
+                        blnReturn = true;
+                    }
+                    else
+                    {
+                        //MessageBox.Show(result.Errors(0).Message.ToString);
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errCannotReachWebservice);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errCannotReachWebservice);
+                            break;
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errWebserviceGeneric);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errWebserviceGeneric);
+                            break;
+                        }
+                }
+            }
+
+            return blnReturn;
+        }
+        public static ProductDetailsWS[] getSaleProductDetails(string userToken, int saleNRI, int lang, int UdP_NRI)
+        {
+            ProductDetailsWS[] productDetails = null;
+            try
+            {
+                CR_ResultActionOfListOfProductDetailsWS result;
+
+                if (connectToWebServiceOperations())
+                {
+                    result = webServiceOperation.GetSaleProductDetails(userToken, saleNRI, lang);
+
+                    if (result.Success)
+                        productDetails = result.ReturnValue;
+                    else
+                    {
+                        //MessageBox.Show(result.Errors(0).Message.ToString);
+                        productDetails = null;
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errCannotReachWebservice);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errCannotReachWebservice);
+                            break;
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errWebserviceGeneric);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errWebserviceGeneric);
+                            break;
+                        }
+                }
+            }
+            return productDetails;
+        }
+
+        public static bool completeSale(string userToken, int saleNRI)
+        {
+            bool blnReturn = false;
+            try
+            {
+                WebService.Operations.CR_ResultActionOfBoolean result;
+
+                if (connectToWebServiceOperations())
+                {
+                    result = webServiceOperation.CompleteSale(userToken, saleNRI);
+
+                    if (result.Success)
+                        blnReturn = result.Success;
+                    else
+                    {
+                        //MessageBox.Show(result.Errors(0).Message.ToString);
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errCannotReachWebservice);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errCannotReachWebservice);
+                            break;
+                        }
+                }
+            }
+            catch (Exception ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errWebserviceGeneric);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errWebserviceGeneric);
+                            break;
+                        }
+                }
+            }
+
+            return blnReturn;
+        }
+
+
+        #endregion
+
+        #region Reception 
 
 
         /*
@@ -472,16 +792,76 @@ namespace Mobility_Android.Resources.webservice
             return blnReturn;
         }
 
-#endregion
+        /*
+         * Méthode qui permet de créer et retouner un numéro de palette
+         * 
+         */
+        public static string createPalletCode(string usertoken, ref string licenseParentCode, ref string licenseCode)
+        {
+            WebService.Operations.CR_ResultActionOfString result = new WebService.Operations.CR_ResultActionOfString();
+            try
+            {
+                if (connectToWebServiceOperations())
+                {
+                    result = webServiceOperation.CreatePalletCode(usertoken, ref licenseParentCode, ref licenseCode);
 
-#region Relocation
+                    if (!result.Success)
+                    {
+                        //MessageBox.Show(result.Errors(0).Message.ToString);
+                    }
+
+                }
+            }
+            /*catch (WebException ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errCannotReachWebservice);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errCannotReachWebservice);
+                            break;
+                        }
+                }
+                result.Success = false;
+            }*/
+            catch (Exception ex)
+            {
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_France:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceFR.errWebserviceGeneric);
+                            break;
+                        }
+
+                    default:
+                        {
+                            //MessageBox.Show(My.Resources.RessourceEN.errWebserviceGeneric);
+                            break;
+                        }
+                }
+                result.Success = false;
+            }
+
+            return result.ReturnValue;
+        }
+
+        #endregion
+
+        #region Relocation
 
 
-            /*
-             * Méthode qui permet de déplacer une licence dans un autre entrepôt
-             * 
-             */
-            public static bool relocateLicense(string userToken, string sourceCode, string destinationCode, RELOCATION_DESTINATION destinationType, int warehouseNRI)
+        /*
+         * Méthode qui permet de déplacer une licence dans un autre entrepôt
+         * 
+         */
+        public static bool relocateLicense(string userToken, string sourceCode, string destinationCode, RELOCATION_DESTINATION destinationType, int warehouseNRI)
         {
             bool blnReturn = false;
             try
@@ -493,7 +873,7 @@ namespace Mobility_Android.Resources.webservice
                     result = webServiceOperation.RelocaliseLicense(userToken, sourceCode, destinationCode, destinationType, warehouseNRI);
 
                     if (result.Success)
-                        blnReturn = result.Success;                 
+                        blnReturn = result.Success;
                     else
                     {
                         blnReturn = false;
@@ -537,9 +917,9 @@ namespace Mobility_Android.Resources.webservice
             return blnReturn;
         }
 
-#endregion
+        #endregion
 
-#region Production
+        #region Production
 
 
         /*
@@ -671,9 +1051,9 @@ namespace Mobility_Android.Resources.webservice
             return result.Success;
         }
 
-#endregion
+        #endregion
 
-#region WareHouse
+        #region WareHouse
 
 
         /*
@@ -769,24 +1149,24 @@ namespace Mobility_Android.Resources.webservice
 
                 }
             }
-           /* catch (WebException ex)
-            {
-                switch (Configuration.currentLanguage)
-                {
-                    case CR_TTLangue.French:
-                        {
-                            //MessageBox.Show(My.Resources.RessourceFR.errCannotReachWebservice);
-                            break;
-                        }
+            /* catch (WebException ex)
+             {
+                 switch (Configuration.currentLanguage)
+                 {
+                     case CR_TTLangue.French:
+                         {
+                             //MessageBox.Show(My.Resources.RessourceFR.errCannotReachWebservice);
+                             break;
+                         }
 
-                    default:
-                        {
-                            //MessageBox.Show(My.Resources.RessourceEN.errCannotReachWebservice);
-                            break;
-                        }
-                }
-                result.Success = false;
-            }*/
+                     default:
+                         {
+                             //MessageBox.Show(My.Resources.RessourceEN.errCannotReachWebservice);
+                             break;
+                         }
+                 }
+                 result.Success = false;
+             }*/
             catch (Exception ex)
             {
                 switch (Configuration.currentLanguage)
@@ -1064,9 +1444,9 @@ namespace Mobility_Android.Resources.webservice
             return result.ReturnValue;
         }
 
-#endregion
+        #endregion
 
-#region Vente
+        #region Vente
 
         public static CR_ResultActionOfListOfSaleWS getListPickingSale(string securedToken, int lang, int warehouseNRI)
         {
@@ -1128,7 +1508,7 @@ namespace Mobility_Android.Resources.webservice
             return productDetails;
         }
 
-#endregion
+        #endregion
 
     }
 }

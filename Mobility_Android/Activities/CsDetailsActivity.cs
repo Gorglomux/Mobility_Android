@@ -18,19 +18,38 @@ namespace Mobility_Android.Activities
      *  
      * 
      * 
-     **/ 
+     **/
+     
+    public enum TYPE_CS { NONE, COMMANDE,RECEPTION};
+    
     [Activity(Label = "CsDetailsActivity", ParentActivity = typeof(HomeActivity))]
     public class CsDetailsActivity : BaseActivity
     {
+        public static TYPE_CS typeCS=TYPE_CS.NONE;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmCsDetails);
 
-            // Récupération du produit sélectionné
-            ProductDetailsWS product = (ProductDetailsWS)ProductDetailsActivity.data;
+            List<PickedLicensesWS> listLicence = null;
 
-            // Récupération de la liste de licence d'un produit
-            List<PickedLicensesWS> listLicence = product.pickedProducts.OfType<PickedLicensesWS>().ToList();
+            if (CsDetailsActivity.typeCS == TYPE_CS.RECEPTION)
+            {
+                // Récupération du produit sélectionné
+                ProductDetailsWS product = (ProductDetailsWS)ProductDetailsActivity.data;
+
+                // Récupération de la liste de licence d'un produit
+                listLicence = product.pickedProducts.OfType<PickedLicensesWS>().ToList();
+            }
+
+            if (CsDetailsActivity.typeCS == TYPE_CS.COMMANDE)
+            {
+                // Récupération du produit sélectionné
+                ProductDetailsWS product = (ProductDetailsWS)ProductDetailsActivity.data;
+
+                // Récupération de la liste de licence d'un produit
+                listLicence = product.pickedProducts.OfType<PickedLicensesWS>().ToList();
+            }
 
             // Configuration de la ListView et de son Adapter par rapport à une liste de licence
             ListView list = FindViewById<ListView>(Resource.Id.lvCSDetails);
@@ -41,6 +60,11 @@ namespace Mobility_Android.Activities
             if (listLicence.Count == 0)
             {
                 Toast.MakeText(this, "Pas de licence", ToastLength.Long).Show();
+            }
+
+            if (CsDetailsActivity.typeCS == TYPE_CS.NONE)
+            {
+                Toast.MakeText(this, "Erreur", ToastLength.Long).Show();
             }
         }
     }

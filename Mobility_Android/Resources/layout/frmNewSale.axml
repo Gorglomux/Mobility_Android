@@ -131,13 +131,14 @@
 		android:layout_marginLeft="15dip"
 		android:text="Date de livraison attendue :"
 	/>
-	<EditText
-		android:id="@+id/date_EditText"
+	<TextView
+		android:id="@+id/tvDate"
 		android:layout_width="match_parent"
+		android:layout_weight="1"
 		android:layout_height="wrap_content"
+		android:background="@android:drawable/editbox_background"
 		android:layout_below="@+id/lblDate" 
-		android:textColor="#fff"
-		 />
+		android:textColor="#000"/>
 	<!-- Confirmer -->
 	<Button
         android:id="@+id/btnConfirm"
@@ -146,6 +147,6 @@
 		android:layout_marginTop="20dip"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dip"
-		android:layout_below="@id/date_EditText"
+		android:layout_below="@id/tvDate"
         android:text="  Confirmer  " />
 </RelativeLayout>

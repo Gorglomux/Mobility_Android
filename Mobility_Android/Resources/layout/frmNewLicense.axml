@@ -65,7 +65,7 @@
 			android:layout_weight="1"
 			android:layout_height="wrap_content"
 			android:background="@android:drawable/editbox_background"
-			android:id="@+id/date_EditText"
+			android:id="@+id/tvDate"
 			android:textColor="#000"/>
 	</LinearLayout>
 

@@ -21,6 +21,7 @@ namespace Mobility_Android.Activities
     public class ReceivingDetailsActivity : BaseActivity
     {
         public static LicenseWS licence;
+        public static List<LicenseWS> licences = null ;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -91,6 +92,49 @@ namespace Mobility_Android.Activities
                 StartActivity(new Intent(this, typeof(ProductDetailsActivity)));
                 IsBusy = false;
             };
+
+            // Ne peut pas fonctionner, il faudrait ajouter une méthode dans les web services afin d'ajouter des licences sur une palette.
+
+            /*// Action clic sur palette pour mettre toutes les licences crées sur la palette
+            FindViewById<Button>(Resource.Id.btnPalette).Click += async (sender, e) => {
+                if (licences != null)
+                {
+
+                    IsBusy = true;
+                    await Task.Delay(50);
+                    var test1 = "1302";
+                    var test2 = "111";
+                    var codePalette = OperationsWebService.createPalletCode(Configuration.securityToken, ref test1, ref test2);
+                    string msg = "Licence non transférée : ";
+                    bool isSucess = true;
+                    licences.Remove(licence);
+
+                    foreach (LicenseWS lic in licences)
+                    {
+                        if (!(OperationsWebService.relocateLicense(Configuration.securityToken, lic.licenseCode, codePalette, RELOCATION_DESTINATION.Pallet, Configuration.userInfos.warehouseNRI)))
+                        {
+                            isSucess = false;
+                            msg += lic.licenseCode + ", ";
+                        }
+                    }
+                    IsBusy = false;
+                    if (isSucess)
+                    {
+                        Toast.MakeText(this, "Les licences ont été transférées", ToastLength.Long).Show();
+
+                    }
+                    else
+                    {
+                        Toast.MakeText(this, msg, ToastLength.Long).Show();
+
+                    }
+                    Recreate();
+                }
+                else
+                {
+                    Toast.MakeText(this, "Veuillez insérer des licences", ToastLength.Long).Show();
+                }
+            };*/
 
             // Action clic sur bouton pour completer une reception
             FindViewById<Button>(Resource.Id.btnEndReceiving).Click += async(sender, e) => {
