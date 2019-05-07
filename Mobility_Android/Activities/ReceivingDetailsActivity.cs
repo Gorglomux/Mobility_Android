@@ -15,6 +15,7 @@ using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
 using Mobility_Android.WebService.Security;
 using static Android.InputMethodServices.KeyboardView;
+using static CodeParser;
 
 namespace Mobility_Android.Activities
 {
@@ -69,15 +70,54 @@ namespace Mobility_Android.Activities
             EditText urlEditText = FindViewById<EditText>(Resource.Id.tfLicenseReceivingDetails);
             urlEditText.KeyPress += (object sender, View.KeyEventArgs e) => {
                 e.Handled = false;
+                CodeParser parser = new CodeParser();
+
                 if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter)
                 {
                     if (urlEditText.Text.ToString() != "")
                     {
                         licence = new LicenseWS();
-                        licence.licenseCode = urlEditText.Text.ToString();
-                        licence.parentNRI = reception.ReceptionNRI;
-                        data = reception;
-                        StartActivity(new Intent(this, typeof(NewLicenseActivity)));
+
+                        ParsedLicence parsedLicence = parser.getLicense(urlEditText.Text);
+                        licence = Converts.ParsedLicToLicenceWS(parsedLicence);
+
+                        if (licence.licenseCode == null)
+                        {
+                            licence.licenseCode = urlEditText.Text;
+                            licence.parentNRI = reception.ReceptionNRI;
+                            data = reception;
+                            StartActivity(new Intent(this, typeof(NewLicenseActivity)));
+                        } else
+                        {
+                            licence.parentNRI = reception.ReceptionNRI;
+                            // Creation liste de nom produit
+                            List<ProductDetailsWS> listProduct = OperationsWebService.getReceptionProductDetails(Configuration.securityToken, reception.ReceptionNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI, null).OfType<ProductDetailsWS>().ToList();
+
+
+                            foreach (ProductDetailsWS pro in listProduct)
+                            {
+                                if (pro.SSCC.Contains(licence.productSSCC))
+                                {
+                                    licence.productNRI = pro.NRI;
+                                }
+                            }
+
+                            if(licence.productNRI != 0)
+                            {
+                                Recreate();
+                            } else
+                            {
+                                if(Configuration.currentLanguage == CR_TTLangue.French_Canada)
+                                {
+                                    Toast.MakeText(this, Activities.ResourceFR.errProductNotPresent, ToastLength.Long).Show() ;
+                                } else
+                                {
+                                    Toast.MakeText(this, Activities.ResourceEN.errProductNotPresent, ToastLength.Long).Show();
+                                }
+                            }
+                            
+                        }
+
                         e.Handled = true;
                     }
                     else
@@ -167,31 +207,31 @@ namespace Mobility_Android.Activities
             switch (Configuration.currentLanguage)
             {
                 case CR_TTLangue.French_Canada:
-                    {
-                        FindViewById<TextView>(Resource.Id.tvTitleRecieving).Text = Activities.ResourceFR.tvTitleRecieving;
-                        FindViewById<TextView>(Resource.Id.tvRecieving).Text = Activities.ResourceFR.tvRecieving;
-                        FindViewById<TextView>(Resource.Id.tvProvider).Text = Activities.ResourceFR.tvProvider;
-                        FindViewById<TextView>(Resource.Id.tvProduct).Text = Activities.ResourceFR.tvProduct;
-                        FindViewById<TextView>(Resource.Id.tvQte).Text = Activities.ResourceFR.tvQte;
-                        FindViewById<TextView>(Resource.Id.tvPoids).Text = Activities.ResourceFR.tvPoids;
-                        FindViewById<TextView>(Resource.Id.tvLicence).Text = Activities.ResourceFR.tvLicence;
-                        FindViewById<Button>(Resource.Id.btnEndReceiving).Text = Activities.ResourceFR.btnEndReceiving;
+                {
+                    FindViewById<TextView>(Resource.Id.tvTitleRecieving).Text = Activities.ResourceFR.tvTitleRecieving;
+                    FindViewById<TextView>(Resource.Id.tvRecieving).Text = Activities.ResourceFR.tvRecieving;
+                    FindViewById<TextView>(Resource.Id.tvProvider).Text = Activities.ResourceFR.tvProvider;
+                    FindViewById<TextView>(Resource.Id.tvProduct).Text = Activities.ResourceFR.tvProduct;
+                    FindViewById<TextView>(Resource.Id.tvQte).Text = Activities.ResourceFR.tvQte;
+                    FindViewById<TextView>(Resource.Id.tvPoids).Text = Activities.ResourceFR.tvPoids;
+                    FindViewById<TextView>(Resource.Id.tvLicence).Text = Activities.ResourceFR.tvLicence;
+                    FindViewById<Button>(Resource.Id.btnEndReceiving).Text = Activities.ResourceFR.btnEndReceiving;
 
-                        break;
-                    }
+                    break;
+                }
 
                 case CR_TTLangue.English:
-                    {
-                        FindViewById<TextView>(Resource.Id.tvTitleRecieving).Text = Activities.ResourceEN.tvTitleRecieving;
-                        FindViewById<TextView>(Resource.Id.tvRecieving).Text = Activities.ResourceEN.tvRecieving;
-                        FindViewById<TextView>(Resource.Id.tvProvider).Text = Activities.ResourceEN.tvProvider;
-                        FindViewById<TextView>(Resource.Id.tvProduct).Text = Activities.ResourceEN.tvProduct;
-                        FindViewById<TextView>(Resource.Id.tvQte).Text = Activities.ResourceEN.tvQte;
-                        FindViewById<TextView>(Resource.Id.tvPoids).Text = Activities.ResourceEN.tvPoids;
-                        FindViewById<TextView>(Resource.Id.tvLicence).Text = Activities.ResourceEN.tvLicence;
-                        FindViewById<Button>(Resource.Id.btnEndReceiving).Text = Activities.ResourceEN.btnEndReceiving;
-                        break;
-                    }
+                {
+                    FindViewById<TextView>(Resource.Id.tvTitleRecieving).Text = Activities.ResourceEN.tvTitleRecieving;
+                    FindViewById<TextView>(Resource.Id.tvRecieving).Text = Activities.ResourceEN.tvRecieving;
+                    FindViewById<TextView>(Resource.Id.tvProvider).Text = Activities.ResourceEN.tvProvider;
+                    FindViewById<TextView>(Resource.Id.tvProduct).Text = Activities.ResourceEN.tvProduct;
+                    FindViewById<TextView>(Resource.Id.tvQte).Text = Activities.ResourceEN.tvQte;
+                    FindViewById<TextView>(Resource.Id.tvPoids).Text = Activities.ResourceEN.tvPoids;
+                    FindViewById<TextView>(Resource.Id.tvLicence).Text = Activities.ResourceEN.tvLicence;
+                    FindViewById<Button>(Resource.Id.btnEndReceiving).Text = Activities.ResourceEN.btnEndReceiving;
+                    break;
+                }
             }
         }
     }

@@ -59,7 +59,6 @@ namespace Mobility_Android.Activities {
                 resourceCulture = value;
             }
         }
-
         
         /// <summary>
         ///   Looks up a localized string similar to 2 - Creation de palette.
@@ -755,7 +754,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to # Commande :.
+        ///   Looks up a localized string similar to Commande :.
         /// </summary>
         internal static string tvPicking {
             get {
@@ -899,7 +898,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to # Commande.
+        ///   Looks up a localized string similar to  Commande.
         /// </summary>
         internal static string tvSale {
             get {
@@ -953,7 +952,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commande.
+        ///   Looks up a localized string similar to # Commande.
         /// </summary>
         internal static string tvTitlePicking {
             get {

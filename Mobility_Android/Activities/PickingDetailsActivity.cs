@@ -13,6 +13,7 @@ using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
 using Mobility_Android.WebService.Security;
+using static CodeParser;
 
 namespace Mobility_Android.Activities
 {
@@ -84,13 +85,26 @@ namespace Mobility_Android.Activities
             EditText editText = FindViewById<EditText>(Resource.Id.tfLicensePickingDetails);
             editText.KeyPress += (object sender, View.KeyEventArgs e) => {
                 e.Handled = false;
+
+                CodeParser parser = new CodeParser();
+
+
                 if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter)
                 {
                     if (editText.Text.ToString() != "")
                     {
                         licence = new LicenseWS();
-                        licence.licenseCode = editText.Text;
+
+                        ParsedLicence parsedLicence = parser.getLicense(editText.Text);
+                        licence = Converts.ParsedLicToLicenceWS(parsedLicence);
+                        
+                        if(licence.licenseCode == null)
+                        {
+                            licence.licenseCode = editText.Text;
+                        }
+                        
                         licence.parentNRI = sale.saleNRI;
+
                         if(OperationsWebService.PickLicenseSale(Configuration.securityToken, licence, Configuration.userInfos.warehouseNRI, Configuration.userInfos.warehouseNRI) == null)
                         {
                             Toast.MakeText(this, "Vérifier le numéro de licence", ToastLength.Long).Show();

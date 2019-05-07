@@ -22,7 +22,7 @@ public class CodeParser
         patterns.Add("21", new GroupDefinition(1, 20, GroupDefinitionField.palletCode));
     }
 
-    public ParsedLicence GetLicense(string input)
+    public ParsedLicence getLicense(string input)
     {
         ParsedLicence parsedLicense = new ParsedLicence();
         CultureInfo provider = CultureInfo.InvariantCulture;
