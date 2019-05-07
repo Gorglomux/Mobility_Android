@@ -63,9 +63,6 @@ namespace Mobility_Android
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahText = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahText;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::Mobility_Android.Resource.Styleable.ProgressWheel_ahTextSize;
-			global::ZXing.Mobile.Resource.Id.contentFrame = global::Mobility_Android.Resource.Id.contentFrame;
-			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::Mobility_Android.Resource.Layout.zxingscanneractivitylayout;
-			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::Mobility_Android.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Animation
@@ -2643,9 +2640,6 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08008d
 			public const int container = 2131230861;
 			
-			// aapt resource value: 0x7f080160
-			public const int contentFrame = 2131231072;
-			
 			// aapt resource value: 0x7f080066
 			public const int contentPanel = 2131230822;
 			
@@ -2979,23 +2973,23 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08012f
 			public const int lvReceiving = 2131231023;
 			
-			// aapt resource value: 0x7f080162
-			public const int masked = 2131231074;
+			// aapt resource value: 0x7f080161
+			public const int masked = 2131231073;
 			
 			// aapt resource value: 0x7f08014f
 			public const int media_actions = 2131231055;
 			
+			// aapt resource value: 0x7f080162
+			public const int menuHome = 2131231074;
+			
 			// aapt resource value: 0x7f080163
-			public const int menuHome = 2131231075;
-			
-			// aapt resource value: 0x7f080164
-			public const int menuMove = 2131231076;
-			
-			// aapt resource value: 0x7f080166
-			public const int menuPicking = 2131231078;
+			public const int menuMove = 2131231075;
 			
 			// aapt resource value: 0x7f080165
-			public const int menuRecieving = 2131231077;
+			public const int menuPicking = 2131231077;
+			
+			// aapt resource value: 0x7f080164
+			public const int menuRecieving = 2131231076;
 			
 			// aapt resource value: 0x7f08015f
 			public const int message = 2131231071;
@@ -3525,8 +3519,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f080161
-			public const int visible = 2131231073;
+			// aapt resource value: 0x7f080160
+			public const int visible = 2131231072;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;
@@ -3862,12 +3856,6 @@ namespace Mobility_Android
 			
 			// aapt resource value: 0x7f04005a
 			public const int tooltip = 2130968666;
-			
-			// aapt resource value: 0x7f04005b
-			public const int zxingscanneractivitylayout = 2130968667;
-			
-			// aapt resource value: 0x7f04005c
-			public const int zxingscannerfragmentlayout = 2130968668;
 			
 			static Layout()
 			{

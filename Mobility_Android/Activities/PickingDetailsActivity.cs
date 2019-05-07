@@ -25,6 +25,8 @@ namespace Mobility_Android.Activities
     [Activity(Label = "PickingDetailsActivity", ParentActivity = typeof(HomeActivity))]
     public class PickingDetailsActivity : BaseActivity
     {
+        public static LicenseWS licence;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingDetails);
@@ -34,6 +36,11 @@ namespace Mobility_Android.Activities
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), FindViewById<EditText>(Resource.Id.tfLicensePickingDetails));
 
             SaleWS sale = (SaleWS)PickingListActivity.data;
+
+
+            // Remplir champs de données par rapport à la réception
+            FindViewById<TextView>(Resource.Id.tvNumPicking).Text = sale.saleNRI.ToString();
+            FindViewById<TextView>(Resource.Id.tvnameClient).Text = sale.customerCode;
 
             // Action clic sur détails pour accèder à la liste de produit d'une reception
             FindViewById<ImageButton>(Resource.Id.imDetails).Click += async (sender, e) => {
@@ -54,6 +61,26 @@ namespace Mobility_Android.Activities
                 Finish();
             };
 
+            // Affichage de la dernière licence créer, si pas de licence alors on n'affiche rien
+            if (licence != null)
+            {
+                // Creation liste de nom produit
+                List<ProductDetailsWS> listProduct = OperationsWebService.getSaleProductDetails(Configuration.securityToken, sale.saleNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI).OfType<ProductDetailsWS>().ToList();
+
+                foreach (ProductDetailsWS p in listProduct)
+                    // On parcourt la liste de produit pour trouver le produit qui correspond à la licence
+                    foreach (PickedLicensesWS l in p.pickedProducts)
+                    {
+                        // Puis on affichage les information dans les TextView
+                        if (licence.licenseCode == l.code)
+                        {
+                            FindViewById<TextView>(Resource.Id.tvNameProduct).Text = p.code;
+                            FindViewById<TextView>(Resource.Id.tvAmountQte).Text = p.qtyPicked.ToString();
+                            FindViewById<TextView>(Resource.Id.tvAmountPoids).Text = l.weight.ToString() + " kg";
+                        }
+                    }
+            }
+
             EditText editText = FindViewById<EditText>(Resource.Id.tfLicensePickingDetails);
             editText.KeyPress += (object sender, View.KeyEventArgs e) => {
                 e.Handled = false;
@@ -61,7 +88,7 @@ namespace Mobility_Android.Activities
                 {
                     if (editText.Text.ToString() != "")
                     {
-                        LicenseWS licence = new LicenseWS();
+                        licence = new LicenseWS();
                         licence.licenseCode = editText.Text;
                         licence.parentNRI = sale.saleNRI;
                         if(OperationsWebService.PickLicenseSale(Configuration.securityToken, licence, Configuration.userInfos.warehouseNRI, Configuration.userInfos.warehouseNRI) == null)
