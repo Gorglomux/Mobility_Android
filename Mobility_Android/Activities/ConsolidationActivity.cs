@@ -12,6 +12,7 @@ using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -21,6 +22,8 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmConsolidation);
+
+            translateScreen();
 
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), FindViewById<EditText>(Resource.Id.tfLicenseConsolidation));
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear2), FindViewById<EditText>(Resource.Id.tfPalette));
@@ -45,8 +48,30 @@ namespace Mobility_Android.Activities
                     Finish();
                 }
             };
+        }
 
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvConsolidation).Text = Activities.ResourceFR.tvConsolidation;
+                        FindViewById<TextView>(Resource.Id.tvLicense).Text = Activities.ResourceFR.tvLicense;
+                        FindViewById<TextView>(Resource.Id.tvPalette).Text = Activities.ResourceFR.tvPalette;
+                        FindViewById<Button>(Resource.Id.btnConfirm).Text = Activities.ResourceFR.btnConfirm;
+                        break;
+                    }
 
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvConsolidation).Text = Activities.ResourceEN.tvConsolidation;
+                        FindViewById<TextView>(Resource.Id.tvLicense).Text = Activities.ResourceEN.tvLicense;
+                        FindViewById<TextView>(Resource.Id.tvPalette).Text = Activities.ResourceEN.tvPalette;
+                        FindViewById<Button>(Resource.Id.btnConfirm).Text = Activities.ResourceEN.btnConfirm;
+                        break;
+                    }
+            }
         }
     }
 }

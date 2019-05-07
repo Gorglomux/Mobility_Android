@@ -3883,7 +3883,10 @@ namespace Mobility_Android
 		{
 			
 			// aapt resource value: 0x7f0e0000
-			public const int menu = 2131623936;
+			public const int menuEN = 2131623936;
+			
+			// aapt resource value: 0x7f0e0001
+			public const int menuFR = 2131623937;
 			
 			static Menu()
 			{

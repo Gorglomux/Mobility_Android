@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.WebService.Operations;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -30,6 +31,8 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmCsDetails);
+
+            translateScreen();
 
             List<PickedLicensesWS> listLicence = null;
 
@@ -65,6 +68,28 @@ namespace Mobility_Android.Activities
             if (CsDetailsActivity.typeCS == TYPE_CS.NONE)
             {
                 Toast.MakeText(this, "Erreur", ToastLength.Long).Show();
+            }
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvProductDetails).Text = Activities.ResourceFR.tvProductDetails;
+                        FindViewById<TextView>(Resource.Id.tvCS).Text = Activities.ResourceFR.tvCS;
+                        FindViewById<TextView>(Resource.Id.tvWeight).Text = Activities.ResourceFR.tvWeight;
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvProductDetails).Text = Activities.ResourceEN.tvProductDetails;
+                        FindViewById<TextView>(Resource.Id.tvCS).Text = Activities.ResourceEN.tvCS;
+                        FindViewById<TextView>(Resource.Id.tvWeight).Text = Activities.ResourceEN.tvWeight;
+                        break;
+                    }
             }
         }
     }

@@ -12,6 +12,7 @@ using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -25,6 +26,8 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmProductDetails);
+
+            translateScreen();
 
             List<ProductDetailsWS> listProduct =  null;
 
@@ -60,6 +63,28 @@ namespace Mobility_Android.Activities
             if (listProduct.Count == 0)
             {
                 Toast.MakeText(this, "Pas de produit", ToastLength.Long).Show();
+            }
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvProductDetails).Text = Activities.ResourceFR.tvProductDetails;
+                        FindViewById<TextView>(Resource.Id.tvProductName).Text = Activities.ResourceFR.tvProductName;
+                        FindViewById<TextView>(Resource.Id.tvQuantity).Text = Activities.ResourceFR.tvQuantity;
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvProductDetails).Text = Activities.ResourceEN.tvProductDetails;
+                        FindViewById<TextView>(Resource.Id.tvProductName).Text = Activities.ResourceEN.tvProductName;
+                        FindViewById<TextView>(Resource.Id.tvQuantity).Text = Activities.ResourceEN.tvQuantity;
+                        break;
+                    }
             }
         }
     }

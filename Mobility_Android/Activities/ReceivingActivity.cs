@@ -13,6 +13,7 @@ using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -23,6 +24,8 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceiving);
+
+            translateScreen();
 
             CsDetailsActivity.typeCS = TYPE_CS.RECEPTION;
 
@@ -52,11 +55,35 @@ namespace Mobility_Android.Activities
             }
 
         }
+
         public override void OnWindowFocusChanged(bool hasFocus)
         {
             if (hasFocus)
             {
                 Recreate();
+            }
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvReceiving).Text = Activities.ResourceFR.tvReceiving;
+                        FindViewById<TextView>(Resource.Id.tvRec).Text = Activities.ResourceFR.tvRec;
+                        FindViewById<TextView>(Resource.Id.tvFournisseur).Text = Activities.ResourceFR.tvFournisseur;
+
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvReceiving).Text = Activities.ResourceEN.tvReceiving;
+                        FindViewById<TextView>(Resource.Id.tvRec).Text = Activities.ResourceEN.tvRec;
+                        FindViewById<TextView>(Resource.Id.tvFournisseur).Text = Activities.ResourceEN.tvFournisseur;
+                        break;
+                    }
             }
         }
 

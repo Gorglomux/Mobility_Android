@@ -166,7 +166,7 @@
     <value>1 - Relocation</value>
   </data>
   <data name="btnSaveConfig" xml:space="preserve">
-    <value>Sauvegarder</value>
+    <value>Save</value>
   </data>
   <data name="errCannotReachWebservice" xml:space="preserve">
     <value>Could not reach WebService</value>
@@ -268,7 +268,7 @@
     <value>Configurations</value>
   </data>
   <data name="tvConsolidation" xml:space="preserve">
-    <value>Consolidation</value>
+    <value>Consolidate</value>
   </data>
   <data name="tvCreation" xml:space="preserve">
     <value>Productions</value>
@@ -310,7 +310,7 @@
     <value>Logout</value>
   </data>
   <data name="tvName" xml:space="preserve">
-    <value>Username  :</value>
+    <value>Username :</value>
   </data>
   <data name="tvNRI" xml:space="preserve">
     <value>NRI</value>
@@ -328,7 +328,7 @@
     <value>Please answer your password  :</value>
   </data>
   <data name="tvPicking" xml:space="preserve">
-    <value># Order :</value>
+    <value>Order</value>
   </data>
   <data name="tvPoids" xml:space="preserve">
     <value>Weight :</value>
@@ -410,5 +410,29 @@
   </data>
   <data name="txtRec" xml:space="preserve">
     <value># Rec.</value>
+  </data>
+  <data name="rbEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="rbFrench" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="tvFournisseur" xml:space="preserve">
+    <value>Provideur</value>
+  </data>
+  <data name="tvRec" xml:space="preserve">
+    <value># Rec.</value>
+  </data>
+  <data name="menuHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="menuMove" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="menuPicking" xml:space="preserve">
+    <value>Picking</value>
+  </data>
+  <data name="menuRecieving" xml:space="preserve">
+    <value>Recieving</value>
   </data>
 </root>

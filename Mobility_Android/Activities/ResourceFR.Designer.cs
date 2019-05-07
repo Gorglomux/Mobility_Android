@@ -59,8 +59,7 @@ namespace Mobility_Android.Activities {
                 resourceCulture = value;
             }
         }
-<<<<<<< HEAD
-=======
+
         
         /// <summary>
         ///   Looks up a localized string similar to 2 - Creation de palette.
@@ -495,6 +494,60 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Accueil.
+        /// </summary>
+        internal static string menuHome {
+            get {
+                return ResourceManager.GetString("menuHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Déplacement.
+        /// </summary>
+        internal static string menuMove {
+            get {
+                return ResourceManager.GetString("menuMove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Commande.
+        /// </summary>
+        internal static string menuPicking {
+            get {
+                return ResourceManager.GetString("menuPicking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Réception.
+        /// </summary>
+        internal static string menuRecieving {
+            get {
+                return ResourceManager.GetString("menuRecieving", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Anglais.
+        /// </summary>
+        internal static string rbEnglish {
+            get {
+                return ResourceManager.GetString("rbEnglish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Français.
+        /// </summary>
+        internal static string rbFrench {
+            get {
+                return ResourceManager.GetString("rbFrench", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Client :.
         /// </summary>
         internal static string tvClient {
@@ -563,6 +616,15 @@ namespace Mobility_Android.Activities {
         internal static string tvDestination {
             get {
                 return ResourceManager.GetString("tvDestination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fournisseur.
+        /// </summary>
+        internal static string tvFournisseur {
+            get {
+                return ResourceManager.GetString("tvFournisseur", resourceCulture);
             }
         }
         
@@ -810,6 +872,15 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to # Rec..
+        /// </summary>
+        internal static string tvRec {
+            get {
+                return ResourceManager.GetString("tvRec", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Réceptions.
         /// </summary>
         internal static string tvReceiving {
@@ -943,6 +1014,5 @@ namespace Mobility_Android.Activities {
                 return ResourceManager.GetString("txtRec", resourceCulture);
             }
         }
->>>>>>> c701da2de0501739b4f78a289a5bcb2a769c6345
     }
 }

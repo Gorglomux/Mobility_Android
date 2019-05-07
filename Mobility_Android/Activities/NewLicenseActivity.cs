@@ -12,6 +12,7 @@ using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -31,6 +32,8 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmNewLicense);
+
+            translateScreen();
 
             mustRefresh = false;
 
@@ -149,6 +152,34 @@ namespace Mobility_Android.Activities
                     Toast.MakeText(this,msg, ToastLength.Long).Show();
                 }
             };
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<TextView>(Resource.Id.lblTitleLicenseInfo).Text = Activities.ResourceFR.lblTitleLicenseInfo;
+                        FindViewById<TextView>(Resource.Id.lblProduct).Text = Activities.ResourceFR.lblProduct;
+                        FindViewById<TextView>(Resource.Id.lblDate).Text = Activities.ResourceFR.lblDate;
+                        FindViewById<TextView>(Resource.Id.lblWeight).Text = Activities.ResourceFR.lblWeight;
+                        FindViewById<TextView>(Resource.Id.lblQty).Text = Activities.ResourceFR.lblQty;
+                        FindViewById<Button>(Resource.Id.btnConfirm).Text = Activities.ResourceFR.btnConfirm;
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<TextView>(Resource.Id.lblTitleLicenseInfo).Text = Activities.ResourceEN.lblTitleLicenseInfo;
+                        FindViewById<TextView>(Resource.Id.lblProduct).Text = Activities.ResourceEN.lblProduct;
+                        FindViewById<TextView>(Resource.Id.lblDate).Text = Activities.ResourceEN.lblDate;
+                        FindViewById<TextView>(Resource.Id.lblWeight).Text = Activities.ResourceEN.lblWeight;
+                        FindViewById<TextView>(Resource.Id.lblQty).Text = Activities.ResourceEN.lblQty;
+                        FindViewById<Button>(Resource.Id.btnConfirm).Text = Activities.ResourceEN.btnConfirm;
+                        break;
+                    }
+            }
         }
     }
 }
