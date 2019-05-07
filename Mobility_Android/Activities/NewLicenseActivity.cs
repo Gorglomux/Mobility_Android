@@ -129,7 +129,7 @@ namespace Mobility_Android.Activities
                     await Task.Delay(50);
                     if(OperationsWebService.pickLicenseReception(Configuration.securityToken, licence, (int)Configuration.currentLanguage, 0, "")==null)
                     {
-                        Toast.MakeText(this, "Une licence existe déjà avec ce nom", ToastLength.Long).Show();
+                        Toast.MakeText(this, OperationsWebService.errorMessage, ToastLength.Long).Show();
                     } else
                     {
                         if (ReceivingDetailsActivity.licences == null)

@@ -13,7 +13,7 @@ using Android.Widget;
 namespace Mobility_Android.Activities
 {
     /**
-     * A implémenter
+     * A CODER PLUS TARD
      * 
      **/ 
     [Activity(Label = "CsDetailsProductionActivity", ParentActivity = typeof(HomeActivity))]

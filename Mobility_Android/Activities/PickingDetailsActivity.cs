@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -51,7 +52,7 @@ namespace Mobility_Android.Activities
             };
 
             EditText editText = FindViewById<EditText>(Resource.Id.tfLicensePickingDetails);
-            editText.KeyPress += (object sender, View.KeyEventArgs e) => {
+            editText.KeyPress += async (object sender, View.KeyEventArgs e) => {
                 e.Handled = false;
                 if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter)
                 {
@@ -60,15 +61,17 @@ namespace Mobility_Android.Activities
                         LicenseWS licence = new LicenseWS();
                         licence.licenseCode = editText.Text;
                         licence.parentNRI = sale.saleNRI;
+
                         if(OperationsWebService.PickLicenseSale(Configuration.securityToken, licence, Configuration.userInfos.warehouseNRI, Configuration.userInfos.warehouseNRI) == null)
                         {
-                            Toast.MakeText(this, "Vérifier le numéro de licence", ToastLength.Long).Show();
+                            Toast.MakeText(this, OperationsWebService.errorMessage, ToastLength.Long).Show();
+                            OperationsWebService.errorMessage = "";
                         } else
                         {
                             Toast.MakeText(this, "Licence ajoutée", ToastLength.Long).Show();
                         }
                         data = sale;
-                        
+ 
                         refresh();
                         e.Handled = true;
                     }

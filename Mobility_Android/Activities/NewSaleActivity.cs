@@ -119,11 +119,11 @@ namespace Mobility_Android.Activities
 
                     if(OperationsWebService.createSale(Configuration.securityToken, sale))
                     {
-                        Toast.MakeText(this, "Vente crée", ToastLength.Long).Show();
+                        Toast.MakeText(this, "Vente créée", ToastLength.Long).Show();
                     }
                     else
                     {
-                        Toast.MakeText(this, "lol xd", ToastLength.Long).Show();
+                        Toast.MakeText(this, OperationsWebService.errorMessage , ToastLength.Long).Show();
                     }
                
                     IsBusy = false;

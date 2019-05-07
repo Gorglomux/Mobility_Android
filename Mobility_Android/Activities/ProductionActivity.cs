@@ -10,6 +10,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+/**
+ * A implémenter plus tard
+ * 
+ * */
 namespace Mobility_Android.Activities
 {
     [Activity(Label = "ProductionActivity", ParentActivity = typeof(HomeActivity))]

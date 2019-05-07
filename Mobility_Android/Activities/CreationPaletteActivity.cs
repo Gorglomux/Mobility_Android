@@ -13,7 +13,7 @@ using Android.Widget;
 namespace Mobility_Android.Activities
 {
     /**
-     * Non supporté pour le moment
+     *  A CODER PLUS TARD
      * 
      * 
      * */

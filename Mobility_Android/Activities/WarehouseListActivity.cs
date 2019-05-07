@@ -10,6 +10,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+/**
+ * A implémenter plus tard
+ * */
 namespace Mobility_Android.Activities
 {
     [Activity(Label = "WarehouseListActivity", ParentActivity = typeof(HomeActivity))]
