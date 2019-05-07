@@ -59,6 +59,7 @@ namespace Mobility_Android.Activities {
                 resourceCulture = value;
             }
         }
+
         
         /// <summary>
         ///   Looks up a localized string similar to 2 - Creation de palette.

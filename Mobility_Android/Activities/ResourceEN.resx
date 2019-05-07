@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="btnAddPalette" xml:space="preserve">
-    <value>2 - Creation palette</value>
+    <value>2 - Pallet creation</value>
   </data>
   <data name="btnConfirm" xml:space="preserve">
-    <value>Validate</value>
+    <value>Confirm</value>
   </data>
   <data name="btnConnect" xml:space="preserve">
     <value>Login</value>
@@ -133,13 +133,13 @@
     <value>Validate</value>
   </data>
   <data name="btnEndPicking" xml:space="preserve">
-    <value>End Picking</value>
+    <value>End Order</value>
   </data>
   <data name="btnEndPickingPalette" xml:space="preserve">
-    <value>End Palette</value>
+    <value>End Pallet</value>
   </data>
   <data name="btnEndReceiving" xml:space="preserve">
-    <value>End receiving</value>
+    <value>End Receipt</value>
   </data>
   <data name="btnLogout" xml:space="preserve">
     <value>Logout</value>
@@ -151,7 +151,7 @@
     <value>New</value>
   </data>
   <data name="btnPicking" xml:space="preserve">
-    <value>3 - Picking</value>
+    <value>3 - Order</value>
   </data>
   <data name="btnProduction" xml:space="preserve">
     <value>4 - Production</value>
@@ -160,7 +160,7 @@
     <value>1 - Put in production</value>
   </data>
   <data name="btnRecieve" xml:space="preserve">
-    <value>2 - Reception </value>
+    <value>2 - Receipt</value>
   </data>
   <data name="btnRelocation" xml:space="preserve">
     <value>1 - Relocation</value>
@@ -187,10 +187,10 @@
     <value>Pallet must be confirmed before pickign a different product</value>
   </data>
   <data name="errPickingCompleted" xml:space="preserve">
-    <value>Picking completed</value>
+    <value>Order completed</value>
   </data>
   <data name="errPickingNonCompleted" xml:space="preserve">
-    <value>Picking not completed</value>
+    <value>Order not completed</value>
   </data>
   <data name="errProductHasNoWeight" xml:space="preserve">
     <value>The license has no weight</value>
@@ -199,10 +199,10 @@
     <value>Product is not part of the current item</value>
   </data>
   <data name="errReceptionCompleted" xml:space="preserve">
-    <value> Receiving completed</value>
+    <value> Receipt completed</value>
   </data>
   <data name="errReceptionNonCompleted" xml:space="preserve">
-    <value>Receiving non completed</value>
+    <value>Receipt not completed</value>
   </data>
   <data name="errRelocCompleted" xml:space="preserve">
     <value>Relocation completed</value>
@@ -214,13 +214,13 @@
     <value>Termicon was notified for printing</value>
   </data>
   <data name="errTermiconNotNotified" xml:space="preserve">
-    <value>Couldn't notify termicon for printing</value>
+    <value>Could not notify termicon for printing</value>
   </data>
   <data name="errWarehouseChanged" xml:space="preserve">
     <value>Warehouse changed</value>
   </data>
   <data name="errWarehouseNotChanged" xml:space="preserve">
-    <value>Couldn't change warehouse</value>
+    <value>Could not change warehouse</value>
   </data>
   <data name="errWebserviceGeneric" xml:space="preserve">
     <value>An error has occured when querying the webservice</value>
@@ -319,16 +319,16 @@
     <value>URL server :</value>
   </data>
   <data name="tvPalette" xml:space="preserve">
-    <value>Palette :</value>
+    <value>Pallet :</value>
   </data>
   <data name="tvPass" xml:space="preserve">
     <value>Password :</value>
   </data>
   <data name="tvPassPrompt" xml:space="preserve">
-    <value>Please answer your password  :</value>
+    <value>Please enter your password  :</value>
   </data>
   <data name="tvPicking" xml:space="preserve">
-    <value>Order</value>
+    <value>Order :</value>
   </data>
   <data name="tvPoids" xml:space="preserve">
     <value>Weight :</value>
@@ -355,7 +355,7 @@
     <value>Provider :</value>
   </data>
   <data name="tvPutProduction" xml:space="preserve">
-    <value>Put in production</value>
+    <value>Placed into production</value>
   </data>
   <data name="tvQte" xml:space="preserve">
     <value>Qty :</value>
@@ -367,10 +367,10 @@
     <value>Quantity</value>
   </data>
   <data name="tvReceiving" xml:space="preserve">
-    <value>Receiving</value>
+    <value>Receipt</value>
   </data>
   <data name="tvRecieving" xml:space="preserve">
-    <value># Receiving :</value>
+    <value># Receipt :</value>
   </data>
   <data name="tvSale" xml:space="preserve">
     <value># Order</value>
@@ -391,13 +391,13 @@
     <value>Inter Warehouse</value>
   </data>
   <data name="tvTitlePicking" xml:space="preserve">
-    <value>Picking</value>
+    <value>Order</value>
   </data>
   <data name="tvTitleProdOrder" xml:space="preserve">
     <value>Production Order</value>
   </data>
   <data name="tvTitleRecieving" xml:space="preserve">
-    <value>Receiving</value>
+    <value>Receipt</value>
   </data>
   <data name="tvWarehouse" xml:space="preserve">
     <value>Warehouse :</value>
@@ -406,7 +406,7 @@
     <value>Weight (Kg)</value>
   </data>
   <data name="txtFournisseur" xml:space="preserve">
-    <value>Fournisseur</value>
+    <value>Provider</value>
   </data>
   <data name="txtRec" xml:space="preserve">
     <value># Rec.</value>
@@ -418,7 +418,7 @@
     <value>French</value>
   </data>
   <data name="tvFournisseur" xml:space="preserve">
-    <value>Provideur</value>
+    <value>Provider</value>
   </data>
   <data name="tvRec" xml:space="preserve">
     <value># Rec.</value>
@@ -430,9 +430,9 @@
     <value>Move</value>
   </data>
   <data name="menuPicking" xml:space="preserve">
-    <value>Picking</value>
+    <value>Order</value>
   </data>
   <data name="menuRecieving" xml:space="preserve">
-    <value>Recieving</value>
+    <value>Receipt</value>
   </data>
 </root>
