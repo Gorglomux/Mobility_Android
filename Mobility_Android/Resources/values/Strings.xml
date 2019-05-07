@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Mobility_Android</string>
     <string name="action_settings">Settings</string>
+
+  
+    <string name="userName">Nom d\'utilisateur :</string>
+    <string name="password">Mot de passe</string>
 </resources>

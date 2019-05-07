@@ -22,14 +22,14 @@ namespace Mobility_Android.Activities {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ResourceFR {
+    internal class ResourceEN {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ResourceFR() {
+        internal ResourceEN() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Mobility_Android.Activities {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Mobility_Android.Activities.ResourceFR", typeof(ResourceFR).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Mobility_Android.Activities.ResourceEN", typeof(ResourceEN).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -59,11 +59,9 @@ namespace Mobility_Android.Activities {
                 resourceCulture = value;
             }
         }
-<<<<<<< HEAD
-=======
         
         /// <summary>
-        ///   Looks up a localized string similar to 2 - Creation de palette.
+        ///   Looks up a localized string similar to 2 - Creation palette.
         /// </summary>
         internal static string btnAddPalette {
             get {
@@ -72,7 +70,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Confirmer.
+        ///   Looks up a localized string similar to Validate.
         /// </summary>
         internal static string btnConfirm {
             get {
@@ -81,7 +79,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Connexion.
+        ///   Looks up a localized string similar to Login.
         /// </summary>
         internal static string btnConnect {
             get {
@@ -90,7 +88,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2 - Consolidation.
+        ///   Looks up a localized string similar to 2 - Consolidate.
         /// </summary>
         internal static string btnConsolidate {
             get {
@@ -99,7 +97,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Terminer.
+        ///   Looks up a localized string similar to Validate.
         /// </summary>
         internal static string btnEnd {
             get {
@@ -108,7 +106,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commande terminée.
+        ///   Looks up a localized string similar to End Picking.
         /// </summary>
         internal static string btnEndPicking {
             get {
@@ -117,7 +115,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Palette terminée.
+        ///   Looks up a localized string similar to End Palette.
         /// </summary>
         internal static string btnEndPickingPalette {
             get {
@@ -126,7 +124,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Réception terminée.
+        ///   Looks up a localized string similar to End receiving.
         /// </summary>
         internal static string btnEndReceiving {
             get {
@@ -135,7 +133,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Déconnexion.
+        ///   Looks up a localized string similar to Logout.
         /// </summary>
         internal static string btnLogout {
             get {
@@ -144,7 +142,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 - Déplacement.
+        ///   Looks up a localized string similar to 1 - Move.
         /// </summary>
         internal static string btnMove {
             get {
@@ -162,7 +160,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3 - Commande.
+        ///   Looks up a localized string similar to 3 - Picking.
         /// </summary>
         internal static string btnPicking {
             get {
@@ -180,7 +178,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 - Mise en production.
+        ///   Looks up a localized string similar to 1 - Put in production.
         /// </summary>
         internal static string btnPutProduction {
             get {
@@ -189,7 +187,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2 - Réception .
+        ///   Looks up a localized string similar to 2 - Reception .
         /// </summary>
         internal static string btnRecieve {
             get {
@@ -198,7 +196,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 - Relocalisation.
+        ///   Looks up a localized string similar to 1 - Relocation.
         /// </summary>
         internal static string btnRelocation {
             get {
@@ -216,7 +214,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Impossible de joindre le webservice.
+        ///   Looks up a localized string similar to Could not reach WebService.
         /// </summary>
         internal static string errCannotReachWebservice {
             get {
@@ -225,7 +223,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Une erreure est survenue lors de la création de la palette.
+        ///   Looks up a localized string similar to An error occured while confirming the pallet.
         /// </summary>
         internal static string errConfirmingPallet {
             get {
@@ -234,7 +232,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Le code barre n&apos;est pas valide. Tag non reconnu .
+        ///   Looks up a localized string similar to The barcode is not valid. Unrecognized tag.
         /// </summary>
         internal static string errInvalidStringFormat {
             get {
@@ -243,7 +241,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La licence à déja été cueillie.
+        ///   Looks up a localized string similar to License was already picked.
         /// </summary>
         internal static string errLicAlreadyPicked {
             get {
@@ -252,7 +250,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Un item doit être sélectionné.
+        ///   Looks up a localized string similar to Must select an item.
         /// </summary>
         internal static string errNoItemSelected {
             get {
@@ -261,7 +259,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La palette doit être confirmée avant de cueillir un autre produit.
+        ///   Looks up a localized string similar to Pallet must be confirmed before pickign a different product.
         /// </summary>
         internal static string errNotCurrentProduct {
             get {
@@ -270,7 +268,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cueillette complétée.
+        ///   Looks up a localized string similar to Picking completed.
         /// </summary>
         internal static string errPickingCompleted {
             get {
@@ -279,7 +277,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cueillette non complétée.
+        ///   Looks up a localized string similar to Picking not completed.
         /// </summary>
         internal static string errPickingNonCompleted {
             get {
@@ -288,7 +286,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to La licence n&apos;a pas de poids.
+        ///   Looks up a localized string similar to The license has no weight.
         /// </summary>
         internal static string errProductHasNoWeight {
             get {
@@ -297,7 +295,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Le produit ne fait pas parti due l&apos;item courant.
+        ///   Looks up a localized string similar to Product is not part of the current item.
         /// </summary>
         internal static string errProductNotPresent {
             get {
@@ -306,7 +304,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Réception complétée.
+        ///   Looks up a localized string similar to  Receiving completed.
         /// </summary>
         internal static string errReceptionCompleted {
             get {
@@ -315,7 +313,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Réception non complétée.
+        ///   Looks up a localized string similar to Receiving non completed.
         /// </summary>
         internal static string errReceptionNonCompleted {
             get {
@@ -324,7 +322,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Relocation complétée.
+        ///   Looks up a localized string similar to Relocation completed.
         /// </summary>
         internal static string errRelocCompleted {
             get {
@@ -333,7 +331,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Relocation non complétée.
+        ///   Looks up a localized string similar to Relocation not completed.
         /// </summary>
         internal static string errRelocNonCompleted {
             get {
@@ -342,7 +340,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Le termicon a été notifié pour l&apos;impression.
+        ///   Looks up a localized string similar to Termicon was notified for printing.
         /// </summary>
         internal static string errTermiconNotified {
             get {
@@ -351,7 +349,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Impossible de notifier le termicon pour l&apos;impression.
+        ///   Looks up a localized string similar to Couldn&apos;t notify termicon for printing.
         /// </summary>
         internal static string errTermiconNotNotified {
             get {
@@ -360,7 +358,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Changement d&apos;entrepot réussi.
+        ///   Looks up a localized string similar to Warehouse changed.
         /// </summary>
         internal static string errWarehouseChanged {
             get {
@@ -369,7 +367,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Impossible de changer d&apos;entrepot.
+        ///   Looks up a localized string similar to Couldn&apos;t change warehouse.
         /// </summary>
         internal static string errWarehouseNotChanged {
             get {
@@ -378,7 +376,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Une erreur s&apos;est produite lors de l&apos;acces au service Web.
+        ///   Looks up a localized string similar to An error has occured when querying the webservice.
         /// </summary>
         internal static string errWebserviceGeneric {
             get {
@@ -387,7 +385,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to L&apos;URL du service web est incorrect.
+        ///   Looks up a localized string similar to The Web service URL is incorrect.
         /// </summary>
         internal static string errWebServiceUrlIncorrect {
             get {
@@ -396,7 +394,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Client :.
+        ///   Looks up a localized string similar to Owner :.
         /// </summary>
         internal static string lblClient {
             get {
@@ -414,7 +412,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Date de livraison attendue :.
+        ///   Looks up a localized string similar to Expected delivery date :.
         /// </summary>
         internal static string lblDateSale {
             get {
@@ -423,7 +421,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Propriétaire :.
+        ///   Looks up a localized string similar to Owner :.
         /// </summary>
         internal static string lblOwner {
             get {
@@ -441,7 +439,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Produit :.
+        ///   Looks up a localized string similar to Product :.
         /// </summary>
         internal static string lblProduct {
             get {
@@ -450,7 +448,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Qté / udm :.
+        ///   Looks up a localized string similar to Qty / udm :.
         /// </summary>
         internal static string lblQty {
             get {
@@ -468,7 +466,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Information de licence.
+        ///   Looks up a localized string similar to Information license.
         /// </summary>
         internal static string lblTitleLicenseInfo {
             get {
@@ -477,7 +475,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Création de commande.
+        ///   Looks up a localized string similar to Order creation.
         /// </summary>
         internal static string lblTitleSaleInfo {
             get {
@@ -486,7 +484,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Poids :.
+        ///   Looks up a localized string similar to Weight :.
         /// </summary>
         internal static string lblWeight {
             get {
@@ -495,7 +493,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Client :.
+        ///   Looks up a localized string similar to Customer :.
         /// </summary>
         internal static string tvClient {
             get {
@@ -540,7 +538,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Client.
+        ///   Looks up a localized string similar to Customer.
         /// </summary>
         internal static string tvCustomer {
             get {
@@ -549,7 +547,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Déplacement.
+        ///   Looks up a localized string similar to Move.
         /// </summary>
         internal static string tvDeplacement {
             get {
@@ -567,7 +565,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gabarit.
+        ///   Looks up a localized string similar to Template.
         /// </summary>
         internal static string tvGabarit {
             get {
@@ -594,7 +592,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Licence :.
+        ///   Looks up a localized string similar to License :.
         /// </summary>
         internal static string tvLicence {
             get {
@@ -603,7 +601,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Licence :.
+        ///   Looks up a localized string similar to License :.
         /// </summary>
         internal static string tvLicense {
             get {
@@ -612,7 +610,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ligne.
+        ///   Looks up a localized string similar to Line.
         /// </summary>
         internal static string tvLigne {
             get {
@@ -630,7 +628,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Déconnexion.
+        ///   Looks up a localized string similar to Logout.
         /// </summary>
         internal static string tvLogout {
             get {
@@ -639,7 +637,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nom d&apos;utilisateur :.
+        ///   Looks up a localized string similar to Username  :.
         /// </summary>
         internal static string tvName {
             get {
@@ -657,7 +655,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to URL du serveur :.
+        ///   Looks up a localized string similar to URL server :.
         /// </summary>
         internal static string tvOrder {
             get {
@@ -675,7 +673,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mot de passe :.
+        ///   Looks up a localized string similar to Password :.
         /// </summary>
         internal static string tvPass {
             get {
@@ -684,7 +682,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Veuillez entrer le mot de passe :.
+        ///   Looks up a localized string similar to Please answer your password  :.
         /// </summary>
         internal static string tvPassPrompt {
             get {
@@ -693,7 +691,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to # Commande :.
+        ///   Looks up a localized string similar to # Order :.
         /// </summary>
         internal static string tvPicking {
             get {
@@ -702,7 +700,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Poids :.
+        ///   Looks up a localized string similar to Weight :.
         /// </summary>
         internal static string tvPoids {
             get {
@@ -720,7 +718,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to # Bon de travail.
+        ///   Looks up a localized string similar to # Production Order.
         /// </summary>
         internal static string tvProdOrder {
             get {
@@ -729,7 +727,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Produit :.
+        ///   Looks up a localized string similar to Product :.
         /// </summary>
         internal static string tvProduct {
             get {
@@ -738,7 +736,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Détails du produit.
+        ///   Looks up a localized string similar to Product Details.
         /// </summary>
         internal static string tvProductDetails {
             get {
@@ -747,7 +745,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Produit.
+        ///   Looks up a localized string similar to Product.
         /// </summary>
         internal static string tvProductEntete {
             get {
@@ -756,7 +754,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Produit.
+        ///   Looks up a localized string similar to Product.
         /// </summary>
         internal static string tvProductName {
             get {
@@ -765,7 +763,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fournisseur :.
+        ///   Looks up a localized string similar to Provider :.
         /// </summary>
         internal static string tvProvider {
             get {
@@ -774,7 +772,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mise en production.
+        ///   Looks up a localized string similar to Put in production.
         /// </summary>
         internal static string tvPutProduction {
             get {
@@ -783,7 +781,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Qté :.
+        ///   Looks up a localized string similar to Qty :.
         /// </summary>
         internal static string tvQte {
             get {
@@ -792,7 +790,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quantité.
+        ///   Looks up a localized string similar to Quantity.
         /// </summary>
         internal static string tvQtyEntete {
             get {
@@ -801,7 +799,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Quantité.
+        ///   Looks up a localized string similar to Quantity.
         /// </summary>
         internal static string tvQuantity {
             get {
@@ -810,7 +808,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Réceptions.
+        ///   Looks up a localized string similar to Receiving.
         /// </summary>
         internal static string tvReceiving {
             get {
@@ -819,7 +817,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to # Réception :.
+        ///   Looks up a localized string similar to # Receiving :.
         /// </summary>
         internal static string tvRecieving {
             get {
@@ -828,7 +826,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to # Commande.
+        ///   Looks up a localized string similar to # Order.
         /// </summary>
         internal static string tvSale {
             get {
@@ -837,7 +835,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select..
+        ///   Looks up a localized string similar to Select.
         /// </summary>
         internal static string tvSelect {
             get {
@@ -864,7 +862,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Serveur d&apos;impression :.
+        ///   Looks up a localized string similar to Termicon :.
         /// </summary>
         internal static string tvTermicon {
             get {
@@ -873,7 +871,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inter entrepôt.
+        ///   Looks up a localized string similar to Inter Warehouse.
         /// </summary>
         internal static string tvTitleInterWarehouse {
             get {
@@ -882,7 +880,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commande.
+        ///   Looks up a localized string similar to Picking.
         /// </summary>
         internal static string tvTitlePicking {
             get {
@@ -891,7 +889,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bon de production.
+        ///   Looks up a localized string similar to Production Order.
         /// </summary>
         internal static string tvTitleProdOrder {
             get {
@@ -900,7 +898,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Réception.
+        ///   Looks up a localized string similar to Receiving.
         /// </summary>
         internal static string tvTitleRecieving {
             get {
@@ -909,7 +907,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Entrepôt :.
+        ///   Looks up a localized string similar to Warehouse :.
         /// </summary>
         internal static string tvWarehouse {
             get {
@@ -918,7 +916,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Poids (en Kg).
+        ///   Looks up a localized string similar to Weight (Kg).
         /// </summary>
         internal static string tvWeight {
             get {
@@ -943,6 +941,5 @@ namespace Mobility_Android.Activities {
                 return ResourceManager.GetString("txtRec", resourceCulture);
             }
         }
->>>>>>> c701da2de0501739b4f78a289a5bcb2a769c6345
     }
 }

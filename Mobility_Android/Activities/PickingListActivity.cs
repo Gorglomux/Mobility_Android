@@ -19,9 +19,11 @@ namespace Mobility_Android.Activities
      * Page avec la liste de toutes les commandes avec possibilté d'en créer une nouvelle
      * 
      * */
+     
     [Activity(Label = "PickingListActivity", ParentActivity = typeof(HomeActivity))]
     public class PickingListActivity : BaseActivity
     {
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingList);

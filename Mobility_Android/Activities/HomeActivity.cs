@@ -22,7 +22,7 @@ namespace Mobility_Android.Activities
      * Permet d'accéder a toute les fonctionnalités de l'application
      * 
      **/ 
-    [Activity(Label = "HomeActivity", ParentActivity = typeof(LoginActivity))]
+    [Activity(Label = "HomeActivity", ParentActivity = typeof(MyCeritar))]
     public class HomeActivity : BaseActivity
     {
         Spinner spinner;
@@ -37,7 +37,7 @@ namespace Mobility_Android.Activities
                 {Resource.Id.btnMove, new Intent(this, typeof(MoveActivity))},
                 {Resource.Id.btnRecieve, new Intent(this, typeof(ReceivingActivity))},
                 {Resource.Id.btnPicking, new Intent(this, typeof(PickingListActivity))},
-                {Resource.Id.btnProduction, new Intent(this, typeof(ProductionMenuActivity))}
+             //   {Resource.Id.btnProduction, new Intent(this, typeof(ProductionMenuActivity))}
                 
             };
             //{Resource.Id.btnInterWarehouse, new Intent(this, typeof(WarehouseListActivity)) }

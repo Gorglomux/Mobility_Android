@@ -129,13 +129,6 @@
 			android:layout_height="wrap_content"
 			android:text="Licence : " />
 
-		<Button
-			android:id="@+id/btnPalette"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_weight="1"
-			android:layout_centerHorizontal="true"
-			android:text=" Palette" />
 
 	</LinearLayout>
 	
@@ -156,14 +149,7 @@
 			android:maxLines="1"
 			android:inputType="text"
 		/>
-		<ImageButton
-			android:id="@+id/imPhoto"
-			android:src="@drawable/camera"
-			android:layout_width="5dp"
-			android:layout_height="35dp"
-			android:layout_weight="1"
-			android:layout_centerHorizontal="true"
-			android:background="?android:selectableItemBackground" />
+
 		
 		<ImageButton
 			android:id="@+id/imClear"

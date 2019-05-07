@@ -67,6 +67,8 @@
 			android:textAlignment="textStart" 
 			android:text="3 - Commande"
 		/>
+		
+		<!--
 		<Button
 			android:id="@+id/btnProduction"
 			android:layout_weight="2"
@@ -75,7 +77,6 @@
 			android:text="4 - Production"
 			android:textAlignment="textStart" 
 		/>
-		<!--
 		<Button
 			android:id="@+id/btnInterWarehouse"
 			android:layout_weight="2"

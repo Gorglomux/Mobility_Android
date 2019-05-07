@@ -128,9 +128,9 @@ namespace Mobility_Android.Activities
                 case Resource.Id.menuPicking:
                     intentMenu = new Intent(this, typeof(PickingListActivity));
                     break;
-                case Resource.Id.menuProduction:
-                    intentMenu = new Intent(this, typeof(ProductionMenuActivity));
-                    break;
+                //case Resource.Id.menuProduction:
+                //  intentMenu = new Intent(this, typeof(ProductionMenuActivity));
+                //    break;
                 case Resource.Id.menuRecieving:
                     intentMenu = new Intent(this, typeof(ReceivingActivity));
                     break;

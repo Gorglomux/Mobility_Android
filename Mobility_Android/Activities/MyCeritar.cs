@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Acr.UserDialogs;
 using Android.App;
@@ -21,8 +23,8 @@ namespace Mobility_Android.Activities
      * Permet de se connecter à l'application, de se déconnecter ou d'accéder aux paramètres et de modifier la configuration
      * 
      **/ 
-    [Activity(Label = "LoginActivity", MainLauncher = true)]
-    public class LoginActivity : BaseActivity
+    [Activity(Label = "MyCeritar", MainLauncher = true)]
+    public class MyCeritar : BaseActivity
     {
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -47,8 +49,7 @@ namespace Mobility_Android.Activities
                 //On essaye de se connecter au WebService
                 if (SecurityWebService.doLogin(username.Text, password.Text))
                 {
-                    //Si la connectio s'est bien passé on est envoyé vers la page d'accueil
-
+                    //Si la connection s'est bien passé on est envoyé vers la page d'accueil
                     StartActivity(new Intent(this, typeof(HomeActivity)));
                 } else
                 {
@@ -68,7 +69,17 @@ namespace Mobility_Android.Activities
             {
                 StartActivity(new Intent(this, typeof(ConfigActivity)));
             };
+
+
+
         }
-        
+        public void SetLocale(CultureInfo ci)
+        {
+            Thread.CurrentThread.CurrentCulture = ci;
+            Thread.CurrentThread.CurrentUICulture = ci;
+
+        }
+
+
     }
 }

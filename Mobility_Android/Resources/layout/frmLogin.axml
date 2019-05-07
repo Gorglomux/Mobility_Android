@@ -24,7 +24,7 @@
 		android:layout_below="@id/imLogo"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:text="Nom d'utilisateur:"/>
+		android:text="@string/userName"/>
 
 	<LinearLayout
 		android:id="@+id/layoutName"
@@ -97,7 +97,6 @@
 	</LinearLayout>
 
 	<!-- ENGLISH / FRENCH -->
-	<!--
 	<RadioGroup
 		android:id="@+id/rgLanguage"
 		android:layout_marginTop="20dip"
@@ -121,9 +120,8 @@
 			android:layout_height="wrap_content"
 			android:layout_marginLeft="40dip"
 			android:layout_below="@id/layoutPass" 
-			android:text="Anglais"/>
+			android:text="Anglais"/> 
 	</RadioGroup>
-	-->
 
 	<!-- CONNECTION BUTTON -->
 
@@ -134,7 +132,7 @@
 		android:layout_marginTop="20dip"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dip"
-		android:layout_below="@id/layoutPass"
+		android:layout_below="@id/rgLanguage"
         android:text="  Connexion  " />
 
 	<!-- Logout -->

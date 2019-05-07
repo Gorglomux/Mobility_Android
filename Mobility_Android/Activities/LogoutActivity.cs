@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Java.Lang;
+using Mobility_Android.Resources.global;
 
 namespace Mobility_Android.Activities
 {
@@ -19,7 +21,18 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmLogout);
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), FindViewById<EditText>(Resource.Id.tfPassPrompt));
-            // Create your application here
+            FindViewById<Button>(Resource.Id.btnLogout).Click += (sender, e) =>
+             {
+                 var password = FindViewById<EditText>(Resource.Id.tfPassPrompt).Text;
+                 if (password == Configuration.logoutPassword)
+                 {
+                     JavaSystem.Exit(0);
+                 }
+                 else
+                 {
+                     Toast.MakeText(this, "Mot de passe invalide", ToastLength.Short).Show();
+                 }
+             };
         }
     }
 }
