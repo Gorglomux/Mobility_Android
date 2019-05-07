@@ -107,7 +107,8 @@ namespace Mobility_Android.Activities
 
                         if(OperationsWebService.PickLicenseSale(Configuration.securityToken, licence, Configuration.userInfos.warehouseNRI, Configuration.userInfos.warehouseNRI) == null)
                         {
-                            Toast.MakeText(this, "Vérifier le numéro de licence", ToastLength.Long).Show();
+                            Toast.MakeText(this, OperationsWebService.errorMessage, ToastLength.Long).Show();
+                            OperationsWebService.errorMessage = "";
                         } else
                         {
                             Toast.MakeText(this, "Licence ajoutée", ToastLength.Long).Show();

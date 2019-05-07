@@ -12,6 +12,10 @@ using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.WebService.Security;
 
+/**
+ * A implémenter plus tard
+ * 
+ * */
 namespace Mobility_Android.Activities
 {
     [Activity(Label = "ProductionActivity", ParentActivity = typeof(HomeActivity))]

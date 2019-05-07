@@ -15,7 +15,7 @@ using Mobility_Android.WebService.Security;
 namespace Mobility_Android.Activities
 {
     /**
-     * Fonctionnalité supprimée pour l'instant
+     * A CODER PLUS TARD
      * 
      **/
     [Activity(Label = "InterWarehouseDetailsActivity", ParentActivity = typeof(HomeActivity))]

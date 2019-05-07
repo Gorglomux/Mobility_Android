@@ -15,7 +15,7 @@ using Mobility_Android.WebService.Security;
 namespace Mobility_Android.Activities
 {
     /**
-     * Non supporté pour le moment
+     *  A CODER PLUS TARD
      * 
      * 
      * */

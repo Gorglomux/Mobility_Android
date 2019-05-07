@@ -6,6 +6,7 @@ using Mobility_Android.WebService.Operations;
 using Mobility_Android.WebService.Security;
 using Mobility_Android.Resources.global;
 using Acr.UserDialogs;
+using Android.Widget;
 
 namespace Mobility_Android.Resources.webservice
 {
@@ -39,7 +40,7 @@ namespace Mobility_Android.Resources.webservice
     {
         private const string urlExtension = "Services/Inventory/WMSOperations.asmx";
         private static WMSOperations webServiceOperation;
-
+        public static String errorMessage;
 
         /*
          * Méthode de connexion au web service Operations pour pouvoir accèder aux méthodes
@@ -54,7 +55,7 @@ namespace Mobility_Android.Resources.webservice
                 webServiceOperation.Url = Configuration.webServiceURL + urlExtension;
                 isSuccess = true;
             }
-            catch (UriFormatException ex)
+            catch (UriFormatException )
             {
                 if (Configuration.currentLanguage == CR_TTLangue.French_France)
                 {
@@ -67,7 +68,7 @@ namespace Mobility_Android.Resources.webservice
 
                 isSuccess = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 if (Configuration.currentLanguage == CR_TTLangue.French_France)
                 {
@@ -100,12 +101,13 @@ namespace Mobility_Android.Resources.webservice
                         receptions = new List<SaleWS>(result.ReturnValue);
                     else
                     {
-                        //MessageBox.Show(result.Errors(0).Message.ToString);
+errorMessage = result.Errors[0].Message.ToString();
+ 
                         receptions.Clear();
                     }
                 }
             }
-            catch (WebException ex)
+            catch (WebException)
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -122,7 +124,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -158,12 +160,13 @@ namespace Mobility_Android.Resources.webservice
                         reception = result.ReturnValue;
                     else
                     {
-                        //MessageBox.Show(result.Errors(0).Message.ToString);
+errorMessage = result.Errors[0].Message.ToString();
+ 
                         reception = null/* TODO Change to default(_) if this is not a reference type */;
                     }
                 }
             }
-            catch (WebException ex)
+            catch (WebException )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -180,7 +183,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -214,8 +217,7 @@ namespace Mobility_Android.Resources.webservice
                     currentProduct = result.ReturnValue;
                 else
                 {
-                    Console.Write("\n\n\n\n\n" + result.Errors[0].Message.ToString() + "\n\n\n\n\n\n\n\n\n\n");
-                    //MessageBox.Show(result.Errors(0).Message.ToString);
+                    errorMessage = result.Errors[0].Message.ToString();
                     currentProduct = null/* TODO Change to default(_) if this is not a reference type */;
                 }
             }
@@ -240,11 +242,11 @@ namespace Mobility_Android.Resources.webservice
                     }
                     else
                     {
-                        //MessageBox.Show(result.Errors(0).Message.ToString);
+                        errorMessage=result.Errors[0].Message.ToString();
                     }
                 }
             }
-            catch (WebException ex)
+            catch (WebException )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -261,7 +263,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -296,12 +298,13 @@ namespace Mobility_Android.Resources.webservice
                         productDetails = result.ReturnValue;
                     else
                     {
-                        //MessageBox.Show(result.Errors(0).Message.ToString);
+                        errorMessage = result.Errors[0].Message.ToString();
+
                         productDetails = null;
                     }
                 }
             }
-            catch (WebException ex)
+            catch (WebException )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -318,7 +321,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -353,11 +356,12 @@ namespace Mobility_Android.Resources.webservice
                         blnReturn = result.Success;
                     else
                     {
-                        //MessageBox.Show(result.Errors(0).Message.ToString);
+errorMessage = result.Errors[0].Message.ToString();
+ 
                     }
                 }
             }
-            catch (WebException ex)
+            catch (WebException  )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -374,7 +378,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }
-            catch (Exception ex)
+            catch (Exception  )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -421,10 +425,8 @@ namespace Mobility_Android.Resources.webservice
                     else
                     {
 
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+ 
                         receptions.Clear();
                     }
                 }
@@ -487,10 +489,8 @@ namespace Mobility_Android.Resources.webservice
                         reception = result.ReturnValue;
                     else
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+ 
                         reception = null/* TODO Change to default(_) if this is not a reference type */;
                     }
                 }
@@ -512,7 +512,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }*/
-            catch (Exception ex)
+            catch (Exception)
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -553,10 +553,7 @@ namespace Mobility_Android.Resources.webservice
                         currentProduct = result.ReturnValue;
                     else
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+                        errorMessage = result.Errors[0].Message.ToString();
                         currentProduct = null/* TODO Change to default(_) if this is not a reference type */;
                     }
                 }
@@ -578,7 +575,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }*/
-            catch (Exception ex)
+            catch (Exception)
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -617,10 +614,8 @@ namespace Mobility_Android.Resources.webservice
                     blnreturn = result.Success;
                     if (!result.Success)
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+ 
                     }
                 }
             }
@@ -641,7 +636,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }*/
-            catch (Exception ex)
+            catch (Exception)
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -681,10 +676,8 @@ namespace Mobility_Android.Resources.webservice
                         productDetails = result.ReturnValue;
                     else
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+  
                         productDetails = null;
                     }
                 }
@@ -706,7 +699,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -746,10 +739,7 @@ namespace Mobility_Android.Resources.webservice
                         blnReturn = result.Success;
                     else
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+
                     }
 
                 }
@@ -771,7 +761,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -830,7 +820,7 @@ namespace Mobility_Android.Resources.webservice
                 }
                 result.Success = false;
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -897,7 +887,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -941,10 +931,8 @@ namespace Mobility_Android.Resources.webservice
                         items = new List<WorkOrderNewWS>(result.ReturnValue);
                     else
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+
                         items.Clear();
                     }
                 }
@@ -966,7 +954,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -1003,10 +991,8 @@ namespace Mobility_Android.Resources.webservice
 
                     if (!result.Success)
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+ 
                     }
 
                 }
@@ -1029,7 +1015,7 @@ namespace Mobility_Android.Resources.webservice
                 }
                 result.Success = false;
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -1077,10 +1063,8 @@ namespace Mobility_Android.Resources.webservice
                     }
                     else
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+                        
                     }
 
                 }
@@ -1103,7 +1087,7 @@ namespace Mobility_Android.Resources.webservice
                 }
                 result.Success = false;
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -1141,10 +1125,7 @@ namespace Mobility_Android.Resources.webservice
 
                     if (!result.Success)
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString(); 
                     }
 
                 }
@@ -1167,7 +1148,7 @@ namespace Mobility_Android.Resources.webservice
                  }
                  result.Success = false;
              }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -1205,10 +1186,8 @@ namespace Mobility_Android.Resources.webservice
 
                     if (!result.Success)
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+ 
                     }
 
                 }
@@ -1231,7 +1210,7 @@ namespace Mobility_Android.Resources.webservice
                 }
                 result.Success = false;
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -1269,10 +1248,8 @@ namespace Mobility_Android.Resources.webservice
 
                     if (!result.Success)
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+ 
                     }
 
                 }
@@ -1295,7 +1272,7 @@ namespace Mobility_Android.Resources.webservice
                 }
                 result.Success = false;
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -1333,10 +1310,8 @@ namespace Mobility_Android.Resources.webservice
 
                     if (!result.Success)
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+ 
                     }
 
                 }
@@ -1359,7 +1334,7 @@ namespace Mobility_Android.Resources.webservice
                 }
                 result.Success = false;
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -1397,10 +1372,9 @@ namespace Mobility_Android.Resources.webservice
 
                     if (!result.Success)
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+ 
+ 
                     }
                 }
             }
@@ -1422,7 +1396,7 @@ namespace Mobility_Android.Resources.webservice
                 }
                 result.Success = false;
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
@@ -1463,10 +1437,8 @@ namespace Mobility_Android.Resources.webservice
                         productDetails = result;
                     else
                     {
-                        var toastConfig = new ToastConfig(result.Errors[0].Message.ToString());
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString();
+ 
                         productDetails = null;
                     }
                 }
@@ -1488,7 +1460,7 @@ namespace Mobility_Android.Resources.webservice
                         }
                 }
             }*/
-            catch (Exception ex)
+            catch (Exception )
             {
                 switch (Configuration.currentLanguage)
                 {
