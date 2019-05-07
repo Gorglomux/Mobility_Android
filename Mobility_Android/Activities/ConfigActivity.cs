@@ -31,7 +31,6 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmConfig);
 
-            //
             //Obtient le chemin jusqu'au dossier "fichiers", où l'on peut écrire et lire des fichiers
             var documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 
@@ -45,7 +44,7 @@ namespace Mobility_Android.Activities
             {
                 System.IO.File.WriteAllText(filePath, Configuration.webServiceURL);
             }
-            //
+            
             urlEditText = FindViewById<EditText>(Resource.Id.tfUrl);
             urlEditText.Text = Configuration.webServiceURL;
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), urlEditText);
@@ -70,10 +69,10 @@ namespace Mobility_Android.Activities
                     }
 
                     Toast.MakeText(this, "Configuration sauvegardée dans" + filePath, ToastLength.Short).Show();
-                    //
+                    
                     //Sauvegarde l'URL dans le fichier "WebServiceURL.txt"
                     System.IO.File.WriteAllText(filePath, Configuration.webServiceURL);
-                    //
+                    
                     Finish();
                 }
                 else

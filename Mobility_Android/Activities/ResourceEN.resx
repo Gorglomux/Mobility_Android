@@ -160,7 +160,7 @@
     <value>1 - Put in production</value>
   </data>
   <data name="btnRecieve" xml:space="preserve">
-    <value>2 - Recept</value>
+    <value>2 - Receipt</value>
   </data>
   <data name="btnRelocation" xml:space="preserve">
     <value>1 - Relocation</value>
