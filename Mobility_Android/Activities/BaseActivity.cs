@@ -14,6 +14,8 @@ using Android.Util;
 using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
+using Mobility_Android.Resources.global;
+using Mobility_Android.WebService.Security;
 
 // Article sur la création d'une activité de base https://stackoverflow.com/questions/38435138/set-toolbar-for-all-activities
 // Article (en Java) http://mateoj.com/2015/06/21/adding-toolbar-and-navigation-drawer-all-activities-android/
@@ -99,17 +101,29 @@ namespace Mobility_Android.Activities
                 refreshImage.Touch += (sender, e) =>
                 {
                     
-                    refresh();
+                    Recreate();
                 };
             }
             SetActionBar(toolbar);
-            
         }
 
         //Fonction appelée quand on appuye sur le menu dans la toolbar
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            MenuInflater.Inflate(Resource.Menu.menu, menu);
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        MenuInflater.Inflate(Resource.Menu.menuFR, menu);
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        MenuInflater.Inflate(Resource.Menu.menuEN, menu);
+                        break;
+                    }
+            }
 
             return base.OnCreateOptionsMenu(menu);
         }
@@ -151,13 +165,5 @@ namespace Mobility_Android.Activities
                 et.Text = "";
             };
         }
-
-
- 
-        public void refresh()
-        {
-            Recreate();
-        }
-         
     }
 }

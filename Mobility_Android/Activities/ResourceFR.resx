@@ -411,4 +411,28 @@
   <data name="errWebServiceUrlIncorrect" xml:space="preserve">
     <value>L'URL du service web est incorrect</value>
   </data>
+  <data name="rbEnglish" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="rbFrench" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="tvFournisseur" xml:space="preserve">
+    <value>Fournisseur</value>
+  </data>
+  <data name="tvRec" xml:space="preserve">
+    <value># Rec.</value>
+  </data>
+  <data name="menuHome" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="menuMove" xml:space="preserve">
+    <value>Déplacement</value>
+  </data>
+  <data name="menuPicking" xml:space="preserve">
+    <value>Commande</value>
+  </data>
+  <data name="menuRecieving" xml:space="preserve">
+    <value>Réception</value>
+  </data>
 </root>

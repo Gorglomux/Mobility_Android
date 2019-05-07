@@ -12,6 +12,7 @@ using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -34,6 +35,8 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmNewSale);
+
+            translateScreen();
 
             mustRefresh = false;
 
@@ -155,6 +158,36 @@ namespace Mobility_Android.Activities
             spinner.Adapter = adapter;
 
             return dictionary;
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<TextView>(Resource.Id.lblTitleSaleInfo).Text = Activities.ResourceFR.lblTitleSaleInfo;
+                        FindViewById<TextView>(Resource.Id.lblClient).Text = Activities.ResourceFR.lblClient;
+                        FindViewById<TextView>(Resource.Id.lblRecipient).Text = Activities.ResourceFR.lblRecipient;
+                        FindViewById<TextView>(Resource.Id.lblOwner).Text = Activities.ResourceFR.lblOwner;
+                        FindViewById<TextView>(Resource.Id.lblPO).Text = Activities.ResourceFR.lblPO;
+                        FindViewById<TextView>(Resource.Id.lblDateSale).Text = Activities.ResourceFR.lblDateSale;
+                        FindViewById<Button>(Resource.Id.btnConfirm).Text = Activities.ResourceFR.btnConfirm;
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<TextView>(Resource.Id.lblTitleSaleInfo).Text = Activities.ResourceEN.lblTitleSaleInfo;
+                        FindViewById<TextView>(Resource.Id.lblClient).Text = Activities.ResourceEN.lblClient;
+                        FindViewById<TextView>(Resource.Id.lblRecipient).Text = Activities.ResourceEN.lblRecipient;
+                        FindViewById<TextView>(Resource.Id.lblOwner).Text = Activities.ResourceEN.lblOwner;
+                        FindViewById<TextView>(Resource.Id.lblPO).Text = Activities.ResourceEN.lblPO;
+                        FindViewById<TextView>(Resource.Id.lblDateSale).Text = Activities.ResourceEN.lblDateSale;
+                        FindViewById<Button>(Resource.Id.btnConfirm).Text = Activities.ResourceEN.btnConfirm;
+                        break;
+                    }
+            }
         }
     }
 }

@@ -12,7 +12,7 @@
 	<!-- TITLE CONFIG -->
 	<TextView
 		android:id="@+id/tvConfig"
-		android:text="@string/userName"
+		android:text="Configuration"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_below="@+id/toolbar"
@@ -46,7 +46,6 @@
 			android:layout_height="wrap_content"
 			android:layout_centerHorizontal="true"
 			android:layout_marginLeft="5dp"
-			android:hint="url"
 			android:textColorHint="#808080"
 			android:textColor="#000"
 			android:maxLines="1"
@@ -104,7 +103,6 @@
 			android:layout_weight="9"
 			android:layout_height="wrap_content"
 			android:layout_centerHorizontal="true"
-			android:hint="ip"
 			android:textColorHint="#808080"
 			android:textColor="#000"
 			android:maxLines="1"
@@ -131,7 +129,6 @@
 			android:layout_weight="9"
 			android:layout_height="wrap_content"
 			android:layout_centerHorizontal="true"
-			android:hint="port"
 			android:textColorHint="#808080"
 			android:backgroundTintMode="src_over"
 			android:textColor="#000"

@@ -205,7 +205,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sauvegarder.
+        ///   Looks up a localized string similar to Save.
         /// </summary>
         internal static string btnSaveConfig {
             get {
@@ -493,6 +493,60 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        internal static string menuHome {
+            get {
+                return ResourceManager.GetString("menuHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Move.
+        /// </summary>
+        internal static string menuMove {
+            get {
+                return ResourceManager.GetString("menuMove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Picking.
+        /// </summary>
+        internal static string menuPicking {
+            get {
+                return ResourceManager.GetString("menuPicking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recieving.
+        /// </summary>
+        internal static string menuRecieving {
+            get {
+                return ResourceManager.GetString("menuRecieving", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to English.
+        /// </summary>
+        internal static string rbEnglish {
+            get {
+                return ResourceManager.GetString("rbEnglish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to French.
+        /// </summary>
+        internal static string rbFrench {
+            get {
+                return ResourceManager.GetString("rbFrench", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Customer :.
         /// </summary>
         internal static string tvClient {
@@ -511,7 +565,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Consolidation.
+        ///   Looks up a localized string similar to Consolidate.
         /// </summary>
         internal static string tvConsolidation {
             get {
@@ -561,6 +615,15 @@ namespace Mobility_Android.Activities {
         internal static string tvDestination {
             get {
                 return ResourceManager.GetString("tvDestination", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provideur.
+        /// </summary>
+        internal static string tvFournisseur {
+            get {
+                return ResourceManager.GetString("tvFournisseur", resourceCulture);
             }
         }
         
@@ -637,7 +700,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Username  :.
+        ///   Looks up a localized string similar to Username :.
         /// </summary>
         internal static string tvName {
             get {
@@ -691,7 +754,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to # Order :.
+        ///   Looks up a localized string similar to Order.
         /// </summary>
         internal static string tvPicking {
             get {
@@ -804,6 +867,15 @@ namespace Mobility_Android.Activities {
         internal static string tvQuantity {
             get {
                 return ResourceManager.GetString("tvQuantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to # Rec..
+        /// </summary>
+        internal static string tvRec {
+            get {
+                return ResourceManager.GetString("tvRec", resourceCulture);
             }
         }
         

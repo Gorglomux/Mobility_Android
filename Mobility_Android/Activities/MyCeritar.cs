@@ -14,6 +14,7 @@ using Android.Views;
 using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -30,7 +31,9 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmLogin);
-            
+
+            translateScreen();
+
             //On récupère le contenu des champs       
             EditText username = FindViewById<EditText>(Resource.Id.tfName);
             EditText password = FindViewById<EditText>(Resource.Id.tfPass);
@@ -38,11 +41,21 @@ namespace Mobility_Android.Activities
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), username);
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear2), password);
 
+            FindViewById<RadioButton>(Resource.Id.rbFrench).Click += async (sender, e) =>
+            {
+                Configuration.currentLanguage = CR_TTLangue.French_Canada;
+                Recreate();
+            };
+
+            FindViewById<RadioButton>(Resource.Id.rbEnglish).Click += async (sender, e) =>
+            {
+                Configuration.currentLanguage = CR_TTLangue.English;
+                Recreate();
+            };
+
             //Si l'utilisateur appuie sur le bouton connecter
             FindViewById<Button>(Resource.Id.btnConnect).Click += async  (sender, e) =>
             {
-
-
                 //L'application est occupée
                 IsBusy = true;
                 await Task.Delay(50);
@@ -69,17 +82,33 @@ namespace Mobility_Android.Activities
             {
                 StartActivity(new Intent(this, typeof(ConfigActivity)));
             };
-
-
-
         }
-        public void SetLocale(CultureInfo ci)
+
+        private void translateScreen()
         {
-            Thread.CurrentThread.CurrentCulture = ci;
-            Thread.CurrentThread.CurrentUICulture = ci;
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                {
+                    FindViewById<TextView>(Resource.Id.tvName).Text = Activities.ResourceFR.tvName;
+                    FindViewById<TextView>(Resource.Id.tvPass).Text = Activities.ResourceFR.tvPass;
+                    FindViewById<RadioButton>(Resource.Id.rbFrench).Text = Activities.ResourceFR.rbFrench;
+                    FindViewById<RadioButton>(Resource.Id.rbEnglish).Text = Activities.ResourceFR.rbEnglish;
+                    FindViewById<Button>(Resource.Id.btnConnect).Text = Activities.ResourceFR.btnConnect;
+                    break;
+                }
 
+                case CR_TTLangue.English:
+                { 
+                    FindViewById<TextView>(Resource.Id.tvName).Text = Activities.ResourceEN.tvName;
+                    FindViewById<TextView>(Resource.Id.tvPass).Text = Activities.ResourceEN.tvPass;
+                    FindViewById<RadioButton>(Resource.Id.rbFrench).Text = Activities.ResourceEN.rbFrench;
+                    FindViewById<RadioButton>(Resource.Id.rbEnglish).Text = Activities.ResourceEN.rbEnglish;
+                    FindViewById<Button>(Resource.Id.btnConnect).Text = Activities.ResourceEN.btnConnect;
+                     break;
+                }
+            }
         }
-
 
     }
 }
