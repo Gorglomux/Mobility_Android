@@ -58,8 +58,9 @@ namespace Mobility_Android.Activities
 
         public override void OnWindowFocusChanged(bool hasFocus)
         {
-            if (hasFocus)
+            if (hasFocus && ReceivingDetailsActivity.mustRefresh)
             {
+                ReceivingDetailsActivity.mustRefresh = false;
                 Recreate();
             }
         }

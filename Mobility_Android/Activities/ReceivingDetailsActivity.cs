@@ -23,6 +23,7 @@ namespace Mobility_Android.Activities
     {
         public static LicenseWS licence;
         public static List<LicenseWS> licences = null ;
+        public static bool mustRefresh = false;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -145,7 +146,7 @@ namespace Mobility_Android.Activities
                 await Task.Delay(50);
                 OperationsWebService.completeReception(Configuration.securityToken, reception.ReceptionNRI);
                 IsBusy = false;
-
+                mustRefresh = true;
                 
                 Finish();
             };
