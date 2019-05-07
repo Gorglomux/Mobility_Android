@@ -102,9 +102,7 @@ namespace Mobility_Android.Resources.webservice
                     else
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
                         receptions.Clear();
                     }
                 }
@@ -163,9 +161,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     else
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
                         reception = null/* TODO Change to default(_) if this is not a reference type */;
                     }
                 }
@@ -361,9 +357,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     else
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
                     }
                 }
             }
@@ -432,9 +426,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     {
 
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
                         receptions.Clear();
                     }
                 }
@@ -498,9 +490,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     else
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
                         reception = null/* TODO Change to default(_) if this is not a reference type */;
                     }
                 }
@@ -625,9 +615,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     if (!result.Success)
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
                     }
                 }
             }
@@ -689,9 +677,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     else
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+  
                         productDetails = null;
                     }
                 }
@@ -946,9 +932,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     else
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+
                         items.Clear();
                     }
                 }
@@ -1008,9 +992,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     if (!result.Success)
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
                     }
 
                 }
@@ -1082,9 +1064,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     else
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+                        
                     }
 
                 }
@@ -1145,10 +1125,7 @@ errorMessage = result.Errors[0].Message.ToString();
 
                     if (!result.Success)
                     {
-errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+errorMessage = result.Errors[0].Message.ToString(); 
                     }
 
                 }
@@ -1210,9 +1187,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     if (!result.Success)
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
                     }
 
                 }
@@ -1274,9 +1249,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     if (!result.Success)
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
                     }
 
                 }
@@ -1338,9 +1311,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     if (!result.Success)
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
                     }
 
                 }
@@ -1402,9 +1373,8 @@ errorMessage = result.Errors[0].Message.ToString();
                     if (!result.Success)
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
+ 
                     }
                 }
             }
@@ -1468,9 +1438,7 @@ errorMessage = result.Errors[0].Message.ToString();
                     else
                     {
 errorMessage = result.Errors[0].Message.ToString();
-                        toastConfig.SetDuration(500);
-                        toastConfig.SetBackgroundColor(System.Drawing.Color.Red);
-                        UserDialogs.Instance.Toast(toastConfig);
+ 
                         productDetails = null;
                     }
                 }

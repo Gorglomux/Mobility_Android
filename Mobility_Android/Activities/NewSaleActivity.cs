@@ -23,6 +23,7 @@ namespace Mobility_Android.Activities
     [Activity(Label = "NewSaleActivity", ParentActivity = typeof(HomeActivity))]
     public class NewSaleActivity : BaseActivity
     {
+
         TextView dateSelect;
         Spinner spinnerClient;
         Spinner spinnerRecipient;
