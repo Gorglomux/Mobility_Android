@@ -12,6 +12,7 @@ using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -27,6 +28,8 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingList);
+
+            translateScreen();
 
             CsDetailsActivity.typeCS = TYPE_CS.COMMANDE;
 
@@ -62,6 +65,28 @@ namespace Mobility_Android.Activities
                 Recreate();
             }
 
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvPicking).Text = Activities.ResourceFR.tvPicking;
+                        FindViewById<TextView>(Resource.Id.tvSale).Text = Activities.ResourceFR.tvSale;
+                        FindViewById<TextView>(Resource.Id.tvCustomer).Text = Activities.ResourceFR.tvCustomer;
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvPicking).Text = Activities.ResourceEN.tvPicking;
+                        FindViewById<TextView>(Resource.Id.tvSale).Text = Activities.ResourceEN.tvSale;
+                        FindViewById<TextView>(Resource.Id.tvCustomer).Text = Activities.ResourceEN.tvCustomer;
+                        break;
+                    }
+            }
         }
     }
 }

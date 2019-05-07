@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Mobility_Android.Resources.global;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -18,6 +20,8 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmMove);
+
+            translateScreen();
 
             //On stocke les boutons et les transitions dans un dictionnaire
             Dictionary<int, Intent> buttons = new Dictionary<int, Intent>()
@@ -38,6 +42,26 @@ namespace Mobility_Android.Activities
 
             }
 
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<Button>(Resource.Id.btnRelocation).Text = Activities.ResourceFR.btnRelocation;
+                        FindViewById<Button>(Resource.Id.btnConsolidate).Text = Activities.ResourceFR.btnConsolidate;
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<Button>(Resource.Id.btnRelocation).Text = Activities.ResourceEN.btnRelocation;
+                        FindViewById<Button>(Resource.Id.btnConsolidate).Text = Activities.ResourceEN.btnConsolidate;
+                        break;
+                    }
+            }
         }
 
     }

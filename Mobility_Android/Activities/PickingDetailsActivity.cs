@@ -12,6 +12,7 @@ using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -27,6 +28,9 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingDetails);
+
+            translateScreen();
+
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), FindViewById<EditText>(Resource.Id.tfLicensePickingDetails));
 
             SaleWS sale = (SaleWS)PickingListActivity.data;
@@ -69,7 +73,7 @@ namespace Mobility_Android.Activities
                         }
                         data = sale;
                         
-                        refresh();
+                        Recreate();
                         e.Handled = true;
                     }
                     else
@@ -79,6 +83,38 @@ namespace Mobility_Android.Activities
                     }
                 }
             };
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvTitlePicking).Text = Activities.ResourceFR.tvTitlePicking;
+                        FindViewById<TextView>(Resource.Id.tvPicking).Text = Activities.ResourceFR.tvPicking;
+                        FindViewById<TextView>(Resource.Id.tvClient).Text = Activities.ResourceFR.tvClient;
+                        FindViewById<TextView>(Resource.Id.tvProduct).Text = Activities.ResourceFR.tvProduct;
+                        FindViewById<TextView>(Resource.Id.tvQte).Text = Activities.ResourceFR.tvQte;
+                        FindViewById<TextView>(Resource.Id.tvPoids).Text = Activities.ResourceFR.tvPoids;
+                        FindViewById<TextView>(Resource.Id.tvLicense).Text = Activities.ResourceFR.tvLicense;
+                        FindViewById<Button>(Resource.Id.btnEndPicking).Text = Activities.ResourceFR.btnEndPicking;
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvTitlePicking).Text = Activities.ResourceEN.tvTitlePicking;
+                        FindViewById<TextView>(Resource.Id.tvPicking).Text = Activities.ResourceEN.tvPicking;
+                        FindViewById<TextView>(Resource.Id.tvClient).Text = Activities.ResourceEN.tvClient;
+                        FindViewById<TextView>(Resource.Id.tvProduct).Text = Activities.ResourceEN.tvProduct;
+                        FindViewById<TextView>(Resource.Id.tvQte).Text = Activities.ResourceEN.tvQte;
+                        FindViewById<TextView>(Resource.Id.tvPoids).Text = Activities.ResourceEN.tvPoids;
+                        FindViewById<TextView>(Resource.Id.tvLicense).Text = Activities.ResourceEN.tvLicense;
+                        FindViewById<Button>(Resource.Id.btnEndPicking).Text = Activities.ResourceEN.btnEndPicking;
+                        break;
+                    }
+            }
         }
     }
 }

@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Mobility_Android.Resources.global;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -19,6 +21,8 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmProductionMenu);
 
+            translateScreen();
+
             FindViewById<Button>(Resource.Id.btnPutProduction).Click += (sender, e) =>
             {
                 StartActivity(new Intent(this, typeof(ProductionActivity)));
@@ -27,6 +31,27 @@ namespace Mobility_Android.Activities
             {
                 StartActivity(new Intent(this, typeof(ProductionOrderActivity)));
             };
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<Button>(Resource.Id.btnPutProduction).Text = Activities.ResourceFR.btnPutProduction;
+                        FindViewById<Button>(Resource.Id.btnAddPalette).Text = Activities.ResourceFR.btnAddPalette;
+
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<Button>(Resource.Id.btnPutProduction).Text = Activities.ResourceEN.btnPutProduction;
+                        FindViewById<Button>(Resource.Id.btnAddPalette).Text = Activities.ResourceEN.btnAddPalette;
+                        break;
+                    }
+            }
         }
     }
 }

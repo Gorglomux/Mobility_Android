@@ -13,6 +13,7 @@ using Android.Widget;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
 using Mobility_Android.WebService.Operations;
+using Mobility_Android.WebService.Security;
 using static Android.InputMethodServices.KeyboardView;
 
 namespace Mobility_Android.Activities
@@ -26,6 +27,8 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmReceivingDetails);
+
+            translateScreen();
 
             // Récupération de la réception
             ReceptionWS reception = (ReceptionWS)ReceivingActivity.data;
@@ -156,6 +159,39 @@ namespace Mobility_Android.Activities
                 Recreate();
             }
             
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvTitleRecieving).Text = Activities.ResourceFR.tvTitleRecieving;
+                        FindViewById<TextView>(Resource.Id.tvRecieving).Text = Activities.ResourceFR.tvRecieving;
+                        FindViewById<TextView>(Resource.Id.tvProvider).Text = Activities.ResourceFR.tvProvider;
+                        FindViewById<TextView>(Resource.Id.tvProduct).Text = Activities.ResourceFR.tvProduct;
+                        FindViewById<TextView>(Resource.Id.tvQte).Text = Activities.ResourceFR.tvQte;
+                        FindViewById<TextView>(Resource.Id.tvPoids).Text = Activities.ResourceFR.tvPoids;
+                        FindViewById<TextView>(Resource.Id.tvLicence).Text = Activities.ResourceFR.tvLicence;
+                        FindViewById<Button>(Resource.Id.btnEndReceiving).Text = Activities.ResourceFR.btnEndReceiving;
+
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvTitleRecieving).Text = Activities.ResourceEN.tvTitleRecieving;
+                        FindViewById<TextView>(Resource.Id.tvRecieving).Text = Activities.ResourceEN.tvRecieving;
+                        FindViewById<TextView>(Resource.Id.tvProvider).Text = Activities.ResourceEN.tvProvider;
+                        FindViewById<TextView>(Resource.Id.tvProduct).Text = Activities.ResourceEN.tvProduct;
+                        FindViewById<TextView>(Resource.Id.tvQte).Text = Activities.ResourceEN.tvQte;
+                        FindViewById<TextView>(Resource.Id.tvPoids).Text = Activities.ResourceEN.tvPoids;
+                        FindViewById<TextView>(Resource.Id.tvLicence).Text = Activities.ResourceEN.tvLicence;
+                        FindViewById<Button>(Resource.Id.btnEndReceiving).Text = Activities.ResourceEN.btnEndReceiving;
+                        break;
+                    }
+            }
         }
     }
 }

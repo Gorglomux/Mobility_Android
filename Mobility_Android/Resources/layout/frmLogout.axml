@@ -50,7 +50,6 @@
 			android:layout_height="wrap_content"
 			android:layout_centerHorizontal="true"
 			android:layout_marginLeft="5dp"
-			android:hint="mot de passe"
 			android:textColorHint="#808080"
 			android:textColor="#000"
 			android:maxLines="1"

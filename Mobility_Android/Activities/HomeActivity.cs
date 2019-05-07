@@ -13,6 +13,7 @@ using Android.Util;
 using System.Threading.Tasks;
 using Mobility_Android.Resources.global;
 using Mobility_Android.Resources.webservice;
+using Mobility_Android.WebService.Security;
 
 namespace Mobility_Android.Activities
 {
@@ -30,6 +31,8 @@ namespace Mobility_Android.Activities
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmHome);
+
+            translateScreen();
             
             //On stocke les boutons et les transitions dans un dictionnaire
             Dictionary<int, Intent> buttons = new Dictionary<int, Intent>()
@@ -78,6 +81,30 @@ namespace Mobility_Android.Activities
 
             }
             
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvWarehouse).Text = Activities.ResourceFR.tvWarehouse;
+                        FindViewById<Button>(Resource.Id.btnMove).Text = Activities.ResourceFR.btnMove;
+                        FindViewById<Button>(Resource.Id.btnRecieve).Text = Activities.ResourceFR.btnRecieve;
+                        FindViewById<Button>(Resource.Id.btnPicking).Text = Activities.ResourceFR.btnPicking;
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvWarehouse).Text = Activities.ResourceEN.tvWarehouse;
+                        FindViewById<Button>(Resource.Id.btnMove).Text = Activities.ResourceEN.btnMove;
+                        FindViewById<Button>(Resource.Id.btnRecieve).Text = Activities.ResourceEN.btnRecieve;
+                        FindViewById<Button>(Resource.Id.btnPicking).Text = Activities.ResourceEN.btnPicking;
+                        break;
+                    }
+            }
         }
 
     }
