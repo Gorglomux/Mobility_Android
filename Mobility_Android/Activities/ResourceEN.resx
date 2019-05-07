@@ -160,7 +160,7 @@
     <value>1 - Put in production</value>
   </data>
   <data name="btnRecieve" xml:space="preserve">
-    <value>2 - Receipt</value>
+    <value>2 - Receiving</value>
   </data>
   <data name="btnRelocation" xml:space="preserve">
     <value>1 - Relocation</value>
@@ -199,10 +199,10 @@
     <value>Product is not part of the current item</value>
   </data>
   <data name="errReceptionCompleted" xml:space="preserve">
-    <value> Receipt completed</value>
+    <value>Receiving completed</value>
   </data>
   <data name="errReceptionNonCompleted" xml:space="preserve">
-    <value>Receipt not completed</value>
+    <value>Receiving not completed</value>
   </data>
   <data name="errRelocCompleted" xml:space="preserve">
     <value>Relocation completed</value>
@@ -367,10 +367,10 @@
     <value>Quantity</value>
   </data>
   <data name="tvReceiving" xml:space="preserve">
-    <value>Receipt</value>
+    <value>Receiving</value>
   </data>
   <data name="tvRecieving" xml:space="preserve">
-    <value># Receipt :</value>
+    <value># Receiving :</value>
   </data>
   <data name="tvSale" xml:space="preserve">
     <value># Order</value>
@@ -397,7 +397,7 @@
     <value>Production Order</value>
   </data>
   <data name="tvTitleRecieving" xml:space="preserve">
-    <value>Receipt</value>
+    <value>Receiving</value>
   </data>
   <data name="tvWarehouse" xml:space="preserve">
     <value>Warehouse :</value>
@@ -433,6 +433,6 @@
     <value>Order</value>
   </data>
   <data name="menuRecieving" xml:space="preserve">
-    <value>Receipt</value>
+    <value>Receiving</value>
   </data>
 </root>
