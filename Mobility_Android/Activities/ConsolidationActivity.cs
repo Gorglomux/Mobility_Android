@@ -37,13 +37,40 @@ namespace Mobility_Android.Activities
                 // Si il y a eu une erreur lors du transfère alors on affiche un message pour prévenir de l'erreur
                 if (!(OperationsWebService.relocateLicense(Configuration.securityToken, licence, destination, RELOCATION_DESTINATION.Pallet, Configuration.userInfos.warehouseNRI)))
                 {
-                    Toast.MakeText(this, "Erreur, veuillez vérifier le numéro de licence et de palette", ToastLength.Long).Show();
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_Canada:
+                            {
+                                Toast.MakeText(this, "Erreur, veuillez vérifier le numéro de licence et de palette", ToastLength.Short).Show();
+                                break;
+                            }
+
+                        case CR_TTLangue.English:
+                            {
+                                Toast.MakeText(this, "Error, please check the license and pallet number", ToastLength.Short).Show();
+                                break;
+                            }
+                    }
                     IsBusy = false;
                 }
                 // Sinon on affiche la transaction de la licence
                 else
                 {
-                    Toast.MakeText(this, "La licence :" + licence + " est dans " + destination, ToastLength.Long).Show();
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_Canada:
+                            {
+                                Toast.MakeText(this, "La licence :" + licence + " est dans " + destination, ToastLength.Long).Show();
+                                break;
+                            }
+
+                        case CR_TTLangue.English:
+                            {
+                                Toast.MakeText(this, "The license :" + licence + " is now in" + destination, ToastLength.Long).Show();
+                                break;
+                            }
+                    }
+                    
                     IsBusy = false;
                     Finish();
                 }

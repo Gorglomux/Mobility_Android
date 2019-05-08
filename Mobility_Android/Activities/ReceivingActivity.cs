@@ -51,7 +51,22 @@ namespace Mobility_Android.Activities
             // Si pas de reception alors message pour prévenir l'utilisateur
             if (receptions.Count == 0)
             {
-                Toast.MakeText(this, "Pas de reception", ToastLength.Long).Show();
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            Toast.MakeText(this, "Pas de réception", ToastLength.Long).Show();
+
+                            break;
+                        }
+
+                    case CR_TTLangue.English:
+                        {
+                            Toast.MakeText(this, "No reception", ToastLength.Long).Show();
+                            break;
+                        }
+                }
+
             }
 
         }

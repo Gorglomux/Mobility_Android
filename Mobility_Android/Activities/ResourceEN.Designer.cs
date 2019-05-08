@@ -61,7 +61,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2 - Creation palette.
+        ///   Looks up a localized string similar to 2 - Pallet creation.
         /// </summary>
         internal static string btnAddPalette {
             get {
@@ -70,7 +70,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Validate.
+        ///   Looks up a localized string similar to Confirm.
         /// </summary>
         internal static string btnConfirm {
             get {
@@ -106,7 +106,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to End Picking.
+        ///   Looks up a localized string similar to End Order.
         /// </summary>
         internal static string btnEndPicking {
             get {
@@ -115,7 +115,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to End Palette.
+        ///   Looks up a localized string similar to End Pallet.
         /// </summary>
         internal static string btnEndPickingPalette {
             get {
@@ -124,7 +124,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to End receiving.
+        ///   Looks up a localized string similar to End Receiving.
         /// </summary>
         internal static string btnEndReceiving {
             get {
@@ -160,7 +160,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3 - Picking.
+        ///   Looks up a localized string similar to 3 - Order.
         /// </summary>
         internal static string btnPicking {
             get {
@@ -187,7 +187,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2 - Reception .
+        ///   Looks up a localized string similar to 2 - Receiving.
         /// </summary>
         internal static string btnRecieve {
             get {
@@ -232,6 +232,15 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please enter a license code.
+        /// </summary>
+        internal static string errEmptyFieldLicense {
+            get {
+                return ResourceManager.GetString("errEmptyFieldLicense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The barcode is not valid. Unrecognized tag.
         /// </summary>
         internal static string errInvalidStringFormat {
@@ -268,7 +277,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Picking completed.
+        ///   Looks up a localized string similar to Order completed.
         /// </summary>
         internal static string errPickingCompleted {
             get {
@@ -277,7 +286,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Picking not completed.
+        ///   Looks up a localized string similar to Order not completed.
         /// </summary>
         internal static string errPickingNonCompleted {
             get {
@@ -304,7 +313,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Receiving completed.
+        ///   Looks up a localized string similar to Receiving completed.
         /// </summary>
         internal static string errReceptionCompleted {
             get {
@@ -313,7 +322,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Receiving non completed.
+        ///   Looks up a localized string similar to Receiving not completed.
         /// </summary>
         internal static string errReceptionNonCompleted {
             get {
@@ -349,7 +358,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Couldn&apos;t notify termicon for printing.
+        ///   Looks up a localized string similar to Could not notify termicon for printing.
         /// </summary>
         internal static string errTermiconNotNotified {
             get {
@@ -367,7 +376,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Couldn&apos;t change warehouse.
+        ///   Looks up a localized string similar to Could not change warehouse.
         /// </summary>
         internal static string errWarehouseNotChanged {
             get {
@@ -511,7 +520,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Picking.
+        ///   Looks up a localized string similar to Order.
         /// </summary>
         internal static string menuPicking {
             get {
@@ -520,7 +529,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Recieving.
+        ///   Looks up a localized string similar to Receiving.
         /// </summary>
         internal static string menuRecieving {
             get {
@@ -619,7 +628,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Provideur.
+        ///   Looks up a localized string similar to Provider.
         /// </summary>
         internal static string tvFournisseur {
             get {
@@ -727,7 +736,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Palette :.
+        ///   Looks up a localized string similar to Pallet :.
         /// </summary>
         internal static string tvPalette {
             get {
@@ -745,7 +754,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please answer your password  :.
+        ///   Looks up a localized string similar to Please enter your password  :.
         /// </summary>
         internal static string tvPassPrompt {
             get {
@@ -754,7 +763,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Order.
+        ///   Looks up a localized string similar to Order :.
         /// </summary>
         internal static string tvPicking {
             get {
@@ -835,7 +844,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Put in production.
+        ///   Looks up a localized string similar to Placed into production.
         /// </summary>
         internal static string tvPutProduction {
             get {
@@ -952,7 +961,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Picking.
+        ///   Looks up a localized string similar to Order.
         /// </summary>
         internal static string tvTitlePicking {
             get {
@@ -997,7 +1006,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fournisseur.
+        ///   Looks up a localized string similar to Provider.
         /// </summary>
         internal static string txtFournisseur {
             get {

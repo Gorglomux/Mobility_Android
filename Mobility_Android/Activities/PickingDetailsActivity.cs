@@ -73,7 +73,23 @@ namespace Mobility_Android.Activities
                         }
                         else
                         {
-                            Toast.MakeText(this, "Licence ajoutée", ToastLength.Long).Show();
+                            switch (Configuration.currentLanguage)
+                            {
+                                case CR_TTLangue.French_Canada:
+                                    {
+                                        Toast.MakeText(this, "Licence ajoutée", ToastLength.Long).Show();
+
+                                        break;
+                                    }
+
+                                case CR_TTLangue.English:
+                                    {
+                                        Toast.MakeText(this, "License added", ToastLength.Long).Show();
+                                        break;
+                                    }
+                            }
+
+                           
                         }
                         data = sale;
 
@@ -83,7 +99,23 @@ namespace Mobility_Android.Activities
                     else
                     {
                         editText.Text = "";
-                        Toast.MakeText(this, "Veuillez entrer un code pour la licence", ToastLength.Long).Show();
+                        switch (Configuration.currentLanguage)
+                        {
+                            case CR_TTLangue.French_Canada:
+                                {
+                                    Toast.MakeText(this, Activities.ResourceFR.errEmptyFieldLicense, ToastLength.Long).Show();
+
+                                    break;
+                                }
+
+                            case CR_TTLangue.English:
+                                {
+                                    Toast.MakeText(this, Activities.ResourceEN.errEmptyFieldLicense, ToastLength.Long).Show();
+                                    break;
+                                }
+                        }
+
+                         
                     }
                 }
             };

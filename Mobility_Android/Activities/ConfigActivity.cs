@@ -68,7 +68,20 @@ namespace Mobility_Android.Activities
                         Configuration.webServiceURL = textUrl;
                     }
 
-                    Toast.MakeText(this, "Configuration sauvegardée dans" + filePath, ToastLength.Short).Show();
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_Canada:
+                            {
+                                Toast.MakeText(this, "Configuration sauvegardée", ToastLength.Short).Show();
+                                break;
+                            }
+
+                        case CR_TTLangue.English:
+                            {
+                                Toast.MakeText(this, "Configuration saved", ToastLength.Short).Show();
+                                break;
+                            }
+                    }
                     
                     //Sauvegarde l'URL dans le fichier "WebServiceURL.txt"
                     System.IO.File.WriteAllText(filePath, Configuration.webServiceURL);
@@ -77,7 +90,21 @@ namespace Mobility_Android.Activities
                 }
                 else
                 {
-                    Toast.MakeText(this, "URL invalide", ToastLength.Short).Show();
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_Canada:
+                            {
+                                Toast.MakeText(this, "URL invalide", ToastLength.Short).Show();
+                                break;
+                            }
+
+                        case CR_TTLangue.English:
+                            {
+                                Toast.MakeText(this, "Invalid URL", ToastLength.Short).Show();
+                                break;
+                            }
+                    }
+                    
                 }
             };
         }

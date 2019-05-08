@@ -119,6 +119,7 @@
   </resheader>
   <data name="btnAddPalette" xml:space="preserve">
     <value>2 - Creation de palette</value>
+    <comment>fdf</comment>
   </data>
   <data name="btnConfirm" xml:space="preserve">
     <value>Confirmer</value>
@@ -434,5 +435,8 @@
   </data>
   <data name="menuRecieving" xml:space="preserve">
     <value>Réception</value>
+  </data>
+  <data name="errEmptyFieldLicense" xml:space="preserve">
+    <value>Veuillez rentrer un code pour la licence</value>
   </data>
 </root>

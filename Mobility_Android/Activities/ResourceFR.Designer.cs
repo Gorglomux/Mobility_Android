@@ -59,7 +59,6 @@ namespace Mobility_Android.Activities {
                 resourceCulture = value;
             }
         }
-
         
         /// <summary>
         ///   Looks up a localized string similar to 2 - Creation de palette.
@@ -229,6 +228,15 @@ namespace Mobility_Android.Activities {
         internal static string errConfirmingPallet {
             get {
                 return ResourceManager.GetString("errConfirmingPallet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Veuillez rentrer un code pour la licence.
+        /// </summary>
+        internal static string errEmptyFieldLicense {
+            get {
+                return ResourceManager.GetString("errEmptyFieldLicense", resourceCulture);
             }
         }
         

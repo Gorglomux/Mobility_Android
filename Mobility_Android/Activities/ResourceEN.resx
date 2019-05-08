@@ -139,7 +139,7 @@
     <value>End Pallet</value>
   </data>
   <data name="btnEndReceiving" xml:space="preserve">
-    <value>End Receipt</value>
+    <value>End Receiving</value>
   </data>
   <data name="btnLogout" xml:space="preserve">
     <value>Logout</value>
@@ -434,5 +434,8 @@
   </data>
   <data name="menuRecieving" xml:space="preserve">
     <value>Receiving</value>
+  </data>
+  <data name="errEmptyFieldLicense" xml:space="preserve">
+    <value>Please enter a license code</value>
   </data>
 </root>
