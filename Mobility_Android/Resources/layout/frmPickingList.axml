@@ -15,7 +15,7 @@
 		android:layout_height="wrap_content" 
 		android:layout_below="@+id/toolbar" >
 		<TextView
-			android:id="@+id/tvPicking"
+			android:id="@+id/tvTitlePicking"
 			android:text="Commandes"
 			android:layout_width="0dp"
 			android:layout_weight="10"

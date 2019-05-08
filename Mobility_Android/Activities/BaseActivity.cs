@@ -55,7 +55,22 @@ namespace Mobility_Android.Activities
             //Si l'application est occupée on affiche un message de chargement
             if (_isBusy == true)
             {
-                var toastConfig = new ToastConfig("Chargement...");
+                ToastConfig toastConfig = null;
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            toastConfig = new ToastConfig("Chargement...");
+                            break;
+                        }
+
+                    case CR_TTLangue.English:
+                        {
+                            toastConfig = new ToastConfig("Loading...");
+                            break;
+                        }
+                }
+                
                 toastConfig.SetDuration(500);
                 toastConfig.SetBackgroundColor(System.Drawing.Color.FromArgb(12, 131, 193));
                 UserDialogs.Instance.Toast(toastConfig);

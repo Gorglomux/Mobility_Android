@@ -119,6 +119,7 @@
   </resheader>
   <data name="btnAddPalette" xml:space="preserve">
     <value>2 - Creation de palette</value>
+    <comment>fdf</comment>
   </data>
   <data name="btnConfirm" xml:space="preserve">
     <value>Confirmer</value>
@@ -268,7 +269,7 @@
     <value>Veuillez entrer le mot de passe :</value>
   </data>
   <data name="tvPicking" xml:space="preserve">
-    <value>Commande :</value>
+    <value># Commande :</value>
   </data>
   <data name="tvPoids" xml:space="preserve">
     <value>Poids :</value>
@@ -313,7 +314,7 @@
     <value># Réception :</value>
   </data>
   <data name="tvSale" xml:space="preserve">
-    <value> Commande</value>
+    <value># Commande</value>
   </data>
   <data name="tvSelect" xml:space="preserve">
     <value>Select.</value>
@@ -331,7 +332,7 @@
     <value>Inter entrepôt</value>
   </data>
   <data name="tvTitlePicking" xml:space="preserve">
-    <value># Commande</value>
+    <value>Commande</value>
   </data>
   <data name="tvTitleProdOrder" xml:space="preserve">
     <value>Bon de production</value>
@@ -343,7 +344,7 @@
     <value>Entrepôt :</value>
   </data>
   <data name="tvWeight" xml:space="preserve">
-    <value>Poids (en Kg)</value>
+    <value>Poids (Kg)</value>
   </data>
   <data name="txtFournisseur" xml:space="preserve">
     <value>Fournisseur</value>
@@ -434,5 +435,8 @@
   </data>
   <data name="menuRecieving" xml:space="preserve">
     <value>Réception</value>
+  </data>
+  <data name="errEmptyFieldLicense" xml:space="preserve">
+    <value>Veuillez rentrer un code pour la licence</value>
   </data>
 </root>

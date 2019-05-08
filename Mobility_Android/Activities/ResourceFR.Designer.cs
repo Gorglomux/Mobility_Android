@@ -232,6 +232,15 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Veuillez rentrer un code pour la licence.
+        /// </summary>
+        internal static string errEmptyFieldLicense {
+            get {
+                return ResourceManager.GetString("errEmptyFieldLicense", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Le code barre n&apos;est pas valide. Tag non reconnu .
         /// </summary>
         internal static string errInvalidStringFormat {

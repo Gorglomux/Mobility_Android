@@ -89,9 +89,23 @@ namespace Mobility_Android.Activities
 
             FindViewById<Button>(Resource.Id.btnConfirm).Click += async (sender, e) =>
             {
-                bool sucess = true;
-                string msg = "Veuillez renseigner les champs :  ";
+                bool sucess = true; 
+                string msg = "";
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            msg = "Veuillez renseigner les champs :  ";
 
+                            break;
+                        }
+
+                    case CR_TTLangue.English:
+                        {
+                            msg = "Please fill in the fields:  ";
+                            break;
+                        }
+                }
                 sale.CreatorNRI = Configuration.userInfos.NRI;
                 sale.WarehouseNRI = Configuration.userInfos.warehouseNRI;
 
@@ -123,7 +137,22 @@ namespace Mobility_Android.Activities
 
                     if(OperationsWebService.createSale(Configuration.securityToken, sale))
                     {
-                        Toast.MakeText(this, "Vente créée", ToastLength.Long).Show();
+                        switch (Configuration.currentLanguage)
+                        {
+                            case CR_TTLangue.French_Canada:
+                                {
+                                    Toast.MakeText(this, "Commande créée", ToastLength.Long).Show();
+
+                                    break;
+                                }
+
+                            case CR_TTLangue.English:
+                                {
+                                    Toast.MakeText(this, "Order created", ToastLength.Long).Show();
+                                    break;
+                                }
+                        }
+                       
                     }
                     else
                     {

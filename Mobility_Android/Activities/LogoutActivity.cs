@@ -34,7 +34,20 @@ namespace Mobility_Android.Activities
                  }
                  else
                  {
-                     Toast.MakeText(this, "Mot de passe invalide", ToastLength.Short).Show();
+                     switch (Configuration.currentLanguage)
+                     {
+                         case CR_TTLangue.French_Canada:
+                             {
+                                 Toast.MakeText(this, "Mot de passe invalide", ToastLength.Short).Show();
+                                 break;
+                             }
+
+                         case CR_TTLangue.English:
+                             {
+                                 Toast.MakeText(this, "Invalid password", ToastLength.Short).Show();
+                                 break;
+                             }
+                     }
                  }
              };
         }

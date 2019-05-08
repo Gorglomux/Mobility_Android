@@ -66,7 +66,20 @@ namespace Mobility_Android.Activities
                     StartActivity(new Intent(this, typeof(HomeActivity)));
                 } else
                 {
-                    Toast.MakeText(this, "Erreur connexion", ToastLength.Short).Show();
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_Canada:
+                            {
+                                Toast.MakeText(this, "Erreur à la connexion", ToastLength.Short).Show();
+                                break;
+                            }
+
+                        case CR_TTLangue.English:
+                            {
+                                Toast.MakeText(this, "Connection error", ToastLength.Short).Show();
+                                break;
+                            }
+                    } 
                 }
                 //La ressource n'est plus occupée
                 IsBusy = false;

@@ -62,7 +62,24 @@ namespace Mobility_Android.Activities
             // Si pas de liste de produit alors on previent l'utilisateur avec un msg
             if (listProduct.Count == 0)
             {
-                Toast.MakeText(this, "Pas de produit", ToastLength.Long).Show();
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            Toast.MakeText(this, "Pas de produit", ToastLength.Long).Show();
+
+                            break;
+                        }
+
+                    case CR_TTLangue.English:
+                        {
+                            Toast.MakeText(this, "No product", ToastLength.Long).Show();
+                            break;
+                        }
+                }
+
+
+                
             }
         }
 

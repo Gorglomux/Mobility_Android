@@ -31,6 +31,8 @@ namespace Mobility_Android.Activities
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmConfig);
 
+            translateScreen();
+
             //Obtient le chemin jusqu'au dossier "fichiers", où l'on peut écrire et lire des fichiers
             var documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 
@@ -44,7 +46,7 @@ namespace Mobility_Android.Activities
             {
                 System.IO.File.WriteAllText(filePath, Configuration.webServiceURL);
             }
-            
+
             urlEditText = FindViewById<EditText>(Resource.Id.tfUrl);
             urlEditText.Text = Configuration.webServiceURL;
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), urlEditText);
@@ -58,7 +60,7 @@ namespace Mobility_Android.Activities
                 //Si l'url est une url valide on regarde si il y a http devant, sinon on l'ajoute
                 if (isValidURL(textUrl))
                 {
-                    
+
                     if (!textUrl.Contains("http://"))
                     {
                         Configuration.webServiceURL = "http://" + textUrl;
@@ -69,15 +71,44 @@ namespace Mobility_Android.Activities
                     }
 
                     Toast.MakeText(this, "Configuration sauvegardée dans" + filePath, ToastLength.Short).Show();
+
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_Canada:
+                            {
+                                Toast.MakeText(this, "Configuration sauvegardée", ToastLength.Short).Show();
+                                break;
+                            }
+
+                        case CR_TTLangue.English:
+                            {
+                                Toast.MakeText(this, "Configuration saved", ToastLength.Short).Show();
+                                break;
+                            }
+                    }
                     
                     //Sauvegarde l'URL dans le fichier "WebServiceURL.txt"
                     System.IO.File.WriteAllText(filePath, Configuration.webServiceURL);
-                    
+
                     Finish();
                 }
                 else
                 {
-                    Toast.MakeText(this, "URL invalide", ToastLength.Short).Show();
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_Canada:
+                            {
+                                Toast.MakeText(this, "URL invalide", ToastLength.Short).Show();
+                                break;
+                            }
+
+                        case CR_TTLangue.English:
+                            {
+                                Toast.MakeText(this, "Invalid URL", ToastLength.Short).Show();
+                                break;
+                            }
+                    }
+                    
                 }
             };
         }
@@ -85,6 +116,34 @@ namespace Mobility_Android.Activities
         public bool isValidURL(string url)
         {
             return Android.Util.Patterns.WebUrl.Matcher(url).Matches();
+        }
+
+        private void translateScreen()
+        {
+            switch (Configuration.currentLanguage)
+            {
+                case CR_TTLangue.French_Canada:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvConfig).Text = Activities.ResourceFR.tvConfig;
+                        FindViewById<TextView>(Resource.Id.tvOrder).Text = Activities.ResourceFR.tvOrder;
+                        FindViewById<TextView>(Resource.Id.tvTermicon).Text = Activities.ResourceFR.tvTermicon;
+                        FindViewById<TextView>(Resource.Id.tvIp).Text = Activities.ResourceFR.tvIp;
+                        FindViewById<TextView>(Resource.Id.tvPort).Text = Activities.ResourceFR.tvPort;
+                        FindViewById<Button>(Resource.Id.btnSaveConfig).Text = Activities.ResourceFR.btnSaveConfig;
+                        break;
+                    }
+
+                case CR_TTLangue.English:
+                    {
+                        FindViewById<TextView>(Resource.Id.tvConfig).Text = Activities.ResourceEN.tvConfig;
+                        FindViewById<TextView>(Resource.Id.tvOrder).Text = Activities.ResourceEN.tvOrder;
+                        FindViewById<TextView>(Resource.Id.tvTermicon).Text = Activities.ResourceEN.tvTermicon;
+                        FindViewById<TextView>(Resource.Id.tvIp).Text = Activities.ResourceEN.tvIp;
+                        FindViewById<TextView>(Resource.Id.tvPort).Text = Activities.ResourceEN.tvPort;
+                        FindViewById<Button>(Resource.Id.btnSaveConfig).Text = Activities.ResourceEN.btnSaveConfig;
+                        break;
+                    }
+            }
         }
     }
 }
