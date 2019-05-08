@@ -51,10 +51,6 @@ namespace Mobility_Android.Activities
 
             foreach (KeyValuePair<int, string> w in dictionary)
             {
-                if(Configuration.userInfos.warehouseNRI == w.Key)
-                {
-                    //
-                }
                 warehouses.Add(w.Value);
             }
 
@@ -62,6 +58,15 @@ namespace Mobility_Android.Activities
             spinner = FindViewById<Spinner>(Resource.Id.spnWarehouse);
             var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, warehouses);
             spinner.Adapter = adapter;
+
+            foreach (KeyValuePair<int, string> w in dictionary)
+            {
+                if (Configuration.userInfos.warehouseNRI == w.Key)
+                {
+                    int spinnerPosition = adapter.GetPosition(w.Value);
+                    spinner.SetSelection(spinnerPosition);
+                }
+            }
 
             spinner.ItemSelected += (parent, args) =>
             {
