@@ -46,7 +46,7 @@ namespace Mobility_Android.Activities
             ReceptionWS reception = (ReceptionWS)ReceivingDetailsActivity.data;
 
             // Récupération de la liste de produit selon une reception grâce au web service Operations
-            List<ProductDetailsWS> listProduct = OperationsWebService.getReceptionProductDetails(Configuration.securityToken, reception.ReceptionNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI, null).OfType<ProductDetailsWS>().ToList();
+            List<ProductDetailsWS> listProduct = OperationsWebService.getReceptionProductDetails(Configuration.securityToken, reception.ReceptionNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI, Configuration.userInfos.Udp_Label).OfType<ProductDetailsWS>().ToList();
 
             // Creation liste de nom produit pour le spinner
             List<string> typeProd = new List<string>();
@@ -193,7 +193,7 @@ namespace Mobility_Android.Activities
                 {
                     IsBusy = true;
                     await Task.Delay(50);
-                    var produit = OperationsWebService.pickLicenseReception(Configuration.securityToken, licence, (int)Configuration.currentLanguage, 0, "");
+                    var produit = OperationsWebService.pickLicenseReception(Configuration.securityToken, licence, (int)Configuration.currentLanguage, Configuration.userInfos.Udp_NRI, Configuration.userInfos.Udp_Label);
                     if (produit ==null)
                     {
                         Toast.MakeText(this, OperationsWebService.errorMessage, ToastLength.Long).Show();

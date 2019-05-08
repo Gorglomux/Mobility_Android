@@ -66,7 +66,7 @@ namespace Mobility_Android.Activities
             if (licence != null)
             {
                 // Creation liste de nom produit
-                List<ProductDetailsWS> listProduct = OperationsWebService.getSaleProductDetails(Configuration.securityToken, sale.saleNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI).OfType<ProductDetailsWS>().ToList();
+                List<ProductDetailsWS> listProduct = OperationsWebService.getSaleProductDetails(Configuration.securityToken, sale.saleNRI, (int)Configuration.currentLanguage, Configuration.userInfos.Udp_NRI).OfType<ProductDetailsWS>().ToList();
 
                 foreach (ProductDetailsWS p in listProduct)
                     // On parcourt la liste de produit pour trouver le produit qui correspond à la licence
@@ -105,7 +105,7 @@ namespace Mobility_Android.Activities
                         
                         licence.parentNRI = sale.saleNRI;
 
-                        if(OperationsWebService.PickLicenseSale(Configuration.securityToken, licence, Configuration.userInfos.warehouseNRI, Configuration.userInfos.warehouseNRI) == null)
+                        if(OperationsWebService.PickLicenseSale(Configuration.securityToken, licence, Configuration.userInfos.warehouseNRI, Configuration.userInfos.warehouseNRI, Configuration.userInfos.Udp_NRI) == null)
                         {
                             Toast.MakeText(this, OperationsWebService.errorMessage, ToastLength.Long).Show();
                             OperationsWebService.errorMessage = "";

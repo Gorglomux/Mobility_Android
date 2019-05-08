@@ -30,7 +30,7 @@ namespace Mobility_Android.Resources.global
 
         public static String fileConfigLanguage = "@.\ressourceFR.resx";
 
-        public static String webServiceURL = "http://clientservices.ceritar.com/MyCeritar_Test/";
+        public static String webServiceURL = "";
 
         public static String termicon_IP = "";
 

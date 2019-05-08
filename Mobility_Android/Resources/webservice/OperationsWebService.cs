@@ -101,7 +101,7 @@ namespace Mobility_Android.Resources.webservice
                         receptions = new List<SaleWS>(result.ReturnValue);
                     else
                     {
-errorMessage = result.Errors[0].Message.ToString();
+                        errorMessage = result.Errors[0].Message.ToString();
  
                         receptions.Clear();
                     }
@@ -145,7 +145,7 @@ errorMessage = result.Errors[0].Message.ToString();
             return receptions;
         }
 
-        public static SaleWS getSaleByNRI(string userToken, int receptionNRI, int lang)
+        public static SaleWS getSaleByNRI(string userToken, int receptionNRI, int lang, int UdP_NRI)
         {
             SaleWS reception = new SaleWS();
             try
@@ -154,13 +154,13 @@ errorMessage = result.Errors[0].Message.ToString();
 
                 if (connectToWebServiceOperations())
                 {
-                    result = webServiceOperation.GetSaleByNRI(userToken, receptionNRI, lang);
+                    result = webServiceOperation.GetSaleByNRI(userToken, receptionNRI, lang, UdP_NRI);
 
                     if (result.Success)
                         reception = result.ReturnValue;
                     else
                     {
-errorMessage = result.Errors[0].Message.ToString();
+                        errorMessage = result.Errors[0].Message.ToString();
  
                         reception = null/* TODO Change to default(_) if this is not a reference type */;
                     }
@@ -204,14 +204,14 @@ errorMessage = result.Errors[0].Message.ToString();
             return reception;
         }
 
-        public static ProductDetailsWS PickLicenseSale(string userToken, LicenseWS license, int warehouseNRI, int UdP_NRI)
+        public static ProductDetailsWS PickLicenseSale(string userToken, LicenseWS license, int lang, int warehouseNRI, int UdP_NRI)
         {
             ProductDetailsWS currentProduct = new ProductDetailsWS();
             CR_ResultActionOfProductDetailsWS result;
 
             if (connectToWebServiceOperations())
             {
-                result = webServiceOperation.PickLicenseSale(userToken, license, warehouseNRI, UdP_NRI);
+                result = webServiceOperation.PickLicenseSale(userToken, license, lang ,warehouseNRI, UdP_NRI);
 
                 if (result.Success)
                     currentProduct = result.ReturnValue;
@@ -292,7 +292,7 @@ errorMessage = result.Errors[0].Message.ToString();
 
                 if (connectToWebServiceOperations())
                 {
-                    result = webServiceOperation.GetSaleProductDetails(userToken, saleNRI, lang);
+                    result = webServiceOperation.GetSaleProductDetails(userToken, saleNRI, lang, UdP_NRI);
 
                     if (result.Success)
                         productDetails = result.ReturnValue;
@@ -483,7 +483,7 @@ errorMessage = result.Errors[0].Message.ToString();
 
                 if (connectToWebServiceOperations())
                 {
-                    result = webServiceOperation.GetReceptionByNRI(userToken, receptionNRI, lang);
+                    result = webServiceOperation.GetReceptionByNRI(userToken, receptionNRI, lang, UdP_NRI, UdP_Label);
 
                     if (result.Success)
                         reception = result.ReturnValue;
@@ -547,7 +547,7 @@ errorMessage = result.Errors[0].Message.ToString();
 
                 if (connectToWebServiceOperations())
                 {
-                    result = webServiceOperation.PickLicenseReception(userToken, license, lang);
+                    result = webServiceOperation.PickLicenseReception(userToken, license, lang, UdP_NRI, UdP_Label);
 
                     if (result.Success)
                         currentProduct = result.ReturnValue;
@@ -670,7 +670,7 @@ errorMessage = result.Errors[0].Message.ToString();
 
                 if (connectToWebServiceOperations())
                 {
-                    result = webServiceOperation.GetReceptionProductDetails(userToken, receptionNRI, lang);
+                    result = webServiceOperation.GetReceptionProductDetails(userToken, receptionNRI, lang, UdP_NRI, UdP_Label);
 
                     if (result.Success)
                         productDetails = result.ReturnValue;
@@ -780,66 +780,6 @@ errorMessage = result.Errors[0].Message.ToString();
             }
 
             return blnReturn;
-        }
-
-        /*
-         * Méthode qui permet de créer et retouner un numéro de palette
-         * 
-         */
-        public static string createPalletCode(string usertoken, ref string licenseParentCode, ref string licenseCode)
-        {
-            WebService.Operations.CR_ResultActionOfString result = new WebService.Operations.CR_ResultActionOfString();
-            try
-            {
-                if (connectToWebServiceOperations())
-                {
-                    result = webServiceOperation.CreatePalletCode(usertoken, ref licenseParentCode, ref licenseCode);
-
-                    if (!result.Success)
-                    {
-                        //MessageBox.Show(result.Errors(0).Message.ToString);
-                    }
-
-                }
-            }
-            /*catch (WebException ex)
-            {
-                switch (Configuration.currentLanguage)
-                {
-                    case CR_TTLangue.French:
-                        {
-                            //MessageBox.Show(My.Resources.RessourceFR.errCannotReachWebservice);
-                            break;
-                        }
-
-                    default:
-                        {
-                            //MessageBox.Show(My.Resources.RessourceEN.errCannotReachWebservice);
-                            break;
-                        }
-                }
-                result.Success = false;
-            }*/
-            catch (Exception )
-            {
-                switch (Configuration.currentLanguage)
-                {
-                    case CR_TTLangue.French_France:
-                        {
-                            //MessageBox.Show(My.Resources.RessourceFR.errWebserviceGeneric);
-                            break;
-                        }
-
-                    default:
-                        {
-                            //MessageBox.Show(My.Resources.RessourceEN.errWebserviceGeneric);
-                            break;
-                        }
-                }
-                result.Success = false;
-            }
-
-            return result.ReturnValue;
         }
 
         #endregion

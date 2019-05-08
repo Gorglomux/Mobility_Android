@@ -91,7 +91,7 @@ namespace Mobility_Android.Activities
                         {
                             licence.parentNRI = reception.ReceptionNRI;
                             // Creation liste de nom produit
-                            List<ProductDetailsWS> listProduct = OperationsWebService.getReceptionProductDetails(Configuration.securityToken, reception.ReceptionNRI, (int)Configuration.currentLanguage, Configuration.userInfos.NRI, null).OfType<ProductDetailsWS>().ToList();
+                            List<ProductDetailsWS> listProduct = OperationsWebService.getReceptionProductDetails(Configuration.securityToken, reception.ReceptionNRI, (int)Configuration.currentLanguage, Configuration.userInfos.Udp_NRI, Configuration.userInfos.Udp_Label).OfType<ProductDetailsWS>().ToList();
 
 
                             foreach (ProductDetailsWS pro in listProduct)

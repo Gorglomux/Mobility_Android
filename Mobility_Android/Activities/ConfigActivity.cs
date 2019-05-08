@@ -69,8 +69,7 @@ namespace Mobility_Android.Activities
                     {
                         Configuration.webServiceURL = textUrl;
                     }
-
-                    Toast.MakeText(this, "Configuration sauvegardée dans" + filePath, ToastLength.Short).Show();
+                    
 
                     switch (Configuration.currentLanguage)
                     {
