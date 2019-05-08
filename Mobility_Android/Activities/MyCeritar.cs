@@ -34,6 +34,20 @@ namespace Mobility_Android.Activities
 
             translateScreen();
 
+
+            //Obtient le chemin jusqu'au dossier "fichiers", où l'on peut écrire et lire des fichiers
+            var documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+
+            //Si l'utilisateur a deja sauvegardé une autre URL que celle de base, alors on lit le fichier la contenant; sinon, on crée ce dernier avec une URL de base
+            var filePath = System.IO.Path.Combine(documentsPath, "WebServiceURL.txt");
+            if (System.IO.File.Exists(filePath))
+            {
+                Configuration.webServiceURL = System.IO.File.ReadAllText(filePath);
+            }
+            else
+            {
+                System.IO.File.WriteAllText(filePath, Configuration.webServiceURL);
+            }
             //On récupère le contenu des champs       
             EditText username = FindViewById<EditText>(Resource.Id.tfName);
             EditText password = FindViewById<EditText>(Resource.Id.tfPass);
