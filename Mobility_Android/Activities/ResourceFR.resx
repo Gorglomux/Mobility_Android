@@ -269,7 +269,7 @@
     <value>Veuillez entrer le mot de passe :</value>
   </data>
   <data name="tvPicking" xml:space="preserve">
-    <value># Commande :</value>
+    <value>Commande :</value>
   </data>
   <data name="tvPoids" xml:space="preserve">
     <value>Poids :</value>
@@ -314,7 +314,7 @@
     <value># Réception :</value>
   </data>
   <data name="tvSale" xml:space="preserve">
-    <value># Commande</value>
+    <value> Commande</value>
   </data>
   <data name="tvSelect" xml:space="preserve">
     <value>Select.</value>
@@ -332,7 +332,7 @@
     <value>Inter entrepôt</value>
   </data>
   <data name="tvTitlePicking" xml:space="preserve">
-    <value>Commande</value>
+    <value># Commande</value>
   </data>
   <data name="tvTitleProdOrder" xml:space="preserve">
     <value>Bon de production</value>
