@@ -435,4 +435,7 @@
   <data name="menuRecieving" xml:space="preserve">
     <value>Receiving</value>
   </data>
+  <data name="errEmptyFieldLicense" xml:space="preserve">
+    <value>Please enter a license code</value>
+  </data>
 </root>

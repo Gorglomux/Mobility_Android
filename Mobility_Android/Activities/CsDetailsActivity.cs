@@ -62,7 +62,22 @@ namespace Mobility_Android.Activities
             // Si aucune licence alors on affiche un message pour prévenir l'utilisateur
             if (listLicence.Count == 0)
             {
-                Toast.MakeText(this, "Pas de licence", ToastLength.Long).Show();
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            Toast.MakeText(this, "Pas de licence", ToastLength.Long).Show();
+                            break;
+                        }
+
+                    case CR_TTLangue.English:
+                        {
+                            Toast.MakeText(this, "No license", ToastLength.Long).Show();
+                            break;
+                        }
+                }
+
+                
             }
 
             if (CsDetailsActivity.typeCS == TYPE_CS.NONE)

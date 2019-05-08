@@ -86,8 +86,23 @@ namespace Mobility_Android.Activities
 
             FindViewById<Button>(Resource.Id.btnConfirm).Click += async (sender, e) => {
                 bool sucess = true;
-                string msg = "Veuillez renseigner les champs :  ";
+                string msg = "";
+                switch (Configuration.currentLanguage)
+                {
+                    case CR_TTLangue.French_Canada:
+                        {
+                            msg = "Veuillez renseigner les champs :  ";
 
+                            break;
+                        }
+
+                    case CR_TTLangue.English:
+                        {
+                            msg = "Please fill in the fields:  ";
+                            break;
+                        }
+                }
+                
                 if(date != null)
                 {
                     licence.expirationDate = date;
@@ -102,7 +117,22 @@ namespace Mobility_Android.Activities
 
                 if (licence.productNRI == 0)
                 {
-                    msg += "produit, ";
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_Canada:
+                            {
+                                msg += "produit, ";
+
+                                break;
+                            }
+
+                        case CR_TTLangue.English:
+                            {
+                                msg += "product, ";
+                                break;
+                            }
+                    }
+                   
                     sucess = false;
                 }
 
@@ -112,7 +142,21 @@ namespace Mobility_Android.Activities
                     licence.weightLb = decimal.Parse(tfWeight.Text);
                 } else
                 {
-                    msg += "poids, ";
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_Canada:
+                            {
+                                msg += "poids, ";
+
+                                break;
+                            }
+
+                        case CR_TTLangue.English:
+                            {
+                                msg += "weight, ";
+                                break;
+                            }
+                    }
                     sucess = false;
                 }
 
@@ -122,7 +166,21 @@ namespace Mobility_Android.Activities
                 }
                 else
                 {
-                    msg += "quantité, ";
+                    switch (Configuration.currentLanguage)
+                    {
+                        case CR_TTLangue.French_Canada:
+                            {
+                                msg += "quantité, ";
+
+                                break;
+                            }
+
+                        case CR_TTLangue.English:
+                            {
+                                msg += "quantity, ";
+                                break;
+                            }
+                    } 
                     sucess = false;
                 }
 
