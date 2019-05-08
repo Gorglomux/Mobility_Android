@@ -56,6 +56,7 @@ namespace Mobility_Android.Resources.global
             tvCs.Text = listCs[position].code;
             tvWeight.Text = listCs[position].weight.ToString();
 
+
             return view;
         }
     }

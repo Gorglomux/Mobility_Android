@@ -41,6 +41,7 @@ namespace Mobility_Android.Activities
             var tfWeight = FindViewById<EditText>(Resource.Id.tfWeight);
             var tfQty = FindViewById<EditText>(Resource.Id.tfQty);
 
+
             // Récupération de la réception sélectionnée
             ReceptionWS reception = (ReceptionWS)ReceivingDetailsActivity.data;
 
@@ -81,6 +82,10 @@ namespace Mobility_Android.Activities
                 // Sauvegarde de la réception choisie
                 licence.productNRI = listProduct[args.Position].NRI;
                 licence.productSSCC = listProduct[args.Position].SSCC[0];
+                if (listProduct[args.Position].isFixedWeight)
+                {
+                    tfWeight.Text = listProduct[args.Position].defaultProductWeight.ToString();
+                }
 
             };
 
@@ -130,7 +135,8 @@ namespace Mobility_Android.Activities
                 {
                     IsBusy = true;
                     await Task.Delay(50);
-                    if(OperationsWebService.pickLicenseReception(Configuration.securityToken, licence, (int)Configuration.currentLanguage, 0, "")==null)
+                    var produit = OperationsWebService.pickLicenseReception(Configuration.securityToken, licence, (int)Configuration.currentLanguage, 0, "");
+                    if (produit ==null)
                     {
                         Toast.MakeText(this, OperationsWebService.errorMessage, ToastLength.Long).Show();
                     } else
