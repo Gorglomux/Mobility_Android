@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Comment modifier la toolbar :
+https://docs.microsoft.com/en-us/xamarin/android/user-interface/controls/tool-bar/replacing-the-action-bar -->
+
+<Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="75px"
+    android:background="#000">
+
+  <LinearLayout
+		android:id="@+id/layoutToolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+    
+    <!-- Flèche retour -->
+    <ImageButton
+		android:id="@+id/imBack"
+		android:src="@drawable/back"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:layout_weight="1"/>
+
+    <!-- Logo Ceritar -->
+    <ImageView
+    android:id="@+id/imCeritar"
+    android:src="@drawable/ceritar_logo_login"
+    android:layout_width="wrap_content"
+    android:layout_height="65px"
+    android:layout_weight="4"/>
+
+  </LinearLayout>
+</Toolbar>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<!-- Toolbar -->
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+	<!-- TITLE WAREHOUSE -->
+	<LinearLayout
+		android:id="@+id/layoutTitle"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/toolbar" >
+		<TextView
+			android:id="@+id/tvInterWarehouse"
+			android:text="Inter Entrepôt"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/toolbar"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffffff" />
+
+		<ImageButton
+			android:id="@+id/imRefresh"
+			android:src="@drawable/refresh"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
+
+	<!-- LINEAR LAYOUT WAREHOUSE -->
+
+	<LinearLayout
+		android:id="@+id/layoutWarehouse"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/layoutTitle" >
+
+		<!-- SPINNER WAREHOUSE -->
+		<Spinner
+			android:id="@+id/spnWarehouse"
+			android:layout_width="0dp"
+			android:layout_weight="6"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="10px"
+			android:background="@drawable/spinner"/>
+
+		<!-- BUTTON CLEAR -->
+
+		<Button
+			android:id="@+id/btnNewINterWarehouse"
+			android:text="New"
+			android:layout_width="0dp"
+			android:layout_weight="2"
+			android:layout_height="40.7dp"
+			android:layout_toRightOf="@+id/txt_url"
+			android:layout_alignTop="@+id/txt_url"
+			android:layout_marginTop="-2dp"
+			android:layout_centerHorizontal="true"
+			android:layout_marginBottom="0.0dp" />
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/layoutEntete"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/layoutWarehouse" >
+
+		<TextView
+			android:text="NRI"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="5"
+			android:layout_height="40.7dp"
+			android:layout_marginLeft="10dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/tvNRI" />
+
+		<TextView
+			android:text="Destination"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="12"
+			android:layout_height="40.7dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/tvDestination" />
+			
+	</LinearLayout>
+		
+	<ListView 
+		android:id="@+id/lvInterWarehouse" 
+		android:minWidth="10px"
+		android:minHeight="10px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/layoutEntete"/>
+
+
+
+</RelativeLayout>

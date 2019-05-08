@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<!-- Toolbar -->
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+	<!-- TITLE LOGOUT -->
+	<LinearLayout
+		android:id="@+id/layoutReceiving"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/toolbar" >
+		<TextView
+			android:id="@+id/tvReceiving"
+			android:text="Réceptions"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/toolbar"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffffff" />
+
+		<ImageButton
+			android:id="@+id/imRefresh"
+			android:src="@drawable/refresh"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/layoutOrder"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/layoutReceiving" >
+
+		<TextView
+			android:id="@+id/tvRec" 
+			android:text="# Rec."
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="4"
+			android:layout_height="40.7dp"
+			android:layout_marginLeft="10dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"/>
+
+		<TextView
+			android:id="@+id/tvFournisseur"
+			android:text="Fournisseur"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="15"
+			android:layout_height="40.7dp"
+			android:textSize="15dp"
+			android:textColor="#FFF" />
+			
+	</LinearLayout>
+		
+	<ListView 
+		android:id="@+id/lvReceiving" 
+		android:minWidth="10px"
+		android:minHeight="10px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/layoutOrder"/>
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<!-- Toolbar -->
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+	<!-- TITLE LOGOUT -->
+	<TextView
+		android:id="@+id/tvLogout"
+		android:text="Déconnexion"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/toolbar"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:textColor="#ffffffff" />
+
+	<!-- TEXT PASSWORD -->
+
+	<TextView
+		android:id="@+id/tvPassPrompt"
+		android:text="Veuillez entrer le mot de passe"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/tvLogout"
+		android:layout_marginTop="20dp"
+		android:layout_marginLeft="20dp"
+		android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+	<!-- LINEAR LAYOUT TEXTINPUT / BUTTON -->
+
+	<LinearLayout
+		android:id="@+id/layoutTextLogoutPassword"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/tvPassPrompt" >
+
+		<!-- INPUT PASSWORD -->
+
+		<!-- INPUT URL -->
+
+		<EditText
+			android:id="@+id/tfPassPrompt"
+			android:layout_width="0dp"
+			android:layout_weight="6"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginLeft="5dp"
+			android:textColorHint="#808080"
+			android:textColor="#000"
+			android:maxLines="1"
+			android:password="true"
+			android:inputType="text"
+			android:background="@android:drawable/editbox_background" />
+
+		<!-- BUTTON CLEAR -->
+
+		<ImageButton
+			android:id="@+id/imClear"
+			android:src="@drawable/clear"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+	</LinearLayout>
+
+	<!-- BUTTON LOGOUT -->
+
+	<Button
+		android:id="@+id/btnLogout"
+		android:text="Déconnexion"
+		android:layout_width="245.0dp"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/layoutTextLogoutPassword"
+		android:layout_centerHorizontal="true" />
+</RelativeLayout>

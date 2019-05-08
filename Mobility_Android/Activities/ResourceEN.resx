@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAddPalette" xml:space="preserve">
+    <value>2 - Pallet creation</value>
+  </data>
+  <data name="btnConfirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="btnConnect" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="btnConsolidate" xml:space="preserve">
+    <value>2 - Consolidate</value>
+  </data>
+  <data name="btnEnd" xml:space="preserve">
+    <value>Validate</value>
+  </data>
+  <data name="btnEndPicking" xml:space="preserve">
+    <value>End Order</value>
+  </data>
+  <data name="btnEndPickingPalette" xml:space="preserve">
+    <value>End Pallet</value>
+  </data>
+  <data name="btnEndReceiving" xml:space="preserve">
+    <value>End Receiving</value>
+  </data>
+  <data name="btnLogout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="btnMove" xml:space="preserve">
+    <value>1 - Move</value>
+  </data>
+  <data name="btnNewINterWarehouse" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="btnPicking" xml:space="preserve">
+    <value>3 - Order</value>
+  </data>
+  <data name="btnProduction" xml:space="preserve">
+    <value>4 - Production</value>
+  </data>
+  <data name="btnPutProduction" xml:space="preserve">
+    <value>1 - Put in production</value>
+  </data>
+  <data name="btnRecieve" xml:space="preserve">
+    <value>2 - Receiving</value>
+  </data>
+  <data name="btnRelocation" xml:space="preserve">
+    <value>1 - Relocation</value>
+  </data>
+  <data name="btnSaveConfig" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="errCannotReachWebservice" xml:space="preserve">
+    <value>Could not reach WebService</value>
+  </data>
+  <data name="errConfirmingPallet" xml:space="preserve">
+    <value>An error occured while confirming the pallet</value>
+  </data>
+  <data name="errInvalidStringFormat" xml:space="preserve">
+    <value>The barcode is not valid. Unrecognized tag</value>
+  </data>
+  <data name="errLicAlreadyPicked" xml:space="preserve">
+    <value>License was already picked</value>
+  </data>
+  <data name="errNoItemSelected" xml:space="preserve">
+    <value>Must select an item</value>
+  </data>
+  <data name="errNotCurrentProduct" xml:space="preserve">
+    <value>Pallet must be confirmed before pickign a different product</value>
+  </data>
+  <data name="errPickingCompleted" xml:space="preserve">
+    <value>Order completed</value>
+  </data>
+  <data name="errPickingNonCompleted" xml:space="preserve">
+    <value>Order not completed</value>
+  </data>
+  <data name="errProductHasNoWeight" xml:space="preserve">
+    <value>The license has no weight</value>
+  </data>
+  <data name="errProductNotPresent" xml:space="preserve">
+    <value>Product is not part of the current item</value>
+  </data>
+  <data name="errReceptionCompleted" xml:space="preserve">
+    <value>Receiving completed</value>
+  </data>
+  <data name="errReceptionNonCompleted" xml:space="preserve">
+    <value>Receiving not completed</value>
+  </data>
+  <data name="errRelocCompleted" xml:space="preserve">
+    <value>Relocation completed</value>
+  </data>
+  <data name="errRelocNonCompleted" xml:space="preserve">
+    <value>Relocation not completed</value>
+  </data>
+  <data name="errTermiconNotified" xml:space="preserve">
+    <value>Termicon was notified for printing</value>
+  </data>
+  <data name="errTermiconNotNotified" xml:space="preserve">
+    <value>Could not notify termicon for printing</value>
+  </data>
+  <data name="errWarehouseChanged" xml:space="preserve">
+    <value>Warehouse changed</value>
+  </data>
+  <data name="errWarehouseNotChanged" xml:space="preserve">
+    <value>Could not change warehouse</value>
+  </data>
+  <data name="errWebserviceGeneric" xml:space="preserve">
+    <value>An error has occured when querying the webservice</value>
+  </data>
+  <data name="errWebServiceUrlIncorrect" xml:space="preserve">
+    <value>The Web service URL is incorrect</value>
+  </data>
+  <data name="lblClient" xml:space="preserve">
+    <value>Owner :</value>
+  </data>
+  <data name="lblDate" xml:space="preserve">
+    <value>Date :</value>
+  </data>
+  <data name="lblDateSale" xml:space="preserve">
+    <value>Expected delivery date :</value>
+  </data>
+  <data name="lblOwner" xml:space="preserve">
+    <value>Owner :</value>
+  </data>
+  <data name="lblPO" xml:space="preserve">
+    <value>PO :</value>
+  </data>
+  <data name="lblProduct" xml:space="preserve">
+    <value>Product :</value>
+  </data>
+  <data name="lblQty" xml:space="preserve">
+    <value>Qty / udm :</value>
+  </data>
+  <data name="lblRecipient" xml:space="preserve">
+    <value>Destination :</value>
+  </data>
+  <data name="lblTitleLicenseInfo" xml:space="preserve">
+    <value>Information license</value>
+  </data>
+  <data name="lblTitleSaleInfo" xml:space="preserve">
+    <value>Order creation</value>
+  </data>
+  <data name="lblWeight" xml:space="preserve">
+    <value>Weight :</value>
+  </data>
+  <data name="tvClient" xml:space="preserve">
+    <value>Customer :</value>
+  </data>
+  <data name="tvConfig" xml:space="preserve">
+    <value>Configurations</value>
+  </data>
+  <data name="tvConsolidation" xml:space="preserve">
+    <value>Consolidate</value>
+  </data>
+  <data name="tvCreation" xml:space="preserve">
+    <value>Productions</value>
+  </data>
+  <data name="tvCS" xml:space="preserve">
+    <value>CS</value>
+  </data>
+  <data name="tvCustomer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="tvDeplacement" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="tvDestination" xml:space="preserve">
+    <value>Destination :</value>
+  </data>
+  <data name="tvGabarit" xml:space="preserve">
+    <value>Template</value>
+  </data>
+  <data name="tvInterWarehouse" xml:space="preserve">
+    <value># :</value>
+  </data>
+  <data name="tvIp" xml:space="preserve">
+    <value>ip :</value>
+  </data>
+  <data name="tvLicence" xml:space="preserve">
+    <value>License :</value>
+  </data>
+  <data name="tvLicense" xml:space="preserve">
+    <value>License :</value>
+  </data>
+  <data name="tvLigne" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="tvLine" xml:space="preserve">
+    <value>Ligne</value>
+  </data>
+  <data name="tvLogout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="tvName" xml:space="preserve">
+    <value>Username :</value>
+  </data>
+  <data name="tvNRI" xml:space="preserve">
+    <value>NRI</value>
+  </data>
+  <data name="tvOrder" xml:space="preserve">
+    <value>URL server :</value>
+  </data>
+  <data name="tvPalette" xml:space="preserve">
+    <value>Pallet :</value>
+  </data>
+  <data name="tvPass" xml:space="preserve">
+    <value>Password :</value>
+  </data>
+  <data name="tvPassPrompt" xml:space="preserve">
+    <value>Please enter your password  :</value>
+  </data>
+  <data name="tvPicking" xml:space="preserve">
+    <value># Order :</value>
+  </data>
+  <data name="tvPoids" xml:space="preserve">
+    <value>Weight :</value>
+  </data>
+  <data name="tvPort" xml:space="preserve">
+    <value>Port :</value>
+  </data>
+  <data name="tvProdOrder" xml:space="preserve">
+    <value># Production Order</value>
+  </data>
+  <data name="tvProduct" xml:space="preserve">
+    <value>Product :</value>
+  </data>
+  <data name="tvProductDetails" xml:space="preserve">
+    <value>Product Details</value>
+  </data>
+  <data name="tvProductEntete" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="tvProductName" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="tvProvider" xml:space="preserve">
+    <value>Provider :</value>
+  </data>
+  <data name="tvPutProduction" xml:space="preserve">
+    <value>Placed into production</value>
+  </data>
+  <data name="tvQte" xml:space="preserve">
+    <value>Qty :</value>
+  </data>
+  <data name="tvQtyEntete" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="tvQuantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="tvReceiving" xml:space="preserve">
+    <value>Receiving</value>
+  </data>
+  <data name="tvRecieving" xml:space="preserve">
+    <value># Receiving :</value>
+  </data>
+  <data name="tvSale" xml:space="preserve">
+    <value># Order</value>
+  </data>
+  <data name="tvSelect" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="tvStation" xml:space="preserve">
+    <value>Station :</value>
+  </data>
+  <data name="tvTemplate" xml:space="preserve">
+    <value>Template :</value>
+  </data>
+  <data name="tvTermicon" xml:space="preserve">
+    <value>Termicon :</value>
+  </data>
+  <data name="tvTitleInterWarehouse" xml:space="preserve">
+    <value>Inter Warehouse</value>
+  </data>
+  <data name="tvTitlePicking" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="tvTitleProdOrder" xml:space="preserve">
+    <value>Production Order</value>
+  </data>
+  <data name="tvTitleRecieving" xml:space="preserve">
+    <value>Receiving</value>
+  </data>
+  <data name="tvWarehouse" xml:space="preserve">
+    <value>Warehouse :</value>
+  </data>
+  <data name="tvWeight" xml:space="preserve">
+    <value>Weight (Kg)</value>
+  </data>
+  <data name="txtFournisseur" xml:space="preserve">
+    <value>Provider</value>
+  </data>
+  <data name="txtRec" xml:space="preserve">
+    <value># Rec.</value>
+  </data>
+  <data name="rbEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="rbFrench" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="tvFournisseur" xml:space="preserve">
+    <value>Provider</value>
+  </data>
+  <data name="tvRec" xml:space="preserve">
+    <value># Rec.</value>
+  </data>
+  <data name="menuHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="menuMove" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="menuPicking" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="menuRecieving" xml:space="preserve">
+    <value>Receiving</value>
+  </data>
+  <data name="errEmptyFieldLicense" xml:space="preserve">
+    <value>Please enter a license code</value>
+  </data>
+</root>

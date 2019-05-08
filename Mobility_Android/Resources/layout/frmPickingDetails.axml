@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <!-- Toolbar -->
+  <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+  <TextView
+		android:id="@+id/tvTitlePicking"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/toolbar"
+		android:layout_marginTop="5px"
+		android:layout_marginBottom="15px"
+		android:text=" Commande"
+		/>
+  <TextView
+		android:id="@+id/tvPicking"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/tvTitlePicking"
+		android:layout_marginLeft="15px"
+		android:text="# Commande : " />
+  <!-- Affichage du num de la Réception -->
+  <TextView
+		android:id="@+id/tvNumPicking"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/tvPicking"
+		android:layout_alignTop="@+id/tvPicking"
+		android:layout_marginLeft="70px"
+		android:text="140 " />
+
+  <TextView
+		android:id="@+id/tvClient"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/tvPicking"
+		android:layout_marginLeft="15px"
+		android:layout_marginTop="20px"
+		android:text="Client: " />
+  <TextView
+		android:id="@+id/tvnameClient"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/tvClient"
+		android:layout_alignTop="@+id/tvClient"
+		android:layout_marginLeft="70px"
+		android:text="  " />
+  <ImageView
+		android:id="@+id/delim1"
+		android:src="#ffffffff"
+		android:layout_below="@id/tvnameClient"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+	/>
+
+  <TextView
+		android:id="@+id/tvProduct"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/delim1"
+		android:layout_marginLeft="15px"
+		android:layout_marginTop="35px"
+		android:text="Produit : " />
+  <TextView
+		android:id="@+id/tvNameProduct"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/tvProduct"
+		android:layout_alignTop="@+id/tvProduct"
+		android:layout_marginLeft="150px"
+		android:text="" />
+  <TextView
+		android:id="@+id/tvQte"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/tvProduct"
+		android:layout_marginLeft="15px"
+		android:layout_marginTop="50px"
+		android:text="Qté : " />
+  <TextView
+		android:id="@+id/tvAmountQte"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/tvQte"
+		android:layout_alignTop="@+id/tvQte"
+		android:layout_marginLeft="220px"
+		android:text="0 /0" />
+  <TextView
+		android:id="@+id/tvPoids"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/tvQte"
+		android:layout_marginLeft="15px"
+		android:layout_marginTop="30px"
+		android:text="Poids : " />
+  <TextView
+		android:id="@+id/tvAmountPoids"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@+id/tvPoids"
+		android:layout_alignTop="@+id/tvPoids"
+		android:layout_marginLeft="175px"
+		android:text="0.00kg" />
+
+  <ImageView
+		android:id="@+id/delim2"
+		android:src="#ffffffff"
+		android:layout_below="@id/tvPoids"
+		android:layout_width="fill_parent"
+		android:layout_height="1dip"
+	/>
+
+  <TextView
+		android:id="@+id/tvLicense"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/delim2"
+		android:layout_marginLeft="15px"
+		android:layout_marginTop="15px"
+		android:text="License :" />
+
+
+  <LinearLayout
+		
+		android:id="@+id/layoutLicense"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/tvLicense" >
+
+    <EditText
+			android:id="@+id/tfLicensePickingDetails"
+			android:layout_width="0dp"
+			android:maxLines="1"
+			android:inputType="text"
+			android:layout_weight="5"
+			android:layout_height="wrap_content"
+			android:background="@android:drawable/editbox_background"
+			android:textColor="#000"
+		/>
+
+		<ImageButton
+			android:id="@+id/imClear"
+			android:src="@drawable/clear"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+  </LinearLayout>
+
+  <LinearLayout
+		
+		android:id="@+id/layoutEndPicking"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20px"
+		android:layout_below="@+id/layoutLicense" >
+    <Button
+			android:id="@+id/btnEndPicking"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="5"
+			android:text="  Commande Terminée  " />
+    <ImageButton
+			android:id="@+id/imDetails"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="25px"
+			android:layout_weight="5"
+			android:background="?android:selectableItemBackground"
+			android:src="@drawable/edit"/>
+  </LinearLayout>
+</RelativeLayout>

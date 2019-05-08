@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="Mobility_Android.Mobility_Android">
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="27" />
+	<application android:allowBackup="true" android:icon="@drawable/mobility_icon" android:label="@string/app_name" android:roundIcon="@drawable/mobility_icon" android:supportsRtl="true" android:theme="@style/ApplicationTheme"></application>
+</manifest>

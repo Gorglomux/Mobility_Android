@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<!-- Toolbar -->
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+	<!-- TITLE PICKING -->
+	<LinearLayout
+		android:id="@+id/layoutPicking"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/toolbar" >
+		<TextView
+			android:id="@+id/tvTitlePicking"
+			android:text="Commandes"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/toolbar"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffffff" />
+		
+		<Button
+			android:id="@+id/imNewSale"
+			android:drawableLeft="@drawable/add"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="2"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+		
+		<ImageButton
+			android:id="@+id/imRefresh"
+			android:src="@drawable/refresh"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
+
+
+	<!-- SCROLL VIEW PICKING -->
+
+	<LinearLayout
+		android:id="@+id/layoutOrder"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/layoutPicking" >
+
+		<TextView
+			android:text="# Commande"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="4"
+			android:layout_height="40.7dp"
+			android:layout_marginLeft="10dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/tvSale" />
+
+		<TextView
+			android:text="Client"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="4"
+			android:layout_height="40.7dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/tvCustomer" />
+			
+	</LinearLayout>
+		
+	<ListView 
+		android:id="@+id/lvPicking" 
+		android:minWidth="10px"
+		android:minHeight="10px"
+		android:layout_width="match_parent"
+	 	android:layout_height="match_parent"
+		android:layout_below="@+id/layoutOrder"/>
+
+
+</RelativeLayout>

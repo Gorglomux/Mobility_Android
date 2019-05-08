@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<!-- LOGO -->
+	<ImageView
+		android:id="@+id/imLogo"
+		android:src="@drawable/ceritar_logo_login"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="20px"
+		android:minHeight="130px"
+		android:paddingTop="5dp"/>
+
+	<!-- USERNAME + TEXT FIELD -->
+	<TextView
+		android:id="@+id/tvName"
+		android:layout_width="wrap_content"
+		android:layout_marginLeft="5dip"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dip"
+		android:layout_below="@id/imLogo"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:text="@string/userName"/>
+
+	<LinearLayout
+		android:id="@+id/layoutName"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/tvName" >
+
+		<EditText
+			android:id="@+id/tfName"
+			android:layout_width="0dp"
+			android:layout_weight="5"
+			android:layout_height="wrap_content"
+			android:background="@android:drawable/editbox_background"
+			android:textColor="#000"
+			android:maxLines="1"
+			android:inputType="text"
+		/>
+		
+		<ImageButton
+			android:id="@+id/imClear"
+			android:src="@drawable/clear"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
+	
+	<!-- PASSWORD + TEXTFIELD -->
+
+	<TextView
+		android:id="@+id/tvPass"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dip"
+		android:layout_marginLeft="5dip"
+		android:layout_below="@+id/layoutName"
+		android:text="Mot de passe :" />
+	<LinearLayout
+		
+		android:id="@+id/layoutPass"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/tvPass" >
+
+		<EditText
+			android:id="@+id/tfPass"
+			android:layout_width="0dp"
+			android:layout_weight="5"
+			android:password="true"
+			android:layout_height="wrap_content"
+			android:background="@android:drawable/editbox_background"
+			android:textColor="#000"
+			android:maxLines="1"
+			android:inputType="text"
+		/>
+		
+		<ImageButton
+			android:id="@+id/imClear2"
+			android:src="@drawable/clear"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
+
+	<!-- ENGLISH / FRENCH -->
+	<RadioGroup
+		android:id="@+id/rgLanguage"
+		android:layout_marginTop="20dip"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_below="@id/layoutPass"
+		android:orientation="horizontal"
+		android:maxWidth="20px"
+		android:maxHeight="20px">
+
+		<RadioButton
+			android:id="@+id/rbFrench"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:checked="true"
+			android:text="Français"/>
+		<RadioButton
+			android:id="@+id/rbEnglish"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="40dip"
+			android:layout_below="@id/layoutPass" 
+			android:text="Anglais"/> 
+	</RadioGroup>
+
+	<!-- CONNECTION BUTTON -->
+
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="20dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dip"
+		android:layout_below="@id/rgLanguage"
+        android:text="  Connexion  " />
+
+	<!-- Logout -->
+		<ImageButton
+			android:id="@+id/imLogout"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dip"
+			android:layout_below="@id/btnConnect"
+			android:minWidth="10px"
+			android:minHeight="10px"
+			android:background="?android:selectableItemBackground"
+			android:src="@drawable/exit"/>
+	
+	<!-- Config -->
+		<ImageButton
+			android:id="@+id/imConfig"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dip"
+			android:layout_alignParentRight="true"
+			android:layout_below="@id/btnConnect"
+			android:minWidth="10px"
+			android:minHeight="10px"
+			android:background="?android:selectableItemBackground"
+			android:src="@drawable/settings"/>
+</RelativeLayout>

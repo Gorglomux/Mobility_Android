@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<!-- Toolbar -->
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+	<!-- TITLE LOGOUT -->
+	<LinearLayout
+		android:id="@+id/layoutTitle"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/toolbar" >
+		<TextView
+			android:id="@+id/tvPutProduction"
+			android:text="Mise en production"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/toolbar"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:textColor="#ffffffff" />
+
+		<ImageButton
+			android:id="@+id/imClear"
+			android:src="@drawable/refresh"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/tvLicence"
+		android:text="Licence :"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/layoutTitle"
+		android:layout_marginLeft="5dp"
+		android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<!-- LINEAR LAYOUT TEXTINPUT / BUTTON -->
+
+	<LinearLayout
+		android:id="@+id/layoutLicense"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/tvLicence" >
+
+		<!-- INPUT URL -->
+
+		<EditText
+			android:id="@+id/tfLicenceProduction"
+			android:layout_width="0dp"
+			android:layout_weight="6"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginLeft="5dp"
+			android:hint="Licence"
+			android:textColorHint="#808080"
+			android:textColor="#000"
+			android:maxLines="1"
+			android:inputType="text"
+			android:background="@android:drawable/editbox_background" />
+
+		<!-- BUTTON CLEAR -->
+		<ImageButton
+			android:id="@+id/imClear"
+			android:src="@drawable/clear"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/tvStation"
+		android:text="Station :"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/layoutLicense"
+		android:layout_marginLeft="5dp"
+		android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<!-- LINEAR LAYOUT TEXTINPUT / BUTTON -->
+
+	<LinearLayout
+		android:id="@+id/layoutStation"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/tvStation" >
+
+		<!-- INPUT URL -->
+
+		<EditText
+			android:id="@+id/tfStation"
+			android:layout_width="0dp"
+			android:layout_weight="6"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginLeft="5dp"
+			android:hint="Station"
+			android:textColorHint="#808080"
+			android:textColor="#000"
+			android:maxLines="1"
+			android:inputType="text"
+			android:background="@android:drawable/editbox_background" />
+
+		<!-- BUTTON CLEAR -->
+
+		<ImageButton
+			android:id="@+id/imClear2"
+			android:src="@drawable/clear"
+			android:layout_width="5dp"
+			android:layout_height="35dp"
+			android:layout_weight="1"
+			android:layout_centerHorizontal="true"
+			android:background="?android:selectableItemBackground" />
+	</LinearLayout>
+
+
+	<LinearLayout
+		android:id="@+id/layoutEntete"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/layoutStation" >
+
+		<TextView
+			android:text="Produit"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="10"
+			android:layout_height="40.7dp"
+			android:layout_marginLeft="10dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/tvProductEntete" />
+
+		<TextView
+			android:text="Quantité"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_width="0dp"
+			android:layout_weight="12"
+			android:layout_height="40.7dp"
+			android:textSize="15dp"
+			android:textColor="#FFF"
+			android:id="@+id/tvQtyEntete" />
+			
+	</LinearLayout>
+		
+	<ListView 
+		android:id="@+id/lvProduction" 
+		android:minWidth="10px"
+		android:minHeight="10px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/layoutEntete"/>
+
+</RelativeLayout>

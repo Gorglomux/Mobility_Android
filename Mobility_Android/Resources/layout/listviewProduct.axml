@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<TextView
+		android:id="@+id/tvProductName"
+		android:text="# Rec. "
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="0dp"
+		android:layout_weight="10"
+		android:layout_height="40.7dp"
+		android:layout_marginLeft="10dp"
+		android:layout_margin="10dp"
+		android:textSize="12dp"
+		android:textColor="#FFF" />
+
+	<TextView
+		android:id="@+id/tvQuantity"
+		android:text="Email :"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:layout_width="0dp"
+		android:layout_weight="12"
+		android:layout_height="40.7dp"
+		android:layout_margin="10dp"
+		android:textSize="12dp"
+		android:textColor="#FFF" />
+
+</LinearLayout>
