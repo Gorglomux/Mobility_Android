@@ -34,6 +34,17 @@ namespace Mobility_Android.Activities
 
             translateScreen();
 
+
+            //Obtient le chemin jusqu'au dossier "fichiers", où l'on peut écrire et lire des fichiers
+            var documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+
+            //Si l'utilisateur a deja sauvegardé une autre URL que celle de base, alors on lit le fichier la contenant; sinon, on crée ce dernier avec une URL de base
+            var filePath = System.IO.Path.Combine(documentsPath, "WebServiceURL.txt");
+            if (System.IO.File.Exists(filePath))
+            {
+                Configuration.webServiceURL = System.IO.File.ReadAllText(filePath);
+            }
+
             //On récupère le contenu des champs       
             EditText username = FindViewById<EditText>(Resource.Id.tfName);
             EditText password = FindViewById<EditText>(Resource.Id.tfPass);
@@ -41,13 +52,13 @@ namespace Mobility_Android.Activities
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear), username);
             clearTextOnClick(FindViewById<ImageButton>(Resource.Id.imClear2), password);
 
-            FindViewById<RadioButton>(Resource.Id.rbFrench).Click += async (sender, e) =>
+            FindViewById<RadioButton>(Resource.Id.rbFrench).Click += (sender, e) =>
             {
                 Configuration.currentLanguage = CR_TTLangue.French_Canada;
                 Recreate();
             };
 
-            FindViewById<RadioButton>(Resource.Id.rbEnglish).Click += async (sender, e) =>
+            FindViewById<RadioButton>(Resource.Id.rbEnglish).Click +=  (sender, e) =>
             {
                 Configuration.currentLanguage = CR_TTLangue.English;
                 Recreate();
