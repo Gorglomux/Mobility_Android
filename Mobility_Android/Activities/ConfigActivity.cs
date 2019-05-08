@@ -70,10 +70,8 @@ namespace Mobility_Android.Activities
                         Configuration.webServiceURL = textUrl;
                     }
 
-<<<<<<< HEAD
                     Toast.MakeText(this, "Configuration sauvegardée dans" + filePath, ToastLength.Short).Show();
 
-=======
                     switch (Configuration.currentLanguage)
                     {
                         case CR_TTLangue.French_Canada:
@@ -89,7 +87,6 @@ namespace Mobility_Android.Activities
                             }
                     }
                     
->>>>>>> 9898496e063a3fa7d833415f63e1e3e446593dbf
                     //Sauvegarde l'URL dans le fichier "WebServiceURL.txt"
                     System.IO.File.WriteAllText(filePath, Configuration.webServiceURL);
 

@@ -73,7 +73,7 @@ namespace Mobility_Android.Activities
             {
                 case CR_TTLangue.French_Canada:
                     {
-                        FindViewById<TextView>(Resource.Id.tvPicking).Text = Activities.ResourceFR.tvPicking;
+                        FindViewById<TextView>(Resource.Id.tvTitlePicking).Text = Activities.ResourceFR.tvTitlePicking;
                         FindViewById<TextView>(Resource.Id.tvSale).Text = Activities.ResourceFR.tvSale;
                         FindViewById<TextView>(Resource.Id.tvCustomer).Text = Activities.ResourceFR.tvCustomer;
                         break;
@@ -81,7 +81,7 @@ namespace Mobility_Android.Activities
 
                 case CR_TTLangue.English:
                     {
-                        FindViewById<TextView>(Resource.Id.tvPicking).Text = Activities.ResourceEN.tvPicking;
+                        FindViewById<TextView>(Resource.Id.tvTitlePicking).Text = Activities.ResourceEN.tvTitlePicking;
                         FindViewById<TextView>(Resource.Id.tvSale).Text = Activities.ResourceEN.tvSale;
                         FindViewById<TextView>(Resource.Id.tvCustomer).Text = Activities.ResourceEN.tvCustomer;
                         break;
