@@ -421,7 +421,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Date de livraison attendue :.
+        ///   Looks up a localized string similar to Date d&apos;expédition prévue:.
         /// </summary>
         internal static string lblDateSale {
             get {
@@ -763,7 +763,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Commande :.
+        ///   Looks up a localized string similar to # Commande :.
         /// </summary>
         internal static string tvPicking {
             get {
@@ -907,7 +907,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  Commande.
+        ///   Looks up a localized string similar to # Commande.
         /// </summary>
         internal static string tvSale {
             get {
@@ -961,7 +961,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to # Commande.
+        ///   Looks up a localized string similar to Commande.
         /// </summary>
         internal static string tvTitlePicking {
             get {
@@ -997,7 +997,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Poids (en Kg).
+        ///   Looks up a localized string similar to Poids (Kg).
         /// </summary>
         internal static string tvWeight {
             get {

@@ -176,7 +176,7 @@
     <value>Date :</value>
   </data>
   <data name="lblDateSale" xml:space="preserve">
-    <value>Date de livraison attendue :</value>
+    <value>Date d'expédition prévue:</value>
   </data>
   <data name="lblOwner" xml:space="preserve">
     <value>Propriétaire :</value>

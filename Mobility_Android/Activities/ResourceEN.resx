@@ -235,7 +235,7 @@
     <value>Date :</value>
   </data>
   <data name="lblDateSale" xml:space="preserve">
-    <value>Expected delivery date :</value>
+    <value>Expected expedition date :</value>
   </data>
   <data name="lblOwner" xml:space="preserve">
     <value>Owner :</value>

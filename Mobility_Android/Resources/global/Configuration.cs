@@ -63,36 +63,5 @@ namespace Mobility_Android.Resources.global
                 Configuration.fileConfigLanguage = "RessourceFR";
             }
         }
-
-        /*
-        public void setItem()
-        {
-            using (ResXResourceSet fileConfigLanguage = new ResXResourceSet(resxFile))
-            {
-                resxSet.GetString("app_title");
-            }
-        }
-
-        private static void CreateResXFile()
-        {
-            Bitmap logo = new Bitmap(@".\Logo.bmp");
-            ResXDataNode node;
-
-            ResXResourceWriter rw = new ResXResourceWriter(@".\StoreResources.resx");
-            node = new ResXDataNode("Logo", logo);
-            node.Comment = "The corporate logo.";
-            rw.AddResource(node);
-            rw.AddResource("AppTitle", "Store Locations");
-            node = new ResXDataNode("nColumns", 5);
-            node.Comment = "The number of columns in the Store Location table";
-            rw.AddResource(node);
-            rw.AddResource("City", "City");
-            rw.AddResource("State", "State");
-            rw.AddResource("Code", "Zip Code");
-            rw.AddResource("Telephone", "Phone");
-            rw.Generate();
-            rw.Close();
-        }
-        */
     }
 }

@@ -104,7 +104,17 @@ namespace Mobility_Android.Activities
 
                             if(licence.productNRI != 0)
                             {
-                                Recreate();
+                                data = reception;
+                                var produit = OperationsWebService.pickLicenseReception(Configuration.securityToken, licence, (int)Configuration.currentLanguage, Configuration.userInfos.Udp_NRI, Configuration.userInfos.Udp_Label);
+                                if (produit == null)
+                                {
+                                    Toast.MakeText(this, OperationsWebService.errorMessage, ToastLength.Long).Show();
+                                    Recreate();
+                                }
+                                else
+                                {
+                                    Recreate();
+                                }
                             } else
                             {
                                 if(Configuration.currentLanguage == CR_TTLangue.French_Canada)

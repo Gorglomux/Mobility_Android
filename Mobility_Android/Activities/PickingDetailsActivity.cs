@@ -105,7 +105,8 @@ namespace Mobility_Android.Activities
                         
                         licence.parentNRI = sale.saleNRI;
 
-                        if(OperationsWebService.PickLicenseSale(Configuration.securityToken, licence, Configuration.userInfos.warehouseNRI, Configuration.userInfos.warehouseNRI, Configuration.userInfos.Udp_NRI) == null)
+                        var productResult = OperationsWebService.PickLicenseSale(Configuration.securityToken, licence, Configuration.userInfos.warehouseNRI, Configuration.userInfos.warehouseNRI, Configuration.userInfos.Udp_NRI);
+                        if (productResult == null)
                         {
                             Toast.MakeText(this, OperationsWebService.errorMessage, ToastLength.Long).Show();
                             OperationsWebService.errorMessage = "";

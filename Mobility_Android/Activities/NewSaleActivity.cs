@@ -29,6 +29,7 @@ namespace Mobility_Android.Activities
         Spinner spinnerClient;
         Spinner spinnerRecipient;
         Spinner spinnerOwner;
+        DateTime? date;
         public enum COMPANY_TYPE { CLIENT=1, TRANSPORTEUR=2, DESTINATAIRE=3, COMPTE_NATIONAL=4, MARQUE=5, FOURNISSEUR=6, ANY=999 };
         public static bool mustRefresh;
 
@@ -72,12 +73,12 @@ namespace Mobility_Android.Activities
                 sale.OwnerNRI = dictionaryProprietaire.FirstOrDefault(x => x.Value == listOwner[args.Position]).Key;
             };
 
-            DateTime date = new DateTime();
             dateSelect = FindViewById<TextView>(Resource.Id.tvDate);
             dateSelect.Click += (sender, e) =>
             {
                 DatePickerFragment frag = DatePickerFragment.NewInstance(delegate (DateTime time)
                 {
+                    date = new DateTime();
                     date = time;
                     dateSelect.Text = time.ToLongDateString();
                     Console.Write(time.ToLongDateString());

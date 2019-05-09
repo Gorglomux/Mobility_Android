@@ -421,7 +421,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Expected delivery date :.
+        ///   Looks up a localized string similar to Expected expedition date :.
         /// </summary>
         internal static string lblDateSale {
             get {
@@ -763,7 +763,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Order :.
+        ///   Looks up a localized string similar to # Order :.
         /// </summary>
         internal static string tvPicking {
             get {
