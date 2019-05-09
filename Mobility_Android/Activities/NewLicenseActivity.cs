@@ -27,6 +27,7 @@ namespace Mobility_Android.Activities
         TextView dateSelect;
         Spinner spinner;
         LicenseWS licence = new LicenseWS();
+        DateTime? date;
         public static bool mustRefresh;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -63,12 +64,12 @@ namespace Mobility_Android.Activities
             var adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, typeProd);
             spinner.Adapter = adapter;
 
-            DateTime date = new DateTime();
             dateSelect = FindViewById<TextView>(Resource.Id.tvDate);
             dateSelect.Click += (sender, e) =>
             {
                 DatePickerFragment frag = DatePickerFragment.NewInstance(delegate (DateTime time)
                 {
+                    date = new DateTime();
                     date = time;
                     dateSelect.Text = time.ToLongDateString();
                     Console.Write(time.ToLongDateString());
