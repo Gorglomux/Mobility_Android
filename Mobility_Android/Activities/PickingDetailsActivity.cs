@@ -27,7 +27,7 @@ namespace Mobility_Android.Activities
     public class PickingDetailsActivity : BaseActivity
     {
         public static LicenseWS licence;
-
+        public static bool mustRefresh = false;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingDetails);
@@ -58,7 +58,7 @@ namespace Mobility_Android.Activities
                 await Task.Delay(50);
                 OperationsWebService.completeSale(Configuration.securityToken, sale.saleNRI);
                 IsBusy = false;
-
+                mustRefresh = true;
                 Finish();
             };
 

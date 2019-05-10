@@ -59,9 +59,10 @@ namespace Mobility_Android.Activities
 
         public override void OnWindowFocusChanged(bool hasFocus)
         {
-            if (hasFocus && NewSaleActivity.mustRefresh)
+            if (hasFocus && (NewSaleActivity.mustRefresh|PickingDetailsActivity.mustRefresh))
             {
                 NewSaleActivity.mustRefresh = false;
+                PickingDetailsActivity.mustRefresh = false;
                 Recreate();
             }
 
