@@ -93,6 +93,7 @@ namespace Mobility_Android.Activities
                 {
                     if (editText.Text.ToString() != "")
                     {
+                        editText.Text.Replace(" ", "");
                         licence = new LicenseWS();
 
                         ParsedLicence parsedLicence = parser.getLicense(editText.Text);

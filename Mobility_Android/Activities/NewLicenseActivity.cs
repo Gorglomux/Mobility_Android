@@ -39,7 +39,7 @@ namespace Mobility_Android.Activities
 
             licence = ReceivingDetailsActivity.licence;
             var tfWeight = FindViewById<EditText>(Resource.Id.tfWeight);
-            var tfQty = FindViewById<EditText>(Resource.Id.tfQty);
+
 
 
             // Récupération de la réception sélectionnée
@@ -165,29 +165,6 @@ namespace Mobility_Android.Activities
                     sucess = false;
                 }
 
-                if (tfQty.Text != "")
-                {
-                    licence.qtyUdm = decimal.Parse(tfQty.Text);
-                }
-                else
-                {
-                    switch (Configuration.currentLanguage)
-                    {
-                        case CR_TTLangue.French_Canada:
-                            {
-                                msg += "quantité, ";
-
-                                break;
-                            }
-
-                        case CR_TTLangue.English:
-                            {
-                                msg += "quantity, ";
-                                break;
-                            }
-                    } 
-                    sucess = false;
-                }
 
                 if (sucess == true)
                 {
@@ -228,7 +205,6 @@ namespace Mobility_Android.Activities
                         FindViewById<TextView>(Resource.Id.lblProduct).Text = Activities.ResourceFR.lblProduct;
                         FindViewById<TextView>(Resource.Id.lblDate).Text = Activities.ResourceFR.lblDate;
                         FindViewById<TextView>(Resource.Id.lblWeight).Text = Activities.ResourceFR.lblWeight;
-                        FindViewById<TextView>(Resource.Id.lblQty).Text = Activities.ResourceFR.lblQty;
                         FindViewById<Button>(Resource.Id.btnConfirm).Text = Activities.ResourceFR.btnConfirm;
                         break;
                     }
@@ -239,7 +215,6 @@ namespace Mobility_Android.Activities
                         FindViewById<TextView>(Resource.Id.lblProduct).Text = Activities.ResourceEN.lblProduct;
                         FindViewById<TextView>(Resource.Id.lblDate).Text = Activities.ResourceEN.lblDate;
                         FindViewById<TextView>(Resource.Id.lblWeight).Text = Activities.ResourceEN.lblWeight;
-                        FindViewById<TextView>(Resource.Id.lblQty).Text = Activities.ResourceEN.lblQty;
                         FindViewById<Button>(Resource.Id.btnConfirm).Text = Activities.ResourceEN.btnConfirm;
                         break;
                     }

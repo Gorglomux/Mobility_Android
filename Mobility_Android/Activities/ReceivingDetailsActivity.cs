@@ -76,6 +76,7 @@ namespace Mobility_Android.Activities
                 {
                     if (urlEditText.Text.ToString() != "")
                     {
+                        urlEditText.Text.Replace(" ", "");
                         licence = new LicenseWS();
 
                         ParsedLicence parsedLicence = parser.getLicense(urlEditText.Text);

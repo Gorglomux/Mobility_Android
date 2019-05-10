@@ -96,41 +96,7 @@
 			android:inputType="numberDecimal"/>
 	</LinearLayout>
 
-	<!-- Quantité + Unité de mesure -->
-	<LinearLayout
-		android:id="@+id/layoutQty"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="20px"
-		android:layout_marginLeft="40px"
-		android:layout_below="@+id/layoutWeight" >
 
-		<TextView
-			android:id="@+id/lblQty"
-			android:layout_width="0dp"
-			android:layout_weight="2"
-			android:layout_height="wrap_content"
-			android:text="Qté / udm : "
-		/>
-		<EditText
-			android:id="@+id/tfQty"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:layout_weight="3"
-			android:maxLines="1"
-			android:inputType="number"
-			android:background="@android:drawable/editbox_background"
-			android:textColor="#000"/>
-		
-		<!--<EditText
-			android:id="@+id/tfUdm"
-			android:layout_width="0dp"
-			android:layout_height="wrap_content"
-			android:layout_weight="2"
-			android:background="@android:drawable/editbox_background"
-			android:textColor="#000"
-			 /> -->
-	</LinearLayout> 
 
 	<!--Confirmer-->
 	<Button
@@ -140,7 +106,7 @@
 		android:layout_marginTop="20dip"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dip"
-		android:layout_below="@id/layoutQty"
+		android:layout_below="@id/layoutWeight"
         android:text="  Confirmer  " />
 
 </RelativeLayout>
