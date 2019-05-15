@@ -32,6 +32,7 @@ namespace Mobility_Android.Activities
             FindViewById<Button>(Resource.Id.btnConfirm).Click += async (sender, e) => {
                 var licence = FindViewById<TextView>(Resource.Id.tfLicenseRelocation).Text;
                 var destination = FindViewById<TextView>(Resource.Id.tfDestination).Text;
+                IsBusy = true;
                 await Task.Delay(50);
 
                 // Si il y a eu une erreur lors du transfère alors on affiche un message pour prévenir de l'erreur
