@@ -114,7 +114,8 @@ namespace Mobility_Android.Activities
         //Fonction permettant de tester si une url était valide
         public bool isValidURL(string url)
         {
-            return Android.Util.Patterns.WebUrl.Matcher(url).Matches();
+            //return Android.Util.Patterns.WebUrl.Matcher(url).Matches();
+            return true;
         }
 
         private void translateScreen()
