@@ -174,6 +174,9 @@
   <data name="errConfirmingPallet" xml:space="preserve">
     <value>An error occured while confirming the pallet</value>
   </data>
+  <data name="errEmptyFieldLicense" xml:space="preserve">
+    <value>Please enter a license code</value>
+  </data>
   <data name="errInvalidStringFormat" xml:space="preserve">
     <value>The barcode is not valid. Unrecognized tag</value>
   </data>
@@ -261,6 +264,33 @@
   <data name="lblWeight" xml:space="preserve">
     <value>Weight :</value>
   </data>
+  <data name="menuHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="menuMove" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="menuPicking" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="menuRecieving" xml:space="preserve">
+    <value>Receiving</value>
+  </data>
+  <data name="rbEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="rbFrench" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tvAddress1" xml:space="preserve">
+    <value>2255 Boulevard Fernand-Lafontaine, #300</value>
+  </data>
+  <data name="tvAddress2" xml:space="preserve">
+    <value>Longueuil, QC, J4G 2R8</value>
+  </data>
   <data name="tvClient" xml:space="preserve">
     <value>Customer :</value>
   </data>
@@ -285,8 +315,17 @@
   <data name="tvDestination" xml:space="preserve">
     <value>Destination :</value>
   </data>
+  <data name="tvEmail" xml:space="preserve">
+    <value>support@ceritar.com</value>
+  </data>
+  <data name="tvFournisseur" xml:space="preserve">
+    <value>Provider</value>
+  </data>
   <data name="tvGabarit" xml:space="preserve">
     <value>Template</value>
+  </data>
+  <data name="tvInfo" xml:space="preserve">
+    <value>Information</value>
   </data>
   <data name="tvInterWarehouse" xml:space="preserve">
     <value># :</value>
@@ -327,6 +366,9 @@
   <data name="tvPassPrompt" xml:space="preserve">
     <value>Please enter your password  :</value>
   </data>
+  <data name="tvPhoneNumber" xml:space="preserve">
+    <value>(450) 651-9988</value>
+  </data>
   <data name="tvPicking" xml:space="preserve">
     <value># Order :</value>
   </data>
@@ -366,6 +408,9 @@
   <data name="tvQuantity" xml:space="preserve">
     <value>Quantity</value>
   </data>
+  <data name="tvRec" xml:space="preserve">
+    <value># Rec.</value>
+  </data>
   <data name="tvReceiving" xml:space="preserve">
     <value>Receiving</value>
   </data>
@@ -402,6 +447,9 @@
   <data name="tvWarehouse" xml:space="preserve">
     <value>Warehouse :</value>
   </data>
+  <data name="tvWebsite" xml:space="preserve">
+    <value>http://www.ceritar.com</value>
+  </data>
   <data name="tvWeight" xml:space="preserve">
     <value>Weight (Kg)</value>
   </data>
@@ -410,35 +458,5 @@
   </data>
   <data name="txtRec" xml:space="preserve">
     <value># Rec.</value>
-  </data>
-  <data name="rbEnglish" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="rbFrench" xml:space="preserve">
-    <value>French</value>
-  </data>
-  <data name="tvFournisseur" xml:space="preserve">
-    <value>Provider</value>
-  </data>
-  <data name="tvRec" xml:space="preserve">
-    <value># Rec.</value>
-  </data>
-  <data name="menuHome" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="menuMove" xml:space="preserve">
-    <value>Move</value>
-  </data>
-  <data name="menuPicking" xml:space="preserve">
-    <value>Order</value>
-  </data>
-  <data name="menuRecieving" xml:space="preserve">
-    <value>Receiving</value>
-  </data>
-  <data name="errEmptyFieldLicense" xml:space="preserve">
-    <value>Please enter a license code</value>
-  </data>
-  <data name="tvInfo" xml:space="preserve">
-    <value>Information</value>
   </data>
 </root>

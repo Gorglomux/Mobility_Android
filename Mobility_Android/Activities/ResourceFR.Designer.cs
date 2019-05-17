@@ -556,6 +556,33 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2255 Boulevard Fernand-Lafontaine, #300.
+        /// </summary>
+        internal static string tvAddress1 {
+            get {
+                return ResourceManager.GetString("tvAddress1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Longueuil, QC, J4G 2R8.
+        /// </summary>
+        internal static string tvAddress2 {
+            get {
+                return ResourceManager.GetString("tvAddress2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Client :.
         /// </summary>
         internal static string tvClient {
@@ -628,6 +655,15 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to support@ceritar.com.
+        /// </summary>
+        internal static string tvEmail {
+            get {
+                return ResourceManager.GetString("tvEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fournisseur.
         /// </summary>
         internal static string tvFournisseur {
@@ -642,6 +678,15 @@ namespace Mobility_Android.Activities {
         internal static string tvGabarit {
             get {
                 return ResourceManager.GetString("tvGabarit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Informations.
+        /// </summary>
+        internal static string tvInfo {
+            get {
+                return ResourceManager.GetString("tvInfo", resourceCulture);
             }
         }
         
@@ -759,6 +804,15 @@ namespace Mobility_Android.Activities {
         internal static string tvPassPrompt {
             get {
                 return ResourceManager.GetString("tvPassPrompt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (450) 651-9988.
+        /// </summary>
+        internal static string tvPhoneNumber {
+            get {
+                return ResourceManager.GetString("tvPhoneNumber", resourceCulture);
             }
         }
         
@@ -993,6 +1047,15 @@ namespace Mobility_Android.Activities {
         internal static string tvWarehouse {
             get {
                 return ResourceManager.GetString("tvWarehouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://www.ceritar.com.
+        /// </summary>
+        internal static string tvWebsite {
+            get {
+                return ResourceManager.GetString("tvWebsite", resourceCulture);
             }
         }
         

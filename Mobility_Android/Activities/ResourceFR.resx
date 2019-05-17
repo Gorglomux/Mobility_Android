@@ -119,7 +119,6 @@
   </resheader>
   <data name="btnAddPalette" xml:space="preserve">
     <value>2 - Creation de palette</value>
-    <comment>fdf</comment>
   </data>
   <data name="btnConfirm" xml:space="preserve">
     <value>Confirmer</value>
@@ -169,194 +168,14 @@
   <data name="btnSaveConfig" xml:space="preserve">
     <value>Sauvegarder</value>
   </data>
-  <data name="lblClient" xml:space="preserve">
-    <value>Client :</value>
-  </data>
-  <data name="lblDate" xml:space="preserve">
-    <value>Date :</value>
-  </data>
-  <data name="lblDateSale" xml:space="preserve">
-    <value>Date d'expédition prévue:</value>
-  </data>
-  <data name="lblOwner" xml:space="preserve">
-    <value>Propriétaire :</value>
-  </data>
-  <data name="lblPO" xml:space="preserve">
-    <value>PO :</value>
-  </data>
-  <data name="lblProduct" xml:space="preserve">
-    <value>Produit :</value>
-  </data>
-  <data name="lblQty" xml:space="preserve">
-    <value>Qté / udm :</value>
-  </data>
-  <data name="lblRecipient" xml:space="preserve">
-    <value>Destination :</value>
-  </data>
-  <data name="lblTitleLicenseInfo" xml:space="preserve">
-    <value>Information de licence</value>
-  </data>
-  <data name="lblTitleSaleInfo" xml:space="preserve">
-    <value>Création de commande</value>
-  </data>
-  <data name="lblWeight" xml:space="preserve">
-    <value>Poids :</value>
-  </data>
-  <data name="tvClient" xml:space="preserve">
-    <value>Client :</value>
-  </data>
-  <data name="tvConfig" xml:space="preserve">
-    <value>Configurations</value>
-  </data>
-  <data name="tvConsolidation" xml:space="preserve">
-    <value>Consolidation</value>
-  </data>
-  <data name="tvCreation" xml:space="preserve">
-    <value>Productions</value>
-  </data>
-  <data name="tvCS" xml:space="preserve">
-    <value>CS</value>
-  </data>
-  <data name="tvCustomer" xml:space="preserve">
-    <value>Client</value>
-  </data>
-  <data name="tvDeplacement" xml:space="preserve">
-    <value>Déplacement</value>
-  </data>
-  <data name="tvDestination" xml:space="preserve">
-    <value>Destination :</value>
-  </data>
-  <data name="tvGabarit" xml:space="preserve">
-    <value>Gabarit</value>
-  </data>
-  <data name="tvInterWarehouse" xml:space="preserve">
-    <value># :</value>
-  </data>
-  <data name="tvIp" xml:space="preserve">
-    <value>ip :</value>
-  </data>
-  <data name="tvLicence" xml:space="preserve">
-    <value>Licence :</value>
-  </data>
-  <data name="tvLicense" xml:space="preserve">
-    <value>Licence :</value>
-  </data>
-  <data name="tvLigne" xml:space="preserve">
-    <value>Ligne</value>
-  </data>
-  <data name="tvLine" xml:space="preserve">
-    <value>Ligne</value>
-  </data>
-  <data name="tvLogout" xml:space="preserve">
-    <value>Déconnexion</value>
-  </data>
-  <data name="tvName" xml:space="preserve">
-    <value>Nom d'utilisateur :</value>
-  </data>
-  <data name="tvNRI" xml:space="preserve">
-    <value>NRI</value>
-  </data>
-  <data name="tvOrder" xml:space="preserve">
-    <value>URL du serveur :</value>
-  </data>
-  <data name="tvPalette" xml:space="preserve">
-    <value>Palette :</value>
-  </data>
-  <data name="tvPass" xml:space="preserve">
-    <value>Mot de passe :</value>
-  </data>
-  <data name="tvPassPrompt" xml:space="preserve">
-    <value>Veuillez entrer le mot de passe :</value>
-  </data>
-  <data name="tvPicking" xml:space="preserve">
-    <value># Commande :</value>
-  </data>
-  <data name="tvPoids" xml:space="preserve">
-    <value>Poids :</value>
-  </data>
-  <data name="tvPort" xml:space="preserve">
-    <value>Port :</value>
-  </data>
-  <data name="tvProdOrder" xml:space="preserve">
-    <value># Bon de travail</value>
-  </data>
-  <data name="tvProduct" xml:space="preserve">
-    <value>Produit :</value>
-  </data>
-  <data name="tvProductDetails" xml:space="preserve">
-    <value>Détails du produit</value>
-  </data>
-  <data name="tvProductEntete" xml:space="preserve">
-    <value>Produit</value>
-  </data>
-  <data name="tvProductName" xml:space="preserve">
-    <value>Produit</value>
-  </data>
-  <data name="tvProvider" xml:space="preserve">
-    <value>Fournisseur :</value>
-  </data>
-  <data name="tvPutProduction" xml:space="preserve">
-    <value>Mise en production</value>
-  </data>
-  <data name="tvQte" xml:space="preserve">
-    <value>Qté :</value>
-  </data>
-  <data name="tvQtyEntete" xml:space="preserve">
-    <value>Quantité</value>
-  </data>
-  <data name="tvQuantity" xml:space="preserve">
-    <value>Quantité</value>
-  </data>
-  <data name="tvReceiving" xml:space="preserve">
-    <value>Réceptions</value>
-  </data>
-  <data name="tvRecieving" xml:space="preserve">
-    <value># Réception :</value>
-  </data>
-  <data name="tvSale" xml:space="preserve">
-    <value># Commande</value>
-  </data>
-  <data name="tvSelect" xml:space="preserve">
-    <value>Select.</value>
-  </data>
-  <data name="tvStation" xml:space="preserve">
-    <value>Station :</value>
-  </data>
-  <data name="tvTemplate" xml:space="preserve">
-    <value>Template :</value>
-  </data>
-  <data name="tvTermicon" xml:space="preserve">
-    <value>Serveur d'impression :</value>
-  </data>
-  <data name="tvTitleInterWarehouse" xml:space="preserve">
-    <value>Inter entrepôt</value>
-  </data>
-  <data name="tvTitlePicking" xml:space="preserve">
-    <value>Commande</value>
-  </data>
-  <data name="tvTitleProdOrder" xml:space="preserve">
-    <value>Bon de production</value>
-  </data>
-  <data name="tvTitleRecieving" xml:space="preserve">
-    <value>Réception</value>
-  </data>
-  <data name="tvWarehouse" xml:space="preserve">
-    <value>Entrepôt :</value>
-  </data>
-  <data name="tvWeight" xml:space="preserve">
-    <value>Poids (Kg)</value>
-  </data>
-  <data name="txtFournisseur" xml:space="preserve">
-    <value>Fournisseur</value>
-  </data>
-  <data name="txtRec" xml:space="preserve">
-    <value># Rec.</value>
-  </data>
   <data name="errCannotReachWebservice" xml:space="preserve">
     <value>Impossible de joindre le webservice</value>
   </data>
   <data name="errConfirmingPallet" xml:space="preserve">
     <value>Une erreure est survenue lors de la création de la palette</value>
+  </data>
+  <data name="errEmptyFieldLicense" xml:space="preserve">
+    <value>Veuillez rentrer un code pour la licence</value>
   </data>
   <data name="errInvalidStringFormat" xml:space="preserve">
     <value>Le code barre n'est pas valide. Tag non reconnu </value>
@@ -412,17 +231,38 @@
   <data name="errWebServiceUrlIncorrect" xml:space="preserve">
     <value>L'URL du service web est incorrect</value>
   </data>
-  <data name="rbEnglish" xml:space="preserve">
-    <value>Anglais</value>
+  <data name="lblClient" xml:space="preserve">
+    <value>Client :</value>
   </data>
-  <data name="rbFrench" xml:space="preserve">
-    <value>Français</value>
+  <data name="lblDate" xml:space="preserve">
+    <value>Date :</value>
   </data>
-  <data name="tvFournisseur" xml:space="preserve">
-    <value>Fournisseur</value>
+  <data name="lblDateSale" xml:space="preserve">
+    <value>Date d'expédition prévue:</value>
   </data>
-  <data name="tvRec" xml:space="preserve">
-    <value># Rec.</value>
+  <data name="lblOwner" xml:space="preserve">
+    <value>Propriétaire :</value>
+  </data>
+  <data name="lblPO" xml:space="preserve">
+    <value>PO :</value>
+  </data>
+  <data name="lblProduct" xml:space="preserve">
+    <value>Produit :</value>
+  </data>
+  <data name="lblQty" xml:space="preserve">
+    <value>Qté / udm :</value>
+  </data>
+  <data name="lblRecipient" xml:space="preserve">
+    <value>Destination :</value>
+  </data>
+  <data name="lblTitleLicenseInfo" xml:space="preserve">
+    <value>Information de licence</value>
+  </data>
+  <data name="lblTitleSaleInfo" xml:space="preserve">
+    <value>Création de commande</value>
+  </data>
+  <data name="lblWeight" xml:space="preserve">
+    <value>Poids :</value>
   </data>
   <data name="menuHome" xml:space="preserve">
     <value>Accueil</value>
@@ -436,10 +276,187 @@
   <data name="menuRecieving" xml:space="preserve">
     <value>Réception</value>
   </data>
-  <data name="errEmptyFieldLicense" xml:space="preserve">
-    <value>Veuillez rentrer un code pour la licence</value>
+  <data name="rbEnglish" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="rbFrench" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tvAddress1" xml:space="preserve">
+    <value>2255 Boulevard Fernand-Lafontaine, #300</value>
+  </data>
+  <data name="tvAddress2" xml:space="preserve">
+    <value>Longueuil, QC, J4G 2R8</value>
+  </data>
+  <data name="tvClient" xml:space="preserve">
+    <value>Client :</value>
+  </data>
+  <data name="tvConfig" xml:space="preserve">
+    <value>Configurations</value>
+  </data>
+  <data name="tvConsolidation" xml:space="preserve">
+    <value>Consolidation</value>
+  </data>
+  <data name="tvCreation" xml:space="preserve">
+    <value>Productions</value>
+  </data>
+  <data name="tvCS" xml:space="preserve">
+    <value>CS</value>
+  </data>
+  <data name="tvCustomer" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="tvDeplacement" xml:space="preserve">
+    <value>Déplacement</value>
+  </data>
+  <data name="tvDestination" xml:space="preserve">
+    <value>Destination :</value>
+  </data>
+  <data name="tvEmail" xml:space="preserve">
+    <value>support@ceritar.com</value>
+  </data>
+  <data name="tvFournisseur" xml:space="preserve">
+    <value>Fournisseur</value>
+  </data>
+  <data name="tvGabarit" xml:space="preserve">
+    <value>Gabarit</value>
   </data>
   <data name="tvInfo" xml:space="preserve">
     <value>Informations</value>
+  </data>
+  <data name="tvInterWarehouse" xml:space="preserve">
+    <value># :</value>
+  </data>
+  <data name="tvIp" xml:space="preserve">
+    <value>ip :</value>
+  </data>
+  <data name="tvLicence" xml:space="preserve">
+    <value>Licence :</value>
+  </data>
+  <data name="tvLicense" xml:space="preserve">
+    <value>Licence :</value>
+  </data>
+  <data name="tvLigne" xml:space="preserve">
+    <value>Ligne</value>
+  </data>
+  <data name="tvLine" xml:space="preserve">
+    <value>Ligne</value>
+  </data>
+  <data name="tvLogout" xml:space="preserve">
+    <value>Déconnexion</value>
+  </data>
+  <data name="tvName" xml:space="preserve">
+    <value>Nom d'utilisateur :</value>
+  </data>
+  <data name="tvNRI" xml:space="preserve">
+    <value>NRI</value>
+  </data>
+  <data name="tvOrder" xml:space="preserve">
+    <value>URL du serveur :</value>
+  </data>
+  <data name="tvPalette" xml:space="preserve">
+    <value>Palette :</value>
+  </data>
+  <data name="tvPass" xml:space="preserve">
+    <value>Mot de passe :</value>
+  </data>
+  <data name="tvPassPrompt" xml:space="preserve">
+    <value>Veuillez entrer le mot de passe :</value>
+  </data>
+  <data name="tvPhoneNumber" xml:space="preserve">
+    <value>(450) 651-9988</value>
+  </data>
+  <data name="tvPicking" xml:space="preserve">
+    <value># Commande :</value>
+  </data>
+  <data name="tvPoids" xml:space="preserve">
+    <value>Poids :</value>
+  </data>
+  <data name="tvPort" xml:space="preserve">
+    <value>Port :</value>
+  </data>
+  <data name="tvProdOrder" xml:space="preserve">
+    <value># Bon de travail</value>
+  </data>
+  <data name="tvProduct" xml:space="preserve">
+    <value>Produit :</value>
+  </data>
+  <data name="tvProductDetails" xml:space="preserve">
+    <value>Détails du produit</value>
+  </data>
+  <data name="tvProductEntete" xml:space="preserve">
+    <value>Produit</value>
+  </data>
+  <data name="tvProductName" xml:space="preserve">
+    <value>Produit</value>
+  </data>
+  <data name="tvProvider" xml:space="preserve">
+    <value>Fournisseur :</value>
+  </data>
+  <data name="tvPutProduction" xml:space="preserve">
+    <value>Mise en production</value>
+  </data>
+  <data name="tvQte" xml:space="preserve">
+    <value>Qté :</value>
+  </data>
+  <data name="tvQtyEntete" xml:space="preserve">
+    <value>Quantité</value>
+  </data>
+  <data name="tvQuantity" xml:space="preserve">
+    <value>Quantité</value>
+  </data>
+  <data name="tvRec" xml:space="preserve">
+    <value># Rec.</value>
+  </data>
+  <data name="tvReceiving" xml:space="preserve">
+    <value>Réceptions</value>
+  </data>
+  <data name="tvRecieving" xml:space="preserve">
+    <value># Réception :</value>
+  </data>
+  <data name="tvSale" xml:space="preserve">
+    <value># Commande</value>
+  </data>
+  <data name="tvSelect" xml:space="preserve">
+    <value>Select.</value>
+  </data>
+  <data name="tvStation" xml:space="preserve">
+    <value>Station :</value>
+  </data>
+  <data name="tvTemplate" xml:space="preserve">
+    <value>Template :</value>
+  </data>
+  <data name="tvTermicon" xml:space="preserve">
+    <value>Serveur d'impression :</value>
+  </data>
+  <data name="tvTitleInterWarehouse" xml:space="preserve">
+    <value>Inter entrepôt</value>
+  </data>
+  <data name="tvTitlePicking" xml:space="preserve">
+    <value>Commande</value>
+  </data>
+  <data name="tvTitleProdOrder" xml:space="preserve">
+    <value>Bon de production</value>
+  </data>
+  <data name="tvTitleRecieving" xml:space="preserve">
+    <value>Réception</value>
+  </data>
+  <data name="tvWarehouse" xml:space="preserve">
+    <value>Entrepôt :</value>
+  </data>
+  <data name="tvWebsite" xml:space="preserve">
+    <value>http://www.ceritar.com</value>
+  </data>
+  <data name="tvWeight" xml:space="preserve">
+    <value>Poids (Kg)</value>
+  </data>
+  <data name="txtFournisseur" xml:space="preserve">
+    <value>Fournisseur</value>
+  </data>
+  <data name="txtRec" xml:space="preserve">
+    <value># Rec.</value>
   </data>
 </root>
