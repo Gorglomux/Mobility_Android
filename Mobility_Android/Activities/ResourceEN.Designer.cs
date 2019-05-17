@@ -142,7 +142,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Informations.
+        ///   Looks up a localized string similar to About.
         /// </summary>
         internal static string btnInfo {
             get {

@@ -445,6 +445,6 @@
     <value>Logout</value>
   </data>
   <data name="btnInfo" xml:space="preserve">
-    <value>Informations</value>
+    <value>About</value>
   </data>
 </root>
