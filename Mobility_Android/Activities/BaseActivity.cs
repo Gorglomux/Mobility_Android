@@ -96,7 +96,7 @@ namespace Mobility_Android.Activities
             if (toolbar != null)
             {
                  //Interaction avec le bouton retour de la toolbar
-                ImageView backImage = FindViewById<ImageView>(Resource.Id.imBack);
+                Button backImage = FindViewById<Button>(Resource.Id.imBack);
                 //On ferme la vue si le bouton est appuyé
                 backImage.Touch += (sender, e) =>
                 {
@@ -104,7 +104,10 @@ namespace Mobility_Android.Activities
                     Finish();
 
                 };
-
+                FindViewById<Button>(Resource.Id.imHome).Click += (sender, e) => {
+                    Finish();
+                    StartActivity(new Intent(this, typeof(HomeActivity)));
+                };
 
             }
 
@@ -122,56 +125,6 @@ namespace Mobility_Android.Activities
             SetActionBar(toolbar);
         }
 
-        //Fonction appelée quand on appuye sur le menu dans la toolbar
-        public override bool OnCreateOptionsMenu(IMenu menu)
-        {
-            switch (Configuration.currentLanguage)
-            {
-                case CR_TTLangue.French_Canada:
-                    {
-                        MenuInflater.Inflate(Resource.Menu.menuFR, menu);
-                        break;
-                    }
-
-                case CR_TTLangue.English:
-                    {
-                        MenuInflater.Inflate(Resource.Menu.menuEN, menu);
-                        break;
-                    }
-            }
-
-            return base.OnCreateOptionsMenu(menu);
-        }
-        //Quand on appuie sur un élément du menu on change l'interface
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            Intent intentMenu= new Intent(this, typeof(HomeActivity));
-            switch (item.ItemId)
-            {
-                case Resource.Id.menuHome:
-                    intentMenu = new Intent(this, typeof(HomeActivity));
-                    break;
-                case Resource.Id.menuMove:
-                    intentMenu = new Intent(this, typeof(MoveActivity));
-                    break;
-                case Resource.Id.menuPicking:
-                    intentMenu = new Intent(this, typeof(PickingListActivity));
-                    break;
-                //case Resource.Id.menuProduction:
-                //  intentMenu = new Intent(this, typeof(ProductionMenuActivity));
-                //    break;
-                case Resource.Id.menuRecieving:
-                    intentMenu = new Intent(this, typeof(ReceivingActivity));
-                    break;
-                /*case Resource.Id.menuWarehouse:
-                    intentMenu = new Intent(this, typeof(WarehouseListActivity));
-                    break;
-                    */
-            }
-            StartActivity(intentMenu);
-
-            return base.OnOptionsItemSelected(item);
-        }
 
         //Quand on appuie sur un bouton effacer (à coté des champs a renseigner dans la plupart des interfaces) l'EditText se vide
         public void clearTextOnClick(ImageButton clear, EditText et)

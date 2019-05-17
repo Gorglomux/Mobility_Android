@@ -33,59 +33,109 @@
 		/>
 	</LinearLayout>
 	
-	<!-- Buttons Menus-->
+
 	<LinearLayout
-		android:id="@+id/layoutButtons"
+		android:id="@+id/layoutHome"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
+		android:layout_height="match_parent"
 		android:orientation="vertical"
 		android:layout_below="@+id/layoutWarehouse">
 
-		<Button
-			android:id="@+id/btnMove"
-			android:layout_weight="2"
+		<LinearLayout
+			android:id="@+id/layoutSpace"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:textAlignment="textStart" 
-			android:text="1 - Déplacement"
-		/>
-
-		<Button
-			android:id="@+id/btnRecieve"
-			android:layout_weight="2"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="2 - Réception"
-			android:textAlignment="textStart" 
-		/>
-
-		<Button
-			android:id="@+id/btnPicking"
-			android:layout_weight="2"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:textAlignment="textStart" 
-			android:text="3 - Commande"
-		/>
+			android:layout_weight="1"
+			android:orientation="horizontal">
 		
-		<!--
-		<Button
-			android:id="@+id/btnProduction"
-			android:layout_weight="2"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="4 - Production"
-			android:textAlignment="textStart" 
-		/>
-		<Button
-			android:id="@+id/btnInterWarehouse"
-			android:layout_weight="2"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="5 - Inter Warehouse"
-		/>
-		-->
+		</LinearLayout>
 
+		<LinearLayout
+			android:id="@+id/layoutMove"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="3"
+			android:orientation="horizontal">
+
+			<Button
+				android:id="@+id/btnRelocation"
+				android:drawableTop="@drawable/move"
+				android:layout_width="5dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="Déplacement"
+				android:layout_centerHorizontal="true"
+				android:background="?android:selectableItemBackground" />
+
+			<Button
+				android:id="@+id/btnConsolidate"
+				android:drawableTop="@drawable/consolidate"
+				android:layout_width="5dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="Consolidation"
+				android:layout_centerHorizontal="true"
+				android:background="?android:selectableItemBackground" />
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/layoutOperations"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="3"
+			android:orientation="horizontal">
+
+			<Button
+				android:id="@+id/btnRecieve"
+				android:drawableTop="@drawable/truck"
+				android:layout_width="5dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="Réception"
+				android:layout_centerHorizontal="true"
+				android:background="?android:selectableItemBackground" />
+
+			<Button
+				android:id="@+id/btnPicking"
+				android:drawableTop="@drawable/sale"
+				android:layout_width="5dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="Commande"
+				android:layout_centerHorizontal="true"
+				android:background="?android:selectableItemBackground" />
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/layoutMisc"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="3"
+			android:orientation="horizontal">
+
+		<Button
+				android:id="@+id/btnInfo"
+				android:drawableTop="@drawable/info"
+				android:layout_width="5dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="Informations"
+				android:layout_centerHorizontal="true"
+				android:background="?android:selectableItemBackground" />
+
+			<Button
+				android:id="@+id/btnExit"
+				android:drawableTop="@drawable/exit"
+				android:layout_width="5dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:text="Déconnection"
+				android:layout_centerHorizontal="true"
+				android:background="?android:selectableItemBackground" />
+
+		</LinearLayout>
 
 	</LinearLayout>
 

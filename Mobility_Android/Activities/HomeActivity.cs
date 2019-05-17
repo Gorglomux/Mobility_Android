@@ -37,9 +37,12 @@ namespace Mobility_Android.Activities
             //On stocke les boutons et les transitions dans un dictionnaire
             Dictionary<int, Intent> buttons = new Dictionary<int, Intent>()
             {
-                {Resource.Id.btnMove, new Intent(this, typeof(MoveActivity))},
+                {Resource.Id.btnRelocation, new Intent(this, typeof(RelocationActivity))},
+                {Resource.Id.btnConsolidate, new Intent(this, typeof(ConsolidationActivity))},
                 {Resource.Id.btnRecieve, new Intent(this, typeof(ReceivingActivity))},
                 {Resource.Id.btnPicking, new Intent(this, typeof(PickingListActivity))},
+                {Resource.Id.btnInfo, new Intent(this, typeof(InformationActivity))},
+                {Resource.Id.btnExit, new Intent(this, typeof(LogoutActivity))},
              //   {Resource.Id.btnProduction, new Intent(this, typeof(ProductionMenuActivity))}
                 
             };
@@ -95,18 +98,24 @@ namespace Mobility_Android.Activities
                 case CR_TTLangue.French_Canada:
                     {
                         FindViewById<TextView>(Resource.Id.tvWarehouse).Text = Activities.ResourceFR.tvWarehouse;
-                        FindViewById<Button>(Resource.Id.btnMove).Text = Activities.ResourceFR.btnMove;
-                        FindViewById<Button>(Resource.Id.btnRecieve).Text = Activities.ResourceFR.btnRecieve;
+                        FindViewById<Button>(Resource.Id.btnRelocation).Text = Activities.ResourceFR.btnRelocation;
+                        FindViewById<Button>(Resource.Id.btnConsolidate).Text = Activities.ResourceFR.btnConsolidate;
                         FindViewById<Button>(Resource.Id.btnPicking).Text = Activities.ResourceFR.btnPicking;
+                        FindViewById<Button>(Resource.Id.btnRecieve).Text = Activities.ResourceFR.btnRecieve;
+                        FindViewById<Button>(Resource.Id.btnInfo).Text = Activities.ResourceFR.btnInfo;
+                        FindViewById<Button>(Resource.Id.btnExit).Text = Activities.ResourceFR.btnExit;
                         break;
                     }
 
                 case CR_TTLangue.English:
                     {
                         FindViewById<TextView>(Resource.Id.tvWarehouse).Text = Activities.ResourceEN.tvWarehouse;
-                        FindViewById<Button>(Resource.Id.btnMove).Text = Activities.ResourceEN.btnMove;
-                        FindViewById<Button>(Resource.Id.btnRecieve).Text = Activities.ResourceEN.btnRecieve;
+                        FindViewById<Button>(Resource.Id.btnRelocation).Text = Activities.ResourceEN.btnRelocation;
+                        FindViewById<Button>(Resource.Id.btnConsolidate).Text = Activities.ResourceEN.btnConsolidate;
                         FindViewById<Button>(Resource.Id.btnPicking).Text = Activities.ResourceEN.btnPicking;
+                        FindViewById<Button>(Resource.Id.btnRecieve).Text = Activities.ResourceEN.btnRecieve;
+                        FindViewById<Button>(Resource.Id.btnInfo).Text = Activities.ResourceEN.btnInfo;
+                        FindViewById<Button>(Resource.Id.btnExit).Text = Activities.ResourceEN.btnExit;
                         break;
                     }
             }
