@@ -2622,8 +2622,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800c5
 			public const int btnRelocation = 2131230917;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int btnSaveConfig = 2131230885;
+			// aapt resource value: 0x7f0800a4
+			public const int btnSaveConfig = 2131230884;
 			
 			// aapt resource value: 0x7f080063
 			public const int buttonPanel = 2131230819;
@@ -2757,14 +2757,14 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08003a
 			public const int ifRoom = 2131230778;
 			
-			// aapt resource value: 0x7f08016d
-			public const int imBack = 2131231085;
-			
 			// aapt resource value: 0x7f08016e
-			public const int imCeritar = 2131231086;
+			public const int imBack = 2131231086;
 			
-			// aapt resource value: 0x7f08009e
-			public const int imClear = 2131230878;
+			// aapt resource value: 0x7f080170
+			public const int imCeritar = 2131231088;
+			
+			// aapt resource value: 0x7f08009d
+			public const int imClear = 2131230877;
 			
 			// aapt resource value: 0x7f0800ad
 			public const int imClear2 = 2131230893;
@@ -2777,6 +2777,9 @@ namespace Mobility_Android
 			
 			// aapt resource value: 0x7f0800ec
 			public const int imDetails = 2131230956;
+			
+			// aapt resource value: 0x7f080171
+			public const int imHome = 2131231089;
 			
 			// aapt resource value: 0x7f0800d1
 			public const int imLogo = 2131230929;
@@ -2814,6 +2817,9 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800d4
 			public const int layoutAddress2 = 2131230932;
 			
+			// aapt resource value: 0x7f08016d
+			public const int layoutBack = 2131231085;
+			
 			// aapt resource value: 0x7f0800fe
 			public const int layoutButtons = 2131230974;
 			
@@ -2846,6 +2852,9 @@ namespace Mobility_Android
 			
 			// aapt resource value: 0x7f0800c2
 			public const int layoutHome = 2131230914;
+			
+			// aapt resource value: 0x7f08016f
+			public const int layoutImage = 2131231087;
 			
 			// aapt resource value: 0x7f0800a8
 			public const int layoutLicense = 2131230888;
@@ -2901,8 +2910,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08012c
 			public const int layoutStation = 2131231020;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int layoutTermicon = 2131230880;
+			// aapt resource value: 0x7f08009f
+			public const int layoutTermicon = 2131230879;
 			
 			// aapt resource value: 0x7f0800fb
 			public const int layoutTextLogoutPassword = 2131230971;
@@ -2922,8 +2931,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08016c
 			public const int layoutToolbar = 2131231084;
 			
-			// aapt resource value: 0x7f08009c
-			public const int layoutUrl = 2131230876;
+			// aapt resource value: 0x7f08009b
+			public const int layoutUrl = 2131230875;
 			
 			// aapt resource value: 0x7f0800bf
 			public const int layoutWarehouse = 2131230911;
@@ -3021,14 +3030,14 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08013f
 			public const int lvReceiving = 2131231039;
 			
-			// aapt resource value: 0x7f080171
-			public const int masked = 2131231089;
+			// aapt resource value: 0x7f080174
+			public const int masked = 2131231092;
 			
 			// aapt resource value: 0x7f08015f
 			public const int media_actions = 2131231071;
 			
-			// aapt resource value: 0x7f08016f
-			public const int message = 2131231087;
+			// aapt resource value: 0x7f080172
+			public const int message = 2131231090;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -3258,8 +3267,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08014e
 			public const int tfDestination = 2131231054;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int tfIp = 2131230882;
+			// aapt resource value: 0x7f0800a1
+			public const int tfIp = 2131230881;
 			
 			// aapt resource value: 0x7f08012a
 			public const int tfLicenceProduction = 2131231018;
@@ -3297,14 +3306,14 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800fc
 			public const int tfPassPrompt = 2131230972;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int tfPort = 2131230884;
+			// aapt resource value: 0x7f0800a3
+			public const int tfPort = 2131230883;
 			
 			// aapt resource value: 0x7f08012d
 			public const int tfStation = 2131231021;
 			
-			// aapt resource value: 0x7f08009d
-			public const int tfUrl = 2131230877;
+			// aapt resource value: 0x7f08009c
+			public const int tfUrl = 2131230876;
 			
 			// aapt resource value: 0x7f080108
 			public const int tfWeight = 2131230984;
@@ -3321,8 +3330,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08006f
 			public const int title_template = 2131230831;
 			
-			// aapt resource value: 0x7f080099
-			public const int toolbar = 2131230873;
+			// aapt resource value: 0x7f0800a5
+			public const int toolbar = 2131230885;
 			
 			// aapt resource value: 0x7f08003e
 			public const int top = 2131230782;
@@ -3366,8 +3375,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08011a
 			public const int tvClient = 2131231002;
 			
-			// aapt resource value: 0x7f08009a
-			public const int tvConfig = 2131230874;
+			// aapt resource value: 0x7f080099
+			public const int tvConfig = 2131230873;
 			
 			// aapt resource value: 0x7f0800a6
 			public const int tvConsolidation = 2131230886;
@@ -3402,8 +3411,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800dd
 			public const int tvInterWarehouse = 2131230941;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int tvIp = 2131230881;
+			// aapt resource value: 0x7f0800a0
+			public const int tvIp = 2131230880;
 			
 			// aapt resource value: 0x7f080129
 			public const int tvLicence = 2131231017;
@@ -3441,8 +3450,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080142
 			public const int tvNumRecieving = 2131231042;
 			
-			// aapt resource value: 0x7f08009b
-			public const int tvOrder = 2131230875;
+			// aapt resource value: 0x7f08009a
+			public const int tvOrder = 2131230874;
 			
 			// aapt resource value: 0x7f0800aa
 			public const int tvPalette = 2131230890;
@@ -3462,8 +3471,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800e6
 			public const int tvPoids = 2131230950;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int tvPort = 2131230883;
+			// aapt resource value: 0x7f0800a2
+			public const int tvPort = 2131230882;
 			
 			// aapt resource value: 0x7f080134
 			public const int tvProdOrder = 2131231028;
@@ -3519,8 +3528,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080136
 			public const int tvTemplate = 2131231030;
 			
-			// aapt resource value: 0x7f08009f
-			public const int tvTermicon = 2131230879;
+			// aapt resource value: 0x7f08009e
+			public const int tvTermicon = 2131230878;
 			
 			// aapt resource value: 0x7f0800dc
 			public const int tvTitleInterWarehouse = 2131230940;
@@ -3570,8 +3579,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f080170
-			public const int visible = 2131231088;
+			// aapt resource value: 0x7f080173
+			public const int visible = 2131231091;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;

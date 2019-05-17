@@ -96,7 +96,7 @@ namespace Mobility_Android.Activities
             if (toolbar != null)
             {
                  //Interaction avec le bouton retour de la toolbar
-                ImageView backImage = FindViewById<ImageView>(Resource.Id.imBack);
+                Button backImage = FindViewById<Button>(Resource.Id.imBack);
                 //On ferme la vue si le bouton est appuyé
                 backImage.Touch += (sender, e) =>
                 {
@@ -104,7 +104,10 @@ namespace Mobility_Android.Activities
                     Finish();
 
                 };
-
+                FindViewById<Button>(Resource.Id.imHome).Click += (sender, e) => {
+                    Finish();
+                    StartActivity(new Intent(this, typeof(HomeActivity)));
+                };
 
             }
 

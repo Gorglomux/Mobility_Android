@@ -4,18 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-	<!-- Toolbar -->
-	<include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
-
 	<!-- TITLE CONFIG -->
 	<TextView
 		android:id="@+id/tvConfig"
 		android:text="Configuration"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/toolbar"
 		android:textAppearance="?android:attr/textAppearanceLarge" />
 	 
 	<!-- TEXT ORDER URL -->

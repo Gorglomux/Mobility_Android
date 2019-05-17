@@ -12,23 +12,51 @@ https://docs.microsoft.com/en-us/xamarin/android/user-interface/controls/tool-ba
 		android:id="@+id/layoutToolbar"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content">
-    
-    <!-- Flèche retour -->
-    <ImageButton
-		android:id="@+id/imBack"
-		android:src="@drawable/back"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-    android:background="?android:selectableItemBackground"
-    android:layout_weight="1"/>
 
-    <!-- Logo Ceritar -->
-    <ImageView
-    android:id="@+id/imCeritar"
-    android:src="@drawable/ceritar_logo_login"
-    android:layout_width="wrap_content"
-    android:layout_height="65px"
-    android:layout_weight="4"/>
+    <LinearLayout
+      android:id="@+id/layoutBack"
+      android:layout_weight="2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
 
+      <!-- Flèche retour -->
+      <Button
+      android:id="@+id/imBack"
+      android:drawableTop="@drawable/back"
+      android:background="?android:selectableItemBackground"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="2"/>
+    </LinearLayout>
+    <LinearLayout
+      android:id="@+id/layoutImage"
+      android:layout_weight="1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <!-- Logo Ceritar -->
+      <ImageView
+      android:id="@+id/imCeritar"
+      android:src="@drawable/ceritar_logo_login"
+      android:layout_width="wrap_content"
+      android:layout_height="65px"
+      android:layout_weight="4"/>
+     
+    </LinearLayout>
+    <LinearLayout
+      android:id="@+id/layoutHome"
+      android:layout_weight="2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <!-- Maison-->
+      <Button
+      android:id="@+id/imHome"
+      android:drawableTop="@drawable/home"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="?android:selectableItemBackground"
+      android:layout_marginRight="20px"
+      android:layout_weight="3"/>
+    </LinearLayout>
   </LinearLayout>
 </Toolbar>
