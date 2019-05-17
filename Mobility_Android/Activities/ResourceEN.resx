@@ -438,4 +438,7 @@
   <data name="errEmptyFieldLicense" xml:space="preserve">
     <value>Please enter a license code</value>
   </data>
+  <data name="tvInfo" xml:space="preserve">
+    <value>Information</value>
+  </data>
 </root>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+	<!-- Toolbar -->
+	<include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+	<!-- TITLE INFO -->
+	<TextView
+		android:id="@+id/tvInfo"
+		android:text="Informations"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/toolbar"
+		android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	<!-- LOGO -->
+	<ImageView
+		android:id="@+id/imLogo"
+		android:src="@drawable/ceritar_logo_login"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="20px"
+		android:minHeight="130px"
+		android:paddingTop="5dp"/>
+
+	<!-- BUILDING PICTURE -->
+	<ImageView
+		android:id="@+id/imBuilding"
+		android:src="@drawable/ceritar_building"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="20px"
+		android:minHeight="130px"
+		android:paddingTop="5dp"/>
+
+	<!-- FIRST PART OF THE ADDRESS -->
+
+	<TextView
+		android:text="2255 Boulevard Fernand-Lafontaine, #300"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="30dp"
+		android:layout_marginAbove="100dp"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+	<!-- SECOND PART OF THE ADDRESS -->
+
+	<TextView
+		android:text="Longueuil, QC, J4G 2R8"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="100dp"
+		android:layout_marginAbove="100dp"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+	<!-- PHONE NUMBER -->
+
+	<TextView
+		android:text="(450) 651-9988"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="130dp"
+		android:layout_marginAbove="100dp"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:paddingVertical="10"/>
+
+	<!-- MAIL -->
+
+	<TextView
+		android:text="support@ceritar.com"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="110dp"
+		android:layout_marginAbove="100dp"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+	<!-- WEBSITE -->
+
+	<TextView
+		android:text="http://www.ceritar.com"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="100dp"
+		android:layout_marginAbove="100dp"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:paddingVertical="10"/>
+
+</LinearLayout>
