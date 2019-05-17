@@ -37,7 +37,7 @@ namespace Mobility_Android.Activities
             //On stocke les boutons et les transitions dans un dictionnaire
             Dictionary<int, Intent> buttons = new Dictionary<int, Intent>()
             {
-                {Resource.Id.btnMove, new Intent(this, typeof(MoveActivity))},
+                //{Resource.Id.btnMove, new Intent(this, typeof(MoveActivity))},
                 {Resource.Id.btnRecieve, new Intent(this, typeof(ReceivingActivity))},
                 {Resource.Id.btnPicking, new Intent(this, typeof(PickingListActivity))},
              //   {Resource.Id.btnProduction, new Intent(this, typeof(ProductionMenuActivity))}
@@ -89,7 +89,7 @@ namespace Mobility_Android.Activities
         }
 
         private void translateScreen()
-        {
+        {/*
             switch (Configuration.currentLanguage)
             {
                 case CR_TTLangue.French_Canada:
@@ -109,7 +109,7 @@ namespace Mobility_Android.Activities
                         FindViewById<Button>(Resource.Id.btnPicking).Text = Activities.ResourceEN.btnPicking;
                         break;
                     }
-            }
+            }*/
         }
 
     }
