@@ -119,7 +119,6 @@
   </resheader>
   <data name="btnAddPalette" xml:space="preserve">
     <value>2 - Creation de palette</value>
-    <comment>fdf</comment>
   </data>
   <data name="btnConfirm" xml:space="preserve">
     <value>Confirmer</value>
@@ -128,7 +127,7 @@
     <value>Connexion</value>
   </data>
   <data name="btnConsolidate" xml:space="preserve">
-    <value>2 - Consolidation</value>
+    <value>Consolidation</value>
   </data>
   <data name="btnEnd" xml:space="preserve">
     <value>Terminer</value>
@@ -152,7 +151,7 @@
     <value>New</value>
   </data>
   <data name="btnPicking" xml:space="preserve">
-    <value>3 - Commande</value>
+    <value>Commande</value>
   </data>
   <data name="btnProduction" xml:space="preserve">
     <value>4 - Production</value>
@@ -161,10 +160,10 @@
     <value>1 - Mise en production</value>
   </data>
   <data name="btnRecieve" xml:space="preserve">
-    <value>2 - Réception </value>
+    <value>Réception </value>
   </data>
   <data name="btnRelocation" xml:space="preserve">
-    <value>1 - Relocalisation</value>
+    <value>Relocalisation</value>
   </data>
   <data name="btnSaveConfig" xml:space="preserve">
     <value>Sauvegarder</value>
@@ -438,5 +437,14 @@
   </data>
   <data name="errEmptyFieldLicense" xml:space="preserve">
     <value>Veuillez rentrer un code pour la licence</value>
+  </data>
+  <data name="tvInfo" xml:space="preserve">
+    <value>Informations</value>
+  </data>
+  <data name="btnExit" xml:space="preserve">
+    <value>Déconnexion</value>
+  </data>
+  <data name="btnInfo" xml:space="preserve">
+    <value>Informations</value>
   </data>
 </root>

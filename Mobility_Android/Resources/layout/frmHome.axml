@@ -59,21 +59,21 @@
 
 			<Button
 				android:id="@+id/btnRelocation"
-				android:drawableTop="@drawable/clear"
+				android:drawableTop="@drawable/move"
 				android:layout_width="5dp"
 				android:layout_height="match_parent"
 				android:layout_weight="1"
-				android:text="test"
+				android:text="Déplacement"
 				android:layout_centerHorizontal="true"
 				android:background="?android:selectableItemBackground" />
 
 			<Button
-				android:id="@+id/btnConsolidation"
-				android:drawableTop="@drawable/clear"
+				android:id="@+id/btnConsolidate"
+				android:drawableTop="@drawable/consolidate"
 				android:layout_width="5dp"
 				android:layout_height="match_parent"
 				android:layout_weight="1"
-				android:text="test"
+				android:text="Consolidation"
 				android:layout_centerHorizontal="true"
 				android:background="?android:selectableItemBackground" />
 
@@ -88,21 +88,21 @@
 
 			<Button
 				android:id="@+id/btnRecieve"
-				android:drawableTop="@drawable/clear"
+				android:drawableTop="@drawable/truck"
 				android:layout_width="5dp"
 				android:layout_height="match_parent"
 				android:layout_weight="1"
-				android:text="test"
+				android:text="Réception"
 				android:layout_centerHorizontal="true"
 				android:background="?android:selectableItemBackground" />
 
 			<Button
 				android:id="@+id/btnPicking"
-				android:drawableTop="@drawable/clear"
+				android:drawableTop="@drawable/sale"
 				android:layout_width="5dp"
 				android:layout_height="match_parent"
 				android:layout_weight="1"
-				android:text="test"
+				android:text="Commande"
 				android:layout_centerHorizontal="true"
 				android:background="?android:selectableItemBackground" />
 
@@ -117,21 +117,21 @@
 
 		<Button
 				android:id="@+id/btnInfo"
-				android:drawableTop="@drawable/clear"
+				android:drawableTop="@drawable/info"
 				android:layout_width="5dp"
 				android:layout_height="match_parent"
 				android:layout_weight="1"
-				android:text="test"
+				android:text="Informations"
 				android:layout_centerHorizontal="true"
 				android:background="?android:selectableItemBackground" />
 
 			<Button
-				android:id="@+id/BtnExit"
-				android:drawableTop="@drawable/clear"
+				android:id="@+id/btnExit"
+				android:drawableTop="@drawable/exit"
 				android:layout_width="5dp"
 				android:layout_height="match_parent"
 				android:layout_weight="1"
-				android:text="test"
+				android:text="Déconnection"
 				android:layout_centerHorizontal="true"
 				android:background="?android:selectableItemBackground" />
 

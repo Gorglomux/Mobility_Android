@@ -88,7 +88,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2 - Consolidate.
+        ///   Looks up a localized string similar to Consolidate.
         /// </summary>
         internal static string btnConsolidate {
             get {
@@ -135,6 +135,24 @@ namespace Mobility_Android.Activities {
         /// <summary>
         ///   Looks up a localized string similar to Logout.
         /// </summary>
+        internal static string btnExit {
+            get {
+                return ResourceManager.GetString("btnExit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Informations.
+        /// </summary>
+        internal static string btnInfo {
+            get {
+                return ResourceManager.GetString("btnInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
         internal static string btnLogout {
             get {
                 return ResourceManager.GetString("btnLogout", resourceCulture);
@@ -160,7 +178,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 3 - Order.
+        ///   Looks up a localized string similar to Order.
         /// </summary>
         internal static string btnPicking {
             get {
@@ -187,7 +205,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2 - Receiving.
+        ///   Looks up a localized string similar to Receiving.
         /// </summary>
         internal static string btnRecieve {
             get {
@@ -196,7 +214,7 @@ namespace Mobility_Android.Activities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1 - Relocation.
+        ///   Looks up a localized string similar to Relocation.
         /// </summary>
         internal static string btnRelocation {
             get {
@@ -642,6 +660,15 @@ namespace Mobility_Android.Activities {
         internal static string tvGabarit {
             get {
                 return ResourceManager.GetString("tvGabarit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        internal static string tvInfo {
+            get {
+                return ResourceManager.GetString("tvInfo", resourceCulture);
             }
         }
         
