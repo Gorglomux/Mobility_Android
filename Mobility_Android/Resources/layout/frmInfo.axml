@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,95 +9,151 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
-	<!-- TITLE INFO -->
-	<TextView
-		android:id="@+id/tvInfo"
-		android:text="Informations"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/toolbar"
-		android:textAppearance="?android:attr/textAppearanceLarge" />
-
-	<!-- LOGO -->
-	<ImageView
-		android:id="@+id/imLogo"
-		android:src="@drawable/ceritar_logo_login"
+	<LinearLayout
+		android:id="@+id/layoutAbout"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:minWidth="20px"
-		android:minHeight="130px"
-		android:paddingTop="5dp"/>
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:layout_below="@+id/toolbar">
 
-	<!-- BUILDING PICTURE -->
-	<ImageView
-		android:id="@+id/imBuilding"
-		android:src="@drawable/ceritar_building"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:minWidth="20px"
-		android:minHeight="130px"
-		android:paddingTop="5dp"/>
+		<!-- TITLE INFO -->
+		<LinearLayout
+			android:id="@+id/layoutTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_below="@+id/toolbar"
+			android:layout_weight="2">
 
-	<!-- FIRST PART OF THE ADDRESS -->
+			<TextView
+				android:id="@+id/tvInfo"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="0dp"
+				android:layout_weight="3"
+				android:layout_height="wrap_content"
+				android:text="Informations"
+			/>
 
-	<TextView
-		android:text="2255 Boulevard Fernand-Lafontaine, #300"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="30dp"
-		android:layout_marginAbove="100dp"
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:textAppearance="?android:attr/textAppearanceMedium"/>
+		</LinearLayout>
 
-	<!-- SECOND PART OF THE ADDRESS -->
+		<!-- LOGO -->
+		<LinearLayout
+			android:id="@+id/layoutLogo"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_weight="5">
 
-	<TextView
-		android:text="Longueuil, QC, J4G 2R8"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="100dp"
-		android:layout_marginAbove="100dp"
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:textAppearance="?android:attr/textAppearanceMedium"/>
+			<ImageView
+				android:id="@+id/imLogo"
+				android:src="@drawable/ceritar_logo_login"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:minWidth="20px"
+				android:minHeight="130px"
+				android:paddingTop="5dp"/>
 
-	<!-- PHONE NUMBER -->
+		</LinearLayout>
 
-	<TextView
-		android:text="(450) 651-9988"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="130dp"
-		android:layout_marginAbove="100dp"
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:paddingVertical="10"/>
+		<!-- ADRESS PART 1 -->
+		<LinearLayout
+			android:id="@+id/layoutAddress1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
 
-	<!-- MAIL -->
+			<TextView
+				android:id="@+id/tvAddress1"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="0dp"
+				android:layout_weight="3"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="2255 Boulevard Fernand-Lafontaine, #300"
+			/>
+		
+		</LinearLayout>
 
-	<TextView
-		android:text="support@ceritar.com"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="110dp"
-		android:layout_marginAbove="100dp"
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:textAppearance="?android:attr/textAppearanceMedium"/>
+		<!-- ADRESS PART 2 -->
+		<LinearLayout
+			android:id="@+id/layoutAddress2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_weight="5">
 
-	<!-- WEBSITE -->
+			<TextView
+				android:id="@+id/tvAddress2"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="0dp"
+				android:layout_weight="3"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="Longueuil, QC, J4G 2R8"
+			/>
+		</LinearLayout>
 
-	<TextView
-		android:text="http://www.ceritar.com"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="100dp"
-		android:layout_marginAbove="100dp"
-		android:minWidth="25px"
-		android:minHeight="25px"
-		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:paddingVertical="10"/>
+		<!-- PHONE NUMBER -->
+		<LinearLayout
+			android:id="@+id/layoutPhoneNumber"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_weight="5">
 
-</LinearLayout>
+			<TextView
+				android:id="@+id/tvPhoneNumber"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="0dp"
+				android:layout_weight="3"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="(450) 651-9988"
+			/>
+		</LinearLayout>
+
+		<!-- EMAIL -->
+		<LinearLayout
+			android:id="@+id/layoutEmail"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_weight="5">
+
+			<TextView
+				android:id="@+id/tvEmail"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="0dp"
+				android:layout_weight="3"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="support@ceritar.com"
+			/>
+		
+		</LinearLayout>
+
+		<!-- WEBSITE -->
+		<LinearLayout
+			android:id="@+id/layoutWebsite"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_weight="10">
+
+			<TextView
+				android:id="@+id/tvWebsite"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="0dp"
+				android:layout_weight="3"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="http://www.ceritar.com"
+			/>
+		
+		</LinearLayout>
+
+	</LinearLayout>
+
+</RelativeLayout>
