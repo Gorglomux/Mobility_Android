@@ -10,6 +10,7 @@
 		android:text="Déconnexion"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_marginBottom="15dp"
 		android:textAppearance="?android:attr/textAppearanceLarge"
 		android:textColor="#ffffffff" />
 
@@ -23,6 +24,7 @@
 		android:layout_below="@+id/tvLogout"
 		android:layout_marginTop="20dp"
 		android:layout_marginLeft="20dp"
+		android:layout_marginBottom="15dp"
 		android:textAppearance="?android:attr/textAppearanceSmall"/>
 
 	<!-- LINEAR LAYOUT TEXTINPUT / BUTTON -->
@@ -31,6 +33,7 @@
 		android:id="@+id/layoutTextLogoutPassword"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" 
+		android:layout_marginBottom="15dp"
 		android:layout_below="@+id/tvPassPrompt" >
 
 		<!-- INPUT PASSWORD -->
