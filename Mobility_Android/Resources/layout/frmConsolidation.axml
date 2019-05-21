@@ -1,92 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+	<!-- Toolbar -->
 	<include
-		android:id="@+id/toolbar"
-		layout="@layout/toolbar" />
-	<TextView
-		android:id="@+id/tvConsolidation"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@id/toolbar"
-		android:layout_marginTop="5px"
-		android:layout_marginBottom="15px"
-		android:text=" Consolidation "
-		/>
-	<TextView
-		android:id="@+id/tvLicense"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/tvConsolidation"
-		android:layout_marginLeft="15px"
-		android:text="License :" />
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
 	<LinearLayout
-		android:id="@+id/layoutLicense"
+		android:id="@+id/layoutConsolidation"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/tvLicense">
-		<EditText
-			android:id="@+id/tfLicenseConsolidation"
-			android:layout_width="0dp"
-			android:layout_weight="5"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:layout_below="@+id/toolbar">
+
+		<!-- TITLE CONSOLIDATION -->
+		<LinearLayout
+			android:id="@+id/layoutTitle"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:background="@android:drawable/editbox_background"
-			android:textColor="#000"
-			android:maxLines="1"
-			android:inputType="text"
-		/>
-		<ImageButton
-			android:id="@+id/imClear"
-			android:src="@drawable/clear"
-			android:layout_width="5dp"
-			android:layout_height="35dp"
-			android:layout_weight="1"
-			android:layout_centerHorizontal="true"
-			android:background="?android:selectableItemBackground" />
-	</LinearLayout>
-	<TextView
-		android:id="@+id/tvPalette"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="15px"
-		android:layout_below="@+id/layoutLicense"
-		android:text="Palette :" />
-	<LinearLayout
-		android:id="@+id/layoutPalette"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/tvPalette">
-		<EditText
-			android:id="@+id/tfPalette"
-			android:layout_width="0dp"
-			android:layout_weight="5"
+			android:orientation="horizontal"
+			android:layout_weight="1">
+
+			<TextView
+				android:id="@+id/tvConsolidation"   
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5px"
+				android:layout_marginBottom="15px"
+				android:text=" Consolidation  "
+				/> 
+
+		</LinearLayout>
+
+		<!-- TEXT LICENCE -->
+		<LinearLayout
+			android:id="@+id/layoutTitleLicense"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:background="@android:drawable/editbox_background"
-			android:textColor="#000"
-			android:maxLines="1"
-			android:inputType="text"
-		/>
-		<ImageButton
-			android:id="@+id/imClear2"
-			android:src="@drawable/clear"
-			android:layout_width="5dp"
-			android:layout_height="35dp"
-			android:layout_weight="1"
-			android:layout_centerHorizontal="true"
-			android:background="?android:selectableItemBackground" />
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/tvLicense"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15px"
+				android:text="License :" />
+
+		</LinearLayout>
+
+
+		<!-- TEXT FIELD AND CLEAR BUTTON FOR LICENCE -->
+		<LinearLayout
+		
+			android:id="@+id/layoutLicense"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="2">
+
+			<EditText
+				android:id="@+id/tfLicenseConsolidation"
+				android:layout_width="0dp"
+				android:layout_weight="5"
+				android:layout_height="wrap_content"
+				android:maxLines="1"
+				android:inputType="text"
+				android:background="@android:drawable/editbox_background"
+				android:textColor="#000"
+			/>
+		
+			<ImageButton
+				android:id="@+id/imClear"
+				android:src="@drawable/clear"
+				android:layout_width="5dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:layout_centerHorizontal="true"
+				android:background="?android:selectableItemBackground" />
+
+		</LinearLayout>
+
+		<!-- TEXT PALETTE -->
+		<LinearLayout
+			android:id="@+id/layoutTitlePalette"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/tvPalette"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15px"
+				android:text="Palette  :" />
+
+		</LinearLayout>
+
+		<!-- TEXT FIELD AND CLEAR BUTTON FOR PALETTE -->
+		<LinearLayout
+		
+			android:id="@+id/layoutPalette"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="2">
+
+			<EditText
+				android:id="@+id/tfPalette"
+				android:layout_width="0dp"
+				android:layout_weight="5"
+				android:layout_height="wrap_content"
+				android:maxLines="1"
+				android:inputType="text"
+				android:background="@android:drawable/editbox_background"
+				android:textColor="#000"
+			/>
+		
+			<ImageButton
+				android:id="@+id/imClear2"
+				android:src="@drawable/clear"
+				android:layout_width="5dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:layout_centerHorizontal="true"
+				android:background="?android:selectableItemBackground" />
+
+		</LinearLayout>
+
+		<!-- CONFIRM BUTTON -->
+		<LinearLayout
+			android:id="@+id/layoutConfirm"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_weight="5">
+
+				<Button
+				android:id="@+id/btnConfirm"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dip"
+				android:layout_centerHorizontal="true"
+				android:layout_marginLeft="10dip"
+				android:gravity="center"
+				android:text="  Confirmer  " />
+
+		</LinearLayout>
+
 	</LinearLayout>
-	<Button
-		android:id="@+id/btnConfirm"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="20dip"
-		android:layout_centerHorizontal="true"
-		android:layout_marginLeft="10dip"
-		android:layout_below="@id/layoutPalette"
-		android:text="  Confirmer  " />
 
 </RelativeLayout>
+

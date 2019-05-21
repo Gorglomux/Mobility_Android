@@ -87,7 +87,7 @@ namespace Mobility_Android.Activities
                         FindViewById<TextView>(Resource.Id.tvDeplacement).Text = Activities.ResourceFR.tvDeplacement;
                         FindViewById<TextView>(Resource.Id.tvLicense).Text = Activities.ResourceFR.tvLicense;
                         FindViewById<TextView>(Resource.Id.tvDestination).Text = Activities.ResourceFR.tvDestination;
-
+                        FindViewById<Button>(Resource.Id.btnConfirm).Text = Activities.ResourceFR.btnConfirm;
                         break;
                     }
 
@@ -96,6 +96,7 @@ namespace Mobility_Android.Activities
                         FindViewById<TextView>(Resource.Id.tvDeplacement).Text = Activities.ResourceEN.tvDeplacement;
                         FindViewById<TextView>(Resource.Id.tvLicense).Text = Activities.ResourceEN.tvLicense;
                         FindViewById<TextView>(Resource.Id.tvDestination).Text = Activities.ResourceEN.tvDestination;
+                        FindViewById<Button>(Resource.Id.btnConfirm).Text = Activities.ResourceEN.btnConfirm;
                         break;
                     }
             }
