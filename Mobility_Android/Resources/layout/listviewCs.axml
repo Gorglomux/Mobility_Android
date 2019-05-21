@@ -3,26 +3,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-	<TextView
-		android:id="@+id/listCs"
-		android:text="Cs "
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="0dp"
-		android:layout_weight="19"
-		android:layout_height="40.7dp"
-		android:textSize="15dp"
-		android:textColor="#FFF"
-		android:layout_margin="10dp" />
+	<LinearLayout
+	android:id="@+id/layoutHome"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:layout_weight="1"
+	android:layout_below="@+id/layoutWarehouse">
 
-	<TextView
-		android:id="@+id/tvWeight"
-		android:text="Poids"
-		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_width="0dp"
-		android:layout_weight="15"
-		android:layout_height="40.7dp"
-		android:textSize="15dp"
-		android:textColor="#FFF"
-		android:layout_margin="10dp" />
+			<LinearLayout
+			android:id="@+id/layoutSpace"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:orientation="horizontal">
+
+					<TextView
+						android:id="@+id/listCs"
+						android:text="Cs "
+						android:textAppearance="?android:attr/textAppearanceLarge"
+						android:layout_width="5dp"
+						android:layout_weight="3"
+						android:layout_height="match_parent"
+						android:textColor="#FFF"
+						android:layout_margin="10dp" />
+
+					<TextView
+						android:id="@+id/tvWeight"
+						android:text="Poids"
+						android:textAppearance="?android:attr/textAppearanceMedium"
+						android:layout_width="5dp"
+						android:layout_weight="1.3"
+						android:layout_height="match_parent"
+						android:textColor="#FFF"
+						android:layout_margin="10dp" />
+
+			</LinearLayout>
+
+		</LinearLayout>
 
 </LinearLayout>

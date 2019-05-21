@@ -25,6 +25,29 @@ namespace Mobility_Android.Resources.global
         {
             
             this.activity = activity;
+
+            /*int maxLength = 0;
+
+            foreach (PickedLicensesWS licence in listCs)
+            {
+                if(maxLength < licence.code.Length)
+                {
+                    maxLength = licence.code.Length;
+                }
+            }
+
+            foreach (PickedLicensesWS licence in listCs)
+            {
+                if(licence.code.Length < maxLength)
+                {
+                    int taille = maxLength - licence.code.Length;
+                    for (int i=0; taille > i; i++)
+                    {
+                        licence.code += "   ";
+                    }
+                }
+            }*/
+
             this.listCs = listCs;
         }
 
