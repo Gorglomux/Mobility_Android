@@ -23,7 +23,7 @@ namespace Mobility_Android.Activities
      * Point de départ de l'application
      * Permet de se connecter à l'application, de se déconnecter ou d'accéder aux paramètres et de modifier la configuration
      * 
-     **/ 
+     **/
     [Activity(Label = "MyCeritar", MainLauncher = true)]
     public class MyCeritar : BaseActivity
     {

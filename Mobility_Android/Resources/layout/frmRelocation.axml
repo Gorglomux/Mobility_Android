@@ -9,95 +9,148 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
 
-	<TextView
-		android:id="@+id/tvDeplacement" 
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@id/toolbar"
-		android:layout_marginTop="5px"
-		android:layout_marginBottom="15px"
-		android:text=" Déplacement "
-		/>
-	<TextView
-		android:id="@+id/tvLicense"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/tvDeplacement"
-		android:layout_marginLeft="15px"
-		android:text="License :" />
 	<LinearLayout
-		
-		android:id="@+id/layoutLicense"
+		android:id="@+id/layoutDeplacement"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/tvLicense" >
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:layout_below="@+id/toolbar">
 
-		<EditText
-			android:id="@+id/tfLicenseRelocation"
-			android:layout_width="0dp"
-			android:layout_weight="5"
+		<!-- TITLE DEPLACEMENT -->
+		<LinearLayout
+			android:id="@+id/layoutTitle"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:maxLines="1"
-			android:inputType="text"
-			android:background="@android:drawable/editbox_background"
-			android:textColor="#000"
-		/>
+			android:orientation="horizontal"
+			android:layout_weight="1">
+
+			<TextView
+				android:id="@+id/tvDeplacement" 
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5px"
+				android:layout_marginBottom="15px"
+				android:text=" Déplacement "
+				/>
+
+		</LinearLayout>
+
+		<!-- TEXT LICENCE -->
+		<LinearLayout
+			android:id="@+id/layoutTitleLicense"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/tvLicense"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15px"
+				android:text="License :" />
+
+		</LinearLayout>
+
+
+		<!-- TEXT FIELD AND CLEAR BUTTON FOR LICENCE -->
+		<LinearLayout
 		
-		<ImageButton
-			android:id="@+id/imClear"
-			android:src="@drawable/clear"
-			android:layout_width="5dp"
-			android:layout_height="35dp"
-			android:layout_weight="1"
-			android:layout_centerHorizontal="true"
-			android:background="?android:selectableItemBackground" />
+			android:id="@+id/layoutLicense"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="2">
+
+			<EditText
+				android:id="@+id/tfLicenseRelocation"
+				android:layout_width="0dp"
+				android:layout_weight="5"
+				android:layout_height="wrap_content"
+				android:maxLines="1"
+				android:inputType="text"
+				android:background="@android:drawable/editbox_background"
+				android:textColor="#000"
+			/>
+		
+			<ImageButton
+				android:id="@+id/imClear"
+				android:src="@drawable/clear"
+				android:layout_width="5dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:layout_centerHorizontal="true"
+				android:background="?android:selectableItemBackground" />
+
+		</LinearLayout>
+
+		<!-- TEXT DESTINATION -->
+		<LinearLayout
+			android:id="@+id/layoutTitleDestination"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<TextView
+				android:id="@+id/tvDestination"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="15px"
+				android:text="Destination :" />
+
+		</LinearLayout>
+
+		<!-- TEXT FIELD AND CLEAR BUTTON FOR DESTINATION -->
+		<LinearLayout
+		
+			android:id="@+id/layoutDestination"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="2">
+
+			<EditText
+				android:id="@+id/tfDestination"
+				android:layout_width="0dp"
+				android:layout_weight="5"
+				android:layout_height="wrap_content"
+				android:maxLines="1"
+				android:inputType="text"
+				android:background="@android:drawable/editbox_background"
+				android:textColor="#000"
+			/>
+		
+			<ImageButton
+				android:id="@+id/imClear2"
+				android:src="@drawable/clear"
+				android:layout_width="5dp"
+				android:layout_height="35dp"
+				android:layout_weight="1"
+				android:layout_centerHorizontal="true"
+				android:background="?android:selectableItemBackground" />
+
+		</LinearLayout>
+
+		<!-- CONFIRM BUTTON -->
+		<LinearLayout
+			android:id="@+id/layoutConfirm"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_weight="5">
+
+				<Button
+				android:id="@+id/btnConfirm"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dip"
+				android:layout_centerHorizontal="true"
+				android:layout_marginLeft="10dip"
+				android:gravity="center"
+				android:text="  Confirmer  " />
+
+		</LinearLayout>
 
 	</LinearLayout>
-
-	<TextView
-		android:id="@+id/tvDestination"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginLeft="15px"
-		android:layout_below="@+id/layoutLicense"
-		android:text="Destination :" />
-	<LinearLayout
-		
-		android:id="@+id/layoutDestination"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_below="@+id/tvDestination" >
-
-		<EditText
-			android:id="@+id/tfDestination"
-			android:layout_width="0dp"
-			android:layout_weight="5"
-			android:layout_height="wrap_content"
-			android:maxLines="1"
-			android:inputType="text"
-			android:background="@android:drawable/editbox_background"
-			android:textColor="#000"
-		/>
-		
-		<ImageButton
-			android:id="@+id/imClear2"
-			android:src="@drawable/clear"
-			android:layout_width="5dp"
-			android:layout_height="35dp"
-			android:layout_weight="1"
-			android:layout_centerHorizontal="true"
-			android:background="?android:selectableItemBackground" />
-
-	</LinearLayout>
-	    <Button
-        android:id="@+id/btnConfirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-		android:layout_marginTop="20dip"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dip"
-		android:layout_below="@id/layoutDestination"
-        android:text="  Confirmer  " />
 
 </RelativeLayout>
+
