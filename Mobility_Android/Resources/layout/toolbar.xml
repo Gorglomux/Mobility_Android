@@ -19,14 +19,15 @@ https://docs.microsoft.com/en-us/xamarin/android/user-interface/controls/tool-ba
       android:layout_width="match_parent"
       android:layout_height="wrap_content">
 
-      <!-- Flèche retour -->
+      <!-- Flèche retour 
       <Button
       android:id="@+id/imBack"
       android:drawableTop="@drawable/back"
       android:background="?android:selectableItemBackground"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_weight="2"/>
+      android:layout_weight="2"/> -->
+      
     </LinearLayout>
     <LinearLayout
       android:id="@+id/layoutImage"

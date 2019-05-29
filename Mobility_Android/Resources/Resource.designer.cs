@@ -2757,11 +2757,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f08003a
 			public const int ifRoom = 2131230778;
 			
-			// aapt resource value: 0x7f080179
-			public const int imBack = 2131231097;
-			
-			// aapt resource value: 0x7f08017b
-			public const int imCeritar = 2131231099;
+			// aapt resource value: 0x7f08017a
+			public const int imCeritar = 2131231098;
 			
 			// aapt resource value: 0x7f08009d
 			public const int imClear = 2131230877;
@@ -2778,8 +2775,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800f0
 			public const int imDetails = 2131230960;
 			
-			// aapt resource value: 0x7f08017c
-			public const int imHome = 2131231100;
+			// aapt resource value: 0x7f08017b
+			public const int imHome = 2131231099;
 			
 			// aapt resource value: 0x7f0800d5
 			public const int imLogo = 2131230933;
@@ -2865,8 +2862,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f0800bb
 			public const int layoutHome = 2131230907;
 			
-			// aapt resource value: 0x7f08017a
-			public const int layoutImage = 2131231098;
+			// aapt resource value: 0x7f080179
+			public const int layoutImage = 2131231097;
 			
 			// aapt resource value: 0x7f0800fd
 			public const int layoutImages = 2131230973;
@@ -3057,14 +3054,14 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080149
 			public const int lvReceiving = 2131231049;
 			
-			// aapt resource value: 0x7f08017f
-			public const int masked = 2131231103;
+			// aapt resource value: 0x7f08017e
+			public const int masked = 2131231102;
 			
 			// aapt resource value: 0x7f08016a
 			public const int media_actions = 2131231082;
 			
-			// aapt resource value: 0x7f08017d
-			public const int message = 2131231101;
+			// aapt resource value: 0x7f08017c
+			public const int message = 2131231100;
 			
 			// aapt resource value: 0x7f080031
 			public const int middle = 2131230769;
@@ -3612,8 +3609,8 @@ namespace Mobility_Android
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f08017e
-			public const int visible = 2131231102;
+			// aapt resource value: 0x7f08017d
+			public const int visible = 2131231101;
 			
 			// aapt resource value: 0x7f08003c
 			public const int withText = 2131230780;

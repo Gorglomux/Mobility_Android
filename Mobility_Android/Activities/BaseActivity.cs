@@ -96,15 +96,14 @@ namespace Mobility_Android.Activities
             Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
             if (toolbar != null)
             {
-                 //Interaction avec le bouton retour de la toolbar
-                Button backImage = FindViewById<Button>(Resource.Id.imBack);
+                //Interaction avec le bouton retour de la toolbar
+                //Button backImage = FindViewById<Button>(Resource.Id.imBack);
                 //On ferme la vue si le bouton est appuyé
-                backImage.Touch += (sender, e) =>
-                {
+                // backImage.Touch += (sender, e) =>
+                // {  
+                //    Finish();
 
-                    Finish();
-
-                };
+                // };
                 FindViewById<Button>(Resource.Id.imHome).Click += (sender, e) => {
                     Finish();
                     StartActivity(new Intent(this, typeof(HomeActivity)));

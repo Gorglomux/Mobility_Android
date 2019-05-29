@@ -42,7 +42,7 @@ namespace Mobility_Android.Activities
                 {Resource.Id.btnRecieve, new Intent(this, typeof(ReceivingActivity))},
                 {Resource.Id.btnPicking, new Intent(this, typeof(PickingListActivity))},
                 {Resource.Id.btnInfo, new Intent(this, typeof(InformationActivity))},
-                {Resource.Id.btnExit, new Intent(this, typeof(LogoutActivity))},
+                {Resource.Id.btnExit, new Intent(this, typeof(MyCeritar))},
              //   {Resource.Id.btnProduction, new Intent(this, typeof(ProductionMenuActivity))}
                 
             };
