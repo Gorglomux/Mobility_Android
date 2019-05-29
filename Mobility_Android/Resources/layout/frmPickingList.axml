@@ -75,14 +75,17 @@
 			android:id="@+id/tvCustomer" />
 			
 	</LinearLayout>
-		
-	<ListView 
-		android:id="@+id/lvPicking" 
+	<android.support.v4.widget.SwipeRefreshLayout
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
-	 	android:layout_height="match_parent"
-		android:layout_below="@+id/layoutOrder"/>
-
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/layoutOrder"
+		android:id="@+id/swipeRefreshLayout" >
+		<ListView 
+			android:id="@+id/lvPicking" 
+			android:layout_width="match_parent"
+	 		android:layout_height="match_parent"/>
+		</android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

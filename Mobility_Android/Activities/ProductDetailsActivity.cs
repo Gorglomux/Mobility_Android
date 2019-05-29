@@ -34,7 +34,9 @@ namespace Mobility_Android.Activities
             if (CsDetailsActivity.typeCS == TYPE_CS.RECEPTION)
             {
                 // Récupération de la réception sélectionnée
+                Console.Write("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n lalilal \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n ");
                 ReceptionWS reception = (ReceptionWS)ReceivingDetailsActivity.data;
+                Console.Write("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n lolilol \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n ");
                 // Récupération de la liste de produit selon une reception grâce au web service Operations
                 listProduct = OperationsWebService.getReceptionProductDetails(Configuration.securityToken, reception.ReceptionNRI, (int)Configuration.currentLanguage, Configuration.userInfos.Udp_NRI, Configuration.userInfos.Udp_Label).OfType<ProductDetailsWS>().ToList();
             }

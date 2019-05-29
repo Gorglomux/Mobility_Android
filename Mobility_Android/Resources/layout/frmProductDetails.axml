@@ -66,13 +66,16 @@
 			 />
 			
 	</LinearLayout>
-		
-	<ListView 
-		android:id="@+id/lvDetailsProduct" 
+	<android.support.v4.widget.SwipeRefreshLayout
 		android:minWidth="10px"
 		android:minHeight="10px"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@+id/layoutEntete"/>
-
+		android:layout_below="@+id/layoutEntete"
+		android:id="@+id/swipeRefreshLayout" >	
+		<ListView 
+			android:id="@+id/lvDetailsProduct" 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"/>
+		</android.support.v4.widget.SwipeRefreshLayout>
 </RelativeLayout>

@@ -9,6 +9,7 @@ using Android.Content;
 using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Util;
 using Android.Views;
@@ -111,14 +112,15 @@ namespace Mobility_Android.Activities
 
             }
 
-            ImageButton refreshImage = FindViewById<ImageButton>(Resource.Id.imRefresh);
+            SwipeRefreshLayout refresh= FindViewById<SwipeRefreshLayout>(Resource.Id.swipeRefreshLayout);
 
-            if (refreshImage != null)
+            if (refresh != null)
             {
 
-                refreshImage.Touch += (sender, e) =>
+                refresh.Refresh += async (sender, e) =>
                 {
-                    
+                    await Task.Delay(1000);
+
                     Recreate();
                 };
             }
