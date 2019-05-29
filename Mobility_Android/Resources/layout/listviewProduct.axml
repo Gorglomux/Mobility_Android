@@ -3,27 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-	<TextView
-		android:id="@+id/tvProductName"
-		android:text="# Rec. "
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="0dp"
-		android:layout_weight="10"
-		android:layout_height="40.7dp"
-		android:layout_marginLeft="10dp"
-		android:layout_margin="10dp"
-		android:textSize="12dp"
-		android:textColor="#FFF" />
+	<LinearLayout
+	android:id="@+id/layoutHome"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:layout_weight="1"
+	android:layout_below="@+id/layoutWarehouse">
 
-	<TextView
-		android:id="@+id/tvQuantity"
-		android:text="Email :"
-		android:textAppearance="?android:attr/textAppearanceMedium"
-		android:layout_width="0dp"
-		android:layout_weight="12"
-		android:layout_height="40.7dp"
-		android:layout_margin="10dp"
-		android:textSize="12dp"
-		android:textColor="#FFF" />
+			<LinearLayout
+			android:id="@+id/layoutSpace"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:orientation="horizontal">
+
+					<TextView
+						android:id="@+id/tvProductName"
+						android:text="# Rec. "
+						android:textAppearance="?android:attr/textAppearanceLarge"
+						android:layout_width="5dp"
+						android:layout_weight="3"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dp"
+						android:layout_margin="10dp"
+						android:textColor="#FFF" />
+
+					<TextView
+						android:id="@+id/tvQuantity"
+						android:text="Qty :"
+						android:textAppearance="?android:attr/textAppearanceMedium"
+						android:layout_width="5dp"
+						android:layout_weight="2"
+						android:layout_height="match_parent"
+						android:layout_margin="10dp"
+						android:textColor="#FFF" />
+
+			</LinearLayout>
+
+		</LinearLayout>
 
 </LinearLayout>

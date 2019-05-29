@@ -42,28 +42,42 @@
 		android:layout_height="wrap_content" 
 		android:layout_below="@+id/layoutTitle" >
 
-		<TextView
-			android:id="@+id/tvProductName"
-			android:text="Produit"
-			android:textAppearance="?android:attr/textAppearanceMedium"
-			android:layout_width="0dp"
-			android:layout_weight="10"
-			android:layout_height="40.7dp"
-			android:layout_marginLeft="10dp"
-			android:textSize="15dp"
-			android:textColor="#FFF"
-			 />
+			<LinearLayout
+			android:id="@+id/layoutHome"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:layout_weight="1"
+			android:layout_below="@+id/layoutWarehouse">
 
-		<TextView
-			android:id="@+id/tvQuantity"
-			android:text="Quantité"
-			android:textAppearance="?android:attr/textAppearanceMedium"
-			android:layout_width="0dp"
-			android:layout_weight="12"
-			android:layout_height="40.7dp"
-			android:textSize="15dp"
-			android:textColor="#FFF"
-			 />
+					<LinearLayout
+					android:id="@+id/layoutSpace"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="horizontal">
+
+						<TextView
+							android:id="@+id/tvProductName"
+							android:text="Produit"
+							android:textAppearance="?android:attr/textAppearanceMedium"
+							android:layout_width="5dp"
+							android:layout_weight="3"
+							android:layout_height="match_parent"
+							android:layout_marginLeft="10dp"
+							android:textColor="#FFF" />
+
+						<TextView
+							android:id="@+id/tvQuantity"
+							android:text="Quantité"
+							android:textAppearance="?android:attr/textAppearanceMedium"
+							android:layout_width="5dp"
+							android:layout_weight="2"
+							android:layout_height="match_parent"
+							android:textColor="#FFF"/>
+				</LinearLayout>
+
+			</LinearLayout>
 			
 	</LinearLayout>
 	<android.support.v4.widget.SwipeRefreshLayout

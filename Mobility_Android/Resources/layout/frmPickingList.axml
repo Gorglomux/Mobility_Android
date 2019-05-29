@@ -7,7 +7,7 @@
 	<include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-
+	 
 	<!-- TITLE PICKING -->
 	<LinearLayout
 		android:id="@+id/layoutPicking"
@@ -53,26 +53,43 @@
 		android:layout_height="wrap_content" 
 		android:layout_below="@+id/layoutPicking" >
 
-		<TextView
-			android:text="# Commande"
-			android:textAppearance="?android:attr/textAppearanceMedium"
-			android:layout_width="0dp"
-			android:layout_weight="4"
-			android:layout_height="40.7dp"
-			android:layout_marginLeft="10dp"
-			android:textSize="15dp"
-			android:textColor="#FFF"
-			android:id="@+id/tvSale" />
+			<LinearLayout
+			android:id="@+id/layoutHome"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:layout_weight="1"
+			android:layout_below="@+id/layoutWarehouse">
 
-		<TextView
-			android:text="Client"
-			android:textAppearance="?android:attr/textAppearanceMedium"
-			android:layout_width="0dp"
-			android:layout_weight="4"
-			android:layout_height="40.7dp"
-			android:textSize="15dp"
-			android:textColor="#FFF"
-			android:id="@+id/tvCustomer" />
+				<LinearLayout
+				android:id="@+id/layoutSpace"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:orientation="horizontal">
+
+					<TextView
+						android:text="# Commande"
+						android:textAppearance="?android:attr/textAppearanceMedium"
+						android:layout_width="5dp"
+						android:layout_weight="3"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dp"
+						android:textColor="#FFF"
+						android:id="@+id/tvSale" />
+
+					<TextView
+						android:text="Client"
+						android:textAppearance="?android:attr/textAppearanceMedium"
+						android:layout_width="5dp"
+						android:layout_weight="3"
+						android:layout_height="match_parent"
+						android:textColor="#FFF"
+						android:id="@+id/tvCustomer" />
+
+				</LinearLayout>
+
+			</LinearLayout>
 			
 	</LinearLayout>
 	<android.support.v4.widget.SwipeRefreshLayout
