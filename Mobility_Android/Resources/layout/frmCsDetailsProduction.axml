@@ -32,14 +32,6 @@
 			android:layout_weight="1"
 			android:layout_centerHorizontal="true"
 			android:background="?android:selectableItemBackground" />
-		<ImageButton
-			android:id="@+id/imRefresh"
-			android:src="@drawable/refresh"
-			android:layout_width="5dp"
-			android:layout_height="35dp"
-			android:layout_weight="1"
-			android:layout_centerHorizontal="true"
-			android:background="?android:selectableItemBackground" />
 
 	</LinearLayout>
 

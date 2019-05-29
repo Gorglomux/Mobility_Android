@@ -24,6 +24,8 @@ namespace Mobility_Android.Activities
     [Activity(Label = "PickingListActivity", ParentActivity = typeof(HomeActivity))]
     public class PickingListActivity : BaseActivity
     {
+        public static object data = null;
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

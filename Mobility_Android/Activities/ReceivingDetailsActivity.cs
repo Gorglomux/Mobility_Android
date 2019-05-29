@@ -25,6 +25,7 @@ namespace Mobility_Android.Activities
         public static LicenseWS licence;
         public static List<LicenseWS> licences = null ;
         public static bool mustRefresh = false;
+        public static object data = null;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

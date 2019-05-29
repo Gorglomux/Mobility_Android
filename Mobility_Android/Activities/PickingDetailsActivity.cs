@@ -28,6 +28,7 @@ namespace Mobility_Android.Activities
     {
         public static LicenseWS licence;
         public static bool mustRefresh = false;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState, Resource.Layout.frmPickingDetails);
